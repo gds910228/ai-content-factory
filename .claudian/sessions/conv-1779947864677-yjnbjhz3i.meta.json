@@ -1,0 +1,26 @@
+{
+  "id": "conv-1779947864677-yjnbjhz3i",
+  "providerId": "claude",
+  "title": "你好，帮我生成一篇关于 AI 内容生产的 100 字短文",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1779947864681,
+  "updatedAt": 1779955415600,
+  "lastResponseAt": 1779955415600,
+  "sessionId": "e296a1d5-acba-4c1e-a6fc-ef41e8f4e104",
+  "providerState": {
+    "providerSessionId": "e296a1d5-acba-4c1e-a6fc-ef41e8f4e104",
+    "previousProviderSessionIds": [
+      "60315302-17f8-4fff-a481-2add8353c427"
+    ]
+  },
+  "usage": {
+    "model": "glm-4.7",
+    "inputTokens": 81,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 17792,
+    "contextWindow": 200000,
+    "contextTokens": 17873,
+    "percentage": 9,
+    "contextWindowIsAuthoritative": true
+  }
+}
