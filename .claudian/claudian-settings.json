@@ -1,6 +1,6 @@
 {
   "userName": "Archer",
-  "permissionMode": "yolo",
+  "permissionMode": "normal",
   "model": "glm-4.7",
   "thinkingBudget": "medium",
   "effortLevel": "high",
@@ -75,9 +75,9 @@
     "claude": "medium"
   },
   "savedProviderPermissionMode": {
-    "claude": "yolo"
+    "claude": "normal"
   },
-  "lastCustomModel": "glm-5.1",
+  "lastCustomModel": "glm-4.7",
   "maxTabs": 10,
   "tabBarPosition": "input",
   "enableAutoScroll": true,
