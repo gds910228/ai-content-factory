@@ -37,12 +37,20 @@
       "id": "f1805a1b-8604-4d3a-b0ec-d8f6915b2adb",
       "name": "一键生成稿件文件夹",
       "type": "Macro",
-      "command": false,
+      "command": true,
       "runOnStartup": false,
       "macro": {
         "name": "一键生成稿件文件夹",
         "id": "fd7a8ba4-f93a-4f70-9f00-49408914a817",
-        "commands": []
+        "commands": [
+          {
+            "name": "一键生成稿件文件夹",
+            "type": "UserScript",
+            "id": "0c6a2036-0f28-4ab8-9c88-e68edac0cccd",
+            "path": "scripts/一键生成稿件文件夹.js",
+            "settings": {}
+          }
+        ]
       }
     }
   ],

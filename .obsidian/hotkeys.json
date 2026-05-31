@@ -1,11 +1,18 @@
 {
+  "quickadd:choice:f1805a1b-8604-4d3a-b0ec-d8f6915b2adb": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "G"
+    }
+  ],
   "quickadd:choice:17ecc634-6880-4829-83c0-a6d5f1461b24": [
     {
       "modifiers": [
-        "Mod",
-        "Shift"
+        "Alt"
       ],
-      "key": "M"
+      "key": "N"
     }
   ]
 }
