@@ -32,6 +32,18 @@
       "fileExistsBehavior": {
         "kind": "prompt"
       }
+    },
+    {
+      "id": "f1805a1b-8604-4d3a-b0ec-d8f6915b2adb",
+      "name": "一键生成稿件文件夹",
+      "type": "Macro",
+      "command": true,
+      "runOnStartup": false,
+      "macro": {
+        "name": "一键生成稿件文件夹",
+        "id": "fd7a8ba4-f93a-4f70-9f00-49408914a817",
+        "commands": []
+      }
     }
   ],
   "inputPrompt": "single-line",
