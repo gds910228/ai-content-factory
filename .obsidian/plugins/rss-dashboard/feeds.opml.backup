@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>RSS dashboard feeds</title>
+    <dateCreated>Sun, 31 May 2026 06:00:40 GMT</dateCreated>
+  </head>
+  <body>
+    <outline text="Uncategorized" title="Uncategorized">
+    </outline>
+    <outline text="Videos" title="Videos">
+    </outline>
+    <outline text="Podcasts" title="Podcasts">
+    </outline>
+    <outline text="RSS" title="RSS">
+      <outline text="AI HOT — 精选" title="AI HOT — 精选" type="rss" xmlUrl="https://aihot.virxact.com/feed.xml" category="RSS"/>
+    </outline>
+  </body>
+</opml>
