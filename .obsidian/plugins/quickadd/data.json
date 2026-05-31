@@ -37,7 +37,7 @@
       "id": "f1805a1b-8604-4d3a-b0ec-d8f6915b2adb",
       "name": "一键生成稿件文件夹",
       "type": "Macro",
-      "command": true,
+      "command": false,
       "runOnStartup": false,
       "macro": {
         "name": "一键生成稿件文件夹",
