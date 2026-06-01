@@ -52,6 +52,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "4595700f-b8c6-466f-aa82-eb9f5e066af3",
+      "name": "记录灵感",
+      "type": "Template",
+      "command": true,
+      "templatePath": "00-模板库/模板-灵感记录.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:}}{{name}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "01-选题库/01-热点选题池",
+          "01-选题库/02-用户痛点选题池",
+          "01-选题库/03-行业干货选题池"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFile": false,
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "mode": "default",
+        "focus": true
+      },
+      "fileExistsBehavior": {
+        "kind": "prompt"
+      }
     }
   ],
   "inputPrompt": "single-line",

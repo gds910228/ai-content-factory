@@ -152,19 +152,25 @@
           "guid": "https://aihot.virxact.com/cmpuqq2mt0025sl0z5qnshwpd",
           "read": false,
           "starred": false,
-          "tags": [],
+          "tags": [
+            {
+              "name": "Saved",
+              "color": "#3498db"
+            }
+          ],
           "feedTitle": "AI HOT — 精选",
           "feedUrl": "https://aihot.virxact.com/feed.xml",
           "coverImage": "",
           "summary": "NVIDIA Cosmos 3是一款面向物理AI的前沿基础模型。它能够帮助机器人、自动驾驶车辆和智能空间理解真实世界、预测事件发展并生成适应特定环境与任务的行动。该模型融合了物理推理、世界理解与行动生成能力。",
           "author": "noreply@aihot.virxact.com (NVIDIA Technical Blog（开发者技术博客 · RSS）)",
-          "saved": false,
+          "saved": true,
           "mediaType": "article",
           "duration": "",
           "explicit": false,
           "image": "",
           "category": "",
-          "episodeType": ""
+          "episodeType": "",
+          "savedFilePath": "04-日常素材/使用NVIDIA Cosmos 3开发物理AI推理、世界与行动模型.md"
         },
         {
           "title": "Nemotron 3 Ultra 本周即将发布",
@@ -1243,7 +1249,7 @@
   "showFeedArt": true,
   "showThumbnails": true,
   "sidebarCollapsed": false,
-  "sidebarWidth": 280,
+  "sidebarWidth": 203.5,
   "collapsedFolders": [],
   "tagsCollapsed": true,
   "articleFilter": {
