@@ -3,7 +3,7 @@
   "permissionMode": "yolo",
   "model": "glm-5.1",
   "thinkingBudget": "medium",
-  "effortLevel": "max",
+  "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -27,14 +27,14 @@
       "safeMode": "acceptEdits",
       "cliPath": "",
       "cliPathsByHost": {},
-      "loadUserSettings": true,
+      "loadUserSettings": false,
       "enableChrome": false,
       "enableBangBash": false,
       "enableOpus1M": true,
-      "enableSonnet1M": true,
-      "customModels": "glm-5.1",
+      "enableSonnet1M": false,
+      "customModels": "",
       "lastModel": "opus[1m]",
-      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.1",
+      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\n\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\n\nANTHROPIC_MODEL=glm-5.1",
       "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-5.1"
     },
     "codex": {
@@ -81,7 +81,7 @@
     "claude": "glm-5.1"
   },
   "savedProviderEffort": {
-    "claude": "max"
+    "claude": "high"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},
