@@ -4,11 +4,20 @@
   "title": "在「05-数据复盘库」中的「📋 知识库数据仪表板」，将以下所有查询统一放在这个笔记中，作为知识库的...",
   "titleGenerationStatus": "failed",
   "createdAt": 1780289502442,
-  "updatedAt": 1780289997534,
+  "updatedAt": 1780290251686,
   "lastResponseAt": 1780289997534,
-  "sessionId": "7438739c-766e-40ac-9832-0f8f9a19c654",
+  "sessionId": null,
   "providerState": {
     "providerSessionId": "7438739c-766e-40ac-9832-0f8f9a19c654"
   },
-  "currentNote": "05-数据复盘库/📋 知识库数据仪表板.md"
+  "usage": {
+    "model": "glm-5.1",
+    "inputTokens": 1037,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 18624,
+    "contextWindow": 200000,
+    "contextTokens": 19661,
+    "percentage": 10,
+    "contextWindowIsAuthoritative": true
+  }
 }

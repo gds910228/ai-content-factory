@@ -1,0 +1,14 @@
+{
+  "id": "conv-1780293704095-3ogexkipw",
+  "providerId": "claude",
+  "title": "在「05-数据复盘库」中新建笔记，命名为「📋 知识库数据仪表板」，将以下所有查询统一放在这个笔记中...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1780293704095,
+  "updatedAt": 1780293954396,
+  "lastResponseAt": 1780293954396,
+  "sessionId": "e4575d8c-5916-45b7-9c8d-1014e37c23c2",
+  "providerState": {
+    "providerSessionId": "e4575d8c-5916-45b7-9c8d-1014e37c23c2"
+  },
+  "currentNote": "内容创作看板.md"
+}
