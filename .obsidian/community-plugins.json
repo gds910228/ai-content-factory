@@ -4,7 +4,7 @@
   "obsidian-git",
   "obsidian-custom-attachment-location",
   "quickadd",
-  "obsidian-kanban",
   "dataview",
-  "rss-dashboard"
+  "rss-dashboard",
+  "obsidian-kanban"
 ]
