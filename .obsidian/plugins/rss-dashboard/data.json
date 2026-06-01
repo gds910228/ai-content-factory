@@ -739,19 +739,25 @@
           "guid": "https://aihot.virxact.com/cmpsjtxfm022vsluz0pojemz9",
           "read": false,
           "starred": false,
-          "tags": [],
+          "tags": [
+            {
+              "name": "Saved",
+              "color": "#3498db"
+            }
+          ],
           "feedTitle": "AI HOT — 精选",
           "feedUrl": "https://aihot.virxact.com/feed.xml",
           "coverImage": "",
           "summary": "由于运行和使用AI工具的成本持续飙升，美国企业正开始对人工智能的使用实施配给制。企业通过限制使用量、设置分层级审批流程等方式控制开支，以应对AI费用增长过快的问题。这种从广泛采用转向精细化管理的策略，标志着企业在AI应用上从追求速度转向注重成本效益。",
           "author": "noreply@aihot.virxact.com (Hacker News 热门（buzzing.cc 中文翻译）)",
-          "saved": false,
+          "saved": true,
           "mediaType": "article",
           "duration": "",
           "explicit": false,
           "image": "",
           "category": "",
-          "episodeType": ""
+          "episodeType": "",
+          "savedFilePath": "04-日常素材/随着成本飙升，美国企业开始对人工智能实施配给.md"
         },
         {
           "title": "免费领取6个月ChatGPT Pro及AI工具思考",

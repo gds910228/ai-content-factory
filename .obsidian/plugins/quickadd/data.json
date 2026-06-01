@@ -61,7 +61,7 @@
       "templatePath": "00-模板库/模板-灵感记录.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{DATE:}}{{name}}"
+        "format": "{{DATE:}} {{name}}"
       },
       "folder": {
         "enabled": true,
