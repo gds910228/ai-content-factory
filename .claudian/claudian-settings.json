@@ -1,6 +1,6 @@
 {
   "userName": "Archer",
-  "permissionMode": "normal",
+  "permissionMode": "yolo",
   "model": "glm-4.7",
   "thinkingBudget": "medium",
   "effortLevel": "high",
@@ -75,7 +75,7 @@
     "claude": "medium"
   },
   "savedProviderPermissionMode": {
-    "claude": "normal"
+    "claude": "yolo"
   },
   "lastCustomModel": "glm-4.7",
   "maxTabs": 10,
