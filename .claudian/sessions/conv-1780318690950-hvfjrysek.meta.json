@@ -1,12 +1,11 @@
 {
   "id": "conv-1780318690950-hvfjrysek",
   "providerId": "claude",
-  "title": "halo",
+  "title": "1",
   "titleGenerationStatus": "failed",
   "createdAt": 1780318690950,
-  "updatedAt": 1780318726936,
-  "lastResponseAt": 1780318726936,
+  "updatedAt": 1780319717124,
+  "lastResponseAt": 1780319664400,
   "sessionId": null,
-  "providerState": {},
-  "currentNote": "05-数据复盘库/📋 知识库数据仪表板.md"
+  "providerState": {}
 }

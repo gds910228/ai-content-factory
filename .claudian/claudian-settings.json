@@ -1,6 +1,6 @@
 {
   "userName": "Archer",
-  "permissionMode": "yolo",
+  "permissionMode": "normal",
   "model": "glm-5.1",
   "thinkingBudget": "medium",
   "effortLevel": "high",
@@ -34,7 +34,7 @@
       "enableSonnet1M": false,
       "customModels": "",
       "lastModel": "opus[1m]",
-      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\n\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\n\nANTHROPIC_MODEL=glm-5.1",
+      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.1",
       "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-5.1"
     },
     "codex": {
@@ -86,7 +86,7 @@
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
-    "claude": "yolo"
+    "claude": "normal"
   },
   "lastCustomModel": "glm-5.1",
   "maxTabs": 10,
