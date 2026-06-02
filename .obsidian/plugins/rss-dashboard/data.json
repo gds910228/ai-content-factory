@@ -14,19 +14,25 @@
           "guid": "https://aihot.virxact.com/cmpw5sd9k00agsl1un4z8njv7",
           "read": false,
           "starred": false,
-          "tags": [],
+          "tags": [
+            {
+              "name": "Saved",
+              "color": "#3498db"
+            }
+          ],
           "feedTitle": "AI HOT — 精选",
           "feedUrl": "https://aihot.virxact.com/feed.xml",
           "coverImage": "",
           "summary": "作者受一条推文启发，使用Codex对自己的MacBook进行了只读存储分析，发现了B站缓存视频等大量可清理空间（激进方案超140G）。为替代收费软件CleanMyMac，作者制作并开源了一个跨平台（支持Mac/Windows）的AI清理skill。该skill会扫描文件并生成可交互的HTML报告，通过三色分级（绿灯可放心清理、黄灯需人工判断、红灯禁止动）直观展示，并提供安全执行按钮。实测清理后释放了近120G空间，相比CleanMyMa...",
           "author": "noreply@aihot.virxact.com (X：卡兹克 (@Khazix0918))",
-          "saved": false,
+          "saved": true,
           "mediaType": "article",
           "duration": "",
           "explicit": false,
           "image": "",
           "category": "",
-          "episodeType": ""
+          "episodeType": "",
+          "savedFilePath": "04-日常素材/为了不花那120刀，我把电脑清理软件做成了开源skill.md"
         },
         {
           "title": "阶跃星辰Step 3.7 Flash发布，专为高效推理设计",
@@ -83,19 +89,25 @@
           "guid": "https://aihot.virxact.com/cmpvxrm1902luslukxau25aef",
           "read": false,
           "starred": false,
-          "tags": [],
+          "tags": [
+            {
+              "name": "Saved",
+              "color": "#3498db"
+            }
+          ],
           "feedTitle": "AI HOT — 精选",
           "feedUrl": "https://aihot.virxact.com/feed.xml",
           "coverImage": "",
           "summary": "Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉...",
           "author": "noreply@aihot.virxact.com (X：邵猛 (@shao__meng))",
-          "saved": false,
+          "saved": true,
           "mediaType": "article",
           "duration": "",
           "explicit": false,
           "image": "",
           "category": "",
-          "episodeType": ""
+          "episodeType": "",
+          "savedFilePath": "04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流.md"
         },
         {
           "title": "Karpathy 分享学习方法论",
