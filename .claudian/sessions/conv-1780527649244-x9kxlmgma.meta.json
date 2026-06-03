@@ -1,12 +1,10 @@
 {
   "id": "conv-1780527649244-x9kxlmgma",
   "providerId": "claude",
-  "title": "ii哈",
-  "titleGenerationStatus": "failed",
+  "title": "的",
+  "titleGenerationStatus": "pending",
   "createdAt": 1780527649244,
-  "updatedAt": 1780529277450,
-  "lastResponseAt": 1780529277450,
-  "sessionId": null,
-  "providerState": {},
-  "currentNote": "00-模板库/Prompt-深度访谈全流程.md"
+  "updatedAt": 1780529776340,
+  "lastResponseAt": 1780529505490,
+  "sessionId": null
 }

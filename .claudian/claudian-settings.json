@@ -1,9 +1,9 @@
 {
   "userName": "",
-  "permissionMode": "yolo",
-  "model": "glm-5.1",
+  "permissionMode": "normal",
+  "model": "glm-5-turbo",
   "thinkingBudget": "off",
-  "effortLevel": "high",
+  "effortLevel": "medium",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -26,18 +26,16 @@
     "claude": {
       "safeMode": "acceptEdits",
       "cliPath": "",
-      "cliPathsByHost": {
-        "device:d5c94893-05c0-4c2d-95de-2fcbf519fbb3": "C:\\Users\\Administrator\\claude-wrapper.cmd"
-      },
-      "loadUserSettings": false,
+      "cliPathsByHost": {},
+      "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
-      "enableOpus1M": false,
+      "enableOpus1M": true,
       "enableSonnet1M": false,
-      "customModels": "glm-5.1",
+      "customModels": "",
       "lastModel": "haiku",
-      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.1\nCLAUDE_CODE_USE_BEDROCK=1",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-5.1"
+      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5-turbo",
+      "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-5-turbo"
     },
     "codex": {
       "enabled": false,
@@ -80,17 +78,17 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "glm-5.1"
+    "claude": "glm-5-turbo"
   },
   "savedProviderEffort": {
-    "claude": "high"
+    "claude": "medium"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
-    "claude": "yolo"
+    "claude": "normal"
   },
-  "lastCustomModel": "glm-5.1",
+  "lastCustomModel": "glm-5-turbo",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,
