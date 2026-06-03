@@ -1,15 +1,15 @@
 {
-  "userName": "Archer",
-  "permissionMode": "normal",
+  "userName": "",
+  "permissionMode": "yolo",
   "model": "glm-5.1",
-  "thinkingBudget": "medium",
+  "thinkingBudget": "off",
   "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
   "excludedTags": [],
   "mediaFolder": "",
-  "systemPrompt": "Always response in Chinese.",
+  "systemPrompt": "",
   "persistentExternalContextPaths": [],
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
@@ -21,19 +21,21 @@
     "focusInputKey": "i"
   },
   "requireCommandOrControlEnterToSend": false,
-  "locale": "zh-CN",
+  "locale": "en",
   "providerConfigs": {
     "claude": {
       "safeMode": "acceptEdits",
       "cliPath": "",
-      "cliPathsByHost": {},
+      "cliPathsByHost": {
+        "device:d5c94893-05c0-4c2d-95de-2fcbf519fbb3": "C:\\Users\\Administrator\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\cli.js"
+      },
       "loadUserSettings": false,
       "enableChrome": false,
       "enableBangBash": false,
       "enableOpus1M": true,
       "enableSonnet1M": false,
-      "customModels": "",
-      "lastModel": "opus[1m]",
+      "customModels": "glm-5.1",
+      "lastModel": "haiku",
       "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.1",
       "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-5.1"
     },
@@ -86,10 +88,10 @@
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
-    "claude": "normal"
+    "claude": "yolo"
   },
   "lastCustomModel": "glm-5.1",
-  "maxTabs": 10,
+  "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,
   "deferMathRenderingDuringStreaming": true,
