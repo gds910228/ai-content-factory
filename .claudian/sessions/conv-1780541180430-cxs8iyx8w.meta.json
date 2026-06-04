@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780541180430-cxs8iyx8w",
+  "providerId": "claude",
+  "title": "个人写作风格深度分析",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780541180431,
+  "updatedAt": 1780541511642,
+  "lastResponseAt": 1780541511642,
+  "sessionId": "0e12ae74-5abe-4e5c-b6a9-3d0a3e0e6136",
+  "providerState": {
+    "providerSessionId": "0e12ae74-5abe-4e5c-b6a9-3d0a3e0e6136"
+  },
+  "usage": {
+    "model": "glm-4.7",
+    "inputTokens": 62,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 117696,
+    "contextWindow": 200000,
+    "contextTokens": 117758,
+    "percentage": 59,
+    "contextWindowIsAuthoritative": true
+  }
+}
