@@ -1,10 +1,26 @@
 {
   "id": "conv-1780527649244-x9kxlmgma",
   "providerId": "claude",
-  "title": "的",
-  "titleGenerationStatus": "pending",
+  "title": "Analyze character input",
+  "titleGenerationStatus": "success",
   "createdAt": 1780527649244,
-  "updatedAt": 1780529776340,
-  "lastResponseAt": 1780529505490,
-  "sessionId": null
+  "updatedAt": 1780534320392,
+  "lastResponseAt": 1780529817763,
+  "sessionId": "3e316b2b-f01d-4d4f-b2ef-d1605e00dfaa",
+  "providerState": {
+    "providerSessionId": "3e316b2b-f01d-4d4f-b2ef-d1605e00dfaa",
+    "previousProviderSessionIds": [
+      "ffd0ab20-c5e9-4ff3-8294-66a63fd09db1"
+    ]
+  },
+  "usage": {
+    "model": "glm-4.7",
+    "inputTokens": 22874,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 320,
+    "contextWindow": 200000,
+    "contextTokens": 23194,
+    "percentage": 12,
+    "contextWindowIsAuthoritative": true
+  }
 }
