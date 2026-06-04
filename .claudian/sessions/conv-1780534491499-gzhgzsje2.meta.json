@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780534491499-gzhgzsje2",
+  "providerId": "claude",
+  "title": "Create deep interview workflow for AI coding mi...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780534491499,
+  "updatedAt": 1780534583446,
+  "lastResponseAt": 1780534583446,
+  "sessionId": "8d828774-5b75-4bb1-8e26-ad22ce57475e",
+  "providerState": {
+    "providerSessionId": "8d828774-5b75-4bb1-8e26-ad22ce57475e"
+  },
+  "usage": {
+    "model": "glm-4.7",
+    "inputTokens": 423,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 26368,
+    "contextWindow": 200000,
+    "contextTokens": 26791,
+    "percentage": 13,
+    "contextWindowIsAuthoritative": true
+  }
+}

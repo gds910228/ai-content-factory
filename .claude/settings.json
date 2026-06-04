@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash([ -d \"02-稿件库/01-创作中稿件/AI写代码总翻车？这是你一定会遇到的4种翻车场景-\"* ])",
+      "Bash(TITLE=\"AI写代码总翻车？这是你一定会遇到的4种翻车场景\"\nDATE_SUFFIX=$\\(date +%Y%m%d\\)\nFOLDER_NAME=\"${TITLE}-${DATE_SUFFIX}\"\nFOLDER_PATH=\"02-稿件库/01-创作中稿件/${FOLDER_NAME}\"\n\n# 创建文件夹和assets子文件夹\nmkdir -p \"${FOLDER_PATH}/assets\"\n\n# 读取模板并替换变量，生成访谈记录\nCURRENT_DATE=$\\(date +%Y-%m-%d\\)\nsed \"s/{{NAME}}/${TITLE}/g; s/{{DATE:YYYY-MM-DD}}/${CURRENT_DATE}/g\" \"00-模板库/模板-访谈记录.md\" > \"${FOLDER_PATH}/01-访谈记录.md\"\n\n# 创建其他稿件文件\nprintf \"# %s - 初稿\\\\n\\\\n\" \"${TITLE}\" > \"${FOLDER_PATH}/02-初稿.md\"\nprintf \"# %s - 改稿记录\\\\n\\\\n\" \"${TITLE}\" > \"${FOLDER_PATH}/03-改稿记录.md\"\nprintf \"# %s - 定稿\\\\n\\\\n\" \"${TITLE}\" > \"${FOLDER_PATH}/04-定稿.md\"\n\necho \"稿件工作空间创建完成：${FOLDER_PATH}\")"
+    ]
+  }
+}
