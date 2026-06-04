@@ -6,6 +6,29 @@
       "folder": "RSS",
       "items": [
         {
+          "title": "联合国报告：2030年AI数据中心水电消耗将翻倍",
+          "link": "https://www.ithome.com/0/959/607.htm",
+          "description": "联合国大学水、环境与健康研究所报告指出，受AI需求驱动，去年全球数据中心耗电448太瓦时（AI占五分之一），耗水4.5万亿升，碳排放1.89亿吨。预计到2030年，年耗电量将翻倍至945太瓦时（AI占40%），耗水增至9.3万亿升，碳排放升至3.99亿吨，占地面积从6900平方公里扩展至14500平方公里。报告警告若忽视环境成本，AI落地还将加剧土地紧张与电子废弃物问题。",
+          "content": "联合国大学水、环境与健康研究所报告指出，受AI需求驱动，去年全球数据中心耗电448太瓦时（AI占五分之一），耗水4.5万亿升，碳排放1.89亿吨。预计到2030年，年耗电量将翻倍至945太瓦时（AI占40%），耗水增至9.3万亿升，碳排放升至3.99亿吨，占地面积从6900平方公里扩展至14500平方公里。报告警告若忽视环境成本，AI落地还将加剧土地紧张与电子废弃物问题。",
+          "pubDate": "Thu, 04 Jun 2026 00:50:46 GMT",
+          "guid": "https://aihot.virxact.com/cmpysu6gj030usli3gqo1qtsd",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT — 精选",
+          "feedUrl": "https://aihot.virxact.com/feed.xml",
+          "coverImage": "",
+          "summary": "联合国大学水、环境与健康研究所报告指出，受AI需求驱动，去年全球数据中心耗电448太瓦时（AI占五分之一），耗水4.5万亿升，碳排放1.89亿吨。预计到2030年，年耗电量将翻倍至945太瓦时（AI占40%），耗水增至9.3万亿升，碳排放升至3.99亿吨，占地面积从6900平方公里扩展至14500平方公里。报告警告若忽视环境成本，AI落地还将加剧土地紧张与电子废弃物问题。",
+          "author": "noreply@aihot.virxact.com (IT之家（RSS）)",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
+        {
           "title": "Grok模型登陆Cloudflare AI Gateway",
           "link": "https://x.com/xai/status/2062294202625696081",
           "description": "在 @Cloudflare 的 AI Gateway 上尝试 Grok 模型！",
@@ -1133,29 +1156,6 @@
           "episodeType": ""
         },
         {
-          "title": "NVIDIA与微软合作推出Windows端AI智能体开发工具",
-          "link": "https://x.com/NVIDIARTXSpark/status/2061893113463906809",
-          "description": "使用NVIDIA和微软的新工具，在Windows PC上构建设备端个人AI智能体，包括安全沙箱、更快的本地推理、多GPU支持，以及针对Windows AI API的RTX加速。 阅读技术博客：https：//nvda.ws/4e0rLDN",
-          "content": "使用NVIDIA和微软的新工具，在Windows PC上构建设备端个人AI智能体，包括安全沙箱、更快的本地推理、多GPU支持，以及针对Windows AI API的RTX加速。 阅读技术博客：https：//nvda.ws/4e0rLDN",
-          "pubDate": "Tue, 02 Jun 2026 19:30:01 GMT",
-          "guid": "https://aihot.virxact.com/cmpx25l4f00atslgyyutqhcf0",
-          "read": false,
-          "starred": false,
-          "tags": [],
-          "feedTitle": "AI HOT — 精选",
-          "feedUrl": "https://aihot.virxact.com/feed.xml",
-          "coverImage": "",
-          "summary": "使用NVIDIA和微软的新工具，在Windows PC上构建设备端个人AI智能体，包括安全沙箱、更快的本地推理、多GPU支持，以及针对Windows AI API的RTX加速。 阅读技术博客：https：//nvda.ws/4e0rLDN",
-          "author": "noreply@aihot.virxact.com (X：NVIDIA RTX Spark (@NVIDIARTXSpark))",
-          "saved": false,
-          "mediaType": "article",
-          "duration": "",
-          "explicit": false,
-          "image": "",
-          "category": "",
-          "episodeType": ""
-        },
-        {
           "title": "为了不花那120刀，我把电脑清理软件做成了开源skill",
           "link": "https://x.com/Khazix0918/status/2061669881725309048",
           "description": "作者受一条推文启发，使用Codex对自己的MacBook进行了只读存储分析，发现了B站缓存视频等大量可清理空间（激进方案超140G）。为替代收费软件CleanMyMac，作者制作并开源了一个跨平台（支持Mac/Windows）的AI清理skill。该skill会扫描文件并生成可交互的HTML报告，通过三色分级（绿灯可放心清理、黄灯需人工判断、红灯禁止动）直观展示，并提供安全执行按钮。实测清理后释放了近120G空间，相比CleanMyMac仅扫描出的15.8G，其信息更透明、建议更详细。",
@@ -1214,7 +1214,7 @@
           "savedFilePath": "04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流.md"
         }
       ],
-      "lastUpdated": 1780533376070,
+      "lastUpdated": 1780536973869,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1242,6 +1242,29 @@
       "url": "https://aihot.virxact.com/feed/daily.xml",
       "folder": "RSS",
       "items": [
+        {
+          "title": "AI HOT 日报 · 2026-06-04 — Grok Imagine 1.5 预览版发布",
+          "link": "https://aihot.virxact.com/daily/2026-06-04",
+          "description": "Grok Imagine 1.5 预览版发布 — 点击查看完整日报",
+          "content": "Grok Imagine 1.5 预览版发布 — 点击查看完整日报",
+          "pubDate": "Thu, 04 Jun 2026 00:00:00 GMT",
+          "guid": "https://aihot.virxact.com/feed/daily-2026-06-04",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT 日报",
+          "feedUrl": "https://aihot.virxact.com/feed/daily.xml",
+          "coverImage": "",
+          "summary": "Grok Imagine 1.5 预览版发布 — 点击查看完整日报",
+          "author": "noreply@aihot.virxact.com (AI HOT)",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
         {
           "title": "AI HOT 日报 · 2026-06-03 — 微软首款高级推理AI模型MAI-Thinking-1发布",
           "link": "https://aihot.virxact.com/daily/2026-06-03",
@@ -1956,7 +1979,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1780533376090,
+      "lastUpdated": 1780536973807,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1970,8 +1993,8 @@
       "siteUrl": "https://aihot.virxact.com/daily",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 30,
-        "mergedItemCountBeforeRetention": 31,
-        "retainedItemCount": 31,
+        "mergedItemCountBeforeRetention": 32,
+        "retainedItemCount": 32,
         "retentionRemovedCount": 0,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
@@ -2007,7 +2030,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1780533376092,
+  "lastRefreshTimestamp": 1780536973870,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
