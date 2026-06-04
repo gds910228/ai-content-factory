@@ -1,9 +1,9 @@
 {
   "userName": "",
-  "permissionMode": "normal",
-  "model": "glm-4.7",
+  "permissionMode": "yolo",
+  "model": "glm-5.1",
   "thinkingBudget": "off",
-  "effortLevel": "medium",
+  "effortLevel": "max",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -34,8 +34,8 @@
       "enableSonnet1M": false,
       "customModels": "",
       "lastModel": "haiku",
-      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-4.7",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-4.7"
+      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.1",
+      "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-5.1"
     },
     "codex": {
       "enabled": false,
@@ -78,17 +78,17 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "glm-4.7"
+    "claude": "glm-5.1"
   },
   "savedProviderEffort": {
-    "claude": "medium"
+    "claude": "max"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
-    "claude": "normal"
+    "claude": "yolo"
   },
-  "lastCustomModel": "glm-5-turbo",
+  "lastCustomModel": "glm-5.1",
   "maxTabs": 3,
   "tabBarPosition": "input",
   "enableAutoScroll": true,
