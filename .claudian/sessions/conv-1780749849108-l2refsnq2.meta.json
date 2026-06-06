@@ -1,0 +1,24 @@
+{
+  "id": "conv-1780749849108-l2refsnq2",
+  "providerId": "claude",
+  "title": "Develop AI Skills Library for Multi-Platform Pu...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780749849108,
+  "updatedAt": 1780750003873,
+  "lastResponseAt": 1780750003873,
+  "sessionId": "fe72041a-99f5-47af-8b96-2d1fbf4f9d00",
+  "providerState": {
+    "providerSessionId": "fe72041a-99f5-47af-8b96-2d1fbf4f9d00"
+  },
+  "currentNote": "02-稿件库/01-创作中稿件/AI工作流的护城河：你的Skills库才是真正的资产-20260606/04-定稿.md",
+  "usage": {
+    "model": "glm-5.1",
+    "inputTokens": 135,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 49472,
+    "contextWindow": 200000,
+    "contextTokens": 49607,
+    "percentage": 25,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -4,21 +4,20 @@
   "title": "Create WeChat Long Article Conversion Guide",
   "titleGenerationStatus": "success",
   "createdAt": 1780746082384,
-  "updatedAt": 1780747963386,
-  "lastResponseAt": 1780747963386,
+  "updatedAt": 1780749819472,
+  "lastResponseAt": 1780749605133,
   "sessionId": "7c126127-888a-4d5c-9b25-1db378eb2257",
   "providerState": {
     "providerSessionId": "7c126127-888a-4d5c-9b25-1db378eb2257"
   },
-  "currentNote": "02-稿件库/01-创作中稿件/AI写代码总翻车？这是你一定会遇到的4种翻车场景-20260604/04-定稿.md",
   "usage": {
     "model": "glm-5.1",
-    "inputTokens": 1971,
+    "inputTokens": 1984,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 52160,
+    "cacheReadInputTokens": 79168,
     "contextWindow": 200000,
-    "contextTokens": 54131,
-    "percentage": 27,
+    "contextTokens": 81152,
+    "percentage": 41,
     "contextWindowIsAuthoritative": true
   }
 }
