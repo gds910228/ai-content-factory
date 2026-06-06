@@ -1214,7 +1214,7 @@
           "savedFilePath": "04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流.md"
         }
       ],
-      "lastUpdated": 1780717006209,
+      "lastUpdated": 1780720575026,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1933,7 +1933,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1780717006234,
+      "lastUpdated": 1780720575030,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1984,7 +1984,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1780717006236,
+  "lastRefreshTimestamp": 1780720575030,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
