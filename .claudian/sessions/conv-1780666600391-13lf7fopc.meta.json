@@ -4,8 +4,8 @@
   "title": "Explore material library topics",
   "titleGenerationStatus": "success",
   "createdAt": 1780666600391,
-  "updatedAt": 1780724094858,
-  "lastResponseAt": 1780724094858,
+  "updatedAt": 1780724394609,
+  "lastResponseAt": 1780724394609,
   "sessionId": "76e755a7-afe1-4bd5-86fa-d2a98411b42a",
   "providerState": {
     "providerSessionId": "76e755a7-afe1-4bd5-86fa-d2a98411b42a",
@@ -371,11 +371,11 @@
   },
   "usage": {
     "model": "glm-5.1",
-    "inputTokens": 1241,
+    "inputTokens": 361,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 67968,
+    "cacheReadInputTokens": 69696,
     "contextWindow": 200000,
-    "contextTokens": 69209,
+    "contextTokens": 70057,
     "percentage": 35,
     "contextWindowIsAuthoritative": true
   }
