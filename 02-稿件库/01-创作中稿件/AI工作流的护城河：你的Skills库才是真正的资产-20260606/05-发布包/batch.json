@@ -1,0 +1,59 @@
+{
+  "jobs": 3,
+  "tasks": [
+    {
+      "id": "01-three-pitfalls",
+      "promptFiles": ["imgs/prompts/01-infographic-three-pitfalls.md"],
+      "image": "imgs/01-infographic-three-pitfalls.png",
+      "provider": "modelscope",
+      "model": "Tongyi-MAI/Z-Image-Turbo",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "02-prompt-vs-skill",
+      "promptFiles": ["imgs/prompts/02-comparison-prompt-vs-skill.md"],
+      "image": "imgs/02-comparison-prompt-vs-skill.png",
+      "provider": "modelscope",
+      "model": "Tongyi-MAI/Z-Image-Turbo",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "03-skill-evolution",
+      "promptFiles": ["imgs/prompts/03-timeline-skill-evolution.md"],
+      "image": "imgs/03-timeline-skill-evolution.png",
+      "provider": "modelscope",
+      "model": "Tongyi-MAI/Z-Image-Turbo",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "04-three-lessons",
+      "promptFiles": ["imgs/prompts/04-infographic-three-lessons.md"],
+      "image": "imgs/04-infographic-three-lessons.png",
+      "provider": "modelscope",
+      "model": "Tongyi-MAI/Z-Image-Turbo",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "05-capability-formula",
+      "promptFiles": ["imgs/prompts/05-framework-ai-capability-formula.md"],
+      "image": "imgs/05-framework-ai-capability-formula.png",
+      "provider": "modelscope",
+      "model": "Tongyi-MAI/Z-Image-Turbo",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "06-start-today",
+      "promptFiles": ["imgs/prompts/06-scene-start-today.md"],
+      "image": "imgs/06-scene-start-today.png",
+      "provider": "modelscope",
+      "model": "Tongyi-MAI/Z-Image-Turbo",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}

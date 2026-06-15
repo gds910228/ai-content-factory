@@ -4,45 +4,19 @@ type: framework
 style: sketch-notes
 ---
 
-Hand-drawn educational framework / formula sketchnote on warm cream paper. Black
-hand-drawn lines with slight wobble, soft pastel color blocks. Feels simple,
-friendly, easy to understand. Diagram-style visuals ONLY — no realistic or
-photographic images.
+Hand-drawn educational formula sketchnote. Warm cream paper background (#F5F0E8), black hand-drawn lines with slight wobble, soft pastel blocks. Diagram style only, no photos. All text hand-lettered in Chinese, no computer fonts. Generous white space.
 
-PALETTE: macaron — soft pastel on warm cream
-COLORS: Warm Cream background (#F5F0E8); Black (#1A1A1A) for ALL lines, text,
-        arrows, doodles; the "模型能力" node filled with Light Blue (#A8D8EA); the
-        "Skills 库质量" node filled with Mint Green (#B5E5CF); the result "企业 AI
-        能力" node filled with Peach (#FFD5C2). Coral Red (#E8655A) sparingly for
-        one emphasis underline. Color values are rendering guidance only — do NOT
-        display color names or hex codes as visible text.
+TITLE (top, bold hand-lettered): "AI 时代的能力公式"
 
-LAYOUT (top → bottom):
-- TOP: Bold hand-lettered Chinese title "AI 时代的能力公式", oversized, slightly
-       wobbly, with a small decorative underline.
+CENTER: a large hand-lettered EQUATION as three connected boxes with big bold hand-drawn math symbols between them:
+[ 模型能力 ] × [ Skills 库质量 ] = [ 企业 AI 能力 ]
 
-- CENTER: A large hand-lettered EQUATION laid out horizontally as three connected
-       boxes with math-style symbols between them:
-       [ 模型能力 ]  ×  [ Skills 库质量 ]  =  [ 企业 AI 能力 ]
-       The "×" and "=" are big, bold, hand-drawn.
+- "模型能力" box filled light blue; "Skills 库质量" box filled mint green; "企业 AI 能力" box filled peach.
 
-- BELOW the equation, two small contrasting annotation rows:
-       Left under "模型能力": a public/utility icon (e.g. a shared cloud or plug)
-       with hand-lettered tag "公共基础设施 — 大家都有".
-       Right under "Skills 库质量": a locked vault / treasure-chest doodle with
-       hand-lettered tag "私有资产 — 别人抄不走".
+BELOW the equation, two annotation rows:
+- Under "模型能力": a shared cloud/plug icon, tag "公共基础设施 — 大家都有".
+- Under "Skills 库质量": a locked vault/treasure-chest doodle, tag "私有资产 — 别人抄不走".
 
-- BOTTOM: One short hand-lettered takeaway sentence: "AI 越强，Skills 越值钱".
+BOTTOM (hand-lettered): "AI 越强，Skills 越值钱"
 
-ELEMENTS: Rounded-rectangle equation boxes with clear hand-drawn borders, big
-          hand-drawn × and = symbols, small sketchy icons (cloud/plug, vault),
-          wavy hand-drawn arrows, doodle decorations (stars, underlines) sparing.
-
-STYLE: Minimal, well-organized, airy. Color fills don't completely fill outlines.
-       ALL text hand-lettered — no computer fonts. Short labels only. Generous
-       white space. Clean composition. Simple background.
-
-Text large and prominent with handwritten-style fonts, focus on keywords. All text
-in Chinese.
-
-ASPECT: 16:9, medium complexity.
+Small doodle decorations (stars, underlines) sparingly. Text large and prominent. No hex codes or color names shown as text. 16:9.

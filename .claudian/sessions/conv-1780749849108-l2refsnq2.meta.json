@@ -4,8 +4,8 @@
   "title": "Develop AI Skills Library for Multi-Platform Pu...",
   "titleGenerationStatus": "success",
   "createdAt": 1780749849108,
-  "updatedAt": 1781514993110,
-  "lastResponseAt": 1781514993110,
+  "updatedAt": 1781523831147,
+  "lastResponseAt": 1781523831147,
   "sessionId": "fe72041a-99f5-47af-8b96-2d1fbf4f9d00",
   "providerState": {
     "providerSessionId": "fe72041a-99f5-47af-8b96-2d1fbf4f9d00",
@@ -175,11 +175,12 @@
   },
   "usage": {
     "model": "glm-5.1",
-    "inputTokens": 203161,
+    "inputTokens": 402,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 12800,
+    "cacheReadInputTokens": 241536,
     "contextWindow": 200000,
-    "contextTokens": 215961,
-    "percentage": 100
+    "contextTokens": 241938,
+    "percentage": 100,
+    "contextWindowIsAuthoritative": true
   }
 }
