@@ -634,8 +634,8 @@ function migrateLegacyHostnameKeyedMap(entries, currentKey, legacyHostnameKey) {
   if (!currentKey || !legacyHostnameKey || currentKey === legacyHostnameKey) {
     return entries;
   }
-  const hasCurrentEntry = Object.prototype.hasOwnProperty.call(entries, currentKey);
-  const hasLegacyEntry = Object.prototype.hasOwnProperty.call(entries, legacyHostnameKey);
+  const hasCurrentEntry = hasOwnEntry(entries, currentKey);
+  const hasLegacyEntry = hasOwnEntry(entries, legacyHostnameKey);
   if (!hasLegacyEntry) {
     return entries;
   }
@@ -645,6 +645,9 @@ function migrateLegacyHostnameKeyedMap(entries, currentKey, legacyHostnameKey) {
   }
   delete migrated[legacyHostnameKey];
   return migrated;
+}
+function hasOwnEntry(entries, key) {
+  return Object.prototype.hasOwnProperty.call(entries, key) === true;
 }
 function parseContextLimit(input) {
   var _a5;
@@ -23373,7 +23376,7 @@ var require_cross_spawn = __commonJS({
       enoent.hookChildProcess(spawned, parsed);
       return spawned;
     }
-    function spawnSync2(command, args, options) {
+    function spawnSync(command, args, options) {
       const parsed = parse4(command, args, options);
       const result = cp.spawnSync(parsed.command, parsed.args, parsed.options);
       result.error = result.error || enoent.verifyENOENTSync(result.status, parsed);
@@ -23381,7 +23384,7 @@ var require_cross_spawn = __commonJS({
     }
     module2.exports = spawn6;
     module2.exports.spawn = spawn6;
-    module2.exports.sync = spawnSync2;
+    module2.exports.sync = spawnSync;
     module2.exports._parse = parse4;
     module2.exports._enoent = enoent;
   }
@@ -46055,7 +46058,7 @@ function installTreeAwareKill(child, spawnSpec) {
     get pid() {
       return child.pid;
     },
-    kill: originalKill
+    kill: (signal) => originalKill(signal)
   };
   child.kill = ((signal) => terminateSpawnedProcess(killableChild, signal, import_child_process6.spawn, spawnSpec));
 }
@@ -66964,7 +66967,7 @@ function createClaudeApprovalCallback(deps) {
         const questions = input.questions;
         if (Array.isArray(questions)) {
           for (const q of questions) {
-            if (q && typeof q === "object" && !("isOther" in q)) {
+            if (isObjectRecord(q) && !("isOther" in q)) {
               q.isOther = true;
             }
           }
@@ -67016,6 +67019,9 @@ function createClaudeApprovalCallback(deps) {
       };
     }
   };
+}
+function isObjectRecord(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
 // src/providers/claude/runtime/ClaudeDynamicUpdates.ts
@@ -81872,10 +81878,212 @@ var opencodeSettingsReconciler = {
 };
 
 // src/providers/opencode/history/OpencodeHistoryStore.ts
-var import_node_child_process2 = require("node:child_process");
 var fs22 = __toESM(require("node:fs"));
+
+// src/providers/opencode/history/OpencodeSqliteReader.ts
+var import_node_child_process2 = require("node:child_process");
+init_env();
+var OPENCODE_SQLITE_QUERY_MAX_BUFFER = 100 * 1024 * 1024;
 var OPENCODE_MESSAGE_ROW_SQL = buildOpencodeMessageRowsSql("?");
 var OPENCODE_PART_ROW_SQL = buildOpencodePartRowsSql("?");
+var OPENCODE_SQLITE_CHILD_SCRIPT = `
+const { DatabaseSync } = require('node:sqlite');
+const [databasePath, sessionId, messageSql, partSql] = process.argv.slice(1);
+let db;
+try {
+  db = new DatabaseSync(databasePath, { readonly: true });
+  const messageRows = db.prepare(messageSql).all(sessionId);
+  const partRows = db.prepare(partSql).all(sessionId);
+  process.stdout.write(JSON.stringify({ messageRows, partRows }));
+} finally {
+  if (db) db.close();
+}
+`.trim();
+async function loadOpencodeSessionRows(databasePath, sessionId, dependencies = {}) {
+  const resolvedDependencies = resolveDependencies(dependencies);
+  const viaCurrentProcess = loadSessionRowsWithCurrentProcessSqlite(
+    databasePath,
+    sessionId,
+    resolvedDependencies.requireSqliteModule
+  );
+  if (viaCurrentProcess) {
+    return viaCurrentProcess;
+  }
+  const viaNodeProcess = loadSessionRowsWithNodeProcess(
+    databasePath,
+    sessionId,
+    resolvedDependencies.findNodeExecutable,
+    resolvedDependencies.spawnSync
+  );
+  if (viaNodeProcess) {
+    return viaNodeProcess;
+  }
+  return loadSessionRowsWithSqliteCli(
+    databasePath,
+    sessionId,
+    resolvedDependencies.spawnSync
+  );
+}
+function resolveDependencies(dependencies) {
+  return {
+    findNodeExecutable,
+    requireSqliteModule,
+    spawnSync: import_node_child_process2.spawnSync,
+    ...dependencies
+  };
+}
+function requireSqliteModule() {
+  try {
+    if (typeof module === "undefined" || typeof module.require !== "function") {
+      return null;
+    }
+    const sqlite = module.require("node:sqlite");
+    return isSqliteModule(sqlite) ? sqlite : null;
+  } catch (e2) {
+    return null;
+  }
+}
+function isSqliteModule(value) {
+  return isPlainObject7(value) && typeof value.DatabaseSync === "function";
+}
+function loadSessionRowsWithCurrentProcessSqlite(databasePath, sessionId, requireSqlite) {
+  const sqlite = requireSqlite();
+  if (!sqlite) {
+    return null;
+  }
+  let db2 = null;
+  try {
+    db2 = new sqlite.DatabaseSync(databasePath, { readonly: true });
+    const messageRows = db2.prepare(OPENCODE_MESSAGE_ROW_SQL).all(sessionId);
+    const partRows = db2.prepare(OPENCODE_PART_ROW_SQL).all(sessionId);
+    return { messageRows, partRows };
+  } catch (e2) {
+    return null;
+  } finally {
+    db2 == null ? void 0 : db2.close();
+  }
+}
+function loadSessionRowsWithNodeProcess(databasePath, sessionId, findNode, spawnSync) {
+  const nodePath2 = findNode();
+  if (!nodePath2) {
+    return null;
+  }
+  const result = spawnSync(
+    nodePath2,
+    [
+      "-e",
+      OPENCODE_SQLITE_CHILD_SCRIPT,
+      databasePath,
+      sessionId,
+      OPENCODE_MESSAGE_ROW_SQL,
+      OPENCODE_PART_ROW_SQL
+    ],
+    {
+      encoding: "utf8",
+      maxBuffer: OPENCODE_SQLITE_QUERY_MAX_BUFFER,
+      windowsHide: true
+    }
+  );
+  if (result.error || result.status !== 0) {
+    return null;
+  }
+  return parseStoredSessionRows(getSpawnStdout(result.stdout));
+}
+function loadSessionRowsWithSqliteCli(databasePath, sessionId, spawnSync) {
+  const escapedSessionId = escapeSqlLiteral(sessionId);
+  const messageRows = runSqlite3JsonQuery(
+    databasePath,
+    buildOpencodeMessageRowsSql(`'${escapedSessionId}'`),
+    spawnSync
+  );
+  const partRows = runSqlite3JsonQuery(
+    databasePath,
+    buildOpencodePartRowsSql(`'${escapedSessionId}'`),
+    spawnSync
+  );
+  if (!messageRows || !partRows) {
+    return null;
+  }
+  return { messageRows, partRows };
+}
+function runSqlite3JsonQuery(databasePath, sql, spawnSync) {
+  const result = spawnSync(
+    "sqlite3",
+    ["-json", databasePath, sql],
+    {
+      encoding: "utf8",
+      maxBuffer: OPENCODE_SQLITE_QUERY_MAX_BUFFER,
+      windowsHide: true
+    }
+  );
+  if (result.error || result.status !== 0) {
+    return null;
+  }
+  return parseStoredRows(getSpawnStdout(result.stdout));
+}
+function parseStoredSessionRows(value) {
+  try {
+    const parsed = JSON.parse(value || "{}");
+    if (!isPlainObject7(parsed)) {
+      return null;
+    }
+    const messageRows = parseStoredRowsValue(parsed.messageRows);
+    const partRows = parseStoredRowsValue(parsed.partRows);
+    return messageRows && partRows ? { messageRows, partRows } : null;
+  } catch (e2) {
+    return null;
+  }
+}
+function parseStoredRows(value) {
+  try {
+    return parseStoredRowsValue(JSON.parse(value || "[]"));
+  } catch (e2) {
+    return null;
+  }
+}
+function parseStoredRowsValue(value) {
+  return Array.isArray(value) ? value.filter((row) => isPlainObject7(row)) : null;
+}
+function getSpawnStdout(stdout) {
+  var _a5;
+  return typeof stdout === "string" ? stdout : (_a5 = stdout == null ? void 0 : stdout.toString("utf8")) != null ? _a5 : "";
+}
+function escapeSqlLiteral(value) {
+  return value.replaceAll("'", "''");
+}
+function isPlainObject7(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+function buildOpencodeMessageRowsSql(sessionIdExpression) {
+  return `
+with message_json as (
+  select
+    id,
+    time_created,
+    data,
+    json_valid(data) as data_valid
+  from message
+  where session_id = ${sessionIdExpression}
+)
+select
+  id,
+  time_created,
+  data_valid,
+  case when data_valid then json_extract(data, '$.role') end as role,
+  case when data_valid then json_extract(data, '$.time.created') end as data_time_created,
+  case when data_valid then json_extract(data, '$.time.completed') end as data_time_completed
+from message_json
+order by time_created asc, id asc;`.trim();
+}
+function buildOpencodePartRowsSql(sessionIdExpression) {
+  return `
+select id, message_id, data
+from part
+where session_id = ${sessionIdExpression}
+order by message_id asc, id asc;`.trim();
+}
+
+// src/providers/opencode/history/OpencodeHistoryStore.ts
 var OPENCODE_HYDRATION_DIAGNOSTIC_ID_PREFIX = "opencode-hydration-error";
 async function loadOpencodeSessionMessages(sessionId, providerState) {
   const databasePath = resolveExistingOpencodeDatabasePath(providerState == null ? void 0 : providerState.databasePath);
@@ -82195,19 +82403,19 @@ function parseJsonObject2(value) {
   }
   try {
     const parsed = JSON.parse(value);
-    return isPlainObject7(parsed) ? parsed : null;
+    return isPlainObject8(parsed) ? parsed : null;
   } catch (e2) {
     return null;
   }
 }
-function isPlainObject7(value) {
+function isPlainObject8(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 function getBoolean(value) {
   return value === true;
 }
 function getObject(value) {
-  return isPlainObject7(value) ? value : null;
+  return isPlainObject8(value) ? value : null;
 }
 function getString(value) {
   return typeof value === "string" ? value : null;
@@ -82218,107 +82426,12 @@ function getNumber(value) {
 function getNestedNumber(value, keys) {
   let current = value;
   for (const key of keys) {
-    if (!isPlainObject7(current)) {
+    if (!isPlainObject8(current)) {
       return null;
     }
     current = current[key];
   }
   return getNumber(current);
-}
-async function loadSqliteModule() {
-  try {
-    return await import("node:sqlite");
-  } catch (e2) {
-    return null;
-  }
-}
-async function loadOpencodeSessionRows(databasePath, sessionId) {
-  const viaNodeSqlite = await loadSessionRowsWithNodeSqlite(databasePath, sessionId);
-  if (viaNodeSqlite) {
-    return viaNodeSqlite;
-  }
-  return loadSessionRowsWithSqliteCli(databasePath, sessionId);
-}
-async function loadSessionRowsWithNodeSqlite(databasePath, sessionId) {
-  const sqlite = await loadSqliteModule();
-  if (!sqlite) {
-    return null;
-  }
-  let db2 = null;
-  try {
-    db2 = new sqlite.DatabaseSync(databasePath, { readonly: true });
-    const messageRows = db2.prepare(OPENCODE_MESSAGE_ROW_SQL).all(sessionId);
-    const partRows = db2.prepare(OPENCODE_PART_ROW_SQL).all(sessionId);
-    return { messageRows, partRows };
-  } catch (e2) {
-    return null;
-  } finally {
-    db2 == null ? void 0 : db2.close();
-  }
-}
-function loadSessionRowsWithSqliteCli(databasePath, sessionId) {
-  const escapedSessionId = escapeSqlLiteral(sessionId);
-  const messageRows = runSqlite3JsonQuery(
-    databasePath,
-    buildOpencodeMessageRowsSql(`'${escapedSessionId}'`)
-  );
-  const partRows = runSqlite3JsonQuery(
-    databasePath,
-    buildOpencodePartRowsSql(`'${escapedSessionId}'`)
-  );
-  if (!messageRows || !partRows) {
-    return null;
-  }
-  return { messageRows, partRows };
-}
-function runSqlite3JsonQuery(databasePath, sql) {
-  const result = (0, import_node_child_process2.spawnSync)(
-    "sqlite3",
-    ["-json", databasePath, sql],
-    {
-      encoding: "utf8"
-    }
-  );
-  if (result.error || result.status !== 0) {
-    return null;
-  }
-  try {
-    const parsed = JSON.parse(result.stdout || "[]");
-    return Array.isArray(parsed) ? parsed.filter((row) => isPlainObject7(row)) : null;
-  } catch (e2) {
-    return null;
-  }
-}
-function escapeSqlLiteral(value) {
-  return value.replaceAll("'", "''");
-}
-function buildOpencodeMessageRowsSql(sessionIdExpression) {
-  return `
-with message_json as (
-  select
-    id,
-    time_created,
-    data,
-    json_valid(data) as data_valid
-  from message
-  where session_id = ${sessionIdExpression}
-)
-select
-  id,
-  time_created,
-  data_valid,
-  case when data_valid then json_extract(data, '$.role') end as role,
-  case when data_valid then json_extract(data, '$.time.created') end as data_time_created,
-  case when data_valid then json_extract(data, '$.time.completed') end as data_time_completed
-from message_json
-order by time_created asc, id asc;`.trim();
-}
-function buildOpencodePartRowsSql(sessionIdExpression) {
-  return `
-select id, message_id, data
-from part
-where session_id = ${sessionIdExpression}
-order by message_id asc, id asc;`.trim();
 }
 
 // src/providers/opencode/history/OpencodeConversationHistoryService.ts
@@ -82744,7 +82857,7 @@ var PiRpcTransport = class {
     let record2;
     try {
       const parsed = JSON.parse(line);
-      if (!isPlainObject8(parsed)) {
+      if (!isPlainObject9(parsed)) {
         return;
       }
       record2 = parsed;
@@ -82789,7 +82902,7 @@ var PiRpcTransport = class {
     this.pending.clear();
   }
 };
-function isPlainObject8(value) {
+function isPlainObject9(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
@@ -83541,7 +83654,7 @@ function extractPiToolTextContent(value) {
   if (Array.isArray(value)) {
     return value.map(extractPiToolTextContent).filter(Boolean).join("\n");
   }
-  if (!isPlainObject9(value)) {
+  if (!isPlainObject10(value)) {
     return "";
   }
   if (typeof value.text === "string") {
@@ -83553,16 +83666,16 @@ function extractPiToolTextContent(value) {
   if (Array.isArray(value.content)) {
     return extractPiToolTextContent(value.content);
   }
-  if (isPlainObject9(value.partialResult)) {
+  if (isPlainObject10(value.partialResult)) {
     return extractPiToolTextContent(value.partialResult.content);
   }
-  if (isPlainObject9(value.result)) {
+  if (isPlainObject10(value.result)) {
     return extractPiToolTextContent((_a5 = value.result.content) != null ? _a5 : value.result);
   }
   return "";
 }
 function normalizePiToolInput(value, toolName) {
-  const input = isPlainObject9(value) ? { ...value } : {};
+  const input = isPlainObject10(value) ? { ...value } : {};
   const normalizedToolName = toolName ? normalizePiToolName(toolName) : "";
   if ((normalizedToolName === TOOL_READ || normalizedToolName === TOOL_WRITE || normalizedToolName === TOOL_EDIT) && typeof input.path === "string" && typeof input.file_path !== "string") {
     input.file_path = input.path;
@@ -83592,7 +83705,7 @@ function firstString4(...values) {
   }
   return void 0;
 }
-function isPlainObject9(value) {
+function isPlainObject10(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
@@ -83620,7 +83733,7 @@ function parsePiSessionEntries(content) {
     let record2;
     try {
       const parsed = JSON.parse(line);
-      if (!isPlainObject10(parsed)) {
+      if (!isPlainObject11(parsed)) {
         continue;
       }
       record2 = parsed;
@@ -83905,7 +84018,7 @@ function extractAssistantContentBlocks(value) {
   const blocks = [];
   const parts = Array.isArray(value) ? value : [{ type: "text", text: extractTextContent2(value) }];
   for (const part of parts) {
-    if (!isPlainObject10(part)) {
+    if (!isPlainObject11(part)) {
       continue;
     }
     const type = getString2(part.type);
@@ -83934,7 +84047,7 @@ function extractAssistantToolCalls(value) {
   const parts = Array.isArray(value) ? value : [];
   return parts.flatMap((part) => {
     var _a5, _b3, _c2, _d, _e2, _f2;
-    if (!isPlainObject10(part)) {
+    if (!isPlainObject11(part)) {
       return [];
     }
     const type = getString2(part.type);
@@ -84017,7 +84130,7 @@ function extractTextContent2(value) {
   if (Array.isArray(value)) {
     return value.map(extractTextContent2).filter(Boolean).join("");
   }
-  if (!isPlainObject10(value)) {
+  if (!isPlainObject11(value)) {
     return "";
   }
   if (typeof value.text === "string") {
@@ -84067,12 +84180,12 @@ function getTimestamp(value) {
   return Date.now();
 }
 function getRecord(value) {
-  return isPlainObject10(value) ? value : null;
+  return isPlainObject11(value) ? value : null;
 }
 function getString2(value) {
   return typeof value === "string" && value.trim() ? value.trim() : null;
 }
-function isPlainObject10(value) {
+function isPlainObject11(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
@@ -85625,17 +85738,7 @@ var piChatUIConfig = {
       value: level
     }));
   },
-  getDefaultReasoningValue(model, settings11) {
-    const piModel = getCachedModel(model, settings11);
-    if (!piModel) {
-      return decodePiModelId(model) ? PI_DEFAULT_THINKING_LEVEL : "off";
-    }
-    const piSettings = getPiProviderSettings(settings11);
-    return clampPiThinkingLevel(
-      piSettings.preferredThinkingByModel[piModel.encodedId],
-      piModel.thinkingLevels
-    );
-  },
+  getDefaultReasoningValue: getPiDefaultReasoningValue,
   getContextWindowSize(model, customLimits, settings11) {
     var _a5, _b3;
     const metadataContextWindow = settings11 ? (_a5 = getCachedModel(model, settings11)) == null ? void 0 : _a5.contextWindow : void 0;
@@ -85654,7 +85757,7 @@ var piChatUIConfig = {
       return;
     }
     settingsBag.model = model;
-    settingsBag.effortLevel = this.getDefaultReasoningValue(model, settingsBag);
+    settingsBag.effortLevel = getPiDefaultReasoningValue(model, settingsBag);
   },
   applyReasoningSelection(model, value, settings11) {
     var _a5, _b3;
@@ -85716,6 +85819,17 @@ function getCachedModel(model, settings11) {
     return null;
   }
   return (_a5 = getPiProviderSettings(settings11).discoveredModels.find((entry) => entry.encodedId === model)) != null ? _a5 : null;
+}
+function getPiDefaultReasoningValue(model, settings11) {
+  const piModel = getCachedModel(model, settings11);
+  if (!piModel) {
+    return decodePiModelId(model) ? PI_DEFAULT_THINKING_LEVEL : "off";
+  }
+  const piSettings = getPiProviderSettings(settings11);
+  return clampPiThinkingLevel(
+    piSettings.preferredThinkingByModel[piModel.encodedId],
+    piModel.thinkingLevels
+  );
 }
 function buildModelOption(model, alias) {
   return {
@@ -86036,7 +86150,7 @@ var PiExtensionModal = class extends import_obsidian21.Modal {
       this.close();
     };
     this.signal.addEventListener("abort", abortHandler, { once: true });
-    this.resultPromise.finally(() => {
+    void this.resultPromise.finally(() => {
       this.signal.removeEventListener("abort", abortHandler);
     });
     this.open();
