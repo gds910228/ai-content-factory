@@ -48453,6 +48453,7 @@ var DEFAULT_CLAUDIAN_SETTINGS = {
   tabBarPosition: "input",
   enableAutoScroll: true,
   deferMathRenderingDuringStreaming: true,
+  expandFileEditsByDefault: false,
   chatViewPlacement: "right-sidebar",
   hiddenProviderCommands: getDefaultHiddenProviderCommands()
 };
@@ -50222,6 +50223,10 @@ var settings = {
     name: "Mathe-Rendering w\xE4hrend Streaming aufschieben",
     desc: "LaTeX w\xE4hrend des Streamings roh anzeigen und Mathematik einmal rendern, wenn der Textblock abgeschlossen ist."
   },
+  expandFileEditsByDefault: {
+    name: "Dateibearbeitungen standardm\xE4\xDFig ausklappen",
+    desc: "Write- und Edit-Diffs beim ersten Erscheinen ausgeklappt anzeigen."
+  },
   chatViewPlacement: {
     name: "Claudian \xF6ffnen in",
     desc: "W\xE4hlen Sie, wo das Chat-Panel beim Erstellen ge\xF6ffnet wird",
@@ -50557,6 +50562,10 @@ var settings2 = {
   deferMathRenderingDuringStreaming: {
     name: "Defer math rendering during streaming",
     desc: "Show raw LaTeX while responses stream, then render math once when each text block completes."
+  },
+  expandFileEditsByDefault: {
+    name: "Expand file edits by default",
+    desc: "Show Write and Edit diffs expanded when they first appear."
   },
   chatViewPlacement: {
     name: "Open Claudian in",
@@ -50894,6 +50903,10 @@ var settings3 = {
     name: "Diferir renderizado matem\xE1tico durante streaming",
     desc: "Mostrar LaTeX sin procesar mientras se transmite la respuesta y renderizar las f\xF3rmulas una vez al completar cada bloque de texto."
   },
+  expandFileEditsByDefault: {
+    name: "Expandir ediciones de archivo por defecto",
+    desc: "Mostrar los diffs de Write y Edit expandidos cuando aparecen por primera vez."
+  },
   chatViewPlacement: {
     name: "Abrir Claudian en",
     desc: "Elige d\xF3nde se abre el panel de chat cuando se crea",
@@ -51229,6 +51242,10 @@ var settings4 = {
   deferMathRenderingDuringStreaming: {
     name: "Diff\xE9rer le rendu math\xE9matique pendant le streaming",
     desc: "Afficher le LaTeX brut pendant la diffusion, puis rendre les formules une fois chaque bloc de texte termin\xE9."
+  },
+  expandFileEditsByDefault: {
+    name: "D\xE9velopper les modifications de fichiers par d\xE9faut",
+    desc: "Afficher les diffs Write et Edit d\xE9velopp\xE9s lors de leur premi\xE8re apparition."
   },
   chatViewPlacement: {
     name: "Ouvrir Claudian dans",
@@ -51566,6 +51583,10 @@ var settings5 = {
     name: "\u30B9\u30C8\u30EA\u30FC\u30DF\u30F3\u30B0\u4E2D\u306E\u6570\u5F0F\u30EC\u30F3\u30C0\u30EA\u30F3\u30B0\u3092\u9045\u5EF6",
     desc: "\u5FDC\u7B54\u306E\u30B9\u30C8\u30EA\u30FC\u30DF\u30F3\u30B0\u4E2D\u306F\u751F\u306E LaTeX \u3092\u8868\u793A\u3057\u3001\u5404\u30C6\u30AD\u30B9\u30C8\u30D6\u30ED\u30C3\u30AF\u306E\u5B8C\u4E86\u6642\u306B\u4E00\u5EA6\u3060\u3051\u6570\u5F0F\u3092\u30EC\u30F3\u30C0\u30EA\u30F3\u30B0\u3057\u307E\u3059\u3002"
   },
+  expandFileEditsByDefault: {
+    name: "\u30D5\u30A1\u30A4\u30EB\u7DE8\u96C6\u3092\u30C7\u30D5\u30A9\u30EB\u30C8\u3067\u5C55\u958B",
+    desc: "Write \u3068 Edit \u306E diff \u304C\u6700\u521D\u306B\u8868\u793A\u3055\u308C\u308B\u3068\u304D\u3001\u5C55\u958B\u3057\u305F\u72B6\u614B\u3067\u8868\u793A\u3057\u307E\u3059\u3002"
+  },
   chatViewPlacement: {
     name: "Claudian \u3092\u958B\u304F\u5834\u6240",
     desc: "\u30C1\u30E3\u30C3\u30C8\u30D1\u30CD\u30EB\u3092\u4F5C\u6210\u3059\u308B\u3068\u304D\u306B\u958B\u304F\u5834\u6240\u3092\u9078\u629E\u3057\u307E\u3059",
@@ -51901,6 +51922,10 @@ var settings6 = {
   deferMathRenderingDuringStreaming: {
     name: "\uC2A4\uD2B8\uB9AC\uBC0D \uC911 \uC218\uC2DD \uB80C\uB354\uB9C1 \uC9C0\uC5F0",
     desc: "\uC751\uB2F5\uC774 \uC2A4\uD2B8\uB9AC\uBC0D\uB418\uB294 \uB3D9\uC548 \uC6D0\uBCF8 LaTeX\uB97C \uD45C\uC2DC\uD558\uACE0 \uAC01 \uD14D\uC2A4\uD2B8 \uBE14\uB85D\uC774 \uC644\uB8CC\uB418\uBA74 \uC218\uC2DD\uC744 \uD55C \uBC88 \uB80C\uB354\uB9C1\uD569\uB2C8\uB2E4."
+  },
+  expandFileEditsByDefault: {
+    name: "\uD30C\uC77C \uD3B8\uC9D1\uC744 \uAE30\uBCF8\uC801\uC73C\uB85C \uD3BC\uCE58\uAE30",
+    desc: "Write \uBC0F Edit diff\uAC00 \uCC98\uC74C \uD45C\uC2DC\uB420 \uB54C \uD3BC\uCE5C \uC0C1\uD0DC\uB85C \uBCF4\uC5EC\uC90D\uB2C8\uB2E4."
   },
   chatViewPlacement: {
     name: "Claudian \uC5F4 \uC704\uCE58",
@@ -52238,6 +52263,10 @@ var settings7 = {
     name: "Adiar renderiza\xE7\xE3o matem\xE1tica durante streaming",
     desc: "Mostrar LaTeX bruto enquanto a resposta \xE9 transmitida e renderizar a matem\xE1tica uma vez quando cada bloco de texto terminar."
   },
+  expandFileEditsByDefault: {
+    name: "Expandir edi\xE7\xF5es de arquivo por padr\xE3o",
+    desc: "Mostrar os diffs de Write e Edit expandidos quando aparecerem pela primeira vez."
+  },
   chatViewPlacement: {
     name: "Abrir Claudian em",
     desc: "Escolha onde o painel de chat abre quando \xE9 criado",
@@ -52573,6 +52602,10 @@ var settings8 = {
   deferMathRenderingDuringStreaming: {
     name: "\u041E\u0442\u043B\u043E\u0436\u0438\u0442\u044C \u0440\u0435\u043D\u0434\u0435\u0440\u0438\u043D\u0433 \u0444\u043E\u0440\u043C\u0443\u043B \u0432\u043E \u0432\u0440\u0435\u043C\u044F \u043F\u043E\u0442\u043E\u043A\u0430",
     desc: "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u0438\u0441\u0445\u043E\u0434\u043D\u044B\u0439 LaTeX \u0432\u043E \u0432\u0440\u0435\u043C\u044F \u043F\u043E\u0442\u043E\u043A\u043E\u0432\u043E\u0439 \u043F\u0435\u0440\u0435\u0434\u0430\u0447\u0438 \u0438 \u0440\u0435\u043D\u0434\u0435\u0440\u0438\u0442\u044C \u0444\u043E\u0440\u043C\u0443\u043B\u044B \u043E\u0434\u0438\u043D \u0440\u0430\u0437 \u043F\u043E\u0441\u043B\u0435 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0438\u044F \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u0442\u0435\u043A\u0441\u0442\u043E\u0432\u043E\u0433\u043E \u0431\u043B\u043E\u043A\u0430."
+  },
+  expandFileEditsByDefault: {
+    name: "\u0420\u0430\u0441\u043A\u0440\u044B\u0432\u0430\u0442\u044C \u043F\u0440\u0430\u0432\u043A\u0438 \u0444\u0430\u0439\u043B\u043E\u0432 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E",
+    desc: "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C diff \u0434\u043B\u044F Write \u0438 Edit \u0440\u0430\u0441\u043A\u0440\u044B\u0442\u044B\u043C \u043F\u0440\u0438 \u043F\u0435\u0440\u0432\u043E\u043C \u043F\u043E\u044F\u0432\u043B\u0435\u043D\u0438\u0438."
   },
   chatViewPlacement: {
     name: "\u041E\u0442\u043A\u0440\u044B\u0432\u0430\u0442\u044C Claudian \u0432",
@@ -52910,6 +52943,10 @@ var settings9 = {
     name: "\u6D41\u5F0F\u4F20\u8F93\u65F6\u5EF6\u8FDF\u6E32\u67D3\u6570\u5B66\u516C\u5F0F",
     desc: "\u54CD\u5E94\u6D41\u5F0F\u4F20\u8F93\u65F6\u663E\u793A\u539F\u59CB LaTeX\uFF0C\u5E76\u5728\u6BCF\u4E2A\u6587\u672C\u5757\u5B8C\u6210\u540E\u53EA\u6E32\u67D3\u4E00\u6B21\u6570\u5B66\u516C\u5F0F\u3002"
   },
+  expandFileEditsByDefault: {
+    name: "\u9ED8\u8BA4\u5C55\u5F00\u6587\u4EF6\u7F16\u8F91",
+    desc: "Write \u548C Edit diff \u9996\u6B21\u51FA\u73B0\u65F6\u4EE5\u5C55\u5F00\u72B6\u6001\u663E\u793A\u3002"
+  },
   chatViewPlacement: {
     name: "Claudian \u6253\u5F00\u4F4D\u7F6E",
     desc: "\u9009\u62E9\u65B0\u5EFA\u804A\u5929\u9762\u677F\u65F6\u7684\u6253\u5F00\u4F4D\u7F6E",
@@ -53245,6 +53282,10 @@ var settings10 = {
   deferMathRenderingDuringStreaming: {
     name: "\u4E32\u6D41\u50B3\u8F38\u6642\u5EF6\u9072\u6E32\u67D3\u6578\u5B78\u516C\u5F0F",
     desc: "\u56DE\u61C9\u4E32\u6D41\u50B3\u8F38\u6642\u986F\u793A\u539F\u59CB LaTeX\uFF0C\u4E26\u5728\u6BCF\u500B\u6587\u5B57\u5340\u584A\u5B8C\u6210\u5F8C\u53EA\u6E32\u67D3\u4E00\u6B21\u6578\u5B78\u516C\u5F0F\u3002"
+  },
+  expandFileEditsByDefault: {
+    name: "\u9810\u8A2D\u5C55\u958B\u6A94\u6848\u7DE8\u8F2F",
+    desc: "Write \u548C Edit diff \u9996\u6B21\u51FA\u73FE\u6642\u4EE5\u5C55\u958B\u72C0\u614B\u986F\u793A\u3002"
   },
   chatViewPlacement: {
     name: "Claudian \u958B\u555F\u4F4D\u7F6E",
@@ -63113,6 +63154,7 @@ function getClaudeWorkspaceServices() {
 var CURRENT_NOTE_PREFIX_REGEX = /^<current_note>\n[\s\S]*?<\/current_note>\n\n/;
 var CURRENT_NOTE_SUFFIX_REGEX = /\n\n<current_note>\n[\s\S]*?<\/current_note>$/;
 var XML_CONTEXT_PATTERN = /\n\n<(?:current_note|editor_selection|editor_cursor|context_files|canvas_selection|browser_selection)[\s>]/;
+var BRACKET_CONTEXT_PATTERN = /\n\[(?:Current note|Editor selection from|Browser selection from|Canvas selection from)\b/;
 function formatCurrentNote(notePath) {
   return `<current_note>
 ${notePath}
@@ -63139,6 +63181,18 @@ function extractContentBeforeXmlContext(text) {
   const xmlMatch = text.match(XML_CONTEXT_PATTERN);
   if ((xmlMatch == null ? void 0 : xmlMatch.index) !== void 0) {
     return text.substring(0, xmlMatch.index).trim();
+  }
+  return void 0;
+}
+function extractUserDisplayContent(text) {
+  if (!text) return void 0;
+  const xmlDisplayContent = extractContentBeforeXmlContext(text);
+  if (xmlDisplayContent !== void 0) {
+    return xmlDisplayContent;
+  }
+  const bracketMatch = text.match(BRACKET_CONTEXT_PATTERN);
+  if ((bracketMatch == null ? void 0 : bracketMatch.index) !== void 0) {
+    return text.substring(0, bracketMatch.index).trim();
   }
   return void 0;
 }
@@ -64758,9 +64812,6 @@ function isRebuiltContextContent(textContent) {
   }
   return textContent.includes("\n\nUser:") || textContent.includes("\n\nAssistant:") || textContent.includes("\n\nA:");
 }
-function extractDisplayContent(textContent) {
-  return extractContentBeforeXmlContext(textContent);
-}
 function extractImages(content) {
   if (!content || typeof content === "string") {
     return void 0;
@@ -64885,7 +64936,7 @@ function parseSDKMessageToChat(sdkMsg, toolResults) {
   const commandNameMatch = sdkMsg.type === "user" ? textContent.match(/<command-name>(\/[^<]+)<\/command-name>/) : null;
   let displayContent;
   if (sdkMsg.type === "user") {
-    displayContent = commandNameMatch ? commandNameMatch[1] : extractDisplayContent(textContent);
+    displayContent = commandNameMatch ? commandNameMatch[1] : extractUserDisplayContent(textContent);
   }
   const isInterrupt = sdkMsg.type === "user" && isInterruptSignalText(textContent);
   const isRebuiltContext = sdkMsg.type === "user" && isRebuiltContextContent(textContent);
@@ -73352,18 +73403,9 @@ var CODEX_SYSTEM_MESSAGE_PREFIXES = [
   "<subagent_notification>",
   "<skill>"
 ];
-var CODEX_BRACKET_CONTEXT_PATTERN = /\n\[(?:Current note|Editor selection from|Browser selection from|Canvas selection from)\b/;
 function isCodexSystemMessage(text) {
   const trimmed = text.trimStart();
   return CODEX_SYSTEM_MESSAGE_PREFIXES.some((prefix) => trimmed.startsWith(prefix));
-}
-function extractCodexDisplayContent(text) {
-  if (!text) return void 0;
-  const bracketMatch = text.match(CODEX_BRACKET_CONTEXT_PATTERN);
-  if ((bracketMatch == null ? void 0 : bracketMatch.index) !== void 0) {
-    return text.substring(0, bracketMatch.index).trim();
-  }
-  return void 0;
 }
 function extractMessageText(content) {
   if (!Array.isArray(content)) {
@@ -73847,7 +73889,7 @@ function flushBubbleTurnMessages(turn, msgIndex) {
   const messages = [];
   const userText = turn.userChunks.join("\n").trim();
   if (userText && !isCodexSystemMessage(userText)) {
-    const displayContent = extractCodexDisplayContent(userText);
+    const displayContent = extractUserDisplayContent(userText);
     messages.push({
       id: `codex-msg-${msgIndex}`,
       role: "user",
@@ -82952,6 +82994,7 @@ function extractModels(response) {
 }
 
 // src/providers/pi/ui/PiSettingsTab.ts
+var ALL_PROVIDERS_KEY2 = "all";
 var piSettingsTabRenderer = {
   render(container, context) {
     const settingsBag = context.plugin.settings;
@@ -83011,66 +83054,350 @@ var piSettingsTabRenderer = {
       updateCliPathValidation(currentValue, text.inputEl);
     });
     new import_obsidian20.Setting(container).setName("Models").setHeading();
-    const modelContainer = container.createDiv({ cls: "claudian-pi-models" });
-    const renderModels = () => {
-      modelContainer.empty();
+    new import_obsidian20.Setting(container).setName("Visible models").setDesc("Choose which Pi models appear in the chat selector. Filter by provider or type to search. The current session model stays pinned even if it is not selected here.");
+    const pickerEl = container.createDiv({ cls: "claudian-provider-model-picker claudian-provider-model-picker--pi" });
+    let searchQuery = "";
+    let providerFilter = ALL_PROVIDERS_KEY2;
+    let loadingModelCatalog = false;
+    let modelCatalogLoadFailed = false;
+    const summaryEl = pickerEl.createDiv({ cls: "claudian-provider-model-picker-summary" });
+    const selectedEl = pickerEl.createDiv({ cls: "claudian-provider-model-picker-selected" });
+    const catalogEl = pickerEl.createEl("details", { cls: "claudian-provider-model-picker-catalog" });
+    catalogEl.open = getPiProviderSettings(settingsBag).visibleModels.length === 0;
+    const catalogSummaryEl = catalogEl.createEl("summary", {
+      cls: "claudian-provider-model-picker-catalog-summary"
+    });
+    catalogSummaryEl.createSpan({
+      cls: "claudian-provider-model-picker-catalog-caret",
+      text: "\u25B8"
+    });
+    catalogSummaryEl.createSpan({
+      cls: "claudian-provider-model-picker-catalog-title",
+      text: "Browse models"
+    });
+    const catalogSummaryCountEl = catalogSummaryEl.createSpan({
+      cls: "claudian-provider-model-picker-catalog-count"
+    });
+    const controlsEl = catalogEl.createDiv({ cls: "claudian-provider-model-picker-controls" });
+    const searchInput = controlsEl.createEl("input", {
+      cls: "claudian-provider-model-picker-search",
+      type: "search"
+    });
+    searchInput.placeholder = "Filter by model, provider, or ID...";
+    searchInput.addEventListener("input", () => {
+      searchQuery = searchInput.value.trim().toLowerCase();
+      renderList();
+    });
+    const providerSelectEl = controlsEl.createEl("select", {
+      cls: "claudian-provider-model-picker-provider"
+    });
+    providerSelectEl.addEventListener("change", () => {
+      providerFilter = providerSelectEl.value;
+      renderList();
+    });
+    const discoverButtonEl = controlsEl.createEl("button", {
+      cls: "claudian-provider-model-picker-action",
+      text: "Discover"
+    });
+    discoverButtonEl.setAttribute("type", "button");
+    discoverButtonEl.addEventListener("click", () => {
+      void loadModelCatalog({ force: true });
+    });
+    const listEl = catalogEl.createDiv({ cls: "claudian-provider-model-picker-list" });
+    const getEnrichedModels = () => {
       const current = getPiProviderSettings(settingsBag);
-      new import_obsidian20.Setting(modelContainer).setName("Discover models").setDesc(current.discoveredModels.length > 0 ? `${current.discoveredModels.length} Pi models cached.` : "Fetch models from `pi --mode rpc --no-session`.").addButton((button) => {
-        button.setButtonText("Discover").onClick(async () => {
-          button.setDisabled(true);
-          const result = await new PiModelDiscoveryService(context.plugin).discoverModels();
-          if (result.diagnostics) {
-            new import_obsidian20.Notice(`Pi discovery failed: ${result.diagnostics}`);
-            button.setDisabled(false);
-            return;
-          }
-          updatePiProviderSettings(settingsBag, {
-            discoveredModels: result.models,
-            visibleModels: normalizePiVisibleModels(
-              current.visibleModels,
-              result.models
-            )
-          });
-          await context.plugin.saveSettings();
-          renderModels();
-          context.refreshModelSelectors();
-        });
+      return buildEnrichedPiModels(current.discoveredModels, current.visibleModels);
+    };
+    const filterModels = (models) => {
+      return models.filter((model) => {
+        if (providerFilter !== ALL_PROVIDERS_KEY2 && model.providerKey !== providerFilter) {
+          return false;
+        }
+        if (!searchQuery) {
+          return true;
+        }
+        return model.encodedId.toLowerCase().includes(searchQuery) || model.modelLabel.toLowerCase().includes(searchQuery) || model.providerLabel.toLowerCase().includes(searchQuery) || model.description.toLowerCase().includes(searchQuery);
       });
-      if (current.discoveredModels.length === 0) {
-        modelContainer.createDiv({
-          cls: "setting-item-description",
-          text: "No Pi models discovered yet."
-        });
+    };
+    const persistVisibleModels = async (visibleModels) => {
+      const current = getPiProviderSettings(settingsBag);
+      const normalized = normalizePiVisibleModels(visibleModels, current.discoveredModels);
+      if (sameStringList2(current.visibleModels, normalized)) {
         return;
       }
-      for (const model of current.discoveredModels) {
-        new import_obsidian20.Setting(modelContainer).setName(current.modelAliases[model.encodedId] || model.label).setDesc(model.encodedId).addToggle((toggle) => {
-          toggle.setValue(current.visibleModels.includes(model.encodedId)).onChange(async (value) => {
-            const visibleModels = value ? [...current.visibleModels, model.encodedId] : current.visibleModels.filter((id) => id !== model.encodedId);
-            const normalized = normalizePiVisibleModels(visibleModels, current.discoveredModels);
-            if (!sameStringList2(current.visibleModels, normalized)) {
-              updatePiProviderSettings(settingsBag, { visibleModels: normalized });
-              await context.plugin.saveSettings();
-              renderModels();
-              context.refreshModelSelectors();
-            }
+      updatePiProviderSettings(settingsBag, { visibleModels: normalized });
+      await context.plugin.saveSettings();
+      renderAll();
+      context.refreshModelSelectors();
+    };
+    const persistModelAliases = async (modelAliases) => {
+      updatePiProviderSettings(settingsBag, { modelAliases });
+      await context.plugin.saveSettings();
+      renderSelected();
+      context.refreshModelSelectors();
+    };
+    const renderSummary = () => {
+      summaryEl.empty();
+      const current = getPiProviderSettings(settingsBag);
+      const enriched = getEnrichedModels();
+      const providerCount = new Set(enriched.map((model) => model.providerKey)).size;
+      const providerWord = providerCount === 1 ? "provider" : "providers";
+      summaryEl.createSpan({ text: "Visible: " });
+      summaryEl.createSpan({
+        cls: "claudian-provider-model-picker-summary-value",
+        text: String(current.visibleModels.length)
+      });
+      summaryEl.createSpan({
+        text: ` of ${current.discoveredModels.length} discovered | ${providerCount} ${providerWord}`
+      });
+      let catalogSummary = "No models discovered yet";
+      if (loadingModelCatalog) {
+        catalogSummary = "Loading models...";
+      } else if (current.discoveredModels.length > 0) {
+        catalogSummary = `${current.discoveredModels.length} available`;
+      }
+      catalogSummaryCountEl.setText(catalogSummary);
+      discoverButtonEl.disabled = loadingModelCatalog;
+      discoverButtonEl.setText(loadingModelCatalog ? "Loading..." : current.discoveredModels.length > 0 ? "Refresh" : "Discover");
+    };
+    const renderSelected = () => {
+      var _a5;
+      selectedEl.empty();
+      const current = getPiProviderSettings(settingsBag);
+      if (current.visibleModels.length === 0) {
+        selectedEl.toggleClass("claudian-hidden", true);
+        return;
+      }
+      selectedEl.toggleClass("claudian-hidden", false);
+      const enrichedById = new Map(
+        getEnrichedModels().map((model) => [model.encodedId, model])
+      );
+      const headerEl = selectedEl.createDiv({ cls: "claudian-provider-model-picker-selected-header" });
+      headerEl.createEl("span", {
+        cls: "claudian-provider-model-picker-selected-label",
+        text: `Selected (${current.visibleModels.length})`
+      });
+      const clearAllBtn = headerEl.createEl("button", {
+        cls: "claudian-provider-model-picker-selected-clear",
+        text: "Clear all"
+      });
+      clearAllBtn.setAttribute("aria-label", "Clear all selected Pi models");
+      clearAllBtn.addEventListener("click", () => {
+        void persistVisibleModels([]);
+      });
+      const rowsEl = selectedEl.createDiv({ cls: "claudian-provider-model-picker-selected-rows" });
+      for (const encodedId of current.visibleModels) {
+        const enriched = enrichedById.get(encodedId);
+        const defaultLabel = enriched ? `${enriched.providerLabel}/${enriched.modelLabel}` : encodedId;
+        const rowEl = rowsEl.createDiv({ cls: "claudian-provider-model-picker-selected-row" });
+        if (enriched && !enriched.isAvailable) {
+          rowEl.classList.add("claudian-provider-model-picker-selected-row--unavailable");
+        }
+        const infoEl = rowEl.createDiv({ cls: "claudian-provider-model-picker-selected-info" });
+        const titleEl = infoEl.createDiv({ cls: "claudian-provider-model-picker-selected-title" });
+        if (enriched) {
+          titleEl.createEl("span", {
+            cls: "claudian-provider-model-picker-selected-badge",
+            text: enriched.providerLabel
           });
-        }).addText((text) => {
-          var _a5;
-          text.setPlaceholder("Alias").setValue((_a5 = current.modelAliases[model.encodedId]) != null ? _a5 : "").onChange(async (value) => {
-            updatePiProviderSettings(settingsBag, {
-              modelAliases: {
-                ...getPiProviderSettings(settingsBag).modelAliases,
-                [model.encodedId]: value
-              }
-            });
-            await context.plugin.saveSettings();
-            context.refreshModelSelectors();
+          titleEl.createEl("span", {
+            cls: "claudian-provider-model-picker-selected-name",
+            text: enriched.modelLabel
           });
+        } else {
+          titleEl.createEl("span", {
+            cls: "claudian-provider-model-picker-selected-name",
+            text: encodedId
+          });
+        }
+        if (enriched && !enriched.isAvailable) {
+          infoEl.createEl("div", {
+            cls: "claudian-provider-model-picker-selected-unavailable",
+            text: "Not currently reported by Pi"
+          });
+        }
+        infoEl.createEl("div", {
+          cls: "claudian-provider-model-picker-selected-id",
+          text: encodedId
+        });
+        const rowControlsEl = rowEl.createDiv({ cls: "claudian-provider-model-picker-selected-controls" });
+        const aliasInput = rowControlsEl.createEl("input", {
+          cls: "claudian-provider-model-picker-selected-alias",
+          type: "text"
+        });
+        aliasInput.placeholder = defaultLabel;
+        aliasInput.value = (_a5 = current.modelAliases[encodedId]) != null ? _a5 : "";
+        aliasInput.setAttribute("aria-label", `Alias for ${defaultLabel}`);
+        aliasInput.title = "Custom label shown in the model selector. Leave empty to use the default.";
+        const commitAlias = () => {
+          var _a6;
+          const latest = getPiProviderSettings(settingsBag);
+          const existing = (_a6 = latest.modelAliases[encodedId]) != null ? _a6 : "";
+          const next = aliasInput.value.trim();
+          if (next === existing) {
+            aliasInput.value = existing;
+            return;
+          }
+          const nextAliases = { ...latest.modelAliases };
+          if (next) {
+            nextAliases[encodedId] = next;
+          } else {
+            delete nextAliases[encodedId];
+          }
+          void persistModelAliases(nextAliases);
+        };
+        aliasInput.addEventListener("blur", commitAlias);
+        aliasInput.addEventListener("keydown", (event) => {
+          var _a6;
+          if (event.key === "Enter") {
+            event.preventDefault();
+            aliasInput.blur();
+          } else if (event.key === "Escape") {
+            event.preventDefault();
+            aliasInput.value = (_a6 = getPiProviderSettings(settingsBag).modelAliases[encodedId]) != null ? _a6 : "";
+            aliasInput.blur();
+          }
+        });
+        const removeBtn = rowControlsEl.createEl("button", {
+          cls: "claudian-provider-model-picker-selected-remove",
+          text: "\xD7"
+        });
+        removeBtn.setAttribute("aria-label", `Remove ${defaultLabel}`);
+        removeBtn.addEventListener("click", () => {
+          void persistVisibleModels(getPiProviderSettings(settingsBag).visibleModels.filter((entry) => entry !== encodedId));
         });
       }
     };
-    renderModels();
+    const renderProviderSelect = () => {
+      const enriched = getEnrichedModels();
+      const providers = /* @__PURE__ */ new Map();
+      for (const model of enriched) {
+        const existing = providers.get(model.providerKey);
+        if (existing) {
+          existing.count += 1;
+        } else {
+          providers.set(model.providerKey, { count: 1, label: model.providerLabel });
+        }
+      }
+      providerSelectEl.empty();
+      providerSelectEl.createEl("option", {
+        text: `All providers (${enriched.length})`,
+        value: ALL_PROVIDERS_KEY2
+      });
+      const sortedProviders = Array.from(providers.entries()).sort(([, left], [, right]) => left.label.localeCompare(right.label));
+      for (const [key, { count, label }] of sortedProviders) {
+        providerSelectEl.createEl("option", {
+          text: `${label} (${count})`,
+          value: key
+        });
+      }
+      if (providerFilter !== ALL_PROVIDERS_KEY2 && !providers.has(providerFilter)) {
+        providerFilter = ALL_PROVIDERS_KEY2;
+      }
+      providerSelectEl.value = providerFilter;
+    };
+    const renderList = () => {
+      listEl.empty();
+      const current = getPiProviderSettings(settingsBag);
+      const selectedIds = new Set(current.visibleModels);
+      const enriched = getEnrichedModels();
+      const filtered = filterModels(enriched);
+      if (filtered.length === 0) {
+        const emptyEl = listEl.createDiv({ cls: "claudian-provider-model-picker-empty" });
+        let emptyText = "No models match your filter.";
+        if (loadingModelCatalog) {
+          emptyText = "Loading Pi model catalog...";
+        } else if (modelCatalogLoadFailed) {
+          emptyText = "Could not load the Pi model catalog. Check the CLI path and login state, then try again.";
+        } else if (enriched.length === 0) {
+          emptyText = "No Pi models discovered yet. Click Discover to load models from Pi.";
+        }
+        emptyEl.setText(emptyText);
+        return;
+      }
+      for (const model of filtered) {
+        const rowEl = listEl.createEl("label", { cls: "claudian-provider-model-picker-row" });
+        const isSelected = selectedIds.has(model.encodedId);
+        if (isSelected) {
+          rowEl.classList.add("claudian-provider-model-picker-row--selected");
+        }
+        rowEl.title = model.encodedId;
+        const checkboxEl = rowEl.createEl("input", { type: "checkbox" });
+        checkboxEl.checked = isSelected;
+        checkboxEl.addEventListener("change", () => {
+          const currentVisibleModels = getPiProviderSettings(settingsBag).visibleModels;
+          const next = checkboxEl.checked ? [...currentVisibleModels, model.encodedId] : currentVisibleModels.filter((id) => id !== model.encodedId);
+          void persistVisibleModels(next);
+        });
+        const textEl = rowEl.createDiv({ cls: "claudian-provider-model-picker-row-text" });
+        const headerEl = textEl.createDiv({ cls: "claudian-provider-model-picker-row-header" });
+        headerEl.createEl("span", {
+          cls: "claudian-provider-model-picker-row-name",
+          text: model.modelLabel
+        });
+        const badgeEl = headerEl.createEl("span", {
+          cls: "claudian-provider-model-picker-row-badge",
+          text: model.providerLabel
+        });
+        if (!model.isAvailable) {
+          badgeEl.classList.add("claudian-provider-model-picker-row-badge--unavailable");
+          badgeEl.setText("Unavailable");
+          badgeEl.title = "Configured model not currently reported by Pi";
+        }
+        textEl.createDiv({
+          cls: "claudian-provider-model-picker-row-meta",
+          text: model.encodedId
+        });
+        if (model.description) {
+          textEl.createDiv({
+            cls: "claudian-provider-model-picker-row-desc",
+            text: model.description
+          });
+        }
+      }
+    };
+    const renderAll = () => {
+      renderSummary();
+      renderSelected();
+      renderProviderSelect();
+      renderList();
+    };
+    const loadModelCatalog = async ({ force = false } = {}) => {
+      if (loadingModelCatalog || !force && getPiProviderSettings(settingsBag).discoveredModels.length > 0) {
+        return;
+      }
+      loadingModelCatalog = true;
+      modelCatalogLoadFailed = false;
+      renderAll();
+      try {
+        const result = await new PiModelDiscoveryService(context.plugin).discoverModels();
+        if (result.diagnostics) {
+          modelCatalogLoadFailed = true;
+          new import_obsidian20.Notice(`Pi discovery failed: ${result.diagnostics}`);
+          return;
+        }
+        const current = getPiProviderSettings(settingsBag);
+        const normalizedVisibleModels = normalizePiVisibleModels(current.visibleModels, result.models);
+        const shouldPersist = result.models.length > 0 || current.discoveredModels.length > 0 || !sameStringList2(current.visibleModels, normalizedVisibleModels);
+        if (shouldPersist) {
+          updatePiProviderSettings(settingsBag, {
+            discoveredModels: result.models,
+            visibleModels: normalizedVisibleModels
+          });
+          await context.plugin.saveSettings();
+          context.refreshModelSelectors();
+        }
+      } finally {
+        loadingModelCatalog = false;
+        renderAll();
+      }
+    };
+    renderAll();
+    catalogEl.addEventListener("toggle", () => {
+      if (catalogEl.open) {
+        void loadModelCatalog();
+      }
+    });
     renderEnvironmentSettingsSection({
       container,
       desc: "Environment variables passed only to Pi.",
@@ -83095,6 +83422,76 @@ function validateCliPath(value) {
     return "Path must point to a file";
   }
   return null;
+}
+function buildEnrichedPiModels(discoveredModels, visibleModels) {
+  var _a5, _b3;
+  const enriched = [];
+  const discoveredIds = /* @__PURE__ */ new Set();
+  for (const model of discoveredModels) {
+    discoveredIds.add(model.encodedId);
+    enriched.push({
+      description: buildPiModelDescription(model),
+      encodedId: model.encodedId,
+      isAvailable: true,
+      modelLabel: model.label || model.id,
+      providerKey: model.provider.toLowerCase(),
+      providerLabel: formatProviderLabel(model.provider)
+    });
+  }
+  for (const encodedId of visibleModels) {
+    if (discoveredIds.has(encodedId)) {
+      continue;
+    }
+    const decoded = decodePiModelId(encodedId);
+    const provider = (_a5 = decoded == null ? void 0 : decoded.provider) != null ? _a5 : "pi";
+    enriched.push({
+      description: "Configured model",
+      encodedId,
+      isAvailable: false,
+      modelLabel: (_b3 = decoded == null ? void 0 : decoded.modelId) != null ? _b3 : encodedId,
+      providerKey: provider.toLowerCase(),
+      providerLabel: formatProviderLabel(provider)
+    });
+  }
+  return enriched.sort((left, right) => {
+    const providerCmp = left.providerLabel.localeCompare(right.providerLabel);
+    if (providerCmp !== 0) {
+      return providerCmp;
+    }
+    return left.modelLabel.localeCompare(right.modelLabel);
+  });
+}
+function buildPiModelDescription(model) {
+  const details = [];
+  if (model.api) {
+    details.push(`API: ${model.api}`);
+  }
+  if (model.contextWindow) {
+    details.push(`${model.contextWindow.toLocaleString()} context`);
+  }
+  if (model.maxTokens) {
+    details.push(`${model.maxTokens.toLocaleString()} output`);
+  }
+  if (model.input.includes("image")) {
+    details.push("image input");
+  }
+  details.push(model.reasoning ? `thinking: ${model.thinkingLevels.join(", ")}` : "thinking: off");
+  return details.join(" | ");
+}
+function formatProviderLabel(provider) {
+  const normalized = provider.trim();
+  const knownProviders = {
+    anthropic: "Anthropic",
+    deepseek: "DeepSeek",
+    google: "Google",
+    openai: "OpenAI",
+    xai: "xAI"
+  };
+  const known = knownProviders[normalized.toLowerCase()];
+  if (known) {
+    return known;
+  }
+  return normalized.split(/[-_\s]+/).filter(Boolean).map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(" ") || "Pi";
 }
 
 // src/providers/pi/runtime/PiChatRuntime.ts
@@ -87451,6 +87848,7 @@ var ConversationController = class {
   }
   /** Regenerates AI title for a conversation. */
   async regenerateTitle(conversationId) {
+    var _a5, _b3;
     const { plugin } = this.deps;
     if (!plugin.settings.enableAutoTitleGeneration) return;
     const fullConv = await plugin.getConversationById(conversationId);
@@ -87459,7 +87857,7 @@ var ConversationController = class {
     if (!titleService) return;
     const firstUserMsg = fullConv.messages.find((m4) => m4.role === "user");
     if (!firstUserMsg) return;
-    const userContent = firstUserMsg.displayContent || firstUserMsg.content;
+    const userContent = (_b3 = (_a5 = firstUserMsg.displayContent) != null ? _a5 : extractUserDisplayContent(firstUserMsg.content)) != null ? _b3 : firstUserMsg.content;
     const expectedTitle = fullConv.title;
     await plugin.updateConversation(conversationId, { titleGenerationStatus: "pending" });
     this.updateHistoryDropdown();
@@ -89955,17 +90353,19 @@ function renderToolContent(content, toolCall, initialText) {
     renderExpandedContent(content, toolCall.name, toolCall.result, toolCall.input);
   }
 }
-function renderToolCall(parentEl, toolCall, toolCallElements) {
+function renderToolCall(parentEl, toolCall, toolCallElements, options = {}) {
+  var _a5;
   const { toolEl, header, statusEl, content, currentTaskEl } = createToolElementStructure(parentEl, toolCall);
   toolEl.dataset.toolId = toolCall.id;
   toolCallElements.set(toolCall.id, toolEl);
   setGenericToolHeaderRight(statusEl, toolCall);
   renderToolContent(content, toolCall, "Running...");
-  const state = { isExpanded: false };
-  toolCall.isExpanded = false;
+  const initiallyExpanded = (_a5 = options.initiallyExpanded) != null ? _a5 : false;
+  const state = { isExpanded: initiallyExpanded };
+  toolCall.isExpanded = initiallyExpanded;
   const todoStatusEl = toolCall.name === TOOL_TODO_WRITE ? statusEl : null;
   setupCollapsible(toolEl, header, content, state, {
-    initiallyExpanded: false,
+    initiallyExpanded,
     onToggle: createTodoToggleHandler(currentTaskEl, todoStatusEl, (expanded) => {
       toolCall.isExpanded = expanded;
     }),
@@ -90016,7 +90416,8 @@ function updateToolCallResult(toolId, toolCall, toolCallElements) {
     renderExpandedContent(content, toolCall.name, toolCall.result, toolCall.input);
   }
 }
-function renderStoredToolCall(parentEl, toolCall) {
+function renderStoredToolCall(parentEl, toolCall, options = {}) {
+  var _a5;
   const { toolEl, header, statusEl, content, currentTaskEl } = createToolElementStructure(parentEl, toolCall);
   if (toolCall.name === TOOL_TODO_WRITE) {
     setTodoWriteStatus(statusEl, toolCall.input);
@@ -90027,7 +90428,7 @@ function renderStoredToolCall(parentEl, toolCall) {
   const state = { isExpanded: false };
   const todoStatusEl = toolCall.name === TOOL_TODO_WRITE ? statusEl : null;
   setupCollapsible(toolEl, header, content, state, {
-    initiallyExpanded: false,
+    initiallyExpanded: (_a5 = options.initiallyExpanded) != null ? _a5 : false,
     onToggle: createTodoToggleHandler(currentTaskEl, todoStatusEl),
     baseAriaLabel: getToolLabel(toolCall.name, toolCall.input)
   });
@@ -90826,7 +91227,7 @@ var InputController = class {
    * Handles setting fallback title, firing async generation, and updating UI.
    */
   async triggerTitleGeneration() {
-    var _a5, _b3;
+    var _a5, _b3, _c2, _d;
     const { plugin, state, conversationController } = this.deps;
     if (state.messages.length !== 1) {
       return;
@@ -90843,7 +91244,7 @@ var InputController = class {
     if (!firstUserMsg) {
       return;
     }
-    const userContent = firstUserMsg.displayContent || firstUserMsg.content;
+    const userContent = (_d = (_c2 = firstUserMsg.displayContent) != null ? _c2 : extractUserDisplayContent(firstUserMsg.content)) != null ? _d : firstUserMsg.content;
     const fallbackTitle = conversationController.generateFallbackTitle(userContent);
     await plugin.renameConversation(state.currentConversationId, fallbackTitle);
     if (!plugin.settings.enableAutoTitleGeneration) {
@@ -92450,15 +92851,16 @@ function shortenPath2(filePath, maxLength = 40) {
   }
   return `${firstDir}/.../${filename}`;
 }
-function createWriteEditBlock(parentEl, toolCall) {
+function createWriteEditBlock(parentEl, toolCall, options = {}) {
+  var _a5;
   const filePath = toolCall.input.file_path || "file";
   const toolName = toolCall.name;
+  const baseAriaLabel = `${toolName}: ${shortenPath2(filePath)}`;
   const wrapperEl = parentEl.createDiv({ cls: "claudian-write-edit-block" });
   wrapperEl.dataset.toolId = toolCall.id;
   const headerEl = wrapperEl.createDiv({ cls: "claudian-write-edit-header" });
   headerEl.setAttribute("tabindex", "0");
   headerEl.setAttribute("role", "button");
-  headerEl.setAttribute("aria-label", `${toolName}: ${shortenPath2(filePath)} - click to expand`);
   const iconEl = headerEl.createDiv({ cls: "claudian-write-edit-icon" });
   iconEl.setAttribute("aria-hidden", "true");
   (0, import_obsidian31.setIcon)(iconEl, getToolIcon(toolName));
@@ -92484,7 +92886,10 @@ function createWriteEditBlock(parentEl, toolCall) {
     toolCall,
     isExpanded: false
   };
-  setupCollapsible(wrapperEl, headerEl, contentEl, state);
+  setupCollapsible(wrapperEl, headerEl, contentEl, state, {
+    initiallyExpanded: (_a5 = options.initiallyExpanded) != null ? _a5 : false,
+    baseAriaLabel
+  });
   return state;
 }
 function updateWriteEditWithDiff(state, diffData) {
@@ -92522,9 +92927,11 @@ function finalizeWriteEditBlock(state, isError) {
     state.wrapperEl.addClass("done");
   }
 }
-function renderStoredWriteEdit(parentEl, toolCall) {
+function renderStoredWriteEdit(parentEl, toolCall, options = {}) {
+  var _a5;
   const filePath = toolCall.input.file_path || "file";
   const toolName = toolCall.name;
+  const baseAriaLabel = `${toolName}: ${shortenPath2(filePath)}`;
   const isError = toolCall.status === "error" || toolCall.status === "blocked";
   const wrapperEl = parentEl.createDiv({ cls: "claudian-write-edit-block" });
   if (isError) {
@@ -92565,7 +92972,10 @@ function renderStoredWriteEdit(parentEl, toolCall) {
     doneEl.setText(isError ? "ERROR" : "DONE");
   }
   const state = { isExpanded: false };
-  setupCollapsible(wrapperEl, headerEl, contentEl, state);
+  setupCollapsible(wrapperEl, headerEl, contentEl, state, {
+    initiallyExpanded: (_a5 = options.initiallyExpanded) != null ? _a5 : false,
+    baseAriaLabel
+  });
   return wrapperEl;
 }
 
@@ -92788,6 +93198,9 @@ var _StreamController = class _StreamController {
   shouldDeferMathRendering() {
     return this.deps.plugin.settings.deferMathRenderingDuringStreaming !== false;
   }
+  shouldExpandFileEditsByDefault() {
+    return this.deps.plugin.settings.expandFileEditsByDefault === true;
+  }
   getStreamingRenderOptions(content) {
     return this.shouldDeferMathRendering() && hasStreamingMathDelimiters(content) ? { deferMath: true } : void 0;
   }
@@ -92824,11 +93237,15 @@ var _StreamController = class _StreamController {
     const { toolCall, parentEl } = pending;
     if (!parentEl) return;
     if (isWriteEditTool(toolCall.name)) {
-      const writeEditState = createWriteEditBlock(parentEl, toolCall);
+      const writeEditState = createWriteEditBlock(parentEl, toolCall, {
+        initiallyExpanded: this.shouldExpandFileEditsByDefault()
+      });
       state.writeEditStates.set(toolId, writeEditState);
       state.toolCallElements.set(toolId, writeEditState.wrapperEl);
     } else {
-      renderToolCall(parentEl, toolCall, state.toolCallElements);
+      renderToolCall(parentEl, toolCall, state.toolCallElements, {
+        initiallyExpanded: toolCall.name === TOOL_APPLY_PATCH && this.shouldExpandFileEditsByDefault()
+      });
     }
     state.pendingTools.delete(toolId);
   }
@@ -94034,6 +94451,14 @@ var MessageRenderer = class {
   getSubagentLifecycleAdapter(toolName) {
     return resolveSubagentLifecycleAdapter(this.getCapabilities().providerId, toolName);
   }
+  shouldExpandFileEditsByDefault() {
+    var _a5;
+    return ((_a5 = this.plugin.settings) == null ? void 0 : _a5.expandFileEditsByDefault) === true;
+  }
+  getUserMessageTextToShow(msg) {
+    var _a5, _b3;
+    return (_b3 = (_a5 = msg.displayContent) != null ? _a5 : extractUserDisplayContent(msg.content)) != null ? _b3 : msg.content;
+  }
   // ============================================
   // Streaming Message Rendering
   // ============================================
@@ -94042,12 +94467,11 @@ var MessageRenderer = class {
    * Returns the message element for content updates.
    */
   addMessage(msg) {
-    var _a5, _b3;
     if (msg.role === "user" && msg.images && msg.images.length > 0) {
       this.renderMessageImages(this.messagesEl, msg.images);
     }
     if (msg.role === "user") {
-      const textToShow = (_a5 = msg.displayContent) != null ? _a5 : msg.content;
+      const textToShow = this.getUserMessageTextToShow(msg);
       if (!textToShow) {
         this.scrollToBottom();
         const lastChild = this.messagesEl.lastElementChild;
@@ -94063,7 +94487,7 @@ var MessageRenderer = class {
     });
     const contentEl = msgEl.createDiv({ cls: "claudian-message-content", attr: { dir: "auto" } });
     if (msg.role === "user") {
-      const textToShow = (_b3 = msg.displayContent) != null ? _b3 : msg.content;
+      const textToShow = this.getUserMessageTextToShow(msg);
       if (textToShow) {
         const textEl = contentEl.createDiv({ cls: "claudian-text-block" });
         void this.renderContent(textEl, textToShow);
@@ -94077,7 +94501,7 @@ var MessageRenderer = class {
     return msgEl;
   }
   updateLiveUserMessage(msg) {
-    var _a5, _b3;
+    var _a5;
     if (msg.role !== "user") {
       return;
     }
@@ -94090,7 +94514,7 @@ var MessageRenderer = class {
       return;
     }
     contentEl.empty();
-    const textToShow = (_b3 = msg.displayContent) != null ? _b3 : msg.content;
+    const textToShow = this.getUserMessageTextToShow(msg);
     if (textToShow) {
       const textEl = contentEl.createDiv({ cls: "claudian-text-block" });
       void this.renderContent(textEl, textToShow);
@@ -94133,7 +94557,6 @@ var MessageRenderer = class {
     return newWelcomeEl;
   }
   renderStoredMessage(msg, allMessages, index) {
-    var _a5, _b3;
     if (msg.isInterrupt && (msg.role === "user" || !this.hasVisibleContent(msg))) {
       this.renderInterruptMessage();
       return;
@@ -94145,7 +94568,7 @@ var MessageRenderer = class {
       this.renderMessageImages(this.messagesEl, msg.images);
     }
     if (msg.role === "user") {
-      const textToShow = (_a5 = msg.displayContent) != null ? _a5 : msg.content;
+      const textToShow = this.getUserMessageTextToShow(msg);
       if (!textToShow) {
         return;
       }
@@ -94162,7 +94585,7 @@ var MessageRenderer = class {
     });
     const contentEl = msgEl.createDiv({ cls: "claudian-message-content", attr: { dir: "auto" } });
     if (msg.role === "user") {
-      const textToShow = (_b3 = msg.displayContent) != null ? _b3 : msg.content;
+      const textToShow = this.getUserMessageTextToShow(msg);
       if (textToShow) {
         const textEl = contentEl.createDiv({ cls: "claudian-text-block" });
         void this.renderContent(textEl, textToShow);
@@ -94297,13 +94720,17 @@ var MessageRenderer = class {
     if (!this.shouldRenderToolCall(toolCall)) return;
     const subagentLifecycleAdapter = this.getSubagentLifecycleAdapter(toolCall.name);
     if (isWriteEditTool(toolCall.name)) {
-      renderStoredWriteEdit(contentEl, toolCall);
+      renderStoredWriteEdit(contentEl, toolCall, {
+        initiallyExpanded: this.shouldExpandFileEditsByDefault()
+      });
     } else if (isSubagentToolName(toolCall.name)) {
       this.renderTaskSubagent(contentEl, toolCall);
     } else if ((subagentLifecycleAdapter == null ? void 0 : subagentLifecycleAdapter.isSpawnTool(toolCall.name)) && msg) {
       this.renderProviderLifecycleSubagent(contentEl, toolCall, msg);
     } else {
-      renderStoredToolCall(contentEl, toolCall);
+      renderStoredToolCall(contentEl, toolCall, {
+        initiallyExpanded: toolCall.name === TOOL_APPLY_PATCH && this.shouldExpandFileEditsByDefault()
+      });
     }
   }
   shouldRenderToolCall(toolCall) {
@@ -96368,10 +96795,6 @@ var MentionDropdownController = class {
         return;
       }
       const searchText = textBeforeCursor.substring(lastAtIndex + 1);
-      if (/\s/.test(searchText)) {
-        this.hide();
-        return;
-      }
       this.mentionStartIndex = lastAtIndex;
       this.showMentionDropdown(searchText);
     }, 200);
@@ -96473,6 +96896,9 @@ var MentionDropdownController = class {
       }
       const firstVaultItemIndex2 = this.filteredMentionItems.length;
       const vaultItemCount2 = this.appendVaultItems(searchLower);
+      if (this.hideIfNoResults()) {
+        return;
+      }
       if (this.filteredContextFiles.length === 0 && vaultItemCount2 > 0) {
         this.selectedMentionIndex = firstVaultItemIndex2;
       } else {
@@ -96519,6 +96945,9 @@ var MentionDropdownController = class {
     }
     const firstVaultItemIndex = this.filteredMentionItems.length;
     const vaultItemCount = this.appendVaultItems(searchLower);
+    if (this.hideIfNoResults()) {
+      return;
+    }
     this.selectedMentionIndex = vaultItemCount > 0 ? firstVaultItemIndex : 0;
     this.renderMentionDropdown();
   }
@@ -96576,6 +97005,11 @@ var MentionDropdownController = class {
       }
     }
     return merged.length;
+  }
+  hideIfNoResults() {
+    if (this.filteredMentionItems.length > 0) return false;
+    this.hide();
+    return true;
   }
   renderMentionDropdown() {
     this.dropdown.render({
@@ -102169,41 +102603,6 @@ var showDiff = import_state2.StateEffect.define();
 var showInsertion = import_state2.StateEffect.define();
 var hideInlineEdit = import_state2.StateEffect.define();
 var activeController = null;
-var DiffWidget = class extends import_view2.WidgetType {
-  constructor(diffOps, controller) {
-    super();
-    this.diffOps = diffOps;
-    this.controller = controller;
-  }
-  toDOM() {
-    const ownerDocument = this.controller.getOwnerDocument();
-    const span = ownerDocument.createElement("span");
-    span.className = "claudian-inline-diff-replace";
-    appendDiffOps(span, this.diffOps);
-    const btns = ownerDocument.createElement("span");
-    btns.className = "claudian-inline-diff-buttons";
-    const rejectBtn = ownerDocument.createElement("button");
-    rejectBtn.className = "claudian-inline-diff-btn reject";
-    rejectBtn.textContent = "\u2715";
-    rejectBtn.title = "Reject (esc)";
-    rejectBtn.onclick = () => this.controller.reject();
-    const acceptBtn = ownerDocument.createElement("button");
-    acceptBtn.className = "claudian-inline-diff-btn accept";
-    acceptBtn.textContent = "\u2713";
-    acceptBtn.title = "Accept (enter)";
-    acceptBtn.onclick = () => this.controller.accept();
-    btns.appendChild(rejectBtn);
-    btns.appendChild(acceptBtn);
-    span.appendChild(btns);
-    return span;
-  }
-  eq(other) {
-    return diffOpsEqual(this.diffOps, other.diffOps);
-  }
-  ignoreEvent() {
-    return true;
-  }
-};
 var InputWidget = class extends import_view2.WidgetType {
   constructor(controller) {
     super();
@@ -102219,17 +102618,17 @@ var InputWidget = class extends import_view2.WidgetType {
     return true;
   }
 };
-var PreviewWidget = class extends import_view2.WidgetType {
-  constructor(markdown, controller) {
+var MarkdownDiffWidget = class extends import_view2.WidgetType {
+  constructor(diffOps, controller) {
     super();
-    this.markdown = markdown;
+    this.diffOps = diffOps;
     this.controller = controller;
   }
   toDOM() {
-    return this.controller.createPreviewDOM(this.markdown);
+    return this.controller.createDiffPreviewDOM(this.diffOps);
   }
   eq(other) {
-    return this.markdown === other.markdown;
+    return diffOpsEqual(this.diffOps, other.diffOps);
   }
   ignoreEvent() {
     return true;
@@ -102265,26 +102664,19 @@ var inlineEditField = import_state2.StateField.define({
       } else if (e2.is(showDiff)) {
         deco = import_view2.Decoration.set([
           import_view2.Decoration.widget({
-            widget: new PreviewWidget(e2.value.previewText, e2.value.widget),
+            widget: new MarkdownDiffWidget(e2.value.diffOps, e2.value.widget),
             block: true,
             side: -1
           }).range(e2.value.previewPos),
-          import_view2.Decoration.replace({
-            widget: new DiffWidget(e2.value.diffOps, e2.value.widget)
-          }).range(e2.value.from, e2.value.to)
+          import_view2.Decoration.replace({}).range(e2.value.from, e2.value.to)
         ], true);
       } else if (e2.is(showInsertion)) {
         deco = import_view2.Decoration.set([
           import_view2.Decoration.widget({
-            widget: new PreviewWidget(e2.value.previewText, e2.value.widget),
+            widget: new MarkdownDiffWidget(e2.value.diffOps, e2.value.widget),
             block: true,
             side: -1
-          }).range(e2.value.previewPos),
-          import_view2.Decoration.widget({
-            widget: new DiffWidget(e2.value.diffOps, e2.value.widget),
-            side: 1
-            // After the position
-          }).range(e2.value.pos)
+          }).range(e2.value.previewPos)
         ], true);
       } else if (e2.is(hideInlineEdit)) {
         deco = import_view2.Decoration.none;
@@ -102295,55 +102687,75 @@ var inlineEditField = import_state2.StateField.define({
   provide: (f9) => import_view2.EditorView.decorations.from(f9)
 });
 var installedEditors = /* @__PURE__ */ new WeakSet();
-function computeDiff(oldText, newText) {
-  const oldWords = oldText.split(/(\s+)/);
-  const newWords = newText.split(/(\s+)/);
-  const m4 = oldWords.length, n10 = newWords.length;
+function splitLinesPreservingEndings(text) {
+  var _a5, _b3;
+  if (!text) return [];
+  return (_b3 = (_a5 = text.match(/[^\n]*(?:\n|$)/g)) == null ? void 0 : _a5.filter((line) => line.length > 0)) != null ? _b3 : [];
+}
+function computeMarkdownDiff(oldText, newText) {
+  const oldLines = splitLinesPreservingEndings(oldText);
+  const newLines = splitLinesPreservingEndings(newText);
+  const m4 = oldLines.length, n10 = newLines.length;
   const dp = Array.from({ length: m4 + 1 }, () => Array(n10 + 1).fill(0));
   for (let i2 = 1; i2 <= m4; i2++) {
     for (let j6 = 1; j6 <= n10; j6++) {
-      dp[i2][j6] = oldWords[i2 - 1] === newWords[j6 - 1] ? dp[i2 - 1][j6 - 1] + 1 : Math.max(dp[i2 - 1][j6], dp[i2][j6 - 1]);
+      dp[i2][j6] = oldLines[i2 - 1] === newLines[j6 - 1] ? dp[i2 - 1][j6 - 1] + 1 : Math.max(dp[i2 - 1][j6], dp[i2][j6 - 1]);
     }
   }
-  const ops = [];
-  let i = m4, j = n10;
   const temp = [];
+  let i = m4, j = n10;
   while (i > 0 || j > 0) {
-    if (i > 0 && j > 0 && oldWords[i - 1] === newWords[j - 1]) {
-      temp.push({ type: "equal", text: oldWords[i - 1] });
+    if (i > 0 && j > 0 && oldLines[i - 1] === newLines[j - 1]) {
+      temp.push({ type: "equal", text: oldLines[i - 1] });
       i--;
       j--;
     } else if (j > 0 && (i === 0 || dp[i][j - 1] >= dp[i - 1][j])) {
-      temp.push({ type: "insert", text: newWords[j - 1] });
+      temp.push({ type: "insert", text: newLines[j - 1] });
       j--;
     } else {
-      temp.push({ type: "delete", text: oldWords[i - 1] });
+      temp.push({ type: "delete", text: oldLines[i - 1] });
       i--;
     }
   }
-  temp.reverse();
-  for (const op of temp) {
-    if (ops.length > 0 && ops[ops.length - 1].type === op.type) {
-      ops[ops.length - 1].text += op.text;
-    } else {
-      ops.push({ ...op });
-    }
-  }
-  return ops;
+  return mergeAdjacentDiffOps(temp.reverse());
 }
-function appendDiffOps(container, ops) {
+function mergeAdjacentDiffOps(ops) {
+  const merged = [];
   for (const op of ops) {
-    switch (op.type) {
-      case "delete":
-        container.createSpan({ cls: "claudian-diff-del", text: op.text });
-        break;
-      case "insert":
-        container.createSpan({ cls: "claudian-diff-ins", text: op.text });
-        break;
-      default:
-        container.appendText(op.text);
+    if (merged.length > 0 && merged[merged.length - 1].type === op.type) {
+      merged[merged.length - 1].text += op.text;
+    } else {
+      merged.push({ ...op });
     }
   }
+  return merged;
+}
+function getDiffBlockClass(type) {
+  switch (type) {
+    case "delete":
+      return "claudian-diff-del";
+    case "insert":
+      return "claudian-diff-ins";
+    default:
+      return "claudian-diff-equal";
+  }
+}
+function buildMarkdownDiffDocuments(diffOps) {
+  const oldMarkdown = diffOps.filter((op) => op.type !== "insert").map((op) => op.text).join("");
+  const newMarkdown = diffOps.filter((op) => op.type !== "delete").map((op) => op.text).join("");
+  const hasDeletion = diffOps.some((op) => op.type === "delete");
+  const hasInsertion = diffOps.some((op) => op.type === "insert");
+  const documents = [];
+  if (hasDeletion && oldMarkdown) {
+    documents.push({ type: "delete", markdown: oldMarkdown });
+  }
+  if (hasInsertion && newMarkdown) {
+    documents.push({ type: "insert", markdown: newMarkdown });
+  }
+  if (documents.length === 0 && newMarkdown) {
+    documents.push({ type: "equal", markdown: newMarkdown });
+  }
+  return documents;
 }
 function diffOpsEqual(left, right) {
   if (left.length !== right.length) return false;
@@ -102596,15 +103008,35 @@ var InlineEditController = class {
     }, 50);
     return container;
   }
-  createPreviewDOM(markdown) {
+  createDiffPreviewDOM(diffOps) {
     const ownerDocument = this.getOwnerDocument();
     const previewEl = ownerDocument.createElement("div");
-    previewEl.className = "claudian-inline-markdown-preview";
+    previewEl.className = "claudian-inline-diff-preview";
     const bodyEl = ownerDocument.createElement("div");
-    bodyEl.className = "claudian-inline-markdown-preview-body markdown-rendered";
+    bodyEl.className = "claudian-inline-diff-preview-body markdown-rendered";
     previewEl.appendChild(bodyEl);
-    void this.renderMarkdownPreview(bodyEl, markdown);
+    const actionsEl = ownerDocument.createElement("div");
+    actionsEl.className = "claudian-inline-preview-actions";
+    actionsEl.appendChild(this.createPreviewActionButton("Reject", "reject", () => this.reject()));
+    actionsEl.appendChild(this.createPreviewActionButton("Accept", "accept", () => this.accept()));
+    previewEl.appendChild(actionsEl);
+    void this.renderMarkdownDiffPreview(bodyEl, diffOps);
     return previewEl;
+  }
+  createPreviewActionButton(label, variant, onClick) {
+    const ownerDocument = this.getOwnerDocument();
+    const button = ownerDocument.createElement("button");
+    button.type = "button";
+    button.className = `claudian-inline-preview-action ${variant}`;
+    button.textContent = label;
+    button.title = variant === "accept" ? "Accept (enter)" : "Reject (esc)";
+    button.addEventListener("click", (event) => {
+      var _a5, _b3;
+      (_a5 = event.preventDefault) == null ? void 0 : _a5.call(event);
+      (_b3 = event.stopPropagation) == null ? void 0 : _b3.call(event);
+      onClick();
+    });
+    return button;
   }
   async renderMarkdownPreview(container, markdown) {
     var _a5, _b3;
@@ -102616,6 +103048,16 @@ var InlineEditController = class {
       sourcePath: this.notePath,
       mediaFolder: (_b3 = (_a5 = this.plugin.settings) == null ? void 0 : _a5.mediaFolder) != null ? _b3 : ""
     });
+  }
+  async renderMarkdownDiffPreview(container, diffOps) {
+    container.empty();
+    for (const document of buildMarkdownDiffDocuments(diffOps)) {
+      if (!document.markdown) continue;
+      const opEl = this.getOwnerDocument().createElement("div");
+      opEl.className = `claudian-diff-block ${getDiffBlockClass(document.type)}`;
+      container.appendChild(opEl);
+      await this.renderMarkdownPreview(opEl, document.markdown);
+    }
   }
   replaceRenderedPreview(target, rendered) {
     target.empty();
@@ -102711,7 +103153,7 @@ var InlineEditController = class {
   showDiffInPlace() {
     if (this.editedText === null) return;
     hideSelectionHighlight(this.editorView);
-    const diffOps = computeDiff(this.selectedText, this.editedText);
+    const diffOps = computeMarkdownDiff(this.selectedText, this.editedText);
     const previewPos = this.editorView.state.doc.lineAt(this.selFrom).from;
     this.editorView.dispatch({
       effects: showDiff.of({
@@ -102719,7 +103161,6 @@ var InlineEditController = class {
         to: this.selTo,
         diffOps,
         previewPos,
-        previewText: this.editedText,
         widget: this
       })
     });
@@ -102734,10 +103175,8 @@ var InlineEditController = class {
     const previewPos = this.editorView.state.doc.lineAt(this.selFrom).from;
     this.editorView.dispatch({
       effects: showInsertion.of({
-        pos: this.selFrom,
         diffOps,
         previewPos,
-        previewText: trimmedText,
         widget: this
       })
     });
@@ -103110,6 +103549,15 @@ var ClaudianSettingTab = class extends import_obsidian49.PluginSettingTab {
         var _a5;
         return toggle.setValue((_a5 = this.plugin.settings.deferMathRenderingDuringStreaming) != null ? _a5 : true).onChange(async (value) => {
           this.plugin.settings.deferMathRenderingDuringStreaming = value;
+          await this.plugin.saveSettings();
+        });
+      }
+    );
+    new import_obsidian49.Setting(container).setName(t10("settings.expandFileEditsByDefault.name")).setDesc(t10("settings.expandFileEditsByDefault.desc")).addToggle(
+      (toggle) => {
+        var _a5;
+        return toggle.setValue((_a5 = this.plugin.settings.expandFileEditsByDefault) != null ? _a5 : false).onChange(async (value) => {
+          this.plugin.settings.expandFileEditsByDefault = value;
           await this.plugin.saveSettings();
         });
       }
@@ -103836,11 +104284,13 @@ var ClaudianPlugin = class extends import_obsidian50.Plugin {
     });
   }
   getConversationPreview(conv) {
+    var _a5, _b3;
     const firstUserMsg = conv.messages.find((m4) => m4.role === "user");
     if (!firstUserMsg) {
       return "New conversation";
     }
-    return firstUserMsg.content.substring(0, 50) + (firstUserMsg.content.length > 50 ? "..." : "");
+    const previewText = (_b3 = (_a5 = firstUserMsg.displayContent) != null ? _a5 : extractUserDisplayContent(firstUserMsg.content)) != null ? _b3 : firstUserMsg.content;
+    return previewText.substring(0, 50) + (previewText.length > 50 ? "..." : "");
   }
   async loadSdkMessagesForConversation(conversation) {
     await ProviderRegistry.getConversationHistoryService(conversation.providerId).hydrateConversationHistory(conversation, getVaultPath(this.app));
@@ -104019,5 +104469,3 @@ smol-toml/dist/index.js:
    * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    *)
 */
-
-/* nosourcemap */
