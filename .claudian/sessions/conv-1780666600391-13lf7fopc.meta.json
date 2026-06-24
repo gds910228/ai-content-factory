@@ -4,9 +4,9 @@
   "title": "使用Skills做内容创作",
   "titleGenerationStatus": "success",
   "createdAt": 1780666600391,
-  "updatedAt": 1781236206911,
+  "updatedAt": 1782270471229,
   "lastResponseAt": 1780725002484,
-  "sessionId": "76e755a7-afe1-4bd5-86fa-d2a98411b42a",
+  "sessionId": null,
   "providerState": {
     "providerSessionId": "76e755a7-afe1-4bd5-86fa-d2a98411b42a",
     "subagentData": {
@@ -370,13 +370,13 @@
     }
   },
   "usage": {
-    "model": "glm-5.1",
+    "model": "glm-5.2",
     "inputTokens": 527,
     "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 106304,
     "contextWindow": 200000,
     "contextTokens": 106831,
     "percentage": 53,
-    "contextWindowIsAuthoritative": true
+    "contextWindowIsAuthoritative": false
   }
 }

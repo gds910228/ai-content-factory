@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "glm-5.1",
+  "model": "glm-5.2",
   "thinkingBudget": "off",
   "effortLevel": "max",
   "serviceTier": "default",
@@ -28,14 +28,14 @@
       "cliPath": "",
       "cliPathsByHost": {},
       "loadUserSettings": true,
-      "enableChrome": false,
-      "enableBangBash": false,
+      "enableChrome": true,
+      "enableBangBash": true,
       "enableOpus1M": true,
       "enableSonnet1M": false,
       "customModels": "",
       "lastModel": "haiku",
-      "environmentVariables": "ANTHROPIC_API_KEY=8faf953bbef84c91977d7f34b6f3b059.X4cLfgKxPksXvZMp\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.1",
-      "environmentHash": "ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic|ANTHROPIC_MODEL=glm-5.1"
+      "environmentVariables": "ANTHROPIC_API_KEY=ark-336b8f34-7073-4e83-89cd-524028c09220-6f70b\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=glm-5.2",
+      "environmentHash": "ANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding|ANTHROPIC_MODEL=glm-5.2"
     },
     "codex": {
       "enabled": false,
@@ -78,7 +78,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "glm-5.1"
+    "claude": "glm-5.2"
   },
   "savedProviderEffort": {
     "claude": "max"
