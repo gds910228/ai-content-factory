@@ -129,19 +129,25 @@
           "guid": "https://aihot.virxact.com/cmqqxfykz0ehkslp55nlmaje0",
           "read": false,
           "starred": false,
-          "tags": [],
+          "tags": [
+            {
+              "name": "Saved",
+              "color": "#3498db"
+            }
+          ],
           "feedTitle": "AI HOT — 精选",
           "feedUrl": "https://aihot.virxact.com/feed.xml",
           "coverImage": "",
           "summary": "我们的技术报告已经发布。 深入探讨了用于创建 Krea 2 的数据、架构和训练技术。 https://www.krea.ai/blog/krea-2-technical-report 今天，我们开放了 Krea 2 的模型权重。 欢迎 Krea 2 Raw 和 Krea 2 Turbo——前者是一个来自中期训练的非蒸馏模型，适合进行微调；后者是一个快速蒸馏版本，具有广泛的审美多样性。 详情请见下文 👇",
           "author": "noreply@aihot.virxact.com (X：Krea AI (@krea_ai))",
-          "saved": false,
+          "saved": true,
           "mediaType": "article",
           "duration": "",
           "explicit": false,
           "image": "",
           "category": "",
-          "episodeType": ""
+          "episodeType": "",
+          "savedFilePath": "04-日常素材/Krea 2 技术报告正式发布.md"
         },
         {
           "title": "Anthropic 推出 Claude Tag：在 Slack 中通过 @Claude 协作",
