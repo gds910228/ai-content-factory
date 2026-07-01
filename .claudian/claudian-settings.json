@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "glm-5.2",
+  "model": "claude-code/glm-5.2",
   "thinkingBudget": "off",
   "effortLevel": "max",
   "serviceTier": "default",
@@ -78,7 +78,7 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "glm-5.2"
+    "claude": "claude-code/glm-5.2"
   },
   "savedProviderEffort": {
     "claude": "max"
@@ -88,12 +88,12 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
-  "lastCustomModel": "glm-5.1",
+  "lastCustomModel": "claude-code/glm-5.2",
   "maxTabs": 3,
-  "tabBarPosition": "input",
   "enableAutoScroll": true,
   "deferMathRenderingDuringStreaming": true,
   "expandFileEditsByDefault": false,
   "chatViewPlacement": "right-sidebar",
-  "hiddenProviderCommands": {}
+  "hiddenProviderCommands": {},
+  "tabBarPosition": "input"
 }

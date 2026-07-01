@@ -37,19 +37,25 @@
           "guid": "https://aihot.virxact.com/cmr1bxokg01eoslnlem278yfq",
           "read": false,
           "starred": false,
-          "tags": [],
+          "tags": [
+            {
+              "name": "Saved",
+              "color": "#3498db"
+            }
+          ],
           "feedTitle": "AI HOT — 精选",
           "feedUrl": "https://aihot.virxact.com/feed.xml",
           "coverImage": "",
           "summary": "Anthropic在Claude Code中植入隐写术：读取本地时区（Asia/Shanghai或Asia/Urumqi）和ANTHROPIC_BASE_URL环境变量，与一份经base64+XOR（密钥91）加密的147个域名列表（含美团、字节跳动、月之暗面等）比对，识别中国用户。识别后，在请求发送前将系统提示词中日期字符串的单引号（U+0027）替换为其他Unicode字符，连字符改为斜杠，作为2-3比特分类标记传回服务器。该隐蔽行...",
           "author": "noreply@aihot.virxact.com (公众号：数字生命卡兹克)",
-          "saved": false,
+          "saved": true,
           "mediaType": "article",
           "duration": "",
           "explicit": false,
           "image": "",
           "category": "",
-          "episodeType": ""
+          "episodeType": "",
+          "savedFilePath": "04-日常素材/Anthropic在Claude Code中植入隐写术代码识别中国用户.md"
         },
         {
           "title": "库克与欧盟科技主管就新版Siri AI举行建设性会谈",
