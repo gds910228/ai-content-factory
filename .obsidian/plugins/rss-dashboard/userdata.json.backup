@@ -1,13 +1,13 @@
 {
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1783291581555,
+  "lastRefreshTimestamp": 1783321077684,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
   "showFeedArt": true,
   "showThumbnails": true,
   "sidebarCollapsed": false,
-  "sidebarWidth": 203.5,
+  "sidebarWidth": 200,
   "collapsedFolders": [],
   "tagsCollapsed": true,
   "articleFilter": {
