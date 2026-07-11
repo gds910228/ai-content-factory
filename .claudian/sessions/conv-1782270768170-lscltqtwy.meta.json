@@ -4,21 +4,21 @@
   "title": "Generate weekly KB summary report per AI template",
   "titleGenerationStatus": "success",
   "createdAt": 1782270768170,
-  "updatedAt": 1782871561480,
-  "lastResponseAt": 1782270961928,
+  "updatedAt": 1783774866700,
+  "lastResponseAt": 1783774866700,
   "sessionId": "0e95f993-ad15-4391-922d-bee2039d39b8",
+  "selectedModel": "claude-code/glm-5.2",
   "providerState": {
     "providerSessionId": "0e95f993-ad15-4391-922d-bee2039d39b8"
   },
-  "currentNote": "00-模板库/模板-AI自动总结.md",
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 4620,
+    "inputTokens": 5525,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 49591,
+    "cacheReadInputTokens": 61888,
     "contextWindow": 200000,
-    "contextTokens": 54211,
-    "percentage": 27,
+    "contextTokens": 67413,
+    "percentage": 34,
     "contextWindowIsAuthoritative": true
   }
 }
