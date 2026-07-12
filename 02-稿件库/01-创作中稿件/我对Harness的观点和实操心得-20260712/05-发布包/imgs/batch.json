@@ -1,0 +1,54 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "prompts/01-flowchart-crash-loop.md"
+      ],
+      "image": "01-flowchart-crash-loop.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "prompts/02-flowchart-ai-builds-harness.md"
+      ],
+      "image": "02-flowchart-ai-builds-harness.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "prompts/03-comparison-before-after.md"
+      ],
+      "image": "03-comparison-before-after.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": [
+        "prompts/04-comparison-small-vs-big.md"
+      ],
+      "image": "04-comparison-small-vs-big.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-05",
+      "promptFiles": [
+        "prompts/05-flowchart-living-doc-loop.md"
+      ],
+      "image": "05-flowchart-living-doc-loop.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}
