@@ -1,0 +1,1361 @@
+ ▐▛███▜▌   Claude Code v2.1.161
+▝▜█████▛▘  glm-5.2 · API Usage Billing
+  ▘▘ ▝▝    D:\WorkProjects\AI\MiniProgram\PictureToolbox
+
+
+❯ 你知道这个superpowers skill吗                                                 
+  ⎿  ⧉ Selected 1 lines from pages\aiUpscale\aiUpscale.wxml in Cursor
+
+  Thought for 10s (ctrl+o to expand)
+
+● 我对 superpowers 有了解，但需要先说明：它并不在我当前会话可调用的 skill
+  列表里（我这边没有看到它被注册为可用的 user-invocable skill），所以我没法直接
+  /superpowers 调用它。
+
+  关于它本身：
+
+  - superpowers 是 Claude Code 社区里比较知名的一套 skills 集合，作者是
+  obra（Jesse Vincent），开源在 GitHub 上。
+  - 它不是一个单一 skill，而是一组把"工程方法论"封装成 skill
+  的工作流，核心思路是：让 Claude 在动手写代码前先走结构化的思考流程，比如
+  brainstorming（发散探索需求）→ planning（设计方案、ExitPlanMode 审批）→
+  TDD（红绿循环）→ debugging、subagent 编排等。
+  - 每个方法论是一个独立的 skill，可以按需触发；它的"superpower"在于把这些最佳实
+  践变成可复用、可组合的步骤，而不是靠模型每次临场发挥。
+  - 安装方式一般是通过 Claude Code 的 plugin/marketplace 机制引入（~/.claude/
+  下的 skills 或 plugin 配置）。
+
+  要不要我帮你检查一下当前这台机器上是否已经装了 superpowers？我可以扫一下
+  .claude/ 目录和 plugin
+  配置看看有没有它的踪迹。如果有，再看是没被正确启用，还是只是没加载进当前会话。
+
+✻ Sautéed for 17s
+
+❯ 本地还没有安装的，对于开发者来说，这是一套很好的方法论对吧，需要安装这个skill 
+  里头的所有的skills吗                                                          
+
+  Thought for 27s (ctrl+o to expand)
+
+● 是个好问题，我直说我的看法。
+
+  是好方法论吗？
+
+  是的，但要分清"方法论本身"和"要不要全装"是两件事。
+
+  superpowers 的核心价值不在于某个具体
+  skill，而在于它把几条反直觉的工程纪律固化成了可调用的流程——先发散探索需求再动
+  手（brainstorming）、先规划审批再写码（planning）、TDD
+  红绿循环、结构化调试、subagent 编排。这些对开发者确实有用，尤其是对抗"上来就写
+  代码、写完发现方向错了"这种最常见的浪费。
+
+  但不需要全装
+
+  原因有几个，而且和你这个项目特别相关：
+
+  1. 每个 skill 都会增加会话的上下文开销。装得越多，每次启动加载的东西越多，对简
+  单任务是负收益。它是"按需触发"的，但 skill 元数据本身也要占注意力。
+  2. TDD 这套在你这个项目里基本落不了地。你的 package.json 只有个 dummy test
+  脚本，没有测试框架，没有 CI，原生小程序 + 云函数只能靠微信开发者工具跑。红绿循
+  环的前提是有快速可执行的测试，你没有这个基础设施——硬上反而变成走形式。
+  3. planning / brainstorming / 调试 / subagent 编排
+  这几类倒是和你的工作流贴合：你这个项目功能多、跨端（on-device /
+  云函数两层）、改动经常牵涉多个文件，动手前先理清思路收益很大。
+
+  我的建议
+
+  选择性装，而不是全装。挑和你工作流匹配的几类：需求探索、方案规划、调试方法论、
+  subagent 编排。跳过强依赖测试基建的那些。
+
+  具体怎么挑，得看它仓库里现在的实际 skill
+  列表——这东西在迭代，我不应该凭记忆给你报一个可能过时的清单。
+
+  要不要我去拉一下 superpowers 仓库当前实际的 skills 清单，然后对照你这个项目的
+  特点（无测试基建、双层架构、功能多但迭代快）帮你筛一份"建议装 /
+  建议跳过"的清单？这样你能基于真实信息决定。
+
+✻ Churned for 39s
+
+❯ 对，我也是这个想法，选择性安装，这份文档是关于Harness开发理念的，请认真阅读， 
+  我希望能提升AI Coding率，里边第四阶段有提到定义skills，请从superpowers        
+  skill找到合适的。                                                             
+
+  Thought for 5s (ctrl+o to expand)
+
+● 你提到"这份文档"，我先找到它。让我在项目里搜一下相关文档。
+
+  Thought for 4s, searched for 1 pattern (ctrl+o to expand)
+
+● 没直接命中。我列一下项目里的文档文件，看看有没有相关内容。
+
+  Thought for 4s, searched for 1 pattern (ctrl+o to expand)
+
+● 找到了：docs/Harness 落地设计 SOP.md。我仔细读一遍。
+
+  Thought for 18s, read 1 file (ctrl+o to expand)
+
+● 文档读完了。这是一套把工程方法论固化成 .harness/
+  目录结构（agents/rules/skills/changes/mcp）的 SOP，目标是把 AI Coding 率提到
+  90%。阶段四那张表列了 9 个最少必备 Skill，并明确写了"从 superpowers skill
+  找合适可用的，可根据项目调整"。
+
+  关键在于：这 9 个里有几个在你这个项目里根本落不了地（无测试框架、无
+  CI、aone-ci 是阿里内部系统）。我不能凭记忆给你报 skill 名字--superpowers
+  在迭代，得拿它当前真实的 skills 清单来对照。我去拉一下仓库实际结构。
+
+  Thought for 3s, called zread (ctrl+o to expand)
+
+● zread 限流了。换 web 搜索拉 superpowers 当前的 skills 清单。
+
+● Web Search("obra superpowers claude code skills list github repository")
+  ⎿  Did 0 searches in 2s
+
+  Thought for 2s (ctrl+o to expand)
+
+● 搜索没返回内容。直接抓 GitHub 仓库页面。
+
+  Thought for 4s, called web-reader (ctrl+o to expand)
+
+● 两个 MCP 都限流了。试试另一个搜索工具。
+
+  Thought for 11s, called web-search-prime (ctrl+o to expand)
+
+● 专用工具全限流了。用内置 WebSearch 重试，同时用 curl 直接打 GitHub API
+  拉目录树作为兜底。
+
+● Web Search("obra superpowers skills brainstorming planning TDD debugging
+            claude")
+  ⎿  Did 0 searches in 3s
+
+● Bash(curl -s
+      "https://api.github.com/repos/obra/superpowers/git/trees/main?recursive=1"
+      2>/dev/null | grep -oE '"path": "[^"]*"' | head -200)
+  ⎿  "path": ".agents"
+     "path": ".agents/plugins"
+     "path": ".agents/plugins/marketplace.json"
+     … +197 lines (ctrl+o to expand)
+
+  Thought for 17s (ctrl+o to expand)
+
+● 拿到 superpowers 当前真实的 skills 清单了，共 14 
+  个。这是事实基础，不是凭记忆。现在我读一下关键 SKILL.md 的实际内容（尤其是总览
+  using-superpowers 和几个直接对应 Harness 阶段四需求的），让映射有据可依。
+
+● Bash(for s in using-superpowers brainstorming writing-plans executing-plans
+      subagent-driven-development requesting-code-review receiving-code-review
+      systematic-debug…)
+  ⎿  Running in the background (↓ to manage)
+
+  Thought for 4s (ctrl+o to expand)
+
+● Bash(sleep 8 && cat
+      "C:\Users\ADMINI~1\AppData\Local\Temp\claude\D--WorkProjects-AI-MiniProgra
+      m-PictureToolbox\07f522c3-2cb9-412a-bc60-0d176f49ab0f\tasks\blpyc3tl7.o…)
+  ⎿  ========== using-superpowers ==========
+
+     ========== brainstorming ==========
+     … +4 lines (ctrl+o to expand)
+  Thought for 4s (ctrl+o to expand)
+
+● Bash(sleep 6 && cat
+      "C:\Users\ADMINI~1\AppData\Local\Temp\claude\D--WorkProjects-AI-MiniProgra
+      m-PictureToolbox\07f522c3-2cb9-412a-bc60-0d176f49ab0f\tasks\blpyc3tl7.o…)
+  ⎿  ========== using-superpowers ==========
+
+     ========== brainstorming ==========
+     … +6 lines (ctrl+o to expand)
+
+  Thought for 7s (ctrl+o to expand)
+
+● 内容是空的--raw.githubusercontent.com 可能被墙/超时了（之前 api.github.com
+  能通）。我换用 GitHub API 拿文件内容，并测一下单文件连通性。
+
+● Bash(echo "--- test raw ---"; curl -sS -m 15 "https://raw.githubusercontent.co
+      m/obra/superpowers/main/skills/using-superpowers/SKILL.md" 2>&1 | head -5;
+      echo "--- ex…)
+  ⎿  --- test raw ---
+     ---
+     name: using-superpowers
+     … +10 lines (ctrl+o to expand)
+
+  Thought for 17s (ctrl+o to expand)
+
+● raw 其实能通（刚才循环是后台流式写入的延迟）。我一次性抓全部 14 个 skill 的
+  name+description（这俩字段精确说明触发场景），再深读两三个最关键的。
+
+● Bash(for s in using-superpowers brainstorming writing-plans executing-plans
+      subagent-driven-development requesting-code-review receiving-code-review
+      systematic-debug…)
+  ⎿  Running in the background (↓ to manage)
+
+  Thought for 2s (ctrl+o to expand)
+
+● Bash(sleep 12 && cat
+      "C:\Users\ADMINI~1\AppData\Local\Temp\claude\D--WorkProjects-AI-MiniProgra
+      m-PictureToolbox\07f522c3-2cb9-412a-bc60-0d176f49ab0f\tasks\bz39j3d3x.…)
+  ⎿  ### using-superpowers
+     name: using-superpowers
+     description: Use when starting any conversation - establishes how to f
+     … +23 lines (ctrl+o to expand)
+
+  Thought for 11s (ctrl+o to expand)
+
+● 部分 skill 的 frontmatter 返回空--网络间歇性超时（静默吞了
+  stderr）。我换成带重试、落盘的方式，把最关键的几个 skill 完整抓下来读。
+
+● Bash(TMP=/tmp/sp-skills; mkdir -p $TMP
+      fetch() {…)
+  ⎿  OK  using-superpowers (62 lines)
+     OK  brainstorming (159 lines)
+     OK  writing-plans (174 lines)
+     … +11 lines (ctrl+o to expand)
+
+● Background command "Fetch name+description frontmatter of all 14 skills" completed (exit code 0)
+
+  Thought for 7s (ctrl+o to expand)
+
+● 全部抓到了。现在读最关键的几个，把映射做实。
+
+  Thought for 10s, read 2 files (ctrl+o to expand)
+
+● Background command "Fetch frontmatter+intro of all superpowers skills" completed (exit code 0)
+
+● /tmp 是 bash 的虚拟路径，Windows 的 Read 工具解析不了。我直接用 bash
+  输出关键文件内容。
+
+  Thought for 16s, read 3 files (ctrl+o to expand)
+
+● 已经把核心流程摸清了。再读剩下几个关键的（评审、验证、调试、写计划），然后给结
+  论。
+
+● Bash(for f in requesting-code-review verification-before-completion
+      systematic-debugging writing-plans executing-plans
+      finishing-a-development-branch dispatching-par…)
+  ⎿  ################### requesting-code-review ###################
+     ---
+     name: requesting-code-review
+     … +910 lines (ctrl+o to expand)
+
+  Thought for 1m 9s, read 1 file (ctrl+o to expand)
+
+● 全部 14 个 skill 的真实内容我都读完了（从 obra/superpowers 仓库 main
+  分支拉的，不是凭记忆）。现在可以做有据可依的映射。
+
+  superpowers 当前真实的 14 个 skill
+
+  ┌────────────────────────────────┬─────────────────────────────────────────┐
+  │             Skill              │               一句话用途                │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ using-superpowers              │ 总入口/调度规则，强制"先查 skill        │
+  │                                │ 再动手"                                 │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ brainstorming                  │ 动手前发散探索需求→产出 spec 设计文档   │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ writing-plans                  │ 把 spec 拆成 bite-sized 任务的实现计划  │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ subagent-driven-development    │ 每个任务派一个 fresh subagent           │
+  │                                │ 实现+逐任务评审                         │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ executing-plans                │ SDD 的轻量替代（无 subagent             │
+  │                                │ 时同会话执行计划）                      │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ requesting-code-review         │ 派 reviewer subagent 做 diff 评审       │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ receiving-code-review          │ 如何接收/回应评审反馈                   │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ systematic-debugging           │ 四阶段根因调试，禁止盲改                │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ verification-before-completion │ "声称完成前必须跑验证拿证据"的铁律      │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ test-driven-development        │ 红绿循环 TDD                            │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ using-git-worktrees            │ 工作区隔离                              │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ finishing-a-development-branch │ 分支收尾（merge/PR/丢弃菜单）           │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ dispatching-parallel-agents    │ 多个独立任务并行派 agent                │
+  ├────────────────────────────────┼─────────────────────────────────────────┤
+  │ writing-skills                 │ 写新 skill 的元技能                     │
+  └────────────────────────────────┴─────────────────────────────────────────┘
+
+  映射到 Harness 阶段四的 9 项（含本项目适配判断）
+
+  ┌──────────┬──────────────────────┬──────────────────────────────────────┐
+  │ Harness  │                      │                                      │
+  │ 要求的   │   superpowers 对应   │             适配本项目？             │
+  │  skill   │                      │                                      │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ request- │                      │                                      │
+  │ analysis │ brainstorming +      │ ✅ 强适配                            │
+  │          │ writing-plans        │                                      │
+  │ 需求分析 │                      │                                      │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ coding-s │ subagent-driven-deve │ ✅ 适配（分层改                      │
+  │ kill     │ lopment +            │ pages/utils/cloudfunctions，非       │
+  │ 编码实现 │ writing-plans        │ Controller/Service/DAO）             │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ expert-r │ requesting-code-revi │                                      │
+  │ eviewer  │ ew + receiving-code- │ ✅ 强适配                            │
+  │ 专家评审 │ review               │                                      │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ code-rev │ requesting-code-revi │                                      │
+  │ iew      │ ew（含               │ ✅ 强适配                            │
+  │ 代码检查 │ code-reviewer.md     │                                      │
+  │          │ 模板）               │                                      │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ deploy-v │ verification-before- │ ⚠️ 部分适配（验证理念可用，但部署=微 │
+  │ erify    │ completion（理念）   │ 信开发者工具手动上传+真机预览，不是  │
+  │ 部署验证 │                      │ CI/CD，需自建小程序版）              │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ project- │                      │ ❌ superpowers 没有；但你的          │
+  │ analysis │ 无直接对应           │ CLAUDE.md                            │
+  │          │                      │ 已是极详尽的架构索引，大部分已覆盖   │
+  │ 项目分析 │                      │                                      │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ unit-tes │ test-driven-developm │ ❌ 落不了地——无测试框架/无           │
+  │ t-write  │ ent                  │ CI，红绿循环没地方跑                 │
+  │ 单测     │                      │                                      │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ unit-tes │                      │                                      │
+  │ t-ci CI  │ 无                   │ ❌ 无 CI，砍掉                       │
+  │ 验证     │                      │                                      │
+  ├──────────┼──────────────────────┼──────────────────────────────────────┤
+  │ aone-ci- │ 无（aone             │                                      │
+  │ generate │ 是阿里内部系统）     │ ❌ 砍掉                              │
+  │  CI 配置 │                      │                                      │
+  └──────────┴──────────────────────┴──────────────────────────────────────┘
+
+  我的推荐：复制进 .harness/skills/ 的清单（按 Harness 思路，superpowers 
+  是素材库）
+
+  Harness 阶段四的本质是"把合适的 skill 借鉴/复制成项目自己的 .harness/skills/ 
+  资产"，不是装整个 plugin。按这个思路分级：
+
+  🔴 强烈建议复制并按本项目改造（覆盖 9 项里的核心 4 项）
+  - brainstorming → 项目版 request-analysis
+  - writing-plans → 项目版 coding-skill（分层 Spec 改成你的
+  pages/utils/cloudfunctions 三层）
+  - subagent-driven-development → 执行引擎（这是 superpowers
+  的精华，逐任务实现+评审闭环）
+  - requesting-code-review + receiving-code-review → 项目版
+  expert-reviewer/code-review
+
+  🟡 建议复制（本项目特别值）
+  - verification-before-completion → 这条铁律对你尤其重要：你很多"完成"声明缺证
+  据（云函数没跑过、真机没预览），它正好补上；配合自建一个"小程序部署验证 SOP"
+  - systematic-debugging → 云函数/Hunyuan 调试很费时，四阶段根因法能省大量瞎试
+
+  🟢 可选（看工作流需要）
+  - using-git-worktrees、finishing-a-development-branch、dispatching-parallel-ag
+  ents、executing-plans、using-superpowers（调度总则）
+
+  ⚪ 跳过
+  - test-driven-development——无测试基建，照搬会变形式主义。可保留"先想清验证方式
+  "的理念，但不作为 skill
+
+  需自建（superpowers 没有，但 Harness 要）
+  - 小程序版 deploy-verify：上传云函数→构建
+  npm→预览真机→控制台/云开发日志检查（用 verification-before-completion
+  的理念填内容）
+
+  这样 9 项里：5 项强覆盖、1 项部分+自建、3 项砍掉——正好符合 SOP
+  说的"可根据项目调整"。
+
+  下一步怎么走，你定：
+
+● User answered Claude's questions:
+  ⎿  · 下一步怎么落地这些 skill？ → 红+黄全落地(推荐)
+
+  Thought for 1m 30s (ctrl+o to expand)
+
+● 已确认范围：红+黄全落地--核心 5 个 + verification-before-completion +
+  systematic-debugging，外加自建小程序版 deploy-verify。
+
+  动手前先做两点只读核查：.harness/
+  是否已存在（避免覆盖）、cloudfunctionTemplate/ 真实结构（改造 coding-skill
+  要锚定它）。
+
+  Thought for 53s, listed 1 directory (ctrl+o to expand)
+
+● 核查完毕：.harness 不存在（新建），cloudfunctionTemplate/
+  三件套（cloud-secret/content-check/rate-limiter）确认，20 云函数 / 14 utils /
+  30 pages--这些是改造 coding-skill 的真实锚点。
+
+  我的落地原则（会写进总览）：不照搬 superpowers 原文，提炼成项目特定精简
+  SOP；每个 skill 顶部标注源 superpowers skill + Harness 映射；「本项目适配」章
+  节锚定你的真实结构（pages/utils/cloudfunctions/微信开发者工具/设计
+  token/双层架构）。先建任务清单和总览定调。
+  Thought for 1m 25s (ctrl+o to expand)
+
+● 任务清单就位。开始写文件。先写总览 README 定调，加 3 个核心
+  skill（request-analysis / coding-skill / expert-reviewer）。
+
+● Write(.harness\skills\README.md)
+  ⎿  Wrote 57 lines to .harness\skills\README.md
+       2 # Skills 技能体系
+         ers](https://github.com/obra/superpowers)（开源），按本项目「图w
+         个简单」微信小程序的特点改造。
+       5 ## 改造原则
+       6 
+       8 - 每个 skill = `SKILL.md` 主文档（触发场景 / 输入 / 执行步骤 / 
+       9 - 顶部 frontmatter 标注 superpowers 源 skill + Harness 阶段映射
+         。
+         s/`、`cloudfunctionTemplate/`、微信开发者工具、设计 token、on-de
+         vice / cloud 双层架构。
+     … +65 lines (ctrl+o to expand)
+
+  Thought for 3s (ctrl+o to expand)
+
+● Write(.harness\skills\request-analysis\SKILL.md)
+  ⎿  Wrote 55 lines to .harness\skills\request-analysis\SKILL.md
+      1 ---
+      2 name: request-analysis
+      3 source: superpowers:brainstorming + superpowers:writing-plans
+      4 harness_phase: 阶段四 / 阶段八-步骤1 需求分析
+      5 ---
+      6 
+      7 # 需求分析（Request Analysis）
+      8 
+      9 > 源自 superpowers `brainstorming`（发散探索）+ `writing-plans`（
+        拆任务），按本项目改造。
+     … +67 lines (ctrl+o to expand)
+
+● Write(.harness\skills\coding-skill\SKILL.md)
+  ⎿  Wrote 63 lines to .harness\skills\coding-skill\SKILL.md
+      2 name: coding-skill
+      3 source: superpowers:writing-plans + superpowers:subagent-driven-d
+        evelopment
+      4 harness_phase: 阶段四 / 阶段八-步骤3 编码实现
+      5 ---
+      6 
+      7 # 编码实现（Coding Skill）
+      8 
+      9 > 源自 superpowers `writing-plans`（拆 bite-sized 任务）+ `subage
+        nt-driven-development`（逐任务 subagent + 评审），按本项目改造。
+     … +78 lines (ctrl+o to expand)
+
+● Write(.harness\skills\expert-reviewer\SKILL.md)
+  ⎿  Wrote 70 lines to .harness\skills\expert-reviewer\SKILL.md
+      2 name: expert-reviewer
+      3 source: superpowers:requesting-code-review + superpowers:receivin
+        g-code-review
+      4 harness_phase: 阶段四 / 阶段八-步骤2 需求评审 + 步骤4 编码评审
+      5 ---
+      6 
+      7 # 专家评审（Expert Reviewer）
+      8 
+      9 > 源自 superpowers `requesting-code-review`（派 reviewer）+ `rece
+        iving-code-review`（回应反馈），按本项目改造。
+     … +70 lines (ctrl+o to expand)
+
+  Thought for 1m 16s (ctrl+o to expand)
+
+● 核心 4 个就位。写剩下 4 个：code-review / systematic-debugging /
+  verification-before-completion / deploy-verify。
+
+● Write(.harness\skills\code-review\SKILL.md)
+  ⎿  Wrote 62 lines to .harness\skills\code-review\SKILL.md
+      1 ---
+      2 name: code-review
+      3 source: superpowers:requesting-code-review (code-reviewer.md)
+      4 harness_phase: 阶段四 / 阶段八-步骤4 编码评审
+      5 ---
+      6 
+      7 # 代码检查（Code Review）
+      8 
+      9 > 源自 superpowers `requesting-code-review` 的 code-reviewer.md 
+        模板，按本项目改造为静态检查清单。
+     … +72 lines (ctrl+o to expand)
+
+● Write(.harness\skills\systematic-debugging\SKILL.md)
+  ⎿  Wrote 58 lines to .harness\skills\systematic-debugging\SKILL.md
+      1 ---
+      2 name: systematic-debugging
+      3 source: superpowers:systematic-debugging
+      4 harness_phase: 阶段四（按需，不在十阶段主链）
+      5 ---
+      6 
+      7 # 系统化调试（Systematic Debugging）
+      8 
+      9 > 源自 superpowers `systematic-debugging`，按本项目改造。四阶段根
+        因法。
+     … +61 lines (ctrl+o to expand)
+
+● Write(.harness\skills\verification-before-completion\SKILL.md)
+  ⎿  Wrote 55 lines to
+     .harness\skills\verification-before-completion\SKILL.md
+      1 ---
+      2 name: verification-before-completion
+      3 source: superpowers:verification-before-completion
+      4 harness_phase: 阶段四 / L1 常驻铁律
+      5 ---
+      6 
+      7 # 完成前验证（Verification Before Completion）
+      8 
+      9 > 源自 superpowers `verification-before-completion`，按本项目改造
+        。L1 常驻铁律。
+     … +57 lines (ctrl+o to expand)
+
+● Write(.harness\skills\deploy-verify\SKILL.md)
+  ⎿  Wrote 67 lines to .harness\skills\deploy-verify\SKILL.md
+      2 name: deploy-verify
+      3 source: 自建（理念源自 superpowers:verification-before-completion
+         + 项目部署流程）
+      4 harness_phase: 阶段四 / 阶段八-步骤9 部署验证
+      5 ---
+      6 
+      7 # 部署验证（Deploy Verify）
+      8 
+      9 > 自建 skill。本项目无 CI/CD，部署 = 微信开发者工具手动上传 + 真
+        机预览。理念源自 verification-before-completion。
+     … +68 lines (ctrl+o to expand)
+
+  Thought for 35s (ctrl+o to expand)
+
+● 8 个文件全部写好。更新任务状态，同时记一条 project memory（Harness
+  落地进展，方便后续会话接续），并读 MEMORY.md 准备加索引。
+  Thought for 17s, recalled 1 memory, wrote 2 memories (ctrl+o to expand)
+
+● 落地完成。.harness/skills/ 下 8 个文件全部就位，对应 Harness SOP 阶段四。
+
+  交付清单
+
+  ┌───────────────────┬───────────────┬────────────────────────────────────┐
+  │       文件        │ superpowers   │                作用                │
+  │                   │      源       │                                    │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │ README.md         │ —             │ 改造原则 + 映射表 + L1/L2/L3       │
+  │                   │               │ 加载策略 + 砍项说明                │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │ request-analysis/ │ brainstorming │ 需求分析 SOP，含本项目必问清单（执 │
+  │ SKILL.md          │  +            │ 行层/页面注册4处/云函数三件套/限流 │
+  │                   │ writing-plans │ /密钥/内容安全）                   │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │                   │ writing-plans │ 三层结构（pages/utils/cloudfunctio │
+  │ coding-skill/SKIL │  + subagent-d │ ns）+ 硬约束清单（12条历史教训）+  │
+  │ L.md              │ riven-develop │ SDD 执行模式                       │
+  │                   │ ment          │                                    │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │ expert-reviewer/S │ requesting +  │ 计划/执行评审检查项 + 报告模板 +   │
+  │ KILL.md           │ receiving-cod │ 回应反馈规则 + 轮次约束            │
+  │                   │ e-review      │                                    │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │ code-review/SKILL │ requesting-co │ 静态检查清单（风格/安全/性能/正确  │
+  │ .md               │ de-review     │ 性高频坑）+ 严重度                 │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │ systematic-debugg │ systematic-de │ 四阶段根因法 + 云函数/Hunyuan/on-d │
+  │ ing/SKILL.md      │ bugging       │ evice/限流调试适配表 +             │
+  │                   │               │ 3次失败质疑架构                    │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │ verification-befo │ verification- │ L1 常驻铁律 + Gate 函数 +          │
+  │ re-completion/SKI │ before-comple │ 本项目验证命令映射表               │
+  │ LL.md             │ tion          │                                    │
+  ├───────────────────┼───────────────┼────────────────────────────────────┤
+  │ deploy-verify/SKI │ 自建          │ 部署参数确认 + 端到端验证6步 +     │
+  │ LL.md             │               │ deploy_report 模板                 │
+  └───────────────────┴───────────────┴────────────────────────────────────┘
+
+  关键决策
+
+  - 砍掉 unit-test-write / unit-test-ci / aone-ci-generate--无测试框架、无
+  CI，照搬会变形式主义；TDD 的"先想清验证方式"理念已融进
+  verification-before-completion。
+  - 不照搬原文：每个 skill 都是项目特定精简 SOP，锚定你的真实结构（20 云函数 /
+  14 utils / 30 pages / cloudfunctionTemplate 三件套 / 微信开发者工具验证 / 设计
+  token），而非 superpowers 的通用 Python/Jest 范例。
+  - verification-before-completion 设为 L1 常驻--因为本项目无
+  CI/无自动化测试兜底，手动验证证据最不能省，这正是你"提升 AI Coding
+  率"最该补的短板。
+
+  两点提醒
+
+  1. 这套 skill 现在是文档资产，要真正生效需后续会话主动加载遵循。
+  建议（可选）在 CLAUDE.md 末尾加一行指向
+  .harness/skills/README.md，让我每次会话知道有这套体系可调；或者在阶段五的
+  Application Owner Agent 里把它们织进调度指令。需要我加这行吗？
+  2. 后续 Harness 阶段：阶段三 Rules（工程结构/编码规范/开发流程三份）、阶段五
+  Application Owner Agent、阶段六 wiki 还没做。coding-skill
+  里的硬约束清单其实已经是 Rules 的雏形，可以平移过去。
+
+  已记一条 project memory（harness-skills-landed）方便后续会话接续。
+
+  Sources: skill 内容基于 obra/superpowers (https://github.com/obra/superpowers)
+  仓库 main 分支真实 SKILL.md（14 个 skill 全部读取后选择性改造）。
+
+✻ Sautéed for 18m 23s
+
+※ recap: 落地 Harness SOP 阶段四：从 obra/superpowers 选择性改造 7 个 skill 到 .harness/skills/，已全部写完。下一步是推进阶段三 Rules（工程结构/编码规范/开发流程三份文件）。 (disable recaps in /config)
+
+❯ 请执行后续Harness阶段三                                                       
+
+  Thought for 41s (ctrl+o to expand)
+
+● 执行 Harness 阶段三：定义 Rules（规则体系）。三份文件落到
+  .harness/rules/，每份 50-100 行精炼约束，每条对应一个历史教训。
+
+  CLAUDE.md 已是详尽背景文档，Rules 的价值在于提炼成跨阶段稳定约束的规则化形式（
+  do/don't），不重复背景叙述。动手前先做只读核查，确保 Rules
+  描述的工程结构、helper 规范、流程细节准确--尤其 cloudfunctionTemplate/
+  三件套的实际内容（Rules 要锚定它作为规范源）。
+
+  Thought for 54s, read 6 files (ctrl+o to expand)
+
+● 核查完毕，关键发现都已确认：
+
+  - app.json：29 个页面，无 tabBar（靠 index.js groups
+  三组导航），lazyCodeLoading: requiredComponents
+  - package.json：确认只有 dummy test，唯一依赖 piexifjs
+  - .gitignore：.claude/ 和 /docs 被忽略，但 .harness/ 
+  未被忽略（会入库，符合团队共享资产定位）；cloudfunctions/*/config.json +
+  *.json（除 package.json）忽略
+  - cloudfunctionTemplate 三件套实际实现确认（占位符正则、assertImageSafe 1MB
+  阈值、checkRateLimit 先 inc 后 add、北京日 +8、DEFAULT_LIMIT 20）--Rules
+  要锚定这些确切值
+
+  现在写三份 Rules。原则：条目化规则（do/don't + 确切值），不重复 CLAUDE.md
+  的背景叙述，每条对应一个历史教训。每份控制在 50-100 行。
+
+● Write(.harness\rules\工程结构.md)
+  ⎿  Wrote 56 lines to .harness\rules\工程结构.md
+       1 ---
+       2 name: 工程结构
+       3 harness_phase: 阶段三 / L1 常驻
+       4 ---
+       5 
+       6 # 工程结构
+       7 
+       8 > 不随需求变化的稳定结构约束。新增功能前先对照本文件落位。
+       9 
+      10 ## 布局
+     … +67 lines (ctrl+o to expand)
+
+● Write(.harness\rules\项目编码规范.md)
+  ⎿  Wrote 63 lines to .harness\rules\项目编码规范.md
+       2 name: 项目编码规范
+       3 harness_phase: 阶段三 / L1 常驻
+       4 ---
+       5 
+       6 # 项目编码规范
+       7 
+       8 > 硬性约束，每条对应一个历史教训（见 memory）。编码逐条对照，评
+         审逐条核查。
+       9 
+      10 ## 时区与限流
+     … +85 lines (ctrl+o to expand)
+
+● Write(.harness\rules\开发流程规范.md)
+  ⎿  Wrote 61 lines to .harness\rules\开发流程规范.md
+       2 name: 开发流程规范
+       3 harness_phase: 阶段三 / L1 常驻
+       4 ---
+       5 
+       6 # 开发流程规范
+       7 
+       8 > 需求从接收到交付的标准流程（十阶段精简版）。无 CLI，全微信开发
+         者工具。
+       9 
+      10 ## 工具链事实
+     … +78 lines (ctrl+o to expand)
+
+● Write(.harness\rules\README.md)
+  ⎿  Wrote 29 lines to .harness\rules\README.md
+       2 # Rules 规则体系
+       3 Harness SOP 阶段三产出物。不随需求变化的稳定约束，作为 Agent 常
+       4 驻上下文（L1）。
+       5 ## 三份规则
+       7 | 文件 | 范围 | 要点 |
+       8 |---|---|---|
+         布局；三层 tier（pages/utils/cloudfunctions）；cloudfunctionTemp
+         late 规范源；app.json/index.js 注册表 |
+         限流/密钥降级/内容安全FAIL_OPEN/Hunyuan双格式/图像处理坑/前端交
+         互坑/设计token；每条对应 memory 历史教训 |
+     … +29 lines (ctrl+o to expand)
+
+  Thought for 21s (ctrl+o to expand)
+
+● 四份文件就位。现在保持体系一致性：更新 skills/README.md 的 L1 分层（把三份
+  Rules 加进常驻上下文），更新 project memory 记录阶段三完成，并确认 .harness/
+  确实会被 git 跟踪入库（团队资产定位）。
+
+● Update(.harness\skills\README.md)
+  ⎿  Added 2 lines, removed 2 lines
+      23  
+      24  ## 上下文分层（对齐 Harness SOP 阶段七）
+      25  
+      26 -- **L1 常驻**：`CLAUDE.md` + `verification-before-completion`  
+         -铁律（每次会话开始）。                                         
+      26 +- **L1 常驻**：三份 Rules（`.harness/rules/`）+ `verification-b
+         +efore-completion` 铁律 + `CLAUDE.md`（每次会话开始）。         
+      27  - **L2 阶段触发**：当前阶段对应 skill（如编码阶段加载 `coding-s
+          kill`）。
+      28 -- **L3 按需查询**：wiki 知识库（暂未建，`CLAUDE.md` 暂代全局知 
+         -识）。                                                         
+      28 +- **L3 按需查询**：wiki 知识库（阶段六，暂未建）+ memory。     
+      29  
+      30  ## 目录结构
+      31  
+
+  Wrote 1 memory (ctrl+o to expand)
+
+● Bash(echo "=== .harness 是否被 git 跟踪（check-ignore
+      无输出=不忽略=会入库）==="
+      git check-ignore .harness/rules/工程结构.md && echo "[被忽略!]" || echo
+      "[未被忽略，会入库 ✓]"…)
+  ⎿  === .harness 是否被 git 跟踪（check-ignore 无输出=不忽略=会入库）===
+     [未被忽略，会入库 ✓]
+     … +20 lines (ctrl+o to expand)
+
+  Thought for 8s (ctrl+o to expand)
+
+● 阶段三完成。三份 Rules 全部落到 .harness/rules/，git
+  跟踪确认会入库，行数全部符合 SOP 的 50-100 行要求。
+
+  交付清单
+
+  ┌─────────────────┬──────┬─────────────────────────────────────────────────┐
+  │      文件       │ 行数 │                      范围                       │
+  ├─────────────────┼──────┼─────────────────────────────────────────────────┤
+  │                 │      │ flat 布局 / 三层                                │
+  │ 工程结构.md     │ 56   │ tier（pages·utils·cloudfunctions）/             │
+  │                 │      │ cloudfunctionTemplate 规范源 /                  │
+  │                 │      │ app.json·index.js 注册表 / 文件放置规则表       │
+  ├─────────────────┼──────┼─────────────────────────────────────────────────┤
+  │                 │      │ 时区限流 / 密钥降级诚实 / 内容安全 FAIL_OPEN /  │
+  │ 项目编码规范.md │ 63   │ Hunyuan 双格式 / 3-tier JSON / 图像处理坑 /     │
+  │                 │      │ 前端交互坑 / 设计 token / 命名                  │
+  ├─────────────────┼──────┼─────────────────────────────────────────────────┤
+  │                 │      │ 无 CLI 事实 / 五步流程 / 分支策略 /             │
+  │ 开发流程规范.md │ 61   │ 微信工具关键操作 / 提交规范 / 入库边界 /        │
+  │                 │      │ 变更管理                                        │
+  ├─────────────────┼──────┼─────────────────────────────────────────────────┤
+  │ README.md       │ 29   │ 索引 + 与 CLAUDE.md/skills 关系 + L1/L2/L3 加载 │
+  └─────────────────┴──────┴─────────────────────────────────────────────────┘
+
+  关键设计
+
+  Rules 不重复 CLAUDE.md：CLAUDE.md 是叙述性背景，Rules 是条目化约束（do/don't +
+  确切值）。每条规则对应一个历史教训（链接到 memory），便于评审逐条核查。
+
+  锚定真实实现，非泛泛而谈：
+  - 限流规则写明 featureKey 隔离、RATE_LIMIT_DAILY 默认 20、集合手动建、异常降级
+  pass--来自 cloudfunctionTemplate/rate-limiter.js 实读
+  - 内容安全写明 assertImageSafe 1MB 阈值、86414 违规码、FAIL_OPEN
+  仅确认违规才拦--来自 content-check.js 实读
+  - 密钥写明 env 优先级（TENCENTCLOUD_* > SECRET_*）+ 占位符正则--来自
+  cloud-secret.js 实读
+  - 入库边界来自 .gitignore 实读：.harness/ 入库，docs//.claude//密钥文件不入库
+
+  与 skills 配套：Rules 设底线（什么必须/禁止，跨阶段常驻 L1），skills
+  定流程（怎么做，L2 阶段触发）。开发流程规范 的五步流程直接引用
+  .harness/skills/ 里的 skill 名，两套资产咬合。
+
+  已同步
+
+  - skills/README.md 的 L1 常驻更新为「三份 Rules + verification 铁律 +
+  CLAUDE.md」
+  - project memory harness-skills-landed
+  更新：阶段三+四完成，阶段五/六/八-十一待推进
+
+  完整体系现状
+
+  .harness/
+  ├── rules/          ← 阶段三 ✅（4 文件）
+  │   ├── README.md
+  │   ├── 工程结构.md
+  │   ├── 项目编码规范.md
+  │   └── 开发流程规范.md
+  └── skills/         ← 阶段四 ✅（8 文件）
+      └── …7 skill + README
+
+  后续阶段：阶段五 Application Owner Agent（~400 行调度大脑，把 Rules + Skills
+  织进十阶段调度指令 + 5 个 HITL 确认点）、阶段六
+  wiki、阶段八-十一（十阶段流程定义/变更管理目录模板/MCP/Dry Run）。
+
+  需要我接着推进阶段五（Application Owner Agent）吗？那是把现在散落的 Rules 和
+  Skills 串成一套可执行调度体系的关键一环。
+
+✻ Sautéed for 3m 44s
+
+※ recap: Goal: build a `.harness/` system to raise AI coding rate; done phases 3 (rules) and 4 (skills). Next: phase 5, the Application Owner Agent that wires rules and skills into the ten-stage workflow. (disable recaps in /config)
+
+❯ 继续推进阶段五                                                                
+  Thought for 1m 33s (ctrl+o to expand)
+
+● 阶段五：定义 Application Owner Agent——整套体系的调度大脑。这是把阶段三 Rules
+  和阶段四 Skills 串成可执行调度体系的关键一环。
+
+  SOP 要求约 400 行、五个核心模块、十阶段流程调度（每阶段
+  Entry/Skill注入/产出物/质量门禁/回退）、5 个 HITL
+  确认点。关键适配：本项目无测试框架、无 CI，所以十阶段里的「单元测试编写/评审」
+  「代码推送」「CI验证」四阶段不能照搬，必须适配成本项目能落地的形态（验证用例设
+  计/评审、构建+云函数部署、真机预览验证），否则又是形式主义。
+
+  我先基于已确认的事实构建文档结构。这是单一大文件，直接写。
+
+● Write(.harness\agents\application-owner.md)
+  ⎿  Wrote 226 lines to .harness\agents\application-owner.md
+       2 name: application-owner
+       3 harness_phase: 阶段五
+       4 role: 调度大脑（Index & Map）
+       5 ---
+       6 
+       8 # Application Owner Agent
+       9 > Harness SOP 阶段五产出物。整套 Harness 体系的调度大脑，作为 Ag
+         ent 的 Index & Map。
+      10 > 你不是堆码工，而是调度者：加载 Rules、调度 Skills、守质量门禁
+         、在 HITL 确认点暂停等人决策。
+     … +291 lines (ctrl+o to expand)
+
+● 核心文档写好。现在做一致性收尾：建阶段九要求的变更目录模板（changes/ 下放一个
+  README 说明目录结构 + 模板）、确认行数、更新 skills/rules 的引用关系、更新
+  memory。
+
+● Write(.harness\changes\README.md)
+  ⎿  Wrote 85 lines to .harness\changes\README.md
+       1 # 变更管理
+       2 
+       3 Harness SOP 阶段九产出物。每个需求建一个变更目录，全流程可追溯。
+       4 
+       5 ## 目录结构
+       6 
+       7 每个需求在 `.harness/changes/` 下建：
+       8 
+       9 ```
+      10 {类型}-{需求名}-{YYYYMMDD}/
+     … +83 lines (ctrl+o to expand)
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● 核验通过：5个 HITL（11 次出现含汇总表）、十阶段完整、目录树齐全。行数
+  226，低于 SOP 的 ~400--我的版本是精炼条目式而非冗长叙述。考虑到本项目 Rules
+  已承载大量细节（避免重复），226
+  行的密度是合理的，但我应该判断是否需要扩充到接近 400。
+
+  SOP 说"约400行"是参考量，本质要求是五个模块完整 + 十阶段调度指令充分。我的文档
+  五模块齐全、十阶段每阶段六要素（Entry/Skill/产出物/门禁/回退/HITL）都有。但 
+  226 与 400 差距较大，且 SOP 
+  明确把"工作流程调度指令"标为"最长部分"--我可以让十阶段调度更充实（每阶段加"执
+  行要点"展开），让调度指令真正成为可执行手册而非提纲。这有实际价值，不是凑行数
+  。
+
+  让我扩充十阶段的执行细节，让调度指令更具操作性。
+
+  Read 1 file (ctrl+o to expand)
+
+● 文档结构完整。我给每个阶段补充「执行要点」展开，让调度指令从提纲变成可执行手册
+  ，同时补一个「调度决策树」总览（让 Agent
+  快速判断当前在哪个阶段、该做什么）。这样既贴近 SOP 的 ~400
+  行，又增加实际操作价值。
+
+  我给十阶段每阶段加执行要点，并在阶段四开头加调度决策树。用多个 Edit 高效完成。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 25 lines
+       81  
+       82  变更目录：`.harness/changes/{类型}-{需求}-{YYYYMMDD}/`（类型如
+            feat/fix/tune）。
+       83  
+       84 +### 调度决策树（先定位再执行）                                
+       85 +                                                              
+       86 +```                                                           
+       87 +接到需求                                                      
+       88 +  └─> 阶段1 需求分析（request-analysis）                      
+       89 +        └─ spec.md 写好?                                      
+       90 +              ├─ 否 ─> 回探上下文补问                         
+       91 +              └─ 是 ─> 阶段2 需求评审（expert-reviewer）      
+       92 +                    └─ APPROVED? ─ HITL② 用户确认 spec        
+       93 +                          ├─ 否 ─> 改 spec 重审（≤3轮，超限升 
+          +级人工）                                                      
+       94 +                          └─ 是 ─> 阶段3 编码实现（coding-skil
+          +l，建分支/worktree）                                          
+       95 +                                └─ 每任务 task-reviewer 双判  
+       96 +                                      └─ 全任务完成 ─> 阶段4  
+          +编码评审（whole-branch）                                      
+       97 +                                            └─ Critical=0&Impo
+          +rtant=0? ─ HITL③                                              
+       98 +                                                  ├─ 否 ─> ONE
+          + fix subagent 重审（≤2轮）                                    
+       99 +                                                  └─ 是 ─> 阶 
+          +段5 验证用例设计                                              
+      100 +                                                        └─ 阶 
+          +段6 验证用例评审（≤2轮）                                      
+      101 +                                                              
+          +└─ APPROVED ─> 阶段7 构建部署                                 
+      102 +                                                              
+          +      └─ 部署成功 ─> 阶段8 预览验证                           
+      103 +                                                              
+          +            └─ 全用例过 ─> 阶段9 部署验证 ─ HITL④ 参数确认    
+      104 +                                                              
+          +                  └─ 端到端过 ─> 阶段10 用户确认 ─ HITL⑤ 交付 
+      105 +```                                                           
+      106 +                                                              
+      107 +定位规则：会话恢复时先读 `summary.md` + `git log` + `.superpow
+          +ers/sdd/progress.md`，确认当前阶段，从该阶段 Entry 续起，不重 
+          +做已完成阶段。                                                
+      108 +                                                              
+      109  ### 阶段1：需求分析
+      110  - **Entry**：接到需求（用户一句话）。
+      111  - **Skill**：`request-analysis`。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 5 lines
+      110  - **Entry**：接到需求（用户一句话）。
+      111  - **Skill**：`request-analysis`。
+      112  - **执行**：探上下文 -> 一次一问覆盖必问清单 -> 提 2-3 方案 ->
+            分段设计 -> 写 spec.md -> spec 自检（占位符/一致性/范围/歧义
+           ）。
+      113 +- **执行要点**：                                              
+      114 +  - 先读 CLAUDE.md + 相关 pages/utils/cloudfunctions + 近期 co
+          +mmit，遵循现有模式再提改动。                                  
+      115 +  - 必问清单逐条确认：执行层（on-device vs cloud）/ 页面注册4 
+          +处（app.json+index.js groups+LAUNCH_DATES+index.wxss icon）/  
+          +云函数三件套（从 cloudfunctionTemplate 复制）/ 限流 featureKey
+          + / 密钥 env / 内容安全双层 / 设计 token / 成功标准。          
+      116 +  - 多子系统先拆子项目，每个各自 spec -> plan -> 实现；不塞一 
+          +个 spec。                                                     
+      117 +  - spec 自检：TBD/TODO 占位符、内部矛盾、范围过大、歧义双解--
+          +就地修。                                                      
+      118  - **产出物**：`request_analysis/spec.md`。
+      119  - **质量门禁**：spec 无占位符(TBD/TODO)、内部一致、范围明确、
+           歧义已消；必问清单逐条有答案。
+      120  - **回退**：spec 不达标 -> 回探上下文补问。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      124  - **Entry**：spec.md 写好。
+      125  - **Skill**：`expert-reviewer`（计划评审模式）。
+      126  - **执行**：派 reviewer 审 spec（覆盖度 / 三层落位 / 硬约束体
+           现 / 任务粒度 / 接口一致性 / 占位符）。**轮次 ≤ 3**。
+      127 +- **执行要点**：reviewer 只给 spec + 全局约束，不给会话历史； 
+          +检查任务接口签名前后一致（同名函数别 Task3 叫 `clearLayers` Ta
+          +sk7 变 `clearFullLayers`）；占位符（"适当处理异常"/"参考 Task 
+          +N"）视为未完成。                                              
+      128  - **产出物**：`request_analysis/review/spec_review_vN.md`。
+      129  - **质量门禁**：APPROVED。
+      130  - **回退**：❌ -> 改 spec -> 重审；超 3 轮升级人工。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 5 lines
+      135  - **Skill**：`coding-skill`（+ `subagent-driven-development` 
+           多任务）。
+      136  - **前置**：建功能分支 / worktree，**不在 main 开干**。
+      137  - **执行**：三层结构落位，硬约束清单逐条对照；多任务 fresh imp
+           lementer per task + task-reviewer。
+      138 +- **执行要点**：                                              
+      139 +  - fresh subagent 只给：任务 brief（`scripts/task-brief` 抽取
+          +）+ 邻接接口 + 全局约束，**不给会话历史**；报告落文件（brief `
+          +task-N-brief.md` -> report `task-N-report.md`）。             
+      140 +  - 硬约束逐条对照：北京日计数 / 密钥不入前端 / 内容安全 FAIL_
+          +OPEN / Hunyuan 双格式 / 3-tier JSON / compressImage 丢 alpha /
+          + 蓝LSB怕JPEG / dataset index 字符串 / bindtap 事件对象 / 设计 
+          +token / button 单行。                                         
+      141 +  - implementer 状态处理：DONE->派 reviewer；DONE_WITH_CONCERN
+          +S->先读疑虑；NEEDS_CONTEXT->补上下文重派；BLOCKED->评估（补上 
+          +下文/换强模型/拆小/plan错了升级人）。                         
+      142 +  - 连续执行不逐任务请示；Critical/Important 修完才进下一任务 
+          +。                                                            
+      143  - **产出物**：`coding/coding_report_vN.md`（**含验证证据**）。
+      144  - **质量门禁**：每任务 spec合规✅ + 质量✅；硬约束清单全过；验
+           证有证据（非"应该过"）。
+      145  - **回退**：任务评审 ❌ -> fix subagent -> 重审。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      149  - **Entry**：编码完成。
+      150  - **Skill**：`expert-reviewer` + `code-review`。
+      151  - **执行**：派最终 whole-branch reviewer（diff = MERGE_BASE..H
+           EAD），静态清单逐条核查。**轮次 ≤ 2**。
+      152 +- **执行要点**：用 `scripts/review-package MERGE_BASE HEAD` 生
+          +成 diff 文件交 reviewer（不贴进自己上下文）；reviewer 双判 spe
+          +c 合规 + 代码质量；不预判发现严重度（不在 dispatch 写"最多 Min
+          +or"/"别报 X"）；plan-mandated 发现交用户裁决。                
+      153  - **产出物**：`coding/review/code_review_vN.md`。
+      154  - **质量门禁**：Critical=0、Important=0（Minor 记 ledger 待 fi
+           nal triage）。
+      155  - **回退**：有 Critical/Important -> **ONE** fix subagent 带全
+           部发现 -> 重审；超 2 轮升级人工。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Error editing file
+
+● 破折号字符可能有差异。我重新读取那段的精确内容。
+
+  Read 1 file (ctrl+o to expand)
+
+● 我看到第162行用了 --（两个连字符），而我 Edit 的 old_string 里也是
+  --。问题可能是该行有不可见字符或我匹配的换行上下文。我直接用行 162-163
+  的精确文本重试，只替换这两行。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Error editing file
+
+● 还是不匹配--第162行的 -- 在文件里可能是 em-dash —— 或 en-dash –，而 Read
+  显示成了 --。我用 Bash
+  看16进制确认，或者直接用一个更短、肯定唯一的子串来定位。我用
+  unit_test/test_report.md（验证用例清单
+  这个唯一片段，匹配第163行，把执行要点插在162和163之间。
+
+  实际上更简单：我用第163行的产出物行作为锚点，在它前面插入执行要点。但 Edit
+  需要精确匹配。让我换策略--直接匹配第163行整行（它应该唯一），替换为「执行要点
+  + 产出物行」。
+
+  第163行内容（从 Read 复制）：- 
+  **产出物**：\unit_test/test_report.md`（验证用例清单 + 预期 + 怎么验证 +
+  看什么证据）。`
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      160  - **Entry**：编码评审通过。
+      161  - **Skill**：`verification-before-completion`（理念）。
+      162  - **执行**：列验证路径清单——核心功能路径（真机走通）/ 边界输入
+            / 内容安全违规输入（应拦）+正常输入（应过）/ 限流计数核对 / 
+           降级路径（未配密钥显"示例"）/ 密钥态真实返回。
+      163 +- **执行要点**：每条用例含「场景 + 操作步骤 + 预期 + 怎么验证 
+          ++ 看什么证据」；on-device 功能加 Canvas/编码器边界（大图/透明/
+          +EXIF）；云函数加超时/集合缺失降级；AI 功能加 demo 态（未配密钥
+          +）与真实态双路径。                                            
+      164  - **产出物**：`unit_test/test_report.md`（验证用例清单 + 预期 
+           + 怎么验证 + 看什么证据）。
+      165  - **质量门禁**：用例覆盖核心场景 + 安全 + 降级 + 限流；每条含
+           证据要求。
+      166  - **回退**：覆盖不全 -> 补用例。
+
+● 成功了。剩余阶段6-10的执行要点，我用同样的锚点策略（匹配产出物行，前插执行要点
+  ）批量完成。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      169  - **Entry**：验证用例清单写好。
+      170  - **Skill**：`expert-reviewer`。
+      171  - **执行**：审用例覆盖度（是否漏核心路径 / 边界 / 安全 / 降级
+           ）。**轮次 ≤ 2**。
+      172 +- **执行要点**：重点查 on-device 功能的边界用例（透明图/JPEG  
+          +重压缩/大图内存）、AI 功能的 demo↔真实态切换、限流的跨日/跨功 
+          +能隔离是否覆盖。                                              
+      173  - **产出物**：`unit_test/review/`。
+      174  - **质量门禁**：覆盖度 APPROVED。
+      175  - **回退**：❌ -> 补 -> 重审；超 2 轮升级人工。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      179  - **Entry**：验证用例评审通过。
+      180  - **Skill**：`deploy-verify`（构建+部署部分）。
+      181  - **执行**：npm 依赖变更 -> 工具->构建 npm；右键 `cloudfunctio
+           ns/<name>/` -> 上传并部署：云端安装依赖；涉及限流则确认 `rate_
+           limit` 集合已建。
+      182 +- **执行要点**：新建云函数必须三件套齐全（从 cloudfunctionTemp
+          +late 复制）；改共享 helper 须同步模板+所有副本；npm 依赖变更（
+          +piexifjs / wx-server-sdk / tencentcloud-sdk-nodejs）才需构建 n
+          +pm。                                                          
+      183  - **产出物**：`deployment/deploy_report.md`（构建+部署部分）。
+      184  - **质量门禁**：构建 npm 成功；云函数日志无启动报错。
+      185  - **回退**：部署失败 -> 回阶段3 修。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      189  - **Entry**：云函数部署成功。
+      190  - **Skill**：`verification-before-completion` + `deploy-verify
+           `。
+      191  - **执行**：预览扫码真机；按阶段5验证用例逐条执行；Console 无 
+           error、云函数日志无异常、限流文档已 inc（若涉及）、内容安全违
+           规拦/正常过、降级标注正确。
+      192 +- **执行要点**：真机必跑（开发者工具模拟器不够）；证据要可查（
+          +Console 截图/云函数日志链接/rate_limit 文档截图）；失败先过 sy
+          +stematic-debugging 查根因再回阶段3，不盲改。                  
+      193  - **产出物**：`ci_result/ci_result.md`（验证结果 + 证据：日志/
+           截图）。
+      194  - **质量门禁**：所有验证用例通过 + 证据齐全（类比 `status==SUC
+           CESS && 用例数>0 && 全通过`）。
+      195  - **回退**：验证失败 -> bug 则先 `systematic-debugging` 查根因
+            -> 回阶段3 修。
+
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      198  - **Entry**：预览验证全通过。
+      199  - **Skill**：`deploy-verify`。
+      200  - **执行**：部署参数最终确认（env vars / `RATE_LIMIT_DAILY` / 
+           `rate_limit` 集合 / COS+CI 若涉及）；端到端复验；`globalData.s
+           ecretConfigured` 与 AI 返回一致性核对（声称"AI可用"却走 demo =
+            假完成）。
+      201 +- **执行要点**：参数清单逐项核对（云环境 / TENCENTCLOUD_* env 
+          +/ RATE_LIMIT_DAILY / rate_limit 集合 / COS+CI 若涉及）；secret
+          +Configured=true 时 AI 必须非 demo 返回，false 时 UI 必显"示例"
+          +--两者矛盾即假完成。                                          
+      202  - **产出物**：`deployment/deploy_report.md`（完整版）。
+      203  - **质量门禁**：参数齐全 + 端到端通过 + 降级正确。
+      204  - **回退**：参数缺 -> 补配置 -> 重验。
+● Update(.harness\agents\application-owner.md)
+  ⎿  Added 1 line
+      208  - **Entry**：部署验证通过。
+      209  - **Skill**：无（交付确认）。
+      210  - **执行**：更新 `summary.md`（全流程追溯）；向用户呈报交付物 
+           + 验证证据。
+      211 +- **执行要点**：summary.md 填全（阶段进度表/验证用例数/5个HITL
+          +决议/产出物索引/教训沉淀）；新教训同步加进 Rules + memory；呈 
+          +报时附验证证据，不只说"完成"。                                
+      212  - **产出物**：`summary.md` 终版。
+      213  - **质量门禁**：summary 完整 + 证据齐全。
+      214  - **回退**：用户不满意 -> 回相应阶段。
+
+● 全部扩充完成。最终核验行数与完整性，并更新 memory。
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● 核验通过：五模块齐全（一~五）、十阶段完整、每阶段都有执行要点（10个）、269
+  行。
+
+  行数 269 虽仍未到 SOP 的 ~400，但这是条目式精炼的结果--本项目 Rules
+  已承载大量细节约束，application-owner 作为调度索引不必重复 Rules
+  内容，而是引用。再强行扩充会变成重复 Rules 的水分。我认为 269 行的密度优于 400
+  行的冗余，符合"内容精炼、每条对应一个教训"的 SOP 精神（这条原则 SOP
+  在阶段三明确要求，阶段五的 Agent 同理适用）。
+
+  更新 memory 记录阶段五完成。
+
+  Wrote 1 memory (ctrl+o to expand)
+
+● 阶段五完成。Application Owner Agent 落到
+  .harness/agents/application-owner.md，连同阶段九的变更管理模板一起交付。
+
+  交付清单
+
+  ┌──────────────────────────────────────┬──────┬────────────────────────────┐
+  │                 文件                 │ 行数 │            内容            │
+  ├──────────────────────────────────────┼──────┼────────────────────────────┤
+  │ .harness/agents/application-owner.md │ 269  │ 调度大脑，五模块齐全       │
+  ├──────────────────────────────────────┼──────┼────────────────────────────┤
+  │ .harness/changes/README.md           │ -    │ 变更目录结构 + summary.md  │
+  │                                      │      │ 模板（阶段九）             │
+  └──────────────────────────────────────┴──────┴────────────────────────────┘
+
+  application-owner.md 五模块
+
+  一、角色与项目背景 - Application Owner 定位（调度者非堆码工）+
+  项目核心信息（双层架构/无CLI无CI/关键约束）
+
+  二、配置中枢索引 - L1 常驻（3 Rules + 验证铁律 + CLAUDE.md）/ L2 阶段触发（7
+  skill 映射阶段）/ L3 按需（memory/wiki）/ MCP 候选
+
+  三、七项核心职责 - 需求理解澄清 / 任务拆解 / 分发协调（SDD fresh subagent）/
+  任务验收（双判+证据）/ 质量把关 / 文档维护 / 知识问答
+
+  四、十阶段调度指令 -
+  每阶段六要素（Entry/Skill注入/产出物/质量门禁/回退/HITL）+ 执行要点 +
+  调度决策树（快速定位当前阶段）+ HITL 五确认点汇总
+
+  五、沟通原则与硬性约束 - Must-do / Must-not-do / 沟通原则
+
+  关键决策与适配
+
+  十阶段适配（核心）--本项目无测试框架/无 CI，照搬会形式主义：
+
+  ┌──────────┬──────────────────────────────────┬───────────────────────────┐
+  │   SOP    │            本项目适配            │           理由            │
+  │  原阶段  │                                  │                           │
+  ├──────────┼──────────────────────────────────┼───────────────────────────┤
+  │ 5        │ 验证用例设计（手动验证路径清单） │ 无测试框架                │
+  │ 单测编写 │                                  │                           │
+  ├──────────┼──────────────────────────────────┼───────────────────────────┤
+  │ 6        │ 验证用例评审（覆盖度）           │ 同上                      │
+  │ 单测评审 │                                  │                           │
+  ├──────────┼──────────────────────────────────┼───────────────────────────┤
+  │ 7        │ 构建 npm + 上传云函数            │ 无 git push CI            │
+  │ 代码推送 │                                  │                           │
+  ├──────────┼──────────────────────────────────┼───────────────────────────┤
+  │ 8 CI     │ 真机预览 + 日志核对              │ 无                        │
+  │ 验证     │                                  │ CI，用真机+日志作等价门禁 │
+  └──────────┴──────────────────────────────────┴───────────────────────────┘
+
+  骨架不省、形态落地。质量门禁全部改为可手动核验条件（因无可程序化
+  CI），证据要求反而更严--无自动化兜底，手动验证不可省。
+
+  5 个 HITL 确认点对齐 SOP：①需求待决议 ②计划评审后 ③编码评审后 ④部署参数
+  ⑤最终交付。评审轮次约束：需求 ≤3、编码/验证 ≤2，超限升级人工。
+
+  调度决策树 - 加了一段 ASCII 决策树，让 Agent 会话恢复时快速定位当前阶段（读
+  summary.md + git log + ledger 续起，不重做已完成阶段）。
+
+  关于行数
+
+  SOP 说"约 400 行"，实际 269 行。这是有意为之的精炼--本项目 Rules
+  已承载大量细节约束，application-owner 作为调度索引引用 Rules/skills
+  而非重复其内容。SOP 阶三明确要求"内容精炼、每条对应一个教训"，阶段五的 Agent
+  同理适用。再扩充会变成重复 Rules 的水分，反而降低可读性。如果你倾向严格贴近
+  400
+  行，我可以把每阶段的执行要点再展开成更细的检查清单，但我认为当前密度更实用。
+
+  完整体系现状
+
+  .harness/
+  ├── agents/application-owner.md   ← 阶段五 ✅（调度大脑）
+  ├── changes/README.md             ← 阶段九 ✅（变更管理模板）
+  ├── rules/  (4 文件)              ← 阶段三 ✅
+  └── skills/ (8 文件)              ← 阶段四 ✅
+
+  后续阶段：阶段六 wiki、阶段十 MCP、阶段十一 Dry
+  Run（用一个虚拟需求跑通十阶段暴露缺陷）、阶段十二 正式使用。
+
+  一个待决问题
+
+  这套 Harness 体系现在是完整的文档资产，但要真正影响每次会话的 AI Coding 
+  行为，需要让 Agent 在会话开始时知道加载它。目前
+  CLAUDE.md（每次会话必读）还没有指向 .harness/ 的入口。
+
+  建议在 CLAUDE.md 末尾加一节，例如：
+
+  ▎ Harness 体系（.harness/）
+  ▎
+  ▎ 本项目已落地 Harness 工程化体系（SOP 见 docs/Harness 落地设计 SOP.md）：
+  ▎ - 开发任何需求前，先读 
+  ▎ .harness/agents/application-owner.md（调度大脑），按十阶段流程执行。
+  ▎ - L1 常驻：.harness/rules/ 三份 + verification-before-completion 铁律。
+  ▎ - L2 阶段触发：.harness/skills/ 对应 skill。
+
+  要不要我把这一节加进 CLAUDE.md？这是让整套体系"通电"的最后一步--否则
+  application-owner.md 写得再好，新会话也不会自动加载它。
+
+✻ Brewed for 5m 28s
+
+※ recap: 落地 Harness 体系提升 AI Coding 率，已完成阶段三 Rules、阶段四 Skills、阶段五 Application Owner Agent。下一步：在 CLAUDE.md 末尾加一节指向 .harness/，让新会话自动加载这套体系。 (disable recaps in /config)
+
+❯ 好 加上                                                                       
+
+● 在 CLAUDE.md 末尾加 Harness 入口节。先读末尾确认插入位置和现有格式。
+
+  Read 1 file (ctrl+o to expand)
+
+● 文件只有 120 行。读末尾确认格式和最后一节。
+
+  Read 1 file (ctrl+o to expand)
+
+● 确认了末尾格式：最后一节是 ## Gitignore notes，第 119 行结束，120
+  行是文件尾。我在 ## Gitignore notes 之前插入新的 Harness 入口节。
+
+  CLAUDE.md 用的是英文（与项目整体风格一致），但考虑到你之前的对话和现有文档用中
+  文，而这一节是面向 Agent
+  的调度指令且关联大量中文文档名，我采用中英结合：标题和关键指令中文，保持与
+  .harness/ 体系一致。先看一下文件开头几节的标题风格，决定语言一致性。
+
+  Read 1 file (ctrl+o to expand)
+
+● CLAUDE.md 主体是英文（标题英文，正文英文，仅产品名/中文词保留中文）。为保持文
+  件风格一致，新增节用英文标题 +
+  正文，但中文文档名和关键术语保留中文。这样不破坏现有格式。
+
+  在 ## Gitignore notes 前插入新节。
+
+● Update(CLAUDE.md)
+  ⎿  Added 17 lines
+      114  - **`rebase` can silently drop large block swaps** — exit 0 do
+           es not mean structural changes landed. After any rebase, `grep
+           `-verify that moved/renamed blocks actually exist where expect
+           ed. (See memory: `rebase-silent-block-swap-loss`.)
+      115  - **Replicate** (if used for any model): old models 404 on `/m
+           odels/{owner}/{name}/predictions` — use `/v1/predictions` + pi
+           nned `version`. A deployed model version is a code snapshot; t
+           rust the actual prediction output over `predict.py`. (See memo
+           ry.)
+      116  
+      117 +## Harness Engineering System (.harness/)                     
+      118 +                                                              
+      119 +This project has a Harness engineering system landed per `docs
+          +/Harness 落地设计 SOP.md` (goal: raise the AI-coding rate). It
+          + is **loaded at session start** alongside this file - treat it
+          + as active process, not reference docs.                       
+      120 +                                                              
+      121 +**Before starting any requirement**, read `.harness/agents/app
+          +lication-owner.md` (the dispatch brain) and follow its ten-sta
+          +ge flow. Stages 1-4 (analysis -> review -> coding -> code revi
+          +ew) are the front half you'll touch most.                     
+      122 +                                                              
+      123 +**Context layering:**                                         
+      124 +- **L1 always-on:** `.harness/rules/` three files (工程结构 / 
+          +项目编码规范 / 开发流程规范) + `.harness/skills/verification-b
+          +efore-completion/SKILL.md` (the iron law: no completion claim 
+          +without fresh verification evidence) + this CLAUDE.md.        
+      125 +- **L2 stage-triggered:** the skill for the current stage unde
+          +r `.harness/skills/` (request-analysis, coding-skill, expert-r
+          +eviewer, code-review, deploy-verify, systematic-debugging).   
+      126 +- **L3 on-demand:** `~/.claude/.../memory/MEMORY.md` and (futu
+          +re) `wiki/`.                                                  
+      127 +                                                              
+      128 +**Stage adaptation (critical):** this project has **no test fr
+          +amework and no CI**. The SOP's stages 5/6 (unit-test write/rev
+          +iew) are adapted to *manual verification-case design/review*, 
+          +stage 7 (push) to *build-npm + upload cloud function*, stage 8
+          + (CI) to *real-device preview + log check*. The ten-stage skel
+          +eton is kept; only the form is adapted to what actually runs h
+          +ere. Because there's no automation backstop, **manual verifica
+          +tion evidence is non-negotiable** - "should pass" / "looks rig
+          +ht" is not completion.                                        
+      129 +                                                              
+      130 +**Per-requirement change record:** create `.harness/changes/{t
+          +ype}-{name}-{YYYYMMDD}/` with `summary.md` as the single sourc
+          +e of truth (template in `.harness/changes/README.md`). HITL co
+          +nfirmation points (5) must pause for the human.               
+      131 +                                                              
+      132 +`.harness/` is committed (team-shared); `docs/` and `.claude/`
+          + are gitignored.                                              
+      133 +                                                              
+      134  ## Gitignore notes
+      135  
+      136  `cloudfunctions/*/config.json`, `cloudfunctions/**/local-confi
+           g.json`, `node_modules/`, `miniprogram_npm/`, `package-lock.js
+           on`, `.claude/`, and `project.private.config.json` are gitigno
+           red. The `config.json` files exist locally with placeholders o
+           nly — they are not the source of truth for secrets (env vars a
+           re).
+
+● 已加。验证插入正确、节标题无冲突、Harness 节与 Gitignore 节衔接正常。
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● 插入正确。CLAUDE.md 从 120 行增至 136 行，新增 ## Harness Engineering System 
+  (.harness/) 节（第 117 行），位于 ## Conventions & Gotchas 之后、## Gitignore 
+  notes 之前，12 个二级标题无冲突、无重复。
+
+  完成情况
+
+  整套 Harness 体系现在"通电"了。CLAUDE.md 是每次会话必读文件，新增节明确告诉
+  Agent：
+
+  1. 会话开始即加载 -- 与 CLAUDE.md 并列，作为 active process 而非参考文档
+  2. 动手前读 application-owner.md -- 按十阶段流程走，前 4
+  阶段（分析→评审→编码→代码评审）最常用
+  3. 三层上下文加载策略 -- L1 常驻（3 Rules + 验证铁律 + CLAUDE.md）/ L2
+  阶段触发 / L3 按需
+  4. 阶段适配说明 -- 明确无测试/无CI的现实，5/6/7/8
+  四阶段如何落地，手动验证证据不可省
+  5. 变更记录 -- 每需求建 .harness/changes/ 目录，5 个 HITL 必须暂停
+
+  完整 Harness 体系现状
+
+  .harness/
+  ├── agents/application-owner.md   ← 阶段五 ✅ 调度大脑
+  ├── changes/README.md             ← 阶段九 ✅ 变更管理模板
+  ├── rules/  (4 文件)              ← 阶段三 ✅ L1 常驻底线
+  └── skills/ (8 文件)              ← 阶段四 ✅ L2 阶段流程
+
+  CLAUDE.md                         ← 阶段五 ✅ 入口节（会话必读，指向
+  .harness/）
+  docs/Harness 落地设计 SOP.md      ← 源 SOP（本地，gitignored）
+
+  阶段一~五 + 九已完成，剩下：
+
+  - 阶段六 wiki -- 业务上下文知识库（wiki/，至少 4
+  份：快速上手/业务开发/数据对接/部署运维/FAQ）。本项目 CLAUDE.md 已很详尽，wiki
+  可作为补充
+  - 阶段十 MCP -- 集成外部工具（Puppeteer 端到端截图/GitHub
+  PR/数据库查询/Linter）。本项目无 CI，MCP 主要补端到端验证与数据查询
+  - 阶段十一 Dry Run -- 用一个虚拟需求跑通十阶段，暴露缺陷（评审报告不生成文件、
+  门禁不可程序化验证等），修复后迭代
+  - 阶段十二 正式使用 -- 首次真实需求全程监控，每发现错误即 Patch 进 Harness
+
+  要不要继续推进阶段六 wiki，或者先做阶段十一 Dry
+  Run（用虚拟需求验证整套体系是否真能跑通）？我的建议是先 Dry Run--因为 wiki
+  是内容补充，而 Dry Run 能暴露现在这套 rules/skills/agent
+  设计上的真实缺陷（比如门禁全是手动核验，会不会导致 Agent
+  跳过验证），发现问题后一起修，比先堆 wiki 更有价值。
+
+✻ Baked for 1m 10s
+
+※ recap: Landing the Harness system to raise this project's AI-coding rate; stages 3-5, 9 are done and the CLAUDE.md entry point is wired in. Next: run a Dry Run (stage 11) with a dummy requirement to stress-test the ten-stage flow.
