@@ -6,6 +6,29 @@
       "folder": "RSS",
       "items": [
         {
+          "title": "xAI Grok Build CLI 网络流量分析：上传仓库全部文件及 git 历史",
+          "link": "https://aihot.virxact.com/items/cmrhagju201pqbir7t0tnsgfy",
+          "description": "对 xAI 官方 Grok Build 编码 CLI（grok 0.2.93）的网络流量分析显示，该工具在消费者登录后会向 xAI 发送三类数据：一是它读取的文件内容（包括 .env 密钥文件）以明文形式通过 POST /v1/responses 传输，并同时打包成 session_state 存档通过 POST /v1/storage 上传并获 HTTP 200 确认；二是整个仓库的全部文件内容及 git 历史，独立于 AI 智能体实际读取的文件--即使提示\"不要读取任何文件\"，Grok 仍将整个仓库作为 git bundle 上传至 Google Cloud Storage 的 grok-code-session-traces 存储桶；三是该上传机制默认开启，且关闭\"改进模型\"设置不会禁用（/v1/settings 仍返回 trace_upload_enabled： true）。在 12 GB 仓库测试中，/v1/storage 传输了 5.10 GiB 数据，而模型对话通道仅传输 192 KB，比例约 27，800 倍。分析未证明 xAI 使用这些数据进行训练，但证实了数据被传输、接收并存储。 🔗 阅读原文：https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547 via AI HOT · https://aihot.virxact.com/items/cmrhagju201pqbir7t0tnsgfy",
+          "content": "对 xAI 官方 Grok Build 编码 CLI（grok 0.2.93）的网络流量分析显示，该工具在消费者登录后会向 xAI 发送三类数据：一是它读取的文件内容（包括 .env 密钥文件）以明文形式通过 POST /v1/responses 传输，并同时打包成 session_state 存档通过 POST /v1/storage 上传并获 HTTP 200 确认；二是整个仓库的全部文件内容及 git 历史，独立于 AI 智能体实际读取的文件--即使提示\"不要读取任何文件\"，Grok 仍将整个仓库作为 git bundle 上传至 Google Cloud Storage 的 grok-code-session-traces 存储桶；三是该上传机制默认开启，且关闭\"改进模型\"设置不会禁用（/v1/settings 仍返回 trace_upload_enabled： true）。在 12 GB 仓库测试中，/v1/storage 传输了 5.10 GiB 数据，而模型对话通道仅传输 192 KB，比例约 27，800 倍。分析未证明 xAI 使用这些数据进行训练，但证实了数据被传输、接收并存储。 🔗 阅读原文：https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547 via AI HOT · https://aihot.virxact.com/items/cmrhagju201pqbir7t0tnsgfy",
+          "pubDate": "Sun, 12 Jul 2026 03:59:09 GMT",
+          "guid": "https://aihot.virxact.com/cmrhagju201pqbir7t0tnsgfy",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT — 精选",
+          "feedUrl": "https://aihot.virxact.com/feed.xml",
+          "coverImage": "",
+          "summary": "对 xAI 官方 Grok Build 编码 CLI（grok 0.2.93）的网络流量分析显示，该工具在消费者登录后会向 xAI 发送三类数据：一是它读取的文件内容（包括 .env 密钥文件）以明文形式通过 POST /v1/responses 传输，并同时打包成 session_state 存档通过 POST /v1/storage 上传并获 HTTP 200 确认；二是整个仓库的全部文件内容及 git 历史，独立于 AI 智能体实...",
+          "author": "noreply@aihot.virxact.com (Hacker News 热门（buzzing.cc 中文翻译）)",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
+        {
           "title": "苹果起诉OpenAI挖角窃密，分析师称即使指控未证实也可能重创其硬件计划",
           "link": "https://aihot.virxact.com/items/cmrh8o88501e4bir7wzxmfpfm",
           "description": "苹果在美国起诉OpenAI，指控其挖角400名员工、窃取工程机和机密文件。分析师Paolo Pescatore认为，即使指控最终无法证实，OpenAI的硬件计划仍可能受拖累，双方本就脆弱的合作关系将进一步削弱。斯坦福大学教授Mark Lemley指出，若前苹果员工确实带走机密文件并在OpenAI使用，问题将变得严重。该案涉及消费级硬件产品，预计未来将有更多信息曝光。 🔗 阅读原文：https://www.ithome.com/0/975/666.htm via AI HOT · https://aihot.virxact.com/items/cmrh8o88501e4bir7wzxmfpfm",
@@ -1131,32 +1154,9 @@
           "image": "",
           "category": "",
           "episodeType": ""
-        },
-        {
-          "title": "蚂蚁灵波LingBot-Vision实测：1B参数越级打平DINOv3",
-          "link": "https://aihot.virxact.com/items/cmrcwhjxe04zgihx52g0xrzaz",
-          "description": "蚂蚁灵波LingBot-Vision实测：仅1B参数量下展现极强空间几何与边界感知能力，越级打平甚至超越7B参数的DINOv3。适合作为具身智能视觉主干、机器人导航、机械臂抓取等场景，本地算力需求低。演示免微调视频目标追踪，随便画一笔即可锁定目标。硬件级深度补全可识别透明玻璃、反光物体。全局图像分类能力中规中矩。推荐30系显卡本地运行。 🔗 阅读原文：https://x.com/karminski3/status/2075045139970760921 via AI HOT · https://aihot.virxact.com/items/cmrcwhjxe04zgihx52g0xrzaz",
-          "content": "<p>运行视频中的脚本在这里 https://gist.github.com/karminski/4c761893ddbd88fe14a92bdcf962918c</p>\n<p>[引用 @karminski3]：给大家带来蚂蚁灵波LingBot-Vision 实测!</p>\n<p>本次测试最大的亮点是在仅 1B (10亿) 参数量下, 展现出了极强的空间几何和边界感知能力, 实测表现直接越级打平甚至超越了 7B 参数的 DINOv3, 极具性价比！它非常适合用作具身智能的视觉主干 (Backbone) , 或者嵌入到机器人导航、机械臂抓取等需要极高空间精度的框架中使用都很不错, 对本地算力要求也很低. 视频中我直接给大家演示了免微调的视频目标追踪, 随便画一笔就能死死\"咬\"住目标.</p>\n<p>另外, 它在硬件级深度补全 (比如识别透明玻璃、反光物体) 上表现也堪称杀手级, 不过由于技能点都加在了密集空间结构上, 在全局图像分类能力上算是中规中矩. 手里有 30 系显卡的兄弟们强烈建议本地跑着玩玩！</p>\n<p>#灵波 #LingBot #视觉大模型 #具身智能 #机器视觉</p>\n<p>—— 本文由 AI HOT 聚合整理，完整版与更多 AI 动态见 <a href=\"https://aihot.virxact.com/items/cmrcwhjxe04zgihx52g0xrzaz\">https://aihot.virxact.com/items/cmrcwhjxe04zgihx52g0xrzaz</a></p>",
-          "pubDate": "Thu, 09 Jul 2026 02:31:28 GMT",
-          "guid": "https://aihot.virxact.com/cmrcwhjxe04zgihx52g0xrzaz",
-          "read": false,
-          "starred": false,
-          "tags": [],
-          "feedTitle": "AI HOT — 精选",
-          "feedUrl": "https://aihot.virxact.com/feed.xml",
-          "coverImage": "",
-          "summary": "运行视频中的脚本在这里 https://gist.github.com/karminski/4c761893ddbd88fe14a92bdcf962918c [引用 @karminski3]：给大家带来蚂蚁灵波LingBot-Vision 实测! 本次测试最大的亮点是在仅 1B (10亿) 参数量下, 展现出了极强的空间几何和边界感知能力, 实测表现直接越级打平甚至超越了 7B 参数的 DINOv3, 极具性价比！它非常适合用作具身智能...",
-          "author": "noreply@aihot.virxact.com (X：karminski (@karminski3))",
-          "saved": false,
-          "mediaType": "article",
-          "duration": "",
-          "explicit": false,
-          "image": "",
-          "category": "",
-          "episodeType": ""
         }
       ],
-      "lastUpdated": 1783828474018,
+      "lastUpdated": 1783839274097,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1170,9 +1170,9 @@
       "siteUrl": "https://aihot.virxact.com/",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 50,
-        "mergedItemCountBeforeRetention": 53,
+        "mergedItemCountBeforeRetention": 52,
         "retainedItemCount": 50,
-        "retentionRemovedCount": 3,
+        "retentionRemovedCount": 2,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
       },
@@ -2105,7 +2105,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1783828474149,
+      "lastUpdated": 1783839274173,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -2156,7 +2156,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1783828474149,
+  "lastRefreshTimestamp": 1783839274173,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
