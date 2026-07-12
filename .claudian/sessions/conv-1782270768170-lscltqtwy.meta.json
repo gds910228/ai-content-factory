@@ -4,7 +4,7 @@
   "title": "Generate weekly KB summary report per AI template",
   "titleGenerationStatus": "success",
   "createdAt": 1782270768170,
-  "updatedAt": 1783824934437,
+  "updatedAt": 1783827803769,
   "lastResponseAt": 1783774866700,
   "sessionId": "0e95f993-ad15-4391-922d-bee2039d39b8",
   "selectedModel": "claude-code/glm-5.2",
