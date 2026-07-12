@@ -1,0 +1,186 @@
+<section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
+
+  <!-- 1. 开头引言卡片 -->
+  <section style="margin:10px 10px 32px;background:#ffffff;border-radius:12px;box-shadow:0 4px 24px -4px rgba(220,38,38,0.15);padding:28px 24px 22px;overflow:hidden;">
+    <p style="font-size:42px;color:#DC2626;font-weight:900;margin:0;line-height:0.6;">
+      <span leaf="">"</span>
+    </p>
+    <p style="font-size:16px;font-weight:800;color:#1C1917;margin:12px 0 8px;line-height:1.75;padding-left:4px;">
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">AI Coding</span></span>
+      <span leaf="">不是拼谁的模型强，也不是拼谁的提示词花，而是拼你有没有把</span>
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">怎么干活</span></span>
+      <span leaf="">写成规矩。</span>
+    </p>
+  </section>
+
+  <!-- 2. 前言正文 -->
+  <section style="padding:0 10px 32px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">兄弟们是不是经常看到网上有人晒"用AI十分钟写个网页"、"一句话生成个爬虫"，心里痒痒的，恨不得马上把自己手头那个大项目也</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">丢给AI全程搞定</span></span>
+      <span leaf="">？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先别急。前段时间就有朋友找我，说他公司想搞一个"从设计稿到落地"的全程AI Coding实践，领导要求</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">全程让AI写代码</span></span>
+      <span leaf="">，让他总结经验，问我有啥好工具。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我当时没急着推工具，先反问了一句：</span>
+      <strong style="color:#DC2626;"><span leaf="">你们项目多大？</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">他愣了一下。因为这里头藏着一个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">全网都没人讲明白的真相</span></span>
+      <span leaf="">——</span>
+      <strong style="color:#DC2626;"><span leaf="">Harness不是越强越好，小项目别用，大项目必须用。</span></strong>
+      <span leaf="">用错地方，要么白烧token给自己添堵，要么"改一个崩一个，改完项目编译都报错"。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这话不是我拍脑袋想的，是我2025年3月从Vibe Coding一路踩坑、又在</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">3个项目里实测</span></span>
+      <span leaf="">出来的真心话。这一年多摸下来，我把踩过的坑和尝到的甜头，全在这篇文章里掏给你。</span>
+    </p>
+  </section>
+
+  <!-- 3. 前言导读 -->
+  <section style="padding:0 10px 32px;">
+    <p style="font-size:14px;color:#9CA3AF;margin:0 0 14px;letter-spacing:1px;">
+      <span leaf="">📌 本文看点</span>
+    </p>
+    <section style="display:flex;justify-content:space-between;">
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">01</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">Harness不是越强越好</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">02</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">自定义手撸胜过一键生成</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">03</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">踩一次坑补一条规矩</span></p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 4. 第一章 -->
+  <section style="margin-top:16px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">01</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">PITFALL</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">我的翻车史：从"几轮搞定"到"改完编译都报错"</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">2025年3月，我用Cursor配Claude Sonnet 3.5开始搞Vibe Coding。那时候的感觉怎么说呢？真的</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">有点上头</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">写个简单的HTML页面、做个小游戏，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">几轮对话就完事</span></span>
+      <span leaf="">，AI那叫一个听话。我一度以为，编程这事儿被AI拿捏了。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">直到我想搞一个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">A股智能分析系统</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那种感觉怎么说呢？就像你雇了个助理，简单活干得漂亮，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一上大项目就原形毕露</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">刚开始我没用任何MD规范，就是纯聊天。聊了很多个回合，开了多轮会话，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">框架就是搭不起来</span></span>
+      <span leaf="">，更别提后续迭代了。AI的问题很典型：</span>
+    </p>
+
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">偶尔定位问题不准，方向跑偏；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">代码越写越乱；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">3</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">改一个崩另一个，改完项目编译都报错。</span></strong></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">最折磨人的是第三点。你刚改完A功能，B功能莫名其妙挂了；等你修好B，C又报错。一晚上就在这个"打地鼠"的循环里耗着，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">进度卡在原地</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那一刻真的有点破防。简单页面它"几轮搞定"，复杂系统它</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">"几轮崩盘"</span></span>
+      <span leaf="">，落差大得让人想摔键盘。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">也正是这次翻车，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">逼着我去找出路</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 5. 第二章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">02</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">AWAKEN</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">开窍：从社群文章抄来几份MD</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，转机来得挺偶然。在一个社群里，有人分享了一篇Vibe Coding的文章。我照着</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">抄了几份MD</span></span>
+      <span leaf="">——prd、dev、rule那套。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">神奇的事儿发生了：还是同一个模型，AI的</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">回复一下子变得规范了</span></span>
+      <span leaf="">，考虑也更细了。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「问题不在AI笨，在我没给它规矩。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">其实最早用</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">rule.md</span></span>
+      <span leaf="">、</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">dev.md</span></span>
+      <span leaf="">、</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">prd.md</span></span>
+      <span leaf="">这些文件，就是Harness的雏形。人们就是在一次次翻车里，慢慢打磨出了Harness这套现在的最佳实践。说白了，</span>
+      <strong style="color:#DC2626;"><span leaf="">AI Coding就是面向文档编程。</span></strong>
+    </p>
+  </section>
+
+  <!--C-->
+</section>

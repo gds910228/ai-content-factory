@@ -1,0 +1,24 @@
+{
+  "id": "conv-1783862093620-at03099no",
+  "providerId": "claude",
+  "title": "Install gzh-design-skill for WeChat accounts",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783862093620,
+  "updatedAt": 1783862894344,
+  "lastResponseAt": 1783862673292,
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "be0c0408-3d45-4c8c-823b-8094d1283538"
+  },
+  "usage": {
+    "model": "claude-code/glm-5.2",
+    "inputTokens": 4849,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 39232,
+    "contextWindow": 200000,
+    "contextTokens": 44081,
+    "percentage": 22,
+    "contextWindowIsAuthoritative": false
+  }
+}

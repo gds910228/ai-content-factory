@@ -1,0 +1,24 @@
+{
+  "id": "conv-1783861169540-4rdk7lak6",
+  "providerId": "claude",
+  "title": "Insert generated images into Harness article draft",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783861169540,
+  "updatedAt": 1783862039882,
+  "lastResponseAt": 1783861222323,
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "27cf6363-8f61-44d0-be4a-0adc32647210"
+  },
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 4758,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 20608,
+    "contextWindow": 200000,
+    "contextTokens": 25366,
+    "percentage": 13,
+    "contextWindowIsAuthoritative": true
+  }
+}

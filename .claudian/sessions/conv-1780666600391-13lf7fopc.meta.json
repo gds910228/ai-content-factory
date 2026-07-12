@@ -4,9 +4,9 @@
   "title": "使用Skills做内容创作",
   "titleGenerationStatus": "success",
   "createdAt": 1780666600391,
-  "updatedAt": 1783859712395,
+  "updatedAt": 1783862907309,
   "lastResponseAt": 1783859712395,
-  "sessionId": "771bd609-8bbe-4b75-9ca1-57a2af5e0d70",
+  "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
     "providerSessionId": "771bd609-8bbe-4b75-9ca1-57a2af5e0d70",
@@ -374,13 +374,13 @@
     ]
   },
   "usage": {
-    "model": "glm-5.2",
+    "model": "claude-code/glm-5.2",
     "inputTokens": 0,
     "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 0,
     "contextWindow": 200000,
     "contextTokens": 0,
     "percentage": 0,
-    "contextWindowIsAuthoritative": true
+    "contextWindowIsAuthoritative": false
   }
 }
