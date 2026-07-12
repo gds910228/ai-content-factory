@@ -2,18 +2,11 @@
   "tabManagerState": {
     "openTabs": [
       {
-        "tabId": "tab-1780534319320-x3ldxrt",
-        "conversationId": "conv-1780534491499-gzhgzsje2"
-      },
-      {
+        "draftModel": "claude-code/glm-5.2",
         "tabId": "tab-1780666597858-hlmuwk5",
-        "conversationId": "conv-1780746082383-dibc4a4t8"
-      },
-      {
-        "tabId": "tab-1780742585770-1jtj3jy",
-        "conversationId": "conv-1782270768170-lscltqtwy"
+        "conversationId": null
       }
     ],
-    "activeTabId": "tab-1780742585770-1jtj3jy"
+    "activeTabId": "tab-1780666597858-hlmuwk5"
   }
 }
