@@ -1,0 +1,25 @@
+{
+  "id": "conv-1783859833076-943591phd",
+  "providerId": "claude",
+  "title": "Insert generated images into the Harness view a...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783859833076,
+  "updatedAt": 1783859875650,
+  "lastResponseAt": 1783859875650,
+  "sessionId": "7accfaae-b821-4b4a-9549-acffae5738fa",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "7accfaae-b821-4b4a-9549-acffae5738fa"
+  },
+  "currentNote": "02-稿件库/01-创作中稿件/我对Harness的观点和实操心得-20260712/05-发布包/长文发布包.md",
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 2240,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 26304,
+    "contextWindow": 200000,
+    "contextTokens": 28544,
+    "percentage": 14,
+    "contextWindowIsAuthoritative": true
+  }
+}
