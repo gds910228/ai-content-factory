@@ -182,5 +182,250 @@
     </p>
   </section>
 
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 6. 第三章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">03</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">FRAMEWORK</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">什么是Harness，我为啥只走"自定义手撸"路</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">Harness是啥？模型你改不了（那是Anthropic、OpenAI的活），但你能给AI配一套运行环境--规矩、技能、流程、反馈，让它在</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">可控的框架里干活</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「用外部化的结构约束，替代对模型内在能力的依赖。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:14px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">搭Harness有两条路：</span>
+    </p>
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">捷径</span></strong><span leaf="">：装个Harness Creator skill，让Claude Code照着一键生成；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">自定义</span></strong><span leaf="">：相当于我们以前手撸源码的过程，自己搭。</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，第二条路我一直在走，第一条路我到现在都没用过。原因很简单--</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">我想自己掌控细节</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:14px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我的做法是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">"用AI治AI"</span></span>
+      <span leaf="">：</span>
+    </p>
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">先把Harness需要的skill准备好（我是让AI从superpowers skill里挑所需的skill）；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">下一步让AI搭Harness需要的其他MD文件（你也可以让它直接读阿里那篇深度文章，提取出搭建SOP，再照着搭）。</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这背后的逻辑是：既然能让AI干活，那搭Harness这事儿，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">也完全可以丢给AI</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">光说不练假把式。拿我</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">"图个简单"小程序</span></span>
+      <span leaf="">的搭建过程，给你看看这套方法到底怎么跑。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这是个微信小程序，功能不少，但没测试框架、没CI。我让AI读了本地的Harness落地SOP，它第一件事不是闷头写文件，而是跑去GitHub拉了superpowers仓库当前真实的14个skill清单--不凭记忆，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">拿事实说话</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:18px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">拉回来之后，AI对照SOP要求的9项技能，逐个判断适配度，最后给我一张表：</span>
+    </p>
+
+    <section style="display:flex;margin-bottom:24px;padding:0;">
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 10px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="font-size:24px;font-weight:900;color:#DC2626;margin:0 0 4px;line-height:1;"><span leaf="">5项</span></p>
+        <p style="font-size:11px;color:#9CA3AF;margin:0;"><span leaf="">强覆盖</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 10px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="font-size:24px;font-weight:900;color:#DC2626;margin:0 0 4px;line-height:1;"><span leaf="">1项</span></p>
+        <p style="font-size:11px;color:#9CA3AF;margin:0;"><span leaf="">部分适配要自建</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 10px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="font-size:24px;font-weight:900;color:#DC2626;margin:0 0 4px;line-height:1;"><span leaf="">3项</span></p>
+        <p style="font-size:11px;color:#9CA3AF;margin:0;"><span leaf="">直接砍掉</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">砍掉的那3项特别关键--单元测试、CI验证、CI配置生成。原因很实在：我这项目没测试框架、没CI，照搬TDD那套红绿循环没地方跑，硬上就是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">走形式</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">AI自己都点出来了：「</span><strong style="color:#991B1B;"><span leaf="">无测试基建，照搬会变形式主义。</span></strong><span leaf="">」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这就是自定义比一键生成强的地方：</span>
+      <strong style="color:#DC2626;"><span leaf="">它会根据你项目的真实情况，告诉你哪些该用、哪些别用。</span></strong>
+      <span leaf="">一键生成的skill可不会管你有没有CI，一股脑全塞给你。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">定好范围，AI就开始落文件：8个skill、4份Rules、1个调度大脑Agent，外加变更管理模板，全落在</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">.harness/</span></span>
+      <span leaf="">目录下。关键是，每个skill都不照搬原文，而是锚定我项目的真实结构去改--我这小程序有20个云函数、14个工具函数、30个页面，AI把这些都摸清了，才动手改造成</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">项目专属的精简SOP</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">最后一步是"通电"：在</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">CLAUDE.md</span></span>
+      <span leaf="">里加一节入口指向</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">.harness/</span></span>
+      <span leaf="">。因为</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">CLAUDE.md</span></span>
+      <span leaf="">是每次会话必读的文件，加了入口，新会话一开始就知道有套Harness体系要加载。</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">application-owner.md</span></span>
+      <span leaf="">写得再好，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不通电也是摆设</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「AI是干活的工人，我是拍板的老板。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">它拉清单、做映射、写文件，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">我审范围、定取舍</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <strong style="color:#991B1B;"><span leaf="">小技巧：</span></strong>
+        <span leaf="">让AI读阿里文章或本地SOP提炼出可执行流程，比你自己琢磨结构省事太多。它读完直接给你一份能照着干的搭建流程，你只管调细节、拍板砍哪些。</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">搭完了，效果怎么样？</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">拿实测说话</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 7. 第四章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">04</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">BENCHMARK</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">3个项目实测：搭Harness前后，AI判若两人</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我在自己迭代的项目里挑了三个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">做Harness搭建</span></span>
+      <span leaf="">：</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px;margin-right:6px;"><span leaf="">图片处理小程序</span></span>
+      <span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px;margin-right:6px;"><span leaf="">旅游民宿小程序</span></span>
+      <span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px;margin-right:6px;"><span leaf="">游戏站点</span></span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先说游戏站的对比，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">最有说服力</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这个项目有个"新增游戏"的流程，我之前已经打磨好了</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一套新增游戏的提示词</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">搭Harness之前：</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">每次新增一款游戏，一般要</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">2~3轮对话</span></span>
+      <span leaf="">才能完善好。因为AI偶尔会"部分指令要求的效果没执行"，或者执行了质量不过关。来回扯皮，费时费力。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">搭Harness之后：</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">虽然一开始AI会多跟我对话几次，让我选择确认要执行哪些项，但每一段提示词的细节它都能把握，而且</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">拆得很细</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="font-size:15px;margin:0 0 24px;text-align:center;color:#DC2626;font-weight:700;letter-spacing:1px;border-top:1px solid #FEE2E2;border-bottom:1px solid #FEE2E2;padding:14px 10px;">
+      <span leaf="">越细，执行后的效果越好。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这个项目需要适配的skill和流程细节，都准确实现了。整个过程给人一种"思路条理非常清晰"的感觉，输出效果我很满意。原来2~3轮的扯皮，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">现在一轮就到位</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那种感觉怎么说呢？就像从"骑自行车"到"开跑车"，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不是一个量级</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <strong style="color:#991B1B;"><span leaf="">小技巧：</span></strong>
+        <span leaf="">搭完Harness第一次跑真实需求时，别急着让它一口气干完。它每次找你确认执行项，你就当是在校准方向，确认得越细，后面出错越少。</span>
+      </p>
+    </section>
+  </section>
+
   <!--C-->
 </section>
