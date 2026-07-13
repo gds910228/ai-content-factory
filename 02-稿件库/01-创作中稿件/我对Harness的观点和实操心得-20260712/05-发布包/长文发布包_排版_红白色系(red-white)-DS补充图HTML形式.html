@@ -1,0 +1,765 @@
+<section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
+
+  <!-- 1. 开头引言卡片 -->
+  <section style="margin:10px 10px 32px;background:#ffffff;border-radius:12px;box-shadow:0 4px 24px -4px rgba(220,38,38,0.15);padding:28px 24px 22px;overflow:hidden;">
+    <p style="font-size:42px;color:#DC2626;font-weight:900;margin:0;line-height:0.6;">
+      <span leaf="">“</span>
+    </p>
+    <p style="font-size:16px;font-weight:800;color:#1C1917;margin:12px 0 8px;line-height:1.75;padding-left:4px;">
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">AI Coding</span></span>
+      <span leaf="">不是拼谁的模型强，也不是拼谁的提示词花，而是拼你有没有把</span>
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">怎么干活</span></span>
+      <span leaf="">写成规矩。</span>
+    </p>
+  </section>
+
+  <!-- 2. 前言正文 -->
+  <section style="padding:0 10px 32px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">兄弟们是不是经常看到网上有人晒“用AI十分钟写个网页”、“一句话生成个爬虫”，心里痒痒的，恨不得马上把自己手头那个大项目也</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">丢给AI全程搞定</span></span>
+      <span leaf="">？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先别急。前段时间就有朋友找我，说他公司想搞一个“从设计稿到落地”的全程AI Coding实践，领导要求</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">全程让AI写代码</span></span>
+      <span leaf="">，让他总结经验，问我有啥好工具。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我当时没急着推工具，先反问了一句：</span>
+      <strong><span leaf="">你们项目多大？</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">他愣了一下。因为这里头藏着一个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">全网都没人讲明白的真相</span></span>
+      <span leaf="">——</span>
+      <strong style="color:#DC2626;"><span leaf="">Harness不是越强越好，小项目别用，大项目必须用。</span></strong>
+      <span leaf="">用错地方，要么白烧token给自己添堵，要么“改一个崩一个，改完项目编译都报错”。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这话不是我拍脑袋想的，是我2025年3月从Vibe Coding一路踩坑、又在</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">3个项目里实测</span></span>
+      <span leaf="">出来的真心话。这一年多摸下来，我把踩过的坑和尝到的甜头，全在这篇文章里掏给你。</span>
+    </p>
+  </section>
+
+  <!-- 3. 前言导读 -->
+  <section style="padding:0 10px 32px;">
+    <p style="font-size:14px;color:#9CA3AF;margin:0 0 14px;letter-spacing:1px;">
+      <span leaf="">📌 本文看点</span>
+    </p>
+    <section style="display:flex;justify-content:space-between;">
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">01</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">Harness不是越强越好</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">02</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">自定义手撸胜过一键生成</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">03</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">踩一次坑补一条规矩</span></p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 4. 第一章 -->
+  <section style="margin-top:16px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">01</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">PITFALL</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">我的翻车史：从“几轮搞定”到“改完编译都报错”</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">2025年3月，我用Cursor配Claude Sonnet 3.5开始搞Vibe Coding。那时候的感觉怎么说呢？真的</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">有点上头</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">写个简单的HTML页面、做个小游戏，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">几轮对话就完事</span></span>
+      <span leaf="">，AI那叫一个听话。我一度以为，编程这事儿被AI拿捏了。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">直到我想搞一个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">A股智能分析系统</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那种感觉怎么说呢？就像你雇了个助理，简单活干得漂亮，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一上大项目就原形毕露</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">刚开始我没用任何MD规范，就是纯聊天。聊了很多个回合，开了多轮会话，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">框架就是搭不起来</span></span>
+      <span leaf="">，更别提后续迭代了。AI的问题很典型：</span>
+    </p>
+
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">偶尔定位问题不准，方向跑偏；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">代码越写越乱；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">3</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">改一个崩另一个，改完项目编译都报错。</span></strong></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">最折磨人的是第三点。你刚改完A功能，B功能莫名其妙挂了；等你修好B，C又报错。一晚上就在这个“打地鼠”的循环里耗着，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">进度卡在原地</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <!-- 图一：裸用AI的日常 -->
+    <section style="background:#FEF2F2;border-radius:12px;padding:24px 20px;border:1px solid #FEE2E2;margin:24px 0;text-align:center;">
+      <p style="font-weight:800;color:#991B1B;margin-bottom:16px;font-size:16px;">裸用AI的日常</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 6px;">
+        <span style="background:#DC2626;color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:700;">改A功能</span>
+        <span style="font-size:20px;color:#DC2626;font-weight:300;">→</span>
+        <span style="background:#DC2626;color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:700;">B功能崩</span>
+        <span style="font-size:20px;color:#DC2626;font-weight:300;">→</span>
+        <span style="background:#DC2626;color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:700;">改一个崩一个</span>
+        <span style="font-size:20px;color:#DC2626;font-weight:300;">→</span>
+        <span style="background:#DC2626;color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:700;">修B</span>
+        <span style="font-size:20px;color:#DC2626;font-weight:300;">→</span>
+        <span style="background:#DC2626;color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:700;">C又崩</span>
+      </div>
+      <div style="margin-top:16px;padding:10px 20px;background:#DC2626;color:#fff;border-radius:8px;font-weight:700;font-size:15px;display:inline-block;box-shadow:0 4px 6px -2px rgba(220,38,38,0.3);">没规矩 AI必失控</div>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那一刻真的有点破防。简单页面它“几轮搞定”，复杂系统它</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">“几轮崩盘”</span></span>
+      <span leaf="">，落差大得让人想摔键盘。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">也正是这次翻车，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">逼着我去找出路</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 5. 第二章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">02</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">AWAKEN</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">开窍：从社群文章抄来几份MD</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，转机来得挺偶然。在一个社群里，有人分享了一篇Vibe Coding的文章。我照着</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">抄了几份MD</span></span>
+      <span leaf="">——prd、dev、rule那套。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">神奇的事儿发生了：还是同一个模型，AI的</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">回复一下子变得规范了</span></span>
+      <span leaf="">，考虑也更细了。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「问题不在AI笨，在我没给它规矩。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">其实最早用</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">rule.md</span></span>
+      <span leaf="">、</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">dev.md</span></span>
+      <span leaf="">、</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">prd.md</span></span>
+      <span leaf="">这些文件，就是Harness的雏形。人们就是在一次次翻车里，慢慢打磨出了Harness这套现在的最佳实践。说白了，</span>
+      <strong><span leaf="">AI Coding就是面向文档编程。</span></strong>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 6. 第三章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">03</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">FRAMEWORK</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">什么是Harness，我为啥只走“自定义手撸”路</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">Harness是啥？一句话：</span><strong><span leaf="">用外部化的结构约束，替代对模型内在能力的依赖。</span></strong><span leaf="">模型你改不了（那是Anthropic、OpenAI的活），但你能给AI配一套运行环境--规矩、技能、流程、反馈，让它在</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">可控的框架里干活</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:14px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">搭Harness有两条路：</span>
+    </p>
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">捷径</span></strong><span leaf="">：装个Harness Creator skill，让Claude Code照着一键生成；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">自定义</span></strong><span leaf="">：相当于我们以前手撸源码的过程，自己搭。</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，第二条路我一直在走，第一条路我到现在都没用过。原因很简单--</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">我想自己掌控细节</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:14px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我的做法是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">“用AI治AI”</span></span>
+      <span leaf="">：</span>
+    </p>
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">先把Harness需要的skill准备好（我是让AI从superpowers skill里挑所需的skill）；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">下一步让AI搭Harness需要的其他MD文件（你也可以让它直接读阿里那篇深度文章，提取出搭建SOP，再照着搭）。</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这背后的逻辑是：既然能让AI干活，那搭Harness这事儿，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">也完全可以丢给AI</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">光说不练假把式。拿我</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">“图个简单”小程序</span></span>
+      <span leaf="">的搭建过程，给你看看这套方法到底怎么跑。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这是个微信小程序，功能不少，但没测试框架、没CI。我让AI读了本地的Harness落地SOP，它第一件事不是闷头写文件，而是跑去GitHub拉了superpowers仓库当前真实的14个skill清单--不凭记忆，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">拿事实说话</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:18px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">拉回来之后，AI对照SOP要求的9项技能，逐个判断适配度，最后给我一张表：</span>
+    </p>
+
+    <!-- 图二：Harness 映射表 -->
+    <section style="background:#FEF2F2;border-radius:12px;padding:20px 16px;border:1px solid #FEE2E2;margin:24px 0;overflow-x:auto;">
+      <p style="font-weight:800;color:#991B1B;margin-bottom:16px;font-size:16px;">📊 映射到 Harness 阶段四的 9 项（含本项目适配判断）</p>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:500px;">
+        <thead>
+          <tr style="background:#DC2626;color:#fff;">
+            <th style="padding:10px 12px;border:1px solid #FCA5A5;text-align:left;font-weight:700;">Harness 要求的 skill</th>
+            <th style="padding:10px 12px;border:1px solid #FCA5A5;text-align:left;font-weight:700;">superpowers 对应</th>
+            <th style="padding:10px 12px;border:1px solid #FCA5A5;text-align:left;font-weight:700;">适配本项目？</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fff;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">request-analysis 需求分析</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">brainstorming + writing-plans</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#16A34A;font-weight:700;">强适配</td></tr>
+          <tr style="background:#FEF2F2;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">coding-skill 编码实现</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">subagent-driven-development + writing-plans</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#16A34A;font-weight:700;">强适配（分层 pages/utils/cloudfunctions，非 controller/service/DAO）</td></tr>
+          <tr style="background:#fff;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">expert-reviewer 专家评审</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">requesting-code-review + receiving-code-review</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#16A34A;font-weight:700;">强适配</td></tr>
+          <tr style="background:#FEF2F2;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">code-review 代码检查</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">requesting-code-review（含 code-review.md 模板）</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#16A34A;font-weight:700;">强适配</td></tr>
+          <tr style="background:#fff;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">deploy-verify 部署验证</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">verification-before-completion（理念）</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#EAB308;font-weight:700;">部分适配（验证理念可用，但部署-微信开发者工具手动上传+真机预览，不是 CI/CD，需自建小程序版）</td></tr>
+          <tr style="background:#FEF2F2;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">project-analysis 项目分析</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">无直接对应</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#DC2626;font-weight:700;">X superpowers 没有；但你的 CLAUDE.md 已是最早的架构索引，大部分已覆盖</td></tr>
+          <tr style="background:#fff;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">unit-test-write 单测</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">test-driven-development</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#DC2626;font-weight:700;">X 落不了地—无测试框架/无 CI，红绿循环没地方跑</td></tr>
+          <tr style="background:#FEF2F2;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">unit-test-ci CI 验证</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">无</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#DC2626;font-weight:700;">X 无 CI，改掉</td></tr>
+          <tr style="background:#fff;"><td style="padding:10px 12px;border:1px solid #FEE2E2;">aone-ci-generate CI 配置</td><td style="padding:10px 12px;border:1px solid #FEE2E2;">无（aone 是阿里内部系统）</td><td style="padding:10px 12px;border:1px solid #FEE2E2;color:#DC2626;font-weight:700;">X 改掉</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">砍掉的那3项特别关键--单元测试、CI验证、CI配置生成。原因很实在：我这项目没测试框架、没CI，照搬TDD那套红绿循环没地方跑，硬上就是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">走形式</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">AI自己都点出来了：「</span><strong style="color:#991B1B;"><span leaf="">无测试基建，照搬会变形式主义。</span></strong><span leaf="">」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这就是自定义比一键生成强的地方：</span>
+      <strong><span leaf="">它会根据你项目的真实情况，告诉你哪些该用、哪些别用。</span></strong>
+      <span leaf="">一键生成的skill可不会管你有没有CI，一股脑全塞给你。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">定好范围，AI就开始落文件：8个skill、4份Rules、1个调度大脑Agent，外加变更管理模板，全落在</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">.harness/</span></span>
+      <span leaf="">目录下。关键是，每个skill都不照搬原文，而是锚定我项目的真实结构去改--我这小程序有20个云函数、14个工具函数、30个页面，AI把这些都摸清了，才动手改造成</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">项目专属的精简SOP</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">最后一步是“通电”：在</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">CLAUDE.md</span></span>
+      <span leaf="">里加一节入口指向</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">.harness/</span></span>
+      <span leaf="">。因为</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">CLAUDE.md</span></span>
+      <span leaf="">是每次会话必读的文件，加了入口，新会话一开始就知道有套Harness体系要加载。</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">application-owner.md</span></span>
+      <span leaf="">写得再好，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不通电也是摆设</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <!-- 图三：Harness 通电代码片段 -->
+    <section style="background:#1F2937;border-radius:12px;padding:20px;margin:24px 0;border:1px solid #374151;color:#E5E7EB;">
+      <p style="color:#FCA5A5;font-weight:700;margin-bottom:12px;font-size:15px;">💡 建议在 CLAUDE.md 末尾加一节，例如：</p>
+      <div style="background:#111827;padding:20px;border-radius:8px;font-family:monospace;font-size:14px;white-space:pre-wrap;color:#9CA3AF;border-left:4px solid #DC2626;overflow-x:auto;">
+        <span style="color:#F87171;">## Harness 体系 (.harness/)</span>
+
+        本项目已落地 Harness 工程化体系（sop 见 docs/Harness 落地设计 sop.md）：
+        - 开发任何需求前，先读 <span style="color:#FBBF24;">.harness/agents/application-owner.md</span>（调度大脑），按十阶段流程执行。
+        - L1 常驻：<span style="color:#FBBF24;">.harness/rules/</span> 三份 + verification-before-completion 铁律。
+        - L2 阶段触发：<span style="color:#FBBF24;">.harness/skills/</span> 对应 skills。
+
+        <span style="color:#F87171;">要不要我把这一节加进 CLAUDE.md？</span>这是让整套体系“通电”的最后一节--否则 application-owner.md 写得再好，新会话也不会自动加载它。
+      </div>
+    </section>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「AI是干活的工人，我是拍板的老板。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">它拉清单、做映射、写文件，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">我审范围、定取舍</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <strong style="color:#991B1B;"><span leaf="">小技巧：</span></strong>
+        <span leaf="">让AI读阿里文章或本地SOP提炼出可执行流程，比你自己琢磨结构省事太多。它读完直接给你一份能照着干的搭建流程，你只管调细节、拍板砍哪些。</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">搭完了，效果怎么样？</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">拿实测说话</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 7. 第四章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">04</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">BENCHMARK</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">3个项目实测：搭Harness前后，AI判若两人</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我在自己迭代的项目里挑了三个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">做Harness搭建</span></span>
+      <span leaf="">：</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px;margin-right:6px;"><span leaf="">图片处理小程序</span></span>
+      <span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px;margin-right:6px;"><span leaf="">旅游民宿小程序</span></span>
+      <span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:12px;font-weight:700;padding:2px 10px;border-radius:4px;margin-right:6px;"><span leaf="">游戏站点</span></span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先说游戏站的对比，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">最有说服力</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这个项目有个“新增游戏”的流程，我之前已经打磨好了</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一套新增游戏的提示词</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">搭Harness之前：</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">每次新增一款游戏，一般要</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">2～3轮对话</span></span>
+      <span leaf="">才能完善好。因为AI偶尔会“部分指令要求的效果没执行”，或者执行了质量不过关。来回扯皮，费时费力。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">搭Harness之后：</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">虽然一开始AI会多跟我对话几次，让我选择确认要执行哪些项，但每一段提示词的细节它都能把握，而且</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">拆得很细</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <!-- 图四 & 图五：搭Harness前后对比 -->
+    <section style="display:flex;flex-wrap:wrap;gap:20px;margin:24px 0;">
+      <section style="flex:1;min-width:220px;background:#FEF2F2;border-radius:12px;padding:24px 20px;border:1px solid #FEE2E2;">
+        <p style="font-weight:800;color:#DC2626;text-align:center;border-bottom:2px solid #FEE2E2;padding-bottom:12px;font-size:16px;">😫 搭Harness 之前</p>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:16px;">
+          <div style="display:flex;align-items:center;gap:12px;background:#fff;padding:10px 16px;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+            <span style="background:#DC2626;color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">~3</span>
+            <span style="font-weight:700;color:#374151;">轮扯皮，</span><span style="color:#6B7280;">指令没执行</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:#fff;padding:10px 16px;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+            <span style="background:#DC2626;color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">❌</span>
+            <span style="font-weight:700;color:#374151;">质量不过关</span>
+          </div>
+          <div style="background:#FEE2E2;padding:12px;border-radius:8px;text-align:center;color:#991B1B;font-weight:700;border:1px solid #FECACA;">改一个崩一个</div>
+        </div>
+      </section>
+      <section style="flex:1;min-width:220px;background:#F0FDF4;border-radius:12px;padding:24px 20px;border:1px solid #BBF7D0;">
+        <p style="font-weight:800;color:#16A34A;text-align:center;border-bottom:2px solid #BBF7D0;padding-bottom:12px;font-size:16px;">🚀 搭Harness 之后</p>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:16px;">
+          <div style="display:flex;align-items:center;gap:12px;background:#fff;padding:10px 16px;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+            <span style="background:#16A34A;color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">1</span>
+            <span style="font-weight:700;color:#374151;">一轮到位，</span><span style="color:#16A34A;font-weight:600;">拆得很细</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:#fff;padding:10px 16px;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+            <span style="background:#16A34A;color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">✓</span>
+            <span style="font-weight:700;color:#374151;">细节拿捏</span>
+          </div>
+          <div style="background:#BBF7D0;padding:12px;border-radius:8px;text-align:center;color:#166534;font-weight:700;border:1px solid #86EFAC;">越细效果越好</div>
+        </div>
+      </section>
+    </section>
+
+    <p style="font-size:15px;margin:0 0 24px;text-align:center;color:#DC2626;font-weight:700;letter-spacing:1px;border-top:1px solid #FEE2E2;border-bottom:1px solid #FEE2E2;padding:14px 10px;">
+      <span leaf="">越细，执行后的效果越好。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这个项目需要适配的skill和流程细节，都准确实现了。整个过程给人一种“思路条理非常清晰”的感觉，输出效果我很满意。原来2～3轮的扯皮，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">现在一轮就到位</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那种感觉怎么说呢？就像从“骑自行车”到“开跑车”，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不是一个量级</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <strong style="color:#991B1B;"><span leaf="">小技巧：</span></strong>
+        <span leaf="">搭完Harness第一次跑真实需求时，别急着让它一口气干完。它每次找你确认执行项，你就当是在校准方向，确认得越细，后面出错越少。</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 8. 第五章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">05</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">VERDICT</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">Harness不是越强越好：小项目别用</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">聊到这儿，你可能会想：既然Harness这么好，那我</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">每个项目都搭一个</span></span>
+      <span leaf="">不就完了？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">打住。这正是我想掏心窝说的--</span><strong><span leaf="">Harness不是越强越好。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">小项目，在强模型面前，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">压根不需要Harness</span></span>
+      <span leaf="">。就拿现在GLM5.2这种级别的模型来说，简单demo它一句话就给你干完了，你非要套一套Harness上去，那些“看起来很规范”的约束反而会增加token消耗，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">纯属给自己添堵</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:18px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那到底怎么判断“该不该用”？我给你一个能截图带走的判断标准，</span><strong><span leaf="">三个条件同时满足，才不用：</span></strong>
+    </p>
+
+    <section style="margin-bottom:24px;">
+      <section style="margin-bottom:14px;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">代码量小</span></span>
+        </p>
+        <p style="font-size:14px;color:#4B5563;margin:0;line-height:1.7;text-align:justify;">
+          <span leaf="">大概几万行这种级别。</span>
+        </p>
+      </section>
+      <section style="margin-bottom:14px;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">对框架和代码规范要求不高</span></span>
+        </p>
+      </section>
+      <section style="margin-bottom:14px;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">不用考虑长远迭代维护的项目</span></span>
+        </p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">反过来，只要你的项目代码量大、要长期迭代、规范要求高，那就</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">很有必要搭Harness</span></span>
+      <span leaf="">。这时候不搭，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">“改一个崩一个”就是你的日常</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <!-- 图六：Harness 决策图 -->
+    <section style="background:#FEF2F2;border-radius:12px;padding:24px 20px;border:1px solid #FEE2E2;margin:24px 0;text-align:center;">
+      <p style="font-weight:800;color:#991B1B;font-size:20px;margin-bottom:20px;">🎯 Harness 不是越强越好</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+        <div style="flex:1;min-width:200px;background:#FFFFFF;border-radius:12px;padding:20px;border:1px solid #FEE2E2;">
+          <p style="font-weight:700;color:#DC2626;font-size:18px;margin-bottom:12px;">别用</p>
+          <div style="background:#FEF2F2;padding:16px;border-radius:8px;font-size:14px;text-align:left;border:1px solid #FEE2E2;">
+            <span style="display:inline-block;background:#DC2626;color:#fff;border-radius:999px;padding:2px 10px;font-size:12px;margin-right:8px;font-weight:700;">3</span> 代码量小（几万行），规范要求不高，不长远维护
+          </div>
+          <p style="margin-top:16px;color:#6B7280;font-size:15px;font-weight:500;">✅ 强模型一句话搞定</p>
+        </div>
+        <div style="flex:1;min-width:200px;background:#FFFFFF;border-radius:12px;padding:20px;border:2px solid #DC2626;box-shadow:0 4px 12px -4px rgba(220,38,38,0.2);">
+          <p style="font-weight:700;color:#16A34A;font-size:18px;margin-bottom:12px;">必须用</p>
+          <div style="background:#F0FDF4;padding:16px;border-radius:8px;font-size:14px;text-align:left;border:1px solid #BBF7D0;">
+            <span style="display:inline-block;background:#16A34A;color:#fff;border-radius:999px;padding:2px 10px;font-size:12px;margin-right:8px;font-weight:700;">3</span> 代码量大，长期迭代，规范要求高
+          </div>
+          <p style="margin-top:16px;color:#DC2626;font-size:15px;font-weight:700;">⚠️ 不搭改一个崩一个</p>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding:10px 24px;background:#DC2626;color:#fff;border-radius:999px;font-weight:700;font-size:15px;display:inline-block;box-shadow:0 4px 6px -2px rgba(220,38,38,0.3);">看项目规模 别信别裸奔</div>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">实践出真知，这套判断我是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">自己一个个项目试出来的</span></span>
+      <span leaf="">，不是看文章背的。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 9. 第六章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">06</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">EVOLVE</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">Harness是活文档：踩一次坑，补一条规矩</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">很多人以为搭完Harness就一劳永逸了，错。</span><strong><span leaf="">Harness是活文档，得随时、及时根据项目实际维护。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">机制很简单：某类动作或需求如果多次出错，你就要考虑--是不是Harness里</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">某些MD描述该更新了</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">还是拿我游戏站</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">“新增游戏”这个流程</span></span>
+      <span leaf="">说事。</span>
+    </p>
+    <p style="margin-bottom:18px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">最早没规范时，AI常在两个地方翻车：</span>
+    </p>
+
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">游戏配置字段类型不统一</span></strong><span leaf="">--同一个“游戏状态”字段，它这次写成</span><span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">"running"</span></span><span leaf="">字符串，下次写成数字</span><span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">1</span></span><span leaf="">，导致后续状态判断逻辑反复出错，查bug查到吐；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><strong><span leaf="">游戏资源文件命名随意</span></strong><span leaf="">--图片、配置文件有的用驼峰、有的用下划线，部署时路径对不上，页面白屏。</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:18px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">前几次我都是手动改，改完就过去了。后来发现这两类问题反复出现，我就在</span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">.harness/rules/项目编码规范.md</span></span>
+      <span leaf="">里补了</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">两条硬规矩</span></span>
+      <span leaf="">：</span>
+    </p>
+
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">游戏状态字段统一用枚举常量，禁止裸字符串、裸数字；</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">所有游戏资源文件命名统一用下划线，路径放在</span><span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">assets/games/{游戏id}/</span></span><span leaf="">下。</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">打那以后，AI生成新游戏时，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">这两类错再没出现过</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这就是Harness的生长逻辑--</span><strong><span leaf="">每踩一次坑，就给规矩补一条，让它再也犯不了。</span></strong><span leaf="">Harness就这么越长越壮。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 10. 第七章（结语 ∞） -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">∞</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">THE END</span></p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">写在最后：别迷信，也别裸奔</span></h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">回看从2025年3月裸用AI写页面、到现在</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">用Harness治AI这一路</span></span>
+      <span leaf="">，如果有个刚入门的朋友问我“我也想全程让AI写代码，你给我一句最实在的话”，我会说：</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「别迷信Harness，也别裸奔。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">小项目，强模型一句话就给你干完了，套上Harness反而白烧token、给自己添堵；可一旦你的项目大了、要长期迭代了，还不搭Harness，那</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">“改一个崩一个、改完编译都报错”就是你的日常</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说到底，</span><strong><span leaf="">AI Coding不是拼谁的模型强、也不是拼谁的提示词花，而是拼你有没有把“怎么干活”写成规矩。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">规矩不在你脑子里，也不在聊天记录里，得落到MD文件里--</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">AI只认文件，不认人</span></span>
+      <span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这就是Harness的真相：</span>
+    </p>
+
+    <p style="font-size:15px;margin:0 0 24px;text-align:center;color:#DC2626;font-weight:700;letter-spacing:1px;border-top:1px solid #FEE2E2;border-bottom:1px solid #FEE2E2;padding:14px 10px;">
+      <span leaf="">它不是让AI更聪明，而是让AI的错变得可控。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">每踩一次坑，就给规矩补一条，让它再也犯不了--Harness就这么越长越壮。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">所以别问“我该不该用Harness”，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">先问自己</span></span>
+      <span leaf="">：</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <strong><span leaf="">我的项目，值得我用一份规矩去约束它吗？</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">想清楚这个，比纠结“该不该用Harness”</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">实在得多</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 11. END 结尾分割线 -->
+  <section style="padding:0 10px;">
+    <section style="text-align:center;margin:0 0 32px;">
+      <section style="display:flex;align-items:center;justify-content:center;">
+        <span style="height:2px;width:60px;background:linear-gradient(to right,transparent,#DC2626);margin-right:12px;"><span leaf=""><br></span></span>
+        <span style="font-size:11px;color:#DC2626;letter-spacing:3px;font-weight:700;"><span leaf="">END</span></span>
+        <span style="height:2px;width:60px;background:linear-gradient(to left,transparent,#DC2626);margin-left:12px;"><span leaf=""><br></span></span>
+      </section>
+    </section>
+  </section>
+
+  <!-- 12. 尾部作者签名区 -->
+  <section style="padding:0 10px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我是Archer，热衷于分享 AI 独立开发的实战心得。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">如果你也在搞 AI Coding，最想拿 Harness 解决哪个“改一个崩一个”的痛点？欢迎</span><strong><span leaf="">评论区聊聊</span></strong><span leaf="">，咱们一起把规矩补全。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">觉得有用，点个</span><strong><span leaf="">「在看」</span></strong><span leaf="">让更多踩坑的朋友看到。也欢迎</span><strong><span leaf="">星标关注</span></strong><span leaf="">「AI启蒙学习」，用 AI 陪伴成长，用技术创造价值！</span>
+    </p>
+  </section>
+
+</section>
