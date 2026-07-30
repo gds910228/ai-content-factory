@@ -30,10 +30,10 @@
       "loadUserSettings": true,
       "enableChrome": true,
       "enableBangBash": true,
-      "enableOpus1M": true,
-      "enableSonnet1M": false,
       "customModels": "",
       "lastModel": "haiku",
+      "modelEnvironmentType": "model",
+      "titleModelEnvironmentType": "",
       "environmentVariables": "ANTHROPIC_API_KEY=ark-336b8f34-7073-4e83-89cd-524028c09220-6f70b\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=glm-5.2",
       "environmentHash": "ANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding|ANTHROPIC_MODEL=glm-5.2"
     },
@@ -50,7 +50,11 @@
         "device:d5c94893-05c0-4c2d-95de-2fcbf519fbb3": "native-windows"
       },
       "wslDistroOverridesByHost": {},
-      "visibleModels": null
+      "visibleModels": null,
+      "discoveredModels": [],
+      "modelAliases": {},
+      "catalogTimestamp": 0,
+      "catalogFingerprint": ""
     },
     "opencode": {
       "cliPath": "",
@@ -89,6 +93,7 @@
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
+  "pendingProviderSessionInvalidations": {},
   "lastCustomModel": "claude-code/glm-5.2",
   "maxTabs": 3,
   "enableAutoScroll": true,
