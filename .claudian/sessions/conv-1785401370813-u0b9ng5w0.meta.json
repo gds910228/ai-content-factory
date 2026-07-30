@@ -4,8 +4,8 @@
   "title": "使用topic-filter查找Agent技能精简相关素材的选题",
   "titleGenerationStatus": "success",
   "createdAt": 1785401370813,
-  "updatedAt": 1785401922634,
-  "lastResponseAt": 1785401922634,
+  "updatedAt": 1785410669623,
+  "lastResponseAt": 1785410669622,
   "sessionId": "fee5a241-2cf1-48a2-8e9b-394425f209dd",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -13,12 +13,12 @@
   },
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 5771,
+    "inputTokens": 581,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 48000,
+    "cacheReadInputTokens": 44800,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 53771,
-    "percentage": 27
+    "contextTokens": 45381,
+    "percentage": 23
   }
 }
