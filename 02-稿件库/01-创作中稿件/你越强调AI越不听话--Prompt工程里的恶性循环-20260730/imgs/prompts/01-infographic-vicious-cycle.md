@@ -3,43 +3,14 @@ illustration_id: 01
 type: infographic
 style: sketch-notes
 aspect: "16:9"
-language: zh
 ---
+Hand-drawn educational sketch on warm cream paper (#F5F0E8), black hand-drawn lines (#1A1A1A) with slight wobble, soft pastel blocks (mint #B5E5CF, light blue #A8D8EA, peach #FFD5C2, lavender #D5C6E0), coral red (#E8655A) for emphasis only. Diagram-style only, no realistic images. All text hand-lettered Simplified Chinese, large, keywords only. Generous white space. Do NOT render color names or hex codes as visible text.
 
-# 恶性循环 - 循环信息图
+Title top (hand-lettered): "Prompt 的恶性循环".
 
-Single-page hand-drawn educational infographic in a clean presentation style.
-Warm cream paper background, black hand-drawn lines with slight wobble, soft
-pastel color blocks. Feels simple, friendly, and easy to understand at a glance.
-Diagram-style visuals ONLY - no realistic or photographic images.
+Center: four rounded cards arranged in a CIRCLE, clockwise, connected by wavy black arrows forming a closed loop; a dashed arrow closes from the last card back to the first. Small center label: "恶性循环".
+Cards: 1(mint) "越强调 越长"; 2(light blue) "越长 越分散"; 3(peach) "越分散 越违反"; 4(lavender) "再追加一遍". Each card with one tiny icon.
 
-LAYOUT (circular loop, centered):
-- TOP: Bold hand-lettered title "Prompt 的恶性循环", oversized, slightly wobbly,
-       with a small doodle underline.
-- CENTER: Four rounded info cards arranged in a CIRCLE (clockwise), connected by
-          wavy hand-drawn arrows forming a closed loop. A dashed curved arrow
-          closes the loop from the last card back to the first. In the very
-          center of the circle, a small hand-lettered label "恶性循环" with a
-          tiny circular doodle.
-- The four cards (clockwise), each one pastel fill, one short keyword, one tiny icon:
-   Card 1 (Mint #B5E5CF): "越强调 越长"  (icon: stacked lines growing)
-   Card 2 (Light Blue #A8D8EA): "越长 越分散"  (icon: scattered dots)
-   Card 3 (Peach #FFD5C2): "越分散 越违反"  (icon: small warning triangle)
-   Card 4 (Lavender #D5C6E0): "再追加一遍"  (icon: curved back arrow)
-- BOTTOM: One short hand-lettered takeaway sentence "越强调，越不听话" with a
-          small coral-red underline for emphasis.
+Bottom hand-lettered: "越强调，越不听话" with a short coral underline.
 
-COLORS: Warm Cream background (#F5F0E8); Black (#1A1A1A) for ALL lines, text,
-        arrows, doodles; pastel fills Mint (#B5E5CF), Light Blue (#A8D8EA),
-        Peach (#FFD5C2), Lavender (#D5C6E0); Coral Red (#E8655A) sparingly for
-        one emphasis underline only.
-
-STYLE: Minimal, airy. Color fills don't completely fill outlines (slight
-       hand-painted overshoot). ALL text hand-lettered - no computer fonts.
-       Short labels only, never long paragraphs. Generous white space.
-
-Clean composition with generous white space. Simple background. Main elements centered.
-Text should be large and prominent with handwritten-style fonts. Keep minimal, focus on keywords. Labels in Simplified Chinese (中文).
-Color values (#hex) and color names are rendering guidance only - do NOT display color names, hex codes, or palette labels as visible text in the image.
-
-ASPECT: 16:9, low-medium complexity
+ASPECT: 16:9, low complexity.
