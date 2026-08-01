@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "prompts\\01-flowchart-vicious-loop.md"
+      ],
+      "image": "01-flowchart-vicious-loop.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "prompts\\02-comparison-99-vs-1.md"
+      ],
+      "image": "02-comparison-99-vs-1.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "prompts\\03-infographic-u-curve-attention.md"
+      ],
+      "image": "03-infographic-u-curve-attention.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": [
+        "prompts\\04-framework-four-reasons.md"
+      ],
+      "image": "04-framework-four-reasons.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    }
+  ],
+  "jobs": 4
+}
