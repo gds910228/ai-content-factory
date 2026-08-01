@@ -1,0 +1,25 @@
+{
+  "id": "conv-1785501530798-cvnl6t46u",
+  "providerId": "claude",
+  "title": "Fix ModelScope 400 API errors and continue AI art",
+  "titleGenerationStatus": "success",
+  "createdAt": 1785501530798,
+  "updatedAt": 1785575494285,
+  "lastResponseAt": 1785575494285,
+  "sessionId": "208faaf5-401b-4810-9ad9-37762d48041e",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "208faaf5-401b-4810-9ad9-37762d48041e"
+  },
+  "currentNote": "02-稿件库/01-创作中稿件/你越强调AI越不听话--Prompt工程里的恶性循环-20260730/04-定稿.md",
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 0,
+    "percentage": 0
+  }
+}

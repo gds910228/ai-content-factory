@@ -1,15 +1,15 @@
 {
-  "id": "conv-1785401370813-u0b9ng5w0",
+  "id": "conv-1785501019451-l020yojs3",
   "providerId": "claude",
-  "title": "使用topic-filter查找Agent技能精简相关素材的选题",
+  "title": "Continue generating images with baoyu illustrator",
   "titleGenerationStatus": "success",
-  "createdAt": 1785401370813,
-  "updatedAt": 1785501528664,
-  "lastResponseAt": 1785500681676,
-  "sessionId": "fee5a241-2cf1-48a2-8e9b-394425f209dd",
+  "createdAt": 1785501019451,
+  "updatedAt": 1785501501668,
+  "lastResponseAt": 1785501390291,
+  "sessionId": "70d09710-d7a6-4c72-9440-10455143058f",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
-    "providerSessionId": "fee5a241-2cf1-48a2-8e9b-394425f209dd"
+    "providerSessionId": "70d09710-d7a6-4c72-9440-10455143058f"
   },
   "usage": {
     "model": "glm-5.2",

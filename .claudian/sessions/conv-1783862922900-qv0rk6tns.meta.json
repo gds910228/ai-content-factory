@@ -4,7 +4,7 @@
   "title": "/gzh-design  給 02-稿件库/01-创作中稿件/我对Harness的观点和实操心得-2...",
   "titleGenerationStatus": "failed",
   "createdAt": 1783862922900,
-  "updatedAt": 1785380579408,
+  "updatedAt": 1785501016821,
   "lastResponseAt": 1783866913592,
   "sessionId": "b0e15c90-536d-4b71-801a-53f7d7d7d866",
   "selectedModel": "claude-code/glm-5.2",
@@ -14,7 +14,6 @@
       "abeb8594-1e13-4f37-b3a3-2382d38f9aea"
     ]
   },
-  "currentNote": "02-稿件库/01-创作中稿件/我对Harness的观点和实操心得-20260712/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
     "inputTokens": 323,

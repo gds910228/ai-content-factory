@@ -3,14 +3,14 @@
     "openTabs": [
       {
         "tabId": "tab-1780666597858-hlmuwk5",
-        "conversationId": "conv-1783862922900-qv0rk6tns"
+        "conversationId": "conv-1785501530798-cvnl6t46u"
       },
       {
         "draftModel": "claude-code/glm-5.2",
-        "tabId": "tab-1785401294963-jmcos36",
-        "conversationId": "conv-1785401370813-u0b9ng5w0"
+        "tabId": "tab-1785576631598-zm3b3jm",
+        "conversationId": "conv-1785576648528-t1r464rbc"
       }
     ],
-    "activeTabId": "tab-1785401294963-jmcos36"
+    "activeTabId": "tab-1785576631598-zm3b3jm"
   }
 }
