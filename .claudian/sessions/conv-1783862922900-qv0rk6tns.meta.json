@@ -6,14 +6,8 @@
   "createdAt": 1783862922900,
   "updatedAt": 1785501016821,
   "lastResponseAt": 1783866913592,
-  "sessionId": "b0e15c90-536d-4b71-801a-53f7d7d7d866",
+  "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
-  "providerState": {
-    "providerSessionId": "b0e15c90-536d-4b71-801a-53f7d7d7d866",
-    "previousProviderSessionIds": [
-      "abeb8594-1e13-4f37-b3a3-2382d38f9aea"
-    ]
-  },
   "usage": {
     "model": "glm-5.2",
     "inputTokens": 323,

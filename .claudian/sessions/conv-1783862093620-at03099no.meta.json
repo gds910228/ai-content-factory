@@ -8,9 +8,6 @@
   "lastResponseAt": 1783862673292,
   "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
-  "providerState": {
-    "providerSessionId": "be0c0408-3d45-4c8c-823b-8094d1283538"
-  },
   "usage": {
     "model": "claude-code/glm-5.2",
     "inputTokens": 4849,

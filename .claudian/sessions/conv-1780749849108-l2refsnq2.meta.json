@@ -7,9 +7,6 @@
   "updatedAt": 1781596779723,
   "lastResponseAt": 1781523831147,
   "sessionId": null,
-  "providerState": {
-    "providerSessionId": "fe72041a-99f5-47af-8b96-2d1fbf4f9d00"
-  },
   "usage": {
     "model": "glm-5.1",
     "inputTokens": 402,
