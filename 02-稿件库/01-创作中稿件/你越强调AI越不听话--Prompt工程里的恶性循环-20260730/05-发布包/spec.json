@@ -1,0 +1,30 @@
+[
+  {
+    "op": "replace",
+    "anchor": "此处插入：恶性循环闭环流程图",
+    "file": "01-flowchart-vicious-loop.png",
+    "alt": "恶性循环闭环流程图",
+    "caption": "图1｜恶性循环闭环：越强调越长 -> 越长越分散 -> 越分散越违反 -> 违反了再追加 -> 绕回原点"
+  },
+  {
+    "op": "insert",
+    "anchor": "我强调得越多，它崩得越准。",
+    "file": "02-comparison-99-vs-1.png",
+    "alt": "99% 执行 vs 1% 崩塌 对照图",
+    "caption": "图2｜99% 机械拆分乖乖执行 vs 1% SSE 时序崩了--瓷砖贴整齐了，承重墙拆错了"
+  },
+  {
+    "op": "replace",
+    "anchor": "此处插入：U 形注意力曲线示意图",
+    "file": "03-infographic-u-curve-attention.png",
+    "alt": "U 形注意力曲线示意图",
+    "caption": "图3｜注意力 U 形曲线：中间区域最易被遗忘（引自 Stanford《Lost in the Middle》）"
+  },
+  {
+    "op": "replace",
+    "anchor": "此处插入：4 个底层原因四宫格总结图",
+    "file": "04-framework-four-reasons.png",
+    "alt": "4 个底层原因四宫格总结图",
+    "caption": "图4｜越强调越崩的 4 个底层原因：U 形曲线 / 静默择一 / 粉红大象 / 上下文淘汰赛"
+  }
+]
