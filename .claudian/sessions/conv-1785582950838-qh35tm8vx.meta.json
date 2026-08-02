@@ -4,8 +4,8 @@
   "title": "Generate multi-platform distribution long-form ...",
   "titleGenerationStatus": "success",
   "createdAt": 1785582950838,
-  "updatedAt": 1785585981049,
-  "lastResponseAt": 1785585981049,
+  "updatedAt": 1785635800925,
+  "lastResponseAt": 1785635800925,
   "sessionId": "934cb332-8b74-45f1-9d18-98fb6ac12ad4",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -14,12 +14,12 @@
   "currentNote": "02-稿件库/01-创作中稿件/你越强调AI越不听话--Prompt工程里的恶性循环-20260730/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 2681,
+    "inputTokens": 0,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 147136,
+    "cacheReadInputTokens": 0,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 149817,
-    "percentage": 75
+    "contextTokens": 0,
+    "percentage": 0
   }
 }

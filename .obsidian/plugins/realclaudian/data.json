@@ -4,8 +4,13 @@
       {
         "tabId": "tab-1785582828095-7nqyu5v",
         "conversationId": "conv-1785582950838-qh35tm8vx"
+      },
+      {
+        "draftModel": "claude-code/glm-5.2",
+        "tabId": "tab-1785635805475-88rre6f",
+        "conversationId": "conv-1785635815620-cf5ivui9f"
       }
     ],
-    "activeTabId": "tab-1785582828095-7nqyu5v"
+    "activeTabId": "tab-1785635805475-88rre6f"
   }
 }
