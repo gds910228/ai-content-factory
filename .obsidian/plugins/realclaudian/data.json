@@ -2,14 +2,11 @@
   "tabManagerState": {
     "openTabs": [
       {
-        "tabId": "tab-1785638127751-ou7atxy",
-        "conversationId": "conv-1785638130732-5rrvf1vm8"
-      },
-      {
-        "tabId": "tab-1785659265261-wugeoan",
-        "conversationId": "conv-1785659569467-4d4p6eihv"
+        "draftModel": "claude-code/glm-5.2",
+        "tabId": "tab-1785671626393-5oust8z",
+        "conversationId": "conv-1785671727355-un0beu1lw"
       }
     ],
-    "activeTabId": "tab-1785659265261-wugeoan"
+    "activeTabId": "tab-1785671626393-5oust8z"
   }
 }
