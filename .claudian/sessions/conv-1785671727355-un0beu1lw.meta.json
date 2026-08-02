@@ -4,8 +4,8 @@
   "title": "Suggest article topics based on weekly summary ...",
   "titleGenerationStatus": "success",
   "createdAt": 1785671727358,
-  "updatedAt": 1785672151785,
-  "lastResponseAt": 1785672151785,
+  "updatedAt": 1785672753264,
+  "lastResponseAt": 1785672753264,
   "sessionId": "b8797819-969c-4cc9-9307-664592d148d8",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -14,12 +14,12 @@
   "currentNote": "05-数据复盘库/周度总结-2026-08-02.md",
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 2371,
+    "inputTokens": 1487,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 84288,
+    "cacheReadInputTokens": 93568,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 86659,
-    "percentage": 43
+    "contextTokens": 95055,
+    "percentage": 48
   }
 }
