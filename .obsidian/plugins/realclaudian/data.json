@@ -6,11 +6,15 @@
         "conversationId": "conv-1785582950838-qh35tm8vx"
       },
       {
-        "draftModel": "claude-code/glm-5.2",
         "tabId": "tab-1785635805475-88rre6f",
         "conversationId": "conv-1785635815620-cf5ivui9f"
+      },
+      {
+        "draftModel": "claude-code/glm-5.2",
+        "tabId": "tab-1785638127751-ou7atxy",
+        "conversationId": "conv-1785638130732-5rrvf1vm8"
       }
     ],
-    "activeTabId": "tab-1785635805475-88rre6f"
+    "activeTabId": "tab-1785638127751-ou7atxy"
   }
 }
