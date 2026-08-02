@@ -4,8 +4,8 @@
   "title": "Generate full weekly knowledge base summary report",
   "titleGenerationStatus": "success",
   "createdAt": 1785659569467,
-  "updatedAt": 1785659867115,
-  "lastResponseAt": 1785659867115,
+  "updatedAt": 1785659999507,
+  "lastResponseAt": 1785659999507,
   "sessionId": "e433e9ce-99cc-4ae0-bce2-3d6d5dc32081",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -13,12 +13,12 @@
   },
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 9781,
+    "inputTokens": 916,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 95104,
+    "cacheReadInputTokens": 111552,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 104885,
-    "percentage": 52
+    "contextTokens": 112468,
+    "percentage": 56
   }
 }
