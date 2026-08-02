@@ -4,21 +4,21 @@
   "title": "Generate full weekly knowledge base summary report",
   "titleGenerationStatus": "success",
   "createdAt": 1785659569467,
-  "updatedAt": 1785665312018,
-  "lastResponseAt": 1785665312018,
-  "sessionId": "e433e9ce-99cc-4ae0-bce2-3d6d5dc32081",
+  "updatedAt": 1785665742551,
+  "lastResponseAt": 1785665742551,
+  "sessionId": "94e5ad89-61f8-4e74-9e1e-059a8db083c0",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
-    "providerSessionId": "e433e9ce-99cc-4ae0-bce2-3d6d5dc32081"
+    "providerSessionId": "94e5ad89-61f8-4e74-9e1e-059a8db083c0"
   },
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 916,
+    "inputTokens": 16590,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 111552,
+    "cacheReadInputTokens": 44032,
     "contextWindow": 200000,
-    "contextWindowIsAuthoritative": true,
-    "contextTokens": 112468,
-    "percentage": 56
+    "contextTokens": 60622,
+    "percentage": 30,
+    "contextWindowIsAuthoritative": true
   }
 }
