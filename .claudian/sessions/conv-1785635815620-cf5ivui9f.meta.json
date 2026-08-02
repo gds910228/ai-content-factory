@@ -4,7 +4,22 @@
   "title": "Format WeChat articles with gzh-design one-click",
   "titleGenerationStatus": "success",
   "createdAt": 1785635815620,
-  "updatedAt": 1785635882346,
-  "sessionId": null,
-  "selectedModel": "claude-code/glm-5.2"
+  "updatedAt": 1785636835244,
+  "lastResponseAt": 1785636835244,
+  "sessionId": "a4298b0b-7320-4716-a425-d58e09545598",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "a4298b0b-7320-4716-a425-d58e09545598"
+  },
+  "currentNote": "02-稿件库/01-创作中稿件/你越强调AI越不听话--Prompt工程里的恶性循环-20260730/05-发布包/长文发布包.md",
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 251,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 119936,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 120187,
+    "percentage": 60
+  }
 }
