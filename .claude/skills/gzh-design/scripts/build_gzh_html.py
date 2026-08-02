@@ -11,6 +11,7 @@ base64 编码由本脚本本地完成，LLM 只写 <img src="imgs/x.png">。
   --imgs     配图目录
   --spec     可选 JSON，声明每张图放哪（占位框模式）
   --out-dir  可选，默认与 src 同目录
+  --theme    可选主题英文标识(如 red-white)，从 references/theme-{id}.md 读主色套到图片框(主色淡边+淡主色影)
 
 spec.json：
   [
@@ -52,24 +53,73 @@ def data_uri(path):
     return "data:{0};base64,{1}".format(MIME.get(ext, "image/png"), b64)
 
 
-def img_section(src, alt, caption):
-    """通用库 2a 标准图片组件：白底卡片 + 居中 img + 可选说明。<span leaf> 包裹，过校验。"""
+def hex_to_rgb(h):
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def parse_theme_vars(text):
+    """从主题文件「设计变量速查表」解析 {标签: #hex}，兼容各主题命名差异。"""
+    out = {}
+    for line in text.splitlines():
+        m = re.match(r'^\s*([^:：\n]+?)[:：]\s*(#[0-9A-Fa-f]{6})', line)
+        if m:
+            out[m.group(1).strip()] = m.group(2)
+    return out
+
+
+def pick_theme_colors(vars_):
+    """从变量表挑图片框用的 主色 / 边框色 / 说明色（带兜底）。"""
+    primary = None
+    for k, v in vars_.items():
+        if "主色" in k and not any(x in k for x in ("深", "浅", "背景", "极")):
+            primary = v
+            break
+    if not primary:
+        for k, v in vars_.items():
+            if "主色" in k:
+                primary = v
+                break
+    border = None
+    for kw in ("极浅", "浅标", "标记", "浅底", "背景"):
+        for k, v in vars_.items():
+            if kw in k:
+                border = v
+                break
+        if border:
+            break
+    if not border:
+        border = vars_.get("分割线色") or "#E5E7EB"
+    caption = vars_.get("辅助文字色") or "#9CA3AF"
+    return primary, border, caption
+
+
+def img_section(src, alt, caption, colors=None):
+    """2a 图片组件：白底卡片 + 居中 img + 可选说明。<span leaf> 包裹，过校验。
+    colors=None 用中性默认(多数主题图片框本就中性)；传 --theme 解析结果则套主色为强调变体。"""
     alt = alt or ""
+    if colors:
+        border = colors["border"]
+        shadow = "0 4px 12px -2px rgba({0},0.18)".format(colors["shadow_rgb"])
+        cap_color = colors["caption"]
+    else:
+        border = "#E5E7EB"
+        shadow = "0 4px 12px -2px rgba(0,0,0,0.08)"
+        cap_color = "#9CA3AF"
     card = (
         '<section style="background:#FFF;border-radius:12px;padding:6px;'
-        'border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);'
-        'margin:8px 0 {mb};">'
+        'border:1px solid {bd};box-shadow:{sh};margin:8px 0 {mb};">'
         '<span leaf=""><img src="{src}" alt="{alt}" '
         'style="max-width:100%;height:auto;display:block;margin:0 auto;" /></span>'
         '</section>'
     )
     if caption:
         cap = (
-            '<p style="font-size:12px;color:#9CA3AF;text-align:center;margin:0 0 24px;">'
+            '<p style="font-size:12px;color:{cc};text-align:center;margin:0 0 24px;">'
             '<span leaf="">- {cap}</span></p>'
         )
-        return card.format(mb="8px", src=src, alt=alt) + cap.format(cap=caption)
-    return card.format(mb="24px", src=src, alt=alt)
+        return card.format(bd=border, sh=shadow, mb="8px", src=src, alt=alt) + cap.format(cc=cap_color, cap=caption)
+    return card.format(bd=border, sh=shadow, mb="24px", src=src, alt=alt)
 
 
 def replace_placeholder(html, anchor, section_html):
@@ -132,6 +182,7 @@ def main():
     ap.add_argument("--imgs", required=True, help="配图目录")
     ap.add_argument("--spec", default=None, help="可选 JSON 配置（占位框模式）")
     ap.add_argument("--out-dir", default=None, help="输出目录（默认与 src 同目录）")
+    ap.add_argument("--theme", default=None, help="主题英文标识(如 red-white)，从 references/theme-{id}.md 读主色套到图片框")
     args = ap.parse_args()
 
     src = os.path.abspath(args.src)
@@ -141,6 +192,23 @@ def main():
         sys.exit("❌ 源 HTML 不存在: " + src)
     if not os.path.isdir(imgs_dir):
         sys.exit("❌ 配图目录不存在: " + imgs_dir)
+
+    colors = None
+    if args.theme:
+        theme_md = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "..", "references", "theme-{0}.md".format(args.theme))
+        if not os.path.isfile(theme_md):
+            sys.exit("❌ 主题文件不存在: " + theme_md + "（检查 --theme 标识）")
+        vars_ = parse_theme_vars(open(theme_md, encoding="utf-8").read())
+        primary, border, cap = pick_theme_colors(vars_)
+        if not primary:
+            sys.exit("❌ 主题文件未解析到主色: " + theme_md)
+        r, g, b = hex_to_rgb(primary)
+        colors = {"border": border,
+                  "shadow_rgb": "{0},{1},{2}".format(r, g, b),
+                  "caption": cap}
+        print("🎨 主题套色({0}): 主色 {1} -> 边框 {2}, 阴影 rgba({3},0.18), 说明色 {4}".format(
+            args.theme, primary, border, colors["shadow_rgb"], cap))
 
     with open(src, encoding="utf-8") as f:
         html = f.read()
@@ -158,7 +226,7 @@ def main():
             p = os.path.join(imgs_dir, s["file"])
             if not os.path.isfile(p):
                 sys.exit("❌ 配图不存在: " + p)
-            sec = img_section("imgs/" + s["file"], s.get("alt", ""), s.get("caption", ""))
+            sec = img_section("imgs/" + s["file"], s.get("alt", ""), s.get("caption", ""), colors)
             if s["op"] == "replace":
                 html = replace_placeholder(html, s["anchor"], sec)
             elif s["op"] == "insert":

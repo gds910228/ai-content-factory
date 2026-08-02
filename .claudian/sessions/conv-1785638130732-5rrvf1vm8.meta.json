@@ -4,8 +4,8 @@
   "title": "Fix WeChat MP HTML image 400 error via non-base64",
   "titleGenerationStatus": "success",
   "createdAt": 1785638130732,
-  "updatedAt": 1785649123578,
-  "lastResponseAt": 1785649123578,
+  "updatedAt": 1785657664265,
+  "lastResponseAt": 1785657664265,
   "sessionId": "509ee06c-dcd5-4588-8c6d-9f33cc26f4dd",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -14,12 +14,12 @@
   "currentNote": "02-稿件库/01-创作中稿件/你越强调AI越不听话--Prompt工程里的恶性循环-20260730/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 3031,
+    "inputTokens": 3480,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 169984,
+    "cacheReadInputTokens": 197568,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 173015,
-    "percentage": 87
+    "contextTokens": 201048,
+    "percentage": 100
   }
 }

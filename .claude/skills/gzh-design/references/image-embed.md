@@ -30,10 +30,12 @@ LLM 全程只写 `<img src="imgs/x.png">` 这种短标签。
 <SKILL_ROOT>/scripts/build_gzh_html.py \
   --src "<...>_预览.html" \
   --imgs "<imgs目录>" \
-  [--spec "<spec.json>"]
+  [--spec "<spec.json>"] \
+  [--theme "<主题标识,如 red-white>"]
 ```
 
 - `--spec`（可选）：预览里是 2c 占位框时，声明每张图放哪，脚本按 2a 图片组件注入。
+- `--theme`（可选）：从 `references/theme-{标识}.md` 读主色，图片框套主题强调色（主色淡边 + 淡主色影）。多数主题图片框本就中性白卡，不传即中性规范；想带主题色点缀时传。
 - 不传 `--spec`：只把已有的 `<img src="imgs/...">` 转成 base64 自包含版。
 
 | 产物 | 体积 | 图片 | 用途 |

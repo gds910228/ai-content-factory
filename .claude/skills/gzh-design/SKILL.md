@@ -104,12 +104,12 @@ description: 微信公众号文章排版引擎，将 Markdown 转换为可直接
 `_预览.html` 产出后，跑一次脚本得两个版本：
 
 ```bash
-<SKILL_ROOT>/scripts/build_gzh_html.py --src <..._预览.html> --imgs <imgs目录> [--spec <spec.json>]
+<SKILL_ROOT>/scripts/build_gzh_html.py --src <..._预览.html> --imgs <imgs目录> [--spec <spec.json>] [--theme <主题标识>]
 ```
 - `_含图.html`：相对路径 `imgs/x.png`，首选、体积小，**须与 `imgs/` 同目录**。浏览器打开 -> 点「复制到公众号」（图多用手动 Ctrl/⌘+A->C 更稳）-> 公众号编辑器粘贴，图随样式带入并自动转存。
 - `_含图_自包含.html`：base64 内嵌，兜底 / 单文件移植。
 
-`--spec` 声明每张图放哪（replace 2c 占位框 / insert 某段后），脚本按 2a 组件注入；不传 spec 则只把已有 `<img src="imgs/...">` 转 base64。顺序：先 validate_gzh_html.py 过干净正文 -> wrap_preview.py 出预览 -> 再本脚本嵌图。
+`--spec` 声明每张图放哪（replace 2c 占位框 / insert 某段后），脚本按 2a 组件注入；不传 spec 则只把已有 `<img src="imgs/...">` 转 base64。`--theme <标识>` 从 `references/theme-{标识}.md` 读主色套图片框（主色淡边 + 淡主色影；多数主题图片框本就中性，不传即中性规范）。顺序：先 validate_gzh_html.py 过干净正文 -> wrap_preview.py 出预览 -> 再本脚本嵌图。
 
 ## 生成时的智能处理（这些是本 skill 的特色，必须做）
 
