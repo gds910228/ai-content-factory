@@ -1,0 +1,25 @@
+{
+  "id": "conv-1785739823240-v9pcp3yk1",
+  "providerId": "claude",
+  "title": "Arrange images into WeChat article with gzh-design",
+  "titleGenerationStatus": "success",
+  "createdAt": 1785739823241,
+  "updatedAt": 1785740435842,
+  "lastResponseAt": 1785739874345,
+  "sessionId": "d8a9f260-97db-493a-9cc5-bdab7f6ef42d",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "d8a9f260-97db-493a-9cc5-bdab7f6ef42d"
+  },
+  "currentNote": "02-稿件库/01-创作中稿件/别对AI说不要--正向指令为什么比否定指令更管用-20260802/05-发布包/长文发布包.md",
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 6261,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 31936,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 38197,
+    "percentage": 19
+  }
+}
