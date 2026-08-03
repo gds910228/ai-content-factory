@@ -1,0 +1,159 @@
+<template id="{{COMPOSITION_ID}}-template">
+  <div id="{{SCENE_ROOT_ID}}" data-composition-id="{{COMPOSITION_ID}}" data-start="0" data-duration="{{DURATION}}" data-width="{{WIDTH}}" data-height="{{HEIGHT}}" data-debug="{{DEBUG_DEFAULT}}">
+    <style>
+      @font-face { font-family: "Hannotate SC"; src: local("Hannotate SC"); }
+      @font-face { font-family: "Kaiti SC"; src: local("Kaiti SC"); }
+      @font-face { font-family: "PingFang SC"; src: local("PingFang SC"); }
+      #{{SCENE_ROOT_ID}} {
+        position: relative;
+        width: {{WIDTH}}px;
+        height: {{HEIGHT}}px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Hannotate SC", "Kaiti SC", "PingFang SC", cursive;
+      }
+      .scene-image-clip {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .scene-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        background: #ffffff;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .module-window-layer { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+      .module-window { position: absolute; overflow: hidden; background: transparent; }
+      .module-paint { position: absolute; inset: 0; background-color: transparent; background-repeat: no-repeat; background-size: {{WIDTH}}px {{HEIGHT}}px; will-change: clip-path; }
+      .hand-layer { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+      #{{HAND_RIG_ID}} { position: absolute; left: 0; top: 0; width: {{HAND_WIDTH}}px; height: {{HAND_HEIGHT}}px; opacity: 0; will-change: transform, opacity; }
+      #{{HAND_MARKER_ID}} { display: block; width: {{HAND_WIDTH}}px; height: {{HAND_HEIGHT}}px; object-fit: contain; }
+      .pen-crosshair { display: none; position: absolute; left: {{PEN_TIP_X}}px; top: {{PEN_TIP_Y}}px; width: 10px; height: 10px; border: 2px solid {{PATH_COLOR}}; border-radius: 50%; transform: translate(-50%, -50%); }
+      .pen-crosshair::before, .pen-crosshair::after { content: ""; position: absolute; background: {{PATH_COLOR}}; }
+      .pen-crosshair::before { left: 3px; top: -8px; width: 2px; height: 22px; }
+      .pen-crosshair::after { left: -8px; top: 3px; width: 22px; height: 2px; }
+      [data-debug="true"] .pen-crosshair { display: block; }
+      .knowledge-layer { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+      .knowledge-annotation {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        border: 3px solid var(--accent-color);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.94);
+        color: #171717;
+        line-height: 1.05;
+        text-align: center;
+        visibility: hidden;
+        will-change: transform, opacity;
+      }
+      .knowledge-annotation span { display: block; max-width: 100%; }
+      .annotation-title { justify-content: flex-start; border-width: 0 0 5px; border-radius: 0; padding: 4px 8px; font-size: 44px; font-weight: 900; letter-spacing: -0.04em; }
+      .annotation-label { font-size: 30px; font-weight: 800; }
+      .annotation-callout { border-style: dashed; font-size: 32px; font-weight: 900; transform: rotate(-1deg); }
+      .tech-component {
+        position: absolute;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        padding: 10px 14px;
+        border: 3px solid var(--accent-color);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.96);
+        color: #171717;
+        visibility: hidden;
+        overflow: hidden;
+        will-change: transform, opacity;
+      }
+      .tech-component-title { font-size: 25px; font-weight: 900; line-height: 1.05; }
+      .tech-component-body { font-family: "PingFang SC", sans-serif; font-size: 19px; font-weight: 650; line-height: 1.2; }
+      .tech-component-lines { display: flex; flex-direction: column; gap: 2px; font-family: "JetBrains Mono", monospace; font-size: 16px; font-weight: 700; line-height: 1.2; }
+      .tech-component-lines span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .tech-prompt-box { border-left-width: 9px; }
+      .tech-code-card { justify-content: flex-start; border-radius: 8px; box-shadow: inset 0 32px 0 color-mix(in srgb, var(--accent-color) 16%, white); }
+      .tech-code-card .tech-component-title { font-family: "JetBrains Mono", monospace; font-size: 20px; padding-bottom: 5px; }
+      .tech-api-exchange { border-style: double; border-width: 5px; }
+      .tech-metric-badge, .tech-data-chip, .tech-model-badge, .tech-tool-badge { align-items: center; text-align: center; border-radius: 999px; }
+      .tech-metric-badge .tech-component-title { font-size: 29px; }
+      .tech-risk-callout { border-style: dashed; }
+      .tech-risk-callout::before { content: "!"; position: absolute; right: 10px; top: 5px; color: var(--accent-color); font: 900 28px/1 sans-serif; }
+      .caption-layer { position: absolute; left: 0; right: 0; bottom: 0; height: {{CAPTION_SAFE_BOTTOM}}px; z-index: 5; pointer-events: none; }
+      .caption-group {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 40px 18px;
+        opacity: 0;
+        visibility: hidden;
+        font-family: {{CAPTION_FONT_FAMILY}};
+        font-size: {{CAPTION_FONT_SIZE}}px;
+        font-weight: 900;
+        line-height: 1.1;
+        text-align: center;
+        color: {{CAPTION_TEXT_COLOR}};
+        -webkit-text-stroke: {{CAPTION_OUTLINE_WIDTH}}px {{CAPTION_OUTLINE_COLOR}};
+        paint-order: stroke fill;
+        will-change: transform, opacity;
+      }
+      .caption-group span {
+        display: block;
+        max-width: calc({{WIDTH}}px - 120px);
+        padding: 7px 22px 9px;
+        border-radius: 14px;
+        background: {{CAPTION_BACKGROUND}};
+        box-shadow: 0 3px 0 rgba(23, 23, 23, 0.18);
+      }
+      .diagnostics { position: absolute; inset: 0; pointer-events: none; z-index: 6; }
+      [data-debug="false"] .diagnostics { display: none; }
+      .motion-path { fill: none; stroke: {{PATH_COLOR}}; stroke-width: 2; stroke-dasharray: 7 6; opacity: 0.75; }
+      .current-module { position: absolute; left: 24px; top: 20px; padding: 6px 10px; border: 1px solid {{PATH_COLOR}}; border-radius: 4px; background: color-mix(in srgb, white 80%, transparent); color: {{LABEL_COLOR}}; font-size: 16px; font-weight: 800; opacity: 0; }
+      .module-box { position: absolute; border: 2px solid var(--diagnostic-color); background: transparent; box-shadow: 0 0 0 1px color-mix(in srgb, var(--diagnostic-color) 35%, transparent); }
+      .module-label { position: absolute; left: -2px; top: -25px; padding: 3px 7px; border: 1px solid color-mix(in srgb, var(--diagnostic-color) 75%, white); border-radius: 3px; background: color-mix(in srgb, white 78%, transparent); color: {{LABEL_COLOR}}; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; line-height: 16px; white-space: nowrap; }
+    </style>
+
+    <div id="{{SCENE_IMAGE_ID}}-clip" class="clip scene-image-clip" data-start="0" data-duration="{{DURATION}}" data-track-index="0">
+      <img id="{{SCENE_IMAGE_ID}}" class="scene-image" src="{{SOURCE_IMAGE}}" alt="{{SOURCE_IMAGE_ALT}}">
+    </div>
+    <div id="module-windows" class="clip module-window-layer" data-start="0" data-duration="{{DURATION}}" data-track-index="1">
+{{MODULE_WINDOW_MARKUP}}
+    </div>
+    <div id="hand-layer" class="clip hand-layer" data-start="0" data-duration="{{DURATION}}" data-track-index="2">
+      <div id="{{HAND_RIG_ID}}"><img id="{{HAND_MARKER_ID}}" src="{{HAND_ASSET}}" alt="手持白色马克笔"><span class="pen-crosshair"></span></div>
+    </div>
+    <div id="knowledge-layer" class="clip knowledge-layer" data-start="0" data-duration="{{DURATION}}" data-track-index="3" data-layout-allow-occlusion data-layout-allow-overlap>
+{{ANNOTATION_MARKUP}}
+{{TECH_COMPONENT_MARKUP}}
+    </div>
+    <div id="caption-layer" class="clip caption-layer" data-start="0" data-duration="{{DURATION}}" data-track-index="4">
+{{CAPTION_MARKUP}}
+    </div>
+    <div id="diagnostics" class="clip diagnostics" data-start="0" data-duration="{{DURATION}}" data-track-index="5">
+      <svg width="{{WIDTH}}" height="{{HEIGHT}}" viewBox="0 0 {{WIDTH}} {{HEIGHT}}" aria-hidden="true"><polyline class="motion-path" points="{{MOTION_PATH_POINTS}}" /></svg>
+{{CURRENT_LABELS}}
+{{MODULE_BOXES}}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      const debugParam = new URLSearchParams(window.location.search).get("debug");
+      const debug = debugParam === null ? {{DEBUG_DEFAULT}} : debugParam !== "0" && debugParam !== "false";
+      document.querySelector("#{{SCENE_ROOT_ID}}").dataset.debug = String(debug);
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const handPosition = (targetPenX, targetPenY) => ({ x: targetPenX - {{PEN_TIP_X}}, y: targetPenY - {{PEN_TIP_Y}} });
+{{TIMELINE_SCRIPT}}
+      window.__timelines["{{COMPOSITION_ID}}"] = tl;
+    </script>
+  </div>
+</template>

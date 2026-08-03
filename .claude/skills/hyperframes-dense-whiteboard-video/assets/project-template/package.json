@@ -1,0 +1,14 @@
+{
+  "name": "dense-article-whiteboard-pipeline",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "voice": "node scripts/generate-voiceovers.mjs",
+    "build": "node scripts/build-article-video.mjs",
+    "dev": "node scripts/run-hyperframes.mjs preview",
+    "check": "node scripts/run-hyperframes.mjs check",
+    "render": "node scripts/render-article-video.mjs",
+    "make": "node scripts/make-article-video.mjs",
+    "publish": "node scripts/run-hyperframes.mjs publish"
+  }
+}

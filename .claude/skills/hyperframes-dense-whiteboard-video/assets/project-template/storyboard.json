@@ -1,0 +1,704 @@
+{
+  "$schema": "./schemas/storyboard.schema.json",
+  "version": 2,
+  "article": {
+    "title": "把大目标拆成第一步",
+    "language": "zh-CN",
+    "source": "input/article.md"
+  },
+  "contentProfile": {
+    "domain": "general",
+    "aiConfidence": 0.05,
+    "resolvedDomainPreset": "general",
+    "topics": [
+      "目标拆解"
+    ],
+    "technicalDepth": "beginner",
+    "audience": "希望提升行动力的普通读者",
+    "articleType": "concept",
+    "signals": [
+      "全文围绕目标拆解和行动方法，没有解释 AI 技术"
+    ],
+    "reason": "文章主旨不是 AI，因此使用通用知识白板预设。"
+  },
+  "project": {
+    "id": "dense-article-whiteboard",
+    "title": "把大目标拆成第一步",
+    "visualStyle": "dense-whiteboard",
+    "domainPreset": "auto",
+    "canvas": {
+      "width": 1280,
+      "height": 720,
+      "fps": 30
+    },
+    "transition": {
+      "type": "crossfade",
+      "duration": 0.5
+    },
+    "timing": {
+      "narrationLead": 0.45,
+      "tailHold": 0.85,
+      "minSceneDuration": 5.5,
+      "revealStart": 0.3,
+      "revealEndBefore": 0.65,
+      "moduleGap": 0.08,
+      "maxRevealDuration": 8
+    },
+    "captions": {
+      "enabled": true,
+      "maxChars": 16,
+      "safeBottom": 110,
+      "fontFamily": "Hannotate SC, Kaiti SC, PingFang SC, cursive",
+      "fontSize": 48,
+      "textColor": "#FFFFFF",
+      "outlineColor": "#171717",
+      "outlineWidth": 2,
+      "background": "rgba(55, 55, 55, 0.72)"
+    }
+  },
+  "narration": {
+    "provider": "macos-say",
+    "voice": "Tingting",
+    "rate": 241,
+    "volume": 1
+  },
+  "hand": {
+    "asset": "assets/hand-marker.png",
+    "displayWidth": 420,
+    "displayHeight": 420,
+    "penTip": {
+      "x": 131,
+      "y": 101
+    },
+    "exit": {
+      "duration": 0.28,
+      "pen": {
+        "x": 1450,
+        "y": 850
+      }
+    }
+  },
+  "diagnostics": {
+    "defaultEnabled": false,
+    "labelColor": "#171717",
+    "pathColor": "#EF4444"
+  },
+  "scenes": [
+    {
+      "id": "scene-01",
+      "title": "为什么迟迟无法开始",
+      "narration": "很多人面对大目标时迟迟无法开始，不是因为不够努力，而是终点看起来太远。",
+      "captionChunks": [
+        "很多人面对大目标时",
+        "迟迟无法开始",
+        "不是因为不够努力",
+        "而是终点看起来太远"
+      ],
+      "visualPrompt": "高密度白板线稿：左侧犹豫人物和思考泡泡，中央是遥远距离、问号路标、混乱路径和阻碍，右侧是高山与顶峰旗帜，使用多条箭头表达从人物到目标的关系。纯白背景、黑色手绘线条、少量淡黄色与青绿色点缀、无任何文字，底部110像素留白。",
+      "sourceImage": "assets/scenes/scene-01.png",
+      "sourceImageAlt": "人物面对遥远目标和不清晰路径",
+      "visualPattern": "cause-effect",
+      "modules": [
+        {
+          "id": "character",
+          "label": "犹豫的人",
+          "diagnosticColor": "#0EA5E9",
+          "box": {
+            "x": 28,
+            "y": 252,
+            "width": 175,
+            "height": 270
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 1.1
+          }
+        },
+        {
+          "id": "thought",
+          "label": "思考泡泡",
+          "diagnosticColor": "#3B9C95",
+          "box": {
+            "x": 18,
+            "y": 48,
+            "width": 315,
+            "height": 230
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 0.8
+          }
+        },
+        {
+          "id": "distance",
+          "label": "遥远距离",
+          "diagnosticColor": "#F59E0B",
+          "box": {
+            "x": 150,
+            "y": 392,
+            "width": 205,
+            "height": 82
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.9
+          }
+        },
+        {
+          "id": "first-step",
+          "label": "未知第一步",
+          "diagnosticColor": "#F08A5D",
+          "box": {
+            "x": 322,
+            "y": 120,
+            "width": 220,
+            "height": 405
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 0.9
+          }
+        },
+        {
+          "id": "blocked-path",
+          "label": "混乱路径",
+          "diagnosticColor": "#8B5CF6",
+          "box": {
+            "x": 428,
+            "y": 188,
+            "width": 442,
+            "height": 342
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 1
+          }
+        },
+        {
+          "id": "mountain",
+          "label": "巨大目标",
+          "diagnosticColor": "#3B9C95",
+          "box": {
+            "x": 885,
+            "y": 176,
+            "width": 390,
+            "height": 360
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 1.3
+          }
+        },
+        {
+          "id": "flag",
+          "label": "终点旗帜",
+          "diagnosticColor": "#F6C453",
+          "box": {
+            "x": 1060,
+            "y": 72,
+            "width": 180,
+            "height": 145
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 0.7
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "id": "scene-title",
+          "text": "为什么难以开始？",
+          "variant": "title",
+          "box": {
+            "x": 405,
+            "y": 28,
+            "width": 380,
+            "height": 62
+          },
+          "revealAfter": "character",
+          "accentColor": "#3B9C95"
+        },
+        {
+          "id": "label-distance",
+          "text": "距离太远",
+          "variant": "label",
+          "box": {
+            "x": 310,
+            "y": 455,
+            "width": 180,
+            "height": 52
+          },
+          "revealAfter": "distance",
+          "accentColor": "#F6C453"
+        },
+        {
+          "id": "label-first-step",
+          "text": "第一步不清楚",
+          "variant": "callout",
+          "box": {
+            "x": 332,
+            "y": 532,
+            "width": 230,
+            "height": 56
+          },
+          "revealAfter": "first-step",
+          "accentColor": "#F08A5D"
+        },
+        {
+          "id": "label-goal",
+          "text": "目标太大",
+          "variant": "label",
+          "box": {
+            "x": 900,
+            "y": 535,
+            "width": 170,
+            "height": 52
+          },
+          "revealAfter": "mountain",
+          "accentColor": "#3B9C95"
+        }
+      ]
+    },
+    {
+      "id": "scene-02",
+      "title": "把目标拆成小动作",
+      "narration": "有效的方法，是把目标拆成几个小而明确的动作，每一步都小到现在就能开始。",
+      "captionChunks": [
+        "有效的方法",
+        "是把目标拆成几个",
+        "小而明确的动作",
+        "每一步都小到现在就能开始"
+      ],
+      "visualPrompt": "高密度白板线稿：左侧巨大目标圆盘，中央通过分解箭头拆成三条路径，右侧三个小行动卡片、勾选清单、计时器和立即行动的人物，结构像知识流程图。纯白背景、黑色手绘线条、少量淡黄色与青绿色点缀、无任何文字，底部110像素留白。",
+      "sourceImage": "assets/scenes/scene-02.png",
+      "sourceImageAlt": "大目标被拆成清晰的小行动",
+      "visualPattern": "hub-spoke",
+      "modules": [
+        {
+          "id": "big-goal",
+          "label": "大目标",
+          "diagnosticColor": "#8B5CF6",
+          "box": {
+            "x": 22,
+            "y": 96,
+            "width": 360,
+            "height": 390
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 1.1
+          }
+        },
+        {
+          "id": "split-arrows",
+          "label": "拆解箭头",
+          "diagnosticColor": "#0EA5E9",
+          "box": {
+            "x": 350,
+            "y": 140,
+            "width": 355,
+            "height": 350
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.9
+          }
+        },
+        {
+          "id": "action-one",
+          "label": "行动一",
+          "role": "card",
+          "diagnosticColor": "#F6C453",
+          "box": {
+            "x": 690,
+            "y": 50,
+            "width": 305,
+            "height": 150
+          },
+          "extraRevealBoxes": [
+            {
+              "x": 950,
+              "y": 75,
+              "width": 105,
+              "height": 70
+            }
+          ],
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.8
+          }
+        },
+        {
+          "id": "action-two",
+          "label": "行动二",
+          "role": "card",
+          "diagnosticColor": "#3B9C95",
+          "box": {
+            "x": 690,
+            "y": 225,
+            "width": 305,
+            "height": 165
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.8
+          }
+        },
+        {
+          "id": "action-three",
+          "label": "行动三",
+          "role": "card",
+          "diagnosticColor": "#F08A5D",
+          "box": {
+            "x": 690,
+            "y": 402,
+            "width": 305,
+            "height": 165
+          },
+          "extraRevealBoxes": [
+            {
+              "x": 950,
+              "y": 390,
+              "width": 103,
+              "height": 120
+            }
+          ],
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.8
+          }
+        },
+        {
+          "id": "checklist",
+          "label": "行动清单",
+          "diagnosticColor": "#3B9C95",
+          "box": {
+            "x": 1050,
+            "y": 205,
+            "width": 187,
+            "height": 205
+          },
+          "extraRevealBoxes": [
+            {
+              "x": 1005,
+              "y": 190,
+              "width": 45,
+              "height": 150
+            }
+          ],
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 0.9
+          }
+        },
+        {
+          "id": "timer",
+          "label": "立即计时",
+          "diagnosticColor": "#F59E0B",
+          "box": {
+            "x": 1053,
+            "y": 405,
+            "width": 197,
+            "height": 185
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 0.8
+          }
+        },
+        {
+          "id": "starter",
+          "label": "立即行动",
+          "diagnosticColor": "#0EA5E9",
+          "box": {
+            "x": 1055,
+            "y": 28,
+            "width": 205,
+            "height": 165
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 1.1
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "id": "scene-title",
+          "text": "把目标拆小",
+          "variant": "title",
+          "box": {
+            "x": 365,
+            "y": 28,
+            "width": 310,
+            "height": 62
+          },
+          "revealAfter": "big-goal",
+          "accentColor": "#8B5CF6"
+        },
+        {
+          "id": "label-clear",
+          "text": "明确",
+          "variant": "label",
+          "box": {
+            "x": 785,
+            "y": 98,
+            "width": 150,
+            "height": 54
+          },
+          "revealAfter": "action-one",
+          "placement": "inside",
+          "accentColor": "#F6C453"
+        },
+        {
+          "id": "label-small",
+          "text": "足够小",
+          "variant": "label",
+          "box": {
+            "x": 780,
+            "y": 462,
+            "width": 165,
+            "height": 54
+          },
+          "revealAfter": "action-three",
+          "placement": "inside",
+          "accentColor": "#F08A5D"
+        },
+        {
+          "id": "label-now",
+          "text": "现在就能做",
+          "variant": "label",
+          "box": {
+            "x": 770,
+            "y": 282,
+            "width": 205,
+            "height": 54
+          },
+          "revealAfter": "action-two",
+          "placement": "inside",
+          "accentColor": "#3B9C95"
+        }
+      ]
+    },
+    {
+      "id": "scene-03",
+      "title": "完成眼前这一步",
+      "narration": "当第一步完成，下一步会自然变得清晰。持续走好眼前这一步，山顶就会慢慢靠近。",
+      "captionChunks": [
+        "当第一步完成",
+        "下一步会自然变得清晰",
+        "持续走好眼前这一步",
+        "山顶就会慢慢靠近"
+      ],
+      "visualPrompt": "高密度白板线稿：左侧人物完成第一块踏脚石，中央出现反馈回路箭头和被照亮的下一步，随后三块连续踏脚石形成进度路径，右侧上方是更近的山顶旗帜，表达行动、反馈、清晰、继续的循环。纯白背景、黑色手绘线条、少量淡黄色与青绿色点缀、无任何文字，底部110像素留白。",
+      "sourceImage": "assets/scenes/scene-03.png",
+      "sourceImageAlt": "完成第一步后看清连续行动路径",
+      "visualPattern": "pipeline",
+      "modules": [
+        {
+          "id": "walker",
+          "label": "人物完成第一步",
+          "diagnosticColor": "#0EA5E9",
+          "box": {
+            "x": 30,
+            "y": 200,
+            "width": 325,
+            "height": 345
+          },
+          "clipPolygon": [
+            { "x": 0, "y": 0 },
+            { "x": 0.6615, "y": 0 },
+            { "x": 0.6615, "y": 0.5072 },
+            { "x": 1, "y": 0.5072 },
+            { "x": 1, "y": 1 },
+            { "x": 0, "y": 1 }
+          ],
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 1.8
+          }
+        },
+        {
+          "id": "feedback",
+          "label": "反馈回路",
+          "diagnosticColor": "#3B9C95",
+          "box": {
+            "x": 245,
+            "y": 28,
+            "width": 435,
+            "height": 345
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.9
+          }
+        },
+        {
+          "id": "next-clear",
+          "label": "下一步清晰",
+          "diagnosticColor": "#F08A5D",
+          "box": {
+            "x": 360,
+            "y": 325,
+            "width": 255,
+            "height": 205
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 0.9
+          }
+        },
+        {
+          "id": "step-two",
+          "label": "第二步",
+          "diagnosticColor": "#F6C453",
+          "box": {
+            "x": 615,
+            "y": 390,
+            "width": 180,
+            "height": 125
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.75
+          }
+        },
+        {
+          "id": "step-three",
+          "label": "第三步",
+          "diagnosticColor": "#3B9C95",
+          "box": {
+            "x": 785,
+            "y": 340,
+            "width": 190,
+            "height": 140
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.75
+          }
+        },
+        {
+          "id": "progress-path",
+          "label": "持续路径",
+          "diagnosticColor": "#8B5CF6",
+          "box": {
+            "x": 565,
+            "y": 235,
+            "width": 410,
+            "height": 180
+          },
+          "reveal": {
+            "direction": "right",
+            "edgePosition": 0.5,
+            "weight": 0.9
+          }
+        },
+        {
+          "id": "summit",
+          "label": "靠近山顶",
+          "diagnosticColor": "#F59E0B",
+          "box": {
+            "x": 925,
+            "y": 70,
+            "width": 350,
+            "height": 455
+          },
+          "reveal": {
+            "direction": "down",
+            "edgePosition": 0.5,
+            "weight": 1.1
+          }
+        }
+      ],
+      "annotations": [
+        {
+          "id": "scene-title",
+          "text": "行动带来清晰",
+          "variant": "title",
+          "box": {
+            "x": 38,
+            "y": 28,
+            "width": 330,
+            "height": 62
+          },
+          "revealAfter": "walker",
+          "accentColor": "#3B9C95"
+        },
+        {
+          "id": "label-done",
+          "text": "完成第一步",
+          "variant": "label",
+          "box": {
+            "x": 220,
+            "y": 548,
+            "width": 195,
+            "height": 50
+          },
+          "revealAfter": "walker",
+          "accentColor": "#F6C453"
+        },
+        {
+          "id": "label-feedback",
+          "text": "获得反馈",
+          "variant": "callout",
+          "box": {
+            "x": 335,
+            "y": 105,
+            "width": 180,
+            "height": 54
+          },
+          "revealAfter": "feedback",
+          "accentColor": "#3B9C95"
+        },
+        {
+          "id": "label-clear",
+          "text": "看清下一步",
+          "variant": "label",
+          "box": {
+            "x": 500,
+            "y": 530,
+            "width": 195,
+            "height": 50
+          },
+          "revealAfter": "next-clear",
+          "accentColor": "#F08A5D"
+        },
+        {
+          "id": "label-progress",
+          "text": "持续行动",
+          "variant": "label",
+          "box": {
+            "x": 760,
+            "y": 95,
+            "width": 170,
+            "height": 50
+          },
+          "revealAfter": "progress-path",
+          "accentColor": "#8B5CF6"
+        }
+      ]
+    }
+  ]
+}

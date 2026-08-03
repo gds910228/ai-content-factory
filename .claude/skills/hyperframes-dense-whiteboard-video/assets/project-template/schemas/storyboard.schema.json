@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "storyboard.schema.json",
+  "title": "Dense article whiteboard video storyboard",
+  "type": "object",
+  "required": ["version", "article", "project", "narration", "hand", "scenes"],
+  "properties": {
+    "version": { "const": 2 },
+    "article": {
+      "type": "object",
+      "required": ["title", "language", "source"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "language": { "type": "string", "minLength": 2 },
+        "source": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "contentProfile": {
+      "type": "object",
+      "required": ["domain", "aiConfidence", "resolvedDomainPreset", "topics", "technicalDepth", "audience", "articleType", "signals", "reason"],
+      "properties": {
+        "domain": { "enum": ["general", "ai", "mixed"] },
+        "aiConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "resolvedDomainPreset": { "enum": ["general", "hybrid", "ai-explainer"] },
+        "topics": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "technicalDepth": { "enum": ["beginner", "intermediate", "advanced"] },
+        "audience": { "type": "string", "minLength": 1 },
+        "articleType": { "enum": ["concept", "workflow", "comparison", "tutorial", "opinion", "news", "case-study", "mixed"] },
+        "signals": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "project": {
+      "type": "object",
+      "required": ["id", "title", "canvas", "transition", "timing", "captions"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "visualStyle": { "const": "dense-whiteboard" },
+        "domainPreset": { "enum": ["auto", "general", "hybrid", "ai-explainer"] },
+        "canvas": {
+          "type": "object",
+          "required": ["width", "height", "fps"],
+          "properties": {
+            "width": { "type": "number", "exclusiveMinimum": 0 },
+            "height": { "type": "number", "exclusiveMinimum": 0 },
+            "fps": { "enum": [24, 30, 60] }
+          },
+          "additionalProperties": false
+        },
+        "transition": {
+          "type": "object",
+          "required": ["type", "duration"],
+          "properties": {
+            "type": { "const": "crossfade" },
+            "duration": { "type": "number", "exclusiveMinimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "timing": {
+          "type": "object",
+          "required": ["narrationLead", "tailHold", "minSceneDuration", "revealStart", "revealEndBefore", "moduleGap", "maxRevealDuration"],
+          "properties": {
+            "narrationLead": { "type": "number", "exclusiveMinimum": 0 },
+            "tailHold": { "type": "number", "exclusiveMinimum": 0 },
+            "minSceneDuration": { "type": "number", "exclusiveMinimum": 0 },
+            "revealStart": { "type": "number", "minimum": 0 },
+            "revealEndBefore": { "type": "number", "exclusiveMinimum": 0 },
+            "moduleGap": { "type": "number", "minimum": 0 },
+            "maxRevealDuration": { "type": "number", "exclusiveMinimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "captions": {
+          "type": "object",
+          "required": ["enabled", "maxChars", "safeBottom", "fontFamily", "fontSize", "textColor", "outlineColor", "outlineWidth", "background"],
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "maxChars": { "type": "integer", "minimum": 4, "maximum": 24 },
+            "safeBottom": { "type": "number", "minimum": 60, "maximum": 200 },
+            "fontFamily": { "type": "string", "minLength": 1 },
+            "fontSize": { "type": "number", "minimum": 36, "maximum": 72 },
+            "textColor": { "$ref": "#/$defs/color" },
+            "outlineColor": { "$ref": "#/$defs/color" },
+            "outlineWidth": { "type": "number", "minimum": 0, "maximum": 8 },
+            "background": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "narration": {
+      "type": "object",
+      "required": ["provider", "voice", "rate", "volume"],
+      "properties": {
+        "provider": { "const": "macos-say" },
+        "voice": { "type": "string", "minLength": 1 },
+        "rate": { "type": "number", "exclusiveMinimum": 0 },
+        "volume": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "hand": {
+      "type": "object",
+      "required": ["asset", "displayWidth", "displayHeight", "penTip", "exit"],
+      "properties": {
+        "asset": { "type": "string", "minLength": 1 },
+        "displayWidth": { "type": "number", "exclusiveMinimum": 0 },
+        "displayHeight": { "type": "number", "exclusiveMinimum": 0 },
+        "penTip": { "$ref": "#/$defs/point" },
+        "exit": {
+          "type": "object",
+          "required": ["duration", "pen"],
+          "properties": {
+            "duration": { "type": "number", "exclusiveMinimum": 0 },
+            "pen": { "$ref": "#/$defs/point" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "diagnostics": { "type": "object" },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "narration", "visualPrompt", "sourceImage", "modules", "annotations"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+          "title": { "type": "string", "minLength": 1 },
+          "narration": { "type": "string", "minLength": 1 },
+          "captionChunks": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "visualPrompt": { "type": "string", "minLength": 1 },
+          "sourceImage": { "type": "string", "minLength": 1 },
+          "sourceImageAlt": { "type": "string" },
+          "visualPattern": { "$ref": "#/$defs/visualPattern" },
+          "aiConcepts": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "$ref": "#/$defs/aiConcept" }
+          },
+          "modules": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/$defs/module" }
+          },
+          "annotations": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/annotation" }
+          },
+          "techComponents": {
+            "type": "array",
+            "maxItems": 6,
+            "items": { "$ref": "#/$defs/techComponent" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "point": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
+      "additionalProperties": false
+    },
+    "box": {
+      "type": "object",
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0 },
+        "y": { "type": "number", "minimum": 0 },
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "visualPattern": {
+      "enum": ["general", "pipeline", "architecture", "comparison", "loop", "cause-effect", "timeline", "hub-spoke", "metric-dashboard"]
+    },
+    "aiConcept": {
+      "type": "object",
+      "required": ["key", "label", "moduleId"],
+      "properties": {
+        "key": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "label": { "type": "string", "minLength": 1 },
+        "moduleId": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" }
+      },
+      "additionalProperties": false
+    },
+    "module": {
+      "type": "object",
+      "required": ["id", "box", "reveal"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+        "label": { "type": "string" },
+        "role": { "enum": ["visual", "card"] },
+        "diagnosticColor": { "$ref": "#/$defs/color" },
+        "box": { "$ref": "#/$defs/box" },
+        "clipPolygon": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["x", "y"],
+            "properties": {
+              "x": { "type": "number", "minimum": 0, "maximum": 1 },
+              "y": { "type": "number", "minimum": 0, "maximum": 1 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "extraRevealBoxes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/box" }
+        },
+        "reveal": {
+          "type": "object",
+          "required": ["direction"],
+          "properties": {
+            "direction": { "enum": ["down", "up", "right", "left"] },
+            "edgePosition": { "type": "number", "minimum": 0, "maximum": 1 },
+            "weight": { "type": "number", "exclusiveMinimum": 0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "annotation": {
+      "type": "object",
+      "required": ["id", "text", "variant", "box", "revealAfter"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+        "text": { "type": "string", "minLength": 1 },
+        "variant": { "enum": ["title", "label", "callout"] },
+        "box": { "$ref": "#/$defs/box" },
+        "revealAfter": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+        "placement": { "enum": ["free", "inside"] },
+        "accentColor": { "$ref": "#/$defs/color" }
+      },
+      "additionalProperties": false
+    },
+    "techComponent": {
+      "type": "object",
+      "required": ["id", "type", "title", "box", "revealAfter"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+        "type": { "enum": ["prompt-box", "code-card", "api-exchange", "metric-badge", "data-chip", "risk-callout", "model-badge", "tool-badge"] },
+        "title": { "type": "string", "minLength": 1 },
+        "body": { "type": "string" },
+        "lines": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "box": { "$ref": "#/$defs/box" },
+        "revealAfter": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]*$" },
+        "accentColor": { "$ref": "#/$defs/color" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
