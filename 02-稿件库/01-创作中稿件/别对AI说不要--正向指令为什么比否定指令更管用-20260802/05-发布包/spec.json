@@ -1,0 +1,30 @@
+[
+  {
+    "op": "replace",
+    "anchor": "此处插入：图1｜堵窟窿示意",
+    "file": "01-concept-plugging-holes.png",
+    "alt": "越禁越来·堵窟窿示意图",
+    "caption": "图1｜否定指令是堵窟窿：你禁了手机号、身份证，它就在没禁的邮箱上冒出来"
+  },
+  {
+    "op": "replace",
+    "anchor": "此处插入：图2｜否定 vs 正向 对照",
+    "file": "02-comparison-negative-vs-positive.png",
+    "alt": "否定指令 vs 正向指令 对照图",
+    "caption": "图2｜把一串不要换成白名单：与其 100 个不要，不如 1 个要"
+  },
+  {
+    "op": "replace",
+    "anchor": "此处插入：图3｜三列表格模板",
+    "file": "03-template-three-column-table.png",
+    "alt": "场景/正向行为/禁止项 三列表格模板",
+    "caption": "图3｜能截图带走的 Prompt 改造表：场景 / ✅正向行为 / 禁止项"
+  },
+  {
+    "op": "replace",
+    "anchor": "此处插入：图4｜三层机制总结",
+    "file": "04-framework-three-mechanisms.png",
+    "alt": "正向指令更管用的三层机制总结图",
+    "caption": "图4｜为什么要比不要管用：token 正向选择 / 粉红大象 / 训练本能"
+  }
+]
