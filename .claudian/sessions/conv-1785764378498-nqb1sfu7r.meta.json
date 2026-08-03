@@ -4,7 +4,21 @@
   "title": "为AI Agent技能精简系列提供更多选题",
   "titleGenerationStatus": "success",
   "createdAt": 1785764378498,
-  "updatedAt": 1785764391374,
-  "sessionId": null,
-  "selectedModel": "claude-code/glm-5.2"
+  "updatedAt": 1785764729525,
+  "lastResponseAt": 1785764729524,
+  "sessionId": "6d0867a4-3658-4688-b817-2ee81cc705c2",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "6d0867a4-3658-4688-b817-2ee81cc705c2"
+  },
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 4800,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 53184,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 57984,
+    "percentage": 29
+  }
 }
