@@ -1,0 +1,37 @@
+{
+  "jobs": 4,
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": ["prompts/01-infographic-plugging-holes.md"],
+      "image": "01-infographic-plugging-holes.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": ["prompts/02-comparison-negative-vs-positive.md"],
+      "image": "02-comparison-negative-vs-positive.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": ["prompts/03-infographic-three-column-table.md"],
+      "image": "03-infographic-three-column-table.png",
+      "provider": "modelscope",
+      "ar": "4:3",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": ["prompts/04-framework-three-mechanisms.md"],
+      "image": "04-framework-three-mechanisms.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}
