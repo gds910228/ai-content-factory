@@ -1,0 +1,10 @@
+{
+  "id": "conv-1785846381948-en43hgb2z",
+  "providerId": "claude",
+  "title": "Build ModelScope article illustration workflow ...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1785846381948,
+  "updatedAt": 1785846482028,
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.2"
+}

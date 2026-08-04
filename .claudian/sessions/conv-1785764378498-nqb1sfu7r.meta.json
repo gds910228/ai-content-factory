@@ -4,8 +4,8 @@
   "title": "为AI Agent技能精简系列提供更多选题",
   "titleGenerationStatus": "success",
   "createdAt": 1785764378498,
-  "updatedAt": 1785845351874,
-  "lastResponseAt": 1785845351874,
+  "updatedAt": 1785845664160,
+  "lastResponseAt": 1785845664160,
   "sessionId": "6d0867a4-3658-4688-b817-2ee81cc705c2",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -13,12 +13,12 @@
   },
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 10164,
+    "inputTokens": 2937,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 183744,
+    "cacheReadInputTokens": 195392,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 193908,
-    "percentage": 97
+    "contextTokens": 198329,
+    "percentage": 99
   }
 }

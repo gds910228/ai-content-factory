@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\prompts\\01-scene-code-overload.md"
+      ],
+      "image": "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\01-scene-code-overload.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\prompts\\02-flowchart-prompt-bloat.md"
+      ],
+      "image": "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\02-flowchart-prompt-bloat.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\prompts\\03-framework-four-layer.md"
+      ],
+      "image": "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\03-framework-four-layer.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": [
+        "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\prompts\\04-comparison-prose-vs-table.md"
+      ],
+      "image": "02-稿件库\\01-创作中稿件\\把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\\05-发布包\\配图素材\\04-comparison-prose-vs-table.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    }
+  ],
+  "jobs": 4
+}
