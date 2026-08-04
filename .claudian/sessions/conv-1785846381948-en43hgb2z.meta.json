@@ -4,7 +4,21 @@
   "title": "Build ModelScope article illustration workflow ...",
   "titleGenerationStatus": "success",
   "createdAt": 1785846381948,
-  "updatedAt": 1785846482028,
-  "sessionId": null,
-  "selectedModel": "claude-code/glm-5.2"
+  "updatedAt": 1785849022994,
+  "lastResponseAt": 1785848165730,
+  "sessionId": "10538e93-7e9a-49c4-b302-d7ee04039d50",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "10538e93-7e9a-49c4-b302-d7ee04039d50"
+  },
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 1730,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 116224,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 117954,
+    "percentage": 59
+  }
 }
