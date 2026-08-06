@@ -1,0 +1,24 @@
+{
+  "id": "conv-1786021228118-hmgun61d0",
+  "providerId": "claude",
+  "title": "Format and send article to WeChat official account",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786021228122,
+  "updatedAt": 1786023546337,
+  "lastResponseAt": 1786023546336,
+  "sessionId": "fed2c185-9dc3-4f0a-b4bc-bf9000146af2",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "fed2c185-9dc3-4f0a-b4bc-bf9000146af2"
+  },
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 365,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 100096,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 100461,
+    "percentage": 50
+  }
+}

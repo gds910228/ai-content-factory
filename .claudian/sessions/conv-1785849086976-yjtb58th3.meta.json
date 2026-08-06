@@ -4,14 +4,13 @@
   "title": "Fix LLM base64 token overflow 400 error for gzh...",
   "titleGenerationStatus": "success",
   "createdAt": 1785849086976,
-  "updatedAt": 1785855672829,
+  "updatedAt": 1786021167583,
   "lastResponseAt": 1785855672829,
   "sessionId": "89d5af59-da04-47de-84ac-d5997914fe2a",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
     "providerSessionId": "89d5af59-da04-47de-84ac-d5997914fe2a"
   },
-  "currentNote": "02-稿件库/01-创作中稿件/把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
     "inputTokens": 949,

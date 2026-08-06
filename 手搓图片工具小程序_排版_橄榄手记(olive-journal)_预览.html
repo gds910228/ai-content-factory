@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>手搓图片工具小程序_排版_橄榄手记(olive-journal)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; padding:0; background:#f0f0f0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; color:#333; }
+  .bar { position:sticky; top:0; z-index:999; background:#1C1917; color:#fff; padding:10px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; box-shadow:0 2px 10px rgba(0,0,0,0.18); }
+  .bar .t { font-size:14px; font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .copy-btn { flex-shrink:0; background:#fff; color:#1C1917; border:none; padding:8px 16px; border-radius:6px; font-size:14px; font-weight:700; cursor:pointer; transition:all .15s; }
+  .copy-btn:hover { background:#FEE2E2; color:#DC2626; }
+  .copy-btn.ok { background:#D1FAE5; color:#065F46; }
+  .copy-btn.fail { background:#FEE2E2; color:#991B1B; }
+  .hint { max-width:677px; margin:14px auto 0; padding:0 10px; font-size:13px; color:#888; line-height:1.6; }
+  .stage { padding:16px 0 48px; }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <span class="t">手搓图片工具小程序_排版_橄榄手记(olive-journal)</span>
+    <button class="copy-btn" id="copyBtn" onclick="copyToGzh()">复制到公众号</button>
+  </div>
+  <p class="hint">① 点右上角「复制到公众号」 → ② 微信公众号编辑器 Ctrl/⌘+V 粘贴。若图片未带入，改用 Ctrl/⌘+A 全选本页正文再复制；仍不行就用同目录「_含图_自包含.html」。</p>
+  <div class="stage" id="stage">
+<section style="max-width:677px;margin:0 auto;padding:8px;box-sizing:border-box;background:#fdfdf8;color:#4d4f46;font-family:'IBM Plex Sans',-apple-system,system-ui,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.75;">
+
+  <!-- 组件2 头图卡 -->
+  <section style="background:#fdfdf8;border:1px solid #bfc1b7;border-radius:6px;overflow:hidden;font-family:'IBM Plex Sans',-apple-system,system-ui,sans-serif;">
+    <section style="padding:28px 24px 22px;">
+      <section style="display:flex;align-items:center;gap:8px;margin-bottom:22px;">
+        <span style="width:8px;height:8px;background:#1e1f23;border-radius:50%;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:3px;color:#65675e;"><span leaf="">独立开发手记</span></span>
+        <span style="flex:1;height:1px;background:#bfc1b7;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+        <span style="font-size:10px;color:#9ea096;font-weight:500;font-variant-numeric:tabular-nums;"><span leaf="">2026.08.06</span></span>
+      </section>
+      <section style="display:flex;align-items:stretch;gap:18px;">
+        <section style="flex:1;min-width:0;">
+          <p style="font-size:24px;font-weight:800;color:#23251d;margin:0 0 10px;line-height:1.15;letter-spacing:-0.75px;">
+            <span leaf="">手搓了个图片工具小程序</span><span style="color:#4d4f46;"><span leaf="">&nbsp;·&nbsp;</span></span><span style="border-bottom:3px solid #e5e7e0;"><span leaf="">图个简单</span></span>
+          </p>
+          <section style="display:flex;align-items:center;gap:4px;margin-bottom:12px;">
+            <span style="width:22px;height:3px;background:#1e1f23;border-radius:2px;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+            <span style="width:8px;height:3px;background:#bfc1b7;border-radius:2px;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+          </section>
+          <p style="font-size:13px;color:#65675e;margin:0;line-height:1.7;"><span leaf="">一个人，业余时间，断断续续三个月，25 个功能堆满了，来说说真实情况。</span></p>
+        </section>
+        <section style="flex-shrink:0;width:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#eeefe9;border:1px dashed #bfc1b7;border-radius:6px;padding:8px;">
+          <svg width="72" height="72" viewBox="0 0 64 64" aria-hidden="true" style="display:block;">
+            <ellipse cx="32" cy="36" rx="22" ry="18" fill="none" stroke="#4d4f46" stroke-width="2"></ellipse>
+            <circle cx="26" cy="30" r="3" fill="#4d4f46"></circle>
+            <circle cx="38" cy="30" r="3" fill="#4d4f46"></circle>
+            <path d="M28 40 Q32 44 36 40" fill="none" stroke="#4d4f46" stroke-width="1.5"></path>
+            <path d="M12 34 L8 28 M52 34 L56 28" stroke="#bfc1b7" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+          <span style="font-size:8px;font-weight:700;color:#9ea096;letter-spacing:1px;margin-top:4px;"><span leaf="">DOODLE</span></span>
+        </section>
+      </section>
+    </section>
+    <section style="background:#1e1f23;padding:11px 24px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+      <p style="font-size:12px;color:rgba(255,255,255,0.92);margin:0;font-weight:600;"><span leaf="">功能堆得再满，没人知道就是没人知道。</span></p>
+      <section style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="background:#e5e7e0;color:#23251d;padding:3px 8px;border-radius:4px;font-size:8px;font-weight:700;border:1px solid #bfc1b7;"><span leaf="">微信小程序</span></span>
+        <span style="background:#e5e7e0;color:#23251d;padding:3px 8px;border-radius:4px;font-size:8px;font-weight:700;border:1px solid #bfc1b7;"><span leaf="">独立开发</span></span>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件3 章节标题 01 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="display:flex;align-items:center;gap:14px;">
+        <section style="text-align:center;flex-shrink:0;">
+          <p style="margin:0;font-size:24px;font-weight:800;color:#23251d;line-height:1;letter-spacing:-2px;"><span leaf="">01</span></p>
+          <p style="margin:0;font-size:8px;font-weight:700;color:#9ea096;letter-spacing:2px;"><span leaf="">PART</span></p>
+        </section>
+        <span style="width:1px;height:36px;background:#bfc1b7;flex-shrink:0;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+        <section>
+          <p style="margin:0 0 1px;font-size:17px;font-weight:800;color:#23251d;letter-spacing:0.2px;"><span leaf="">能不能揉进一个小程序</span></p>
+          <p style="margin:0;font-size:11px;font-weight:600;color:#65675e;letter-spacing:1.2px;"><span leaf="">ORIGIN · 起因</span></p>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件10 正文段落 - 起因 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <p style="margin:0;font-size:14px;line-height:1.9;text-align:justify;color:#4d4f46;">
+        <span leaf="">起因很简单——我自己老要处理图片：抠个图、去个水印、做个证件照、把几张图拼一下、给老照片上个色。每次都得</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">换三四个工具</span></span><span leaf="">，要么收费，要么带水印，要么要下载一堆 APP。我就想，能不能把这些揉到一个小程序里，</span><span style="background:#eeefe9;padding:1px 5px;border-radius:4px;font-weight:600;color:#23251d;border:1px solid #bfc1b7;"><span leaf="">免费、没水印、打开就能用</span></span><span leaf="">。</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 组件3 章节标题 02 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="display:flex;align-items:center;gap:14px;">
+        <section style="text-align:center;flex-shrink:0;">
+          <p style="margin:0;font-size:24px;font-weight:800;color:#23251d;line-height:1;letter-spacing:-2px;"><span leaf="">02</span></p>
+          <p style="margin:0;font-size:8px;font-weight:700;color:#9ea096;letter-spacing:2px;"><span leaf="">PART</span></p>
+        </section>
+        <span style="width:1px;height:36px;background:#bfc1b7;flex-shrink:0;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+        <section>
+          <p style="margin:0 0 1px;font-size:17px;font-weight:800;color:#23251d;letter-spacing:0.2px;"><span leaf="">25 个功能，分三组</span></p>
+          <p style="margin:0;font-size:11px;font-weight:600;color:#65675e;letter-spacing:1.2px;"><span leaf="">FEATURES · 盘点</span></p>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件10 正文段落 - 功能引子 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <p style="margin:0;font-size:14px;line-height:1.9;text-align:justify;color:#4d4f46;">
+        <span leaf="">现在堆了 </span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">25 个功能</span></span><span leaf="">，分三组：</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 组件24 条目列表卡 - 三组功能 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="margin-bottom:14px;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:13px;font-weight:700;color:#23251d;background:#e5e7e0;padding:3px 10px;border-radius:999px;border:1px solid #bfc1b7;">
+            <span style="display:inline-block;width:6px;height:6px;background:#ed7b2f;border-radius:50%;margin-right:5px;vertical-align:middle;overflow:hidden;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span><span leaf="">&nbsp;AI 智能&nbsp;</span>
+          </span>
+        </p>
+        <p style="font-size:13px;color:#4d4f46;margin:0;line-height:1.7;text-align:justify;"><span leaf="">抠图换背景、去水印消除、证件照制作、老照片上色、</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">AI 文生图</span></span><span leaf="">、百变头像、图片放大、OCR 识别、图片问答、扩图、风格迁移……</span></p>
+      </section>
+      <section style="margin-bottom:14px;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:13px;font-weight:700;color:#23251d;background:#e5e7e0;padding:3px 10px;border-radius:999px;border:1px solid #bfc1b7;">
+            <span style="display:inline-block;width:6px;height:6px;background:#4d4f46;border-radius:50%;margin-right:5px;vertical-align:middle;overflow:hidden;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span><span leaf="">&nbsp;基础处理&nbsp;</span>
+          </span>
+        </p>
+        <p style="font-size:13px;color:#4d4f46;margin:0;line-height:1.7;text-align:justify;"><span leaf="">压缩、裁剪、格式转换、加水印、多图合 PDF、PDF 转图片、拼接、EXIF 抹除、</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">图片查重</span></span><span leaf="">……</span></p>
+      </section>
+      <section style="margin-bottom:0;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:13px;font-weight:700;color:#23251d;background:#e5e7e0;padding:3px 10px;border-radius:999px;border:1px solid #bfc1b7;">
+            <span style="display:inline-block;width:6px;height:6px;background:#ed7b2f;border-radius:50%;margin-right:5px;vertical-align:middle;overflow:hidden;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span><span leaf="">&nbsp;创意玩法&nbsp;</span>
+          </span>
+        </p>
+        <p style="font-size:13px;color:#4d4f46;margin:0;line-height:1.7;text-align:justify;"><span leaf="">GIF 制作、滤镜、</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">隐形水印</span></span><span leaf="">……</span></p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件3 章节标题 03 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="display:flex;align-items:center;gap:14px;">
+        <section style="text-align:center;flex-shrink:0;">
+          <p style="margin:0;font-size:24px;font-weight:800;color:#23251d;line-height:1;letter-spacing:-2px;"><span leaf="">03</span></p>
+          <p style="margin:0;font-size:8px;font-weight:700;color:#9ea096;letter-spacing:2px;"><span leaf="">PART</span></p>
+        </section>
+        <span style="width:1px;height:36px;background:#bfc1b7;flex-shrink:0;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+        <section>
+          <p style="margin:0 0 1px;font-size:17px;font-weight:800;color:#23251d;letter-spacing:0.2px;"><span leaf="">几个手写的硬核点</span></p>
+          <p style="margin:0;font-size:11px;font-weight:600;color:#65675e;letter-spacing:1.2px;"><span leaf="">HANDCRAFTED · 手写</span></p>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件10 正文段落 - 技术点 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <p style="margin:0;font-size:14px;line-height:1.9;text-align:justify;color:#4d4f46;">
+        <span leaf="">其中几个有点技术含量的我</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">手写了</span></span><span leaf="">：GIF 编码是自己撸的二进制（</span><span style="background:#eeefe9;color:#23251d;padding:2px 6px;border-radius:4px;font-family:ui-monospace,Menlo,Monaco,Consolas,monospace;font-size:13px;border:1px solid #b6b7af;"><span leaf="">LZW 压缩</span></span><span leaf="">那套坑踩了不少），隐形水印走的是</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">蓝通道 LSB 隐写</span></span><span leaf="">，AI 那一票接的是腾讯混元大模型。</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 组件3 章节标题 04 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="display:flex;align-items:center;gap:14px;">
+        <section style="text-align:center;flex-shrink:0;">
+          <p style="margin:0;font-size:24px;font-weight:800;color:#23251d;line-height:1;letter-spacing:-2px;"><span leaf="">04</span></p>
+          <p style="margin:0;font-size:8px;font-weight:700;color:#9ea096;letter-spacing:2px;"><span leaf="">PART</span></p>
+        </section>
+        <span style="width:1px;height:36px;background:#bfc1b7;flex-shrink:0;display:inline-block;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span>
+        <section>
+          <p style="margin:0 0 1px;font-size:17px;font-weight:800;color:#23251d;letter-spacing:0.2px;"><span leaf="">上线之后，真实流量</span></p>
+          <p style="margin:0;font-size:11px;font-weight:600;color:#65675e;letter-spacing:1.2px;"><span leaf="">REALITY · 真实</span></p>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件10 正文段落 - 真实流量 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <p style="margin:0;font-size:14px;line-height:1.9;text-align:justify;color:#4d4f46;">
+        <span leaf="">说点真实的：上线之后，</span><span style="background:#eeefe9;padding:1px 5px;border-radius:4px;font-weight:600;color:#23251d;border:1px solid #bfc1b7;"><span leaf="">自然流量个位数</span></span><span leaf="">。我把能做的 SEO 都做了——页面标题塞高频词、</span><span style="background:#eeefe9;color:#23251d;padding:2px 6px;border-radius:4px;font-family:ui-monospace,Menlo,Monaco,Consolas,monospace;font-size:13px;border:1px solid #b6b7af;"><span leaf="">sitemap</span></span><span leaf="">聚焦核心页、分享文案场景化、</span><span style="background:#eeefe9;color:#23251d;padding:2px 6px;border-radius:4px;font-family:ui-monospace,Menlo,Monaco,Consolas,monospace;font-size:13px;border:1px solid #b6b7af;"><span leaf="">埋点</span></span><span leaf="">接上了——但微信收录有个爬虫周期，还在等。</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 组件15 重点观点卡 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="background:#fdfdf8;border-radius:6px;padding:16px 18px;border:1px solid #bfc1b7;">
+        <p style="font-size:14px;color:#4d4f46;margin:0;line-height:1.8;text-align:justify;">
+          <strong style="color:#23251d;border-bottom:3px solid #ed7b2f;"><span leaf="">功能堆得再满，没人知道就是没人知道</span></strong><span leaf="">&nbsp;做独立开发的苦都懂。SEO 是玄学，又没推广预算，只能靠内容一点点磨。</span>
+        </p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件10 正文段落 - 求助引子 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <p style="margin:0;font-size:14px;line-height:1.9;text-align:justify;color:#4d4f46;">
+        <span leaf="">所以这篇不是炫耀贴，是来</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">求大家帮忙</span></span><span leaf="">的：</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 组件24 条目列表卡 - 两个请求 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="margin-bottom:14px;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:13px;font-weight:700;color:#23251d;background:#e5e7e0;padding:3px 10px;border-radius:999px;border:1px solid #bfc1b7;">
+            <span style="display:inline-block;width:6px;height:6px;background:#ed7b2f;border-radius:50%;margin-right:5px;vertical-align:middle;overflow:hidden;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span><span leaf="">&nbsp;去微信搜「图个简单」&nbsp;</span>
+          </span>
+        </p>
+        <p style="font-size:13px;color:#4d4f46;margin:0;line-height:1.7;text-align:justify;"><span leaf="">觉得哪个功能有意思，就去</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">搜一搜、点一点试试</span></span><span leaf="">。</span></p>
+      </section>
+      <section style="margin-bottom:0;">
+        <p style="margin:0 0 6px;">
+          <span style="display:inline-block;font-size:13px;font-weight:700;color:#23251d;background:#e5e7e0;padding:3px 10px;border-radius:999px;border:1px solid #bfc1b7;">
+            <span style="display:inline-block;width:6px;height:6px;background:#ed7b2f;border-radius:50%;margin-right:5px;vertical-align:middle;overflow:hidden;font-size:0;line-height:0;"><span leaf="">&nbsp;</span></span><span leaf="">&nbsp;给我留言，我一个个改&nbsp;</span>
+          </span>
+        </p>
+        <p style="font-size:13px;color:#4d4f46;margin:0;line-height:1.7;text-align:justify;"><span leaf="">发现 bug、有</span><span style="border-bottom:2px solid #ed7b2f;font-weight:600;color:#23251d;"><span leaf="">想加的功能</span></span><span leaf="">，直接留言告诉我。</span></p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件31 暗色摘要边框 - 收束金句 -->
+  <section style="margin-top:24px;">
+    <section style="background:#1e1f23;border:1px solid #23251d;padding:8px;box-sizing:border-box;border-radius:6px;font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <section style="border:1px solid rgba(255,255,255,0.16);border-radius:4px;padding:20px 22px;">
+        <p style="margin:0 0 8px;font-size:10px;line-height:1.6;color:#a3a3a3;letter-spacing:4px;font-weight:800;"><span leaf="">CLOSING · 写在最后</span></p>
+        <p style="margin:0;font-size:16px;line-height:1.9;color:#fafafa;font-weight:700;"><span leaf="">一个人做产品最怕闭门造车，你们的反馈就是我的需求池。</span></p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 组件10 固定签名段落 -->
+  <section style="margin-top:24px;">
+    <section style="font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <p style="margin:0;font-size:14px;line-height:1.9;text-align:justify;color:#4d4f46;">
+        <span leaf="">我是 {{作者名}}，业余时间手搓产品的独立开发者，正在打磨图片工具小程序「图个简单」。</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 组件28 结尾行动区 -->
+  <section style="margin-top:24px;">
+    <section style="background:#fdfdf8;border:1px solid #bfc1b7;border-radius:6px;padding:22px 16px;text-align:center;font-family:'IBM Plex Sans',-apple-system,sans-serif;">
+      <p style="font-size:13px;font-weight:700;color:#23251d;line-height:1.6;margin:0 0 14px;">
+        <span leaf="">如果你觉得今天这篇有收获，欢迎</span><span style="border-bottom:2px solid #ed7b2f;"><span leaf="">点赞、在看、转发</span></span><span leaf="">三连，我们下篇见。</span>
+      </p>
+      <section style="display:flex;justify-content:center;gap:18px;margin-bottom:14px;flex-wrap:wrap;">
+        <section style="text-align:center;color:#4d4f46;">
+          <section style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;background:#eeefe9;border-radius:6px;border:1px solid #bfc1b7;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+          </section>
+          <span style="font-size:11px;font-weight:600;"><span leaf="">赞</span></span>
+        </section>
+        <section style="text-align:center;color:#4d4f46;">
+          <section style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;background:#eeefe9;border-radius:6px;border:1px solid #bfc1b7;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
+          </section>
+          <span style="font-size:11px;font-weight:600;"><span leaf="">在看</span></span>
+        </section>
+        <section style="text-align:center;color:#23251d;">
+          <section style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;background:#d4c9b8;border-radius:6px;border:1px solid #b17816;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#23251d" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </section>
+          <span style="font-size:11px;font-weight:700;"><span leaf="">收藏</span></span>
+        </section>
+      </section>
+      <p style="line-height:1.6;font-size:10px;color:#9ea096;letter-spacing:2px;margin:0;font-weight:500;"><span leaf="">THANKS FOR READING</span></p>
+    </section>
+  </section>
+
+</section>
+<p style="display:none;">
+  <mp-style-type data-value="3"></mp-style-type>
+</p>
+  </div>
+  <script>
+    function copyToGzh(){
+      var stage = document.getElementById('stage');
+      var btn = document.getElementById('copyBtn');
+      var range = document.createRange();
+      range.selectNodeContents(stage);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch(e){ ok = false; }
+      sel.removeAllRanges();
+      if(ok){
+        btn.textContent = '已复制 ✓ 去公众号粘贴';
+        btn.classList.add('ok');
+      } else {
+        btn.textContent = '请手动 Ctrl/⌘+A 全选复制';
+        btn.classList.add('fail');
+      }
+    }
+  </script>
+</body>
+</html>
