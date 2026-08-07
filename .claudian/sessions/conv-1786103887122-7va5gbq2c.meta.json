@@ -1,0 +1,10 @@
+{
+  "id": "conv-1786103887122-7va5gbq2c",
+  "providerId": "claude",
+  "title": "Automate article illustration and fix base64 error",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786103887123,
+  "updatedAt": 1786103953274,
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.2"
+}
