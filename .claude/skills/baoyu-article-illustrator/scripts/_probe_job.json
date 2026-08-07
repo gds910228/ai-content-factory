@@ -1,0 +1,15 @@
+{
+  "workers": 1,
+  "jobs": [
+    {
+      "id": "probe",
+      "prompt_file": "D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/01-创作中稿件/你的Prompt该重构了吗--Agent Skill健康度自检清单-20260807/05-发布包/imgs/prompts/_probe.md",
+      "out": "D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/01-创作中稿件/你的Prompt该重构了吗--Agent Skill健康度自检清单-20260807/05-发布包/imgs/_probe.png",
+      "model": "Qwen/Qwen-Image",
+      "size": "1024x1024",
+      "steps": 30,
+      "guidance": 4.0,
+      "retry": 1
+    }
+  ]
+}
