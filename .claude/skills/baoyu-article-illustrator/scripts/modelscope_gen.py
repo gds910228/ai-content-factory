@@ -158,6 +158,15 @@ def collect_urls(resp):
     urls = []
     if not isinstance(resp, dict):
         return urls
+    # ModelScope async task result: top-level "output_images" (list of url strings)
+    oi = resp.get("output_images")
+    if isinstance(oi, list):
+        for it in oi:
+            if isinstance(it, str):
+                urls.append(it)
+            elif isinstance(it, dict) and it.get("url"):
+                urls.append(it["url"])
+    # OpenAI-compatible sync shape: {"images": [{"url": ...}]}
     imgs = resp.get("images")
     if isinstance(imgs, list):
         for it in imgs:
@@ -165,16 +174,21 @@ def collect_urls(resp):
                 urls.append(it["url"])
             elif isinstance(it, str):
                 urls.append(it)
+    # OpenAI shape: {"data": [{"url"|"b64_json": ...}]}
     data = resp.get("data")
     if isinstance(data, list):
         for it in data:
-            if isinstance(it, dict) and it.get("url"):
-                urls.append(it["url"])
+            if isinstance(it, dict):
+                if it.get("url"):
+                    urls.append(it["url"])
+                elif it.get("b64_json"):
+                    urls.append(("b64", it["b64_json"]))
+    # DashScope shape: {"output": {"results": [{"url": ...}]}}
     out = resp.get("output") or {}
     if isinstance(out, dict):
-        oi = out.get("output_images") or out.get("results")
-        if isinstance(oi, list):
-            for it in oi:
+        oi2 = out.get("output_images") or out.get("results")
+        if isinstance(oi2, list):
+            for it in oi2:
                 if isinstance(it, str):
                     urls.append(it)
                 elif isinstance(it, dict) and it.get("url"):
