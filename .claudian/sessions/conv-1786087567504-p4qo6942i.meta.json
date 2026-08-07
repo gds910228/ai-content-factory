@@ -4,8 +4,8 @@
   "title": "评估系列文章是否还有后续可发布内容",
   "titleGenerationStatus": "success",
   "createdAt": 1786087567506,
-  "updatedAt": 1786090077223,
-  "lastResponseAt": 1786090077223,
+  "updatedAt": 1786091673019,
+  "lastResponseAt": 1786091673019,
   "sessionId": "7e2e099c-7ad7-4ce4-be91-80d17e8dbbf5",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -14,12 +14,12 @@
   "currentNote": "01-选题库/02-用户痛点选题池/删掉80%的Skill，Agent反而更听话了.md",
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 3407,
+    "inputTokens": 9348,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 70400,
+    "cacheReadInputTokens": 108928,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 73807,
-    "percentage": 37
+    "contextTokens": 118276,
+    "percentage": 59
   }
 }
