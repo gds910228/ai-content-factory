@@ -4,8 +4,8 @@
   "title": "Run baoyu article end-to-end illustration workflow",
   "titleGenerationStatus": "success",
   "createdAt": 1786156424192,
-  "updatedAt": 1786156750148,
-  "lastResponseAt": 1786156750148,
+  "updatedAt": 1786157130643,
+  "lastResponseAt": 1786157077104,
   "sessionId": "0d4135c9-a82d-4ac7-a63f-1e0b0794d324",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -14,12 +14,12 @@
   "currentNote": "02-稿件库/01-创作中稿件/你的Prompt该重构了吗--Agent Skill健康度自检清单-20260807/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 287,
+    "inputTokens": 0,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 60672,
+    "cacheReadInputTokens": 0,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 60959,
-    "percentage": 30
+    "contextTokens": 0,
+    "percentage": 0
   }
 }

@@ -1,0 +1,53 @@
+{
+  "jobs": 4,
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": ["prompts/01-infographic-triple-fix-fail.md"],
+      "image": "01-infographic-triple-fix-fail.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": ["prompts/02-infographic-u-curve-attention.md"],
+      "image": "02-infographic-u-curve-attention.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": ["prompts/03-infographic-rules-disorder.md"],
+      "image": "03-infographic-rules-disorder.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": ["prompts/04-comparison-rule-vs-template.md"],
+      "image": "04-comparison-rule-vs-template.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-05",
+      "promptFiles": ["prompts/05-infographic-checklist-card.md"],
+      "image": "05-infographic-checklist-card.png",
+      "provider": "modelscope",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-06",
+      "promptFiles": ["prompts/06-cover-prompt-pulse.md"],
+      "image": "06-cover-prompt-pulse.png",
+      "provider": "modelscope",
+      "ar": "21:9",
+      "quality": "2k"
+    }
+  ]
+}
