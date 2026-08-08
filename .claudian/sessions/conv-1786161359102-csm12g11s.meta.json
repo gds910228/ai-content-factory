@@ -1,25 +1,25 @@
 {
-  "id": "conv-1786157148542-g2ouwfq2y",
+  "id": "conv-1786161359102-csm12g11s",
   "providerId": "claude",
-  "title": "Explore baoyu-article-illustrator directory",
+  "title": "Format WeChat Official Account article with spe...",
   "titleGenerationStatus": "success",
-  "createdAt": 1786157148542,
-  "updatedAt": 1786161319944,
-  "lastResponseAt": 1786158722160,
-  "sessionId": "b251b94a-147f-4be8-a4d9-31a0b5e16eca",
+  "createdAt": 1786161359102,
+  "updatedAt": 1786173410410,
+  "lastResponseAt": 1786167212864,
+  "sessionId": "16ca480e-462b-4b62-aa73-2746fa833254",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
-    "providerSessionId": "b251b94a-147f-4be8-a4d9-31a0b5e16eca"
+    "providerSessionId": "16ca480e-462b-4b62-aa73-2746fa833254"
   },
   "currentNote": "02-稿件库/01-创作中稿件/你的Prompt该重构了吗--Agent Skill健康度自检清单-20260807/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 3460,
+    "inputTokens": 16150,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 125248,
+    "cacheReadInputTokens": 42048,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 128708,
-    "percentage": 64
+    "contextTokens": 58198,
+    "percentage": 29
   }
 }
