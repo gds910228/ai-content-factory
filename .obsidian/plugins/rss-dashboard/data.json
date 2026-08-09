@@ -1156,7 +1156,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1786250043410,
+      "lastUpdated": 1786253643489,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1875,7 +1875,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1786250043597,
+      "lastUpdated": 1786253643657,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1926,7 +1926,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1786250043597,
+  "lastRefreshTimestamp": 1786253643657,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
