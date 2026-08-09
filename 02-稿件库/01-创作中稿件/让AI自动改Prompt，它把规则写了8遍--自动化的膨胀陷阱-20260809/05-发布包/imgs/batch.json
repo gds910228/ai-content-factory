@@ -1,0 +1,45 @@
+{
+  "jobs": 4,
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": ["prompts/01-infographic-loop-to-origin.md"],
+      "image": "01-infographic-loop-to-origin.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": ["prompts/02-comparison-decision-tree.md"],
+      "image": "02-comparison-decision-tree.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": ["prompts/03-infographic-bloat-curve.md"],
+      "image": "03-infographic-bloat-curve.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": ["prompts/04-comparison-treat-symptom.md"],
+      "image": "04-comparison-treat-symptom.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-05",
+      "promptFiles": ["prompts/05-cover-bloat-machine.md"],
+      "image": "05-cover-bloat-machine.png",
+      "provider": "modelscope",
+      "ar": "21:9",
+      "quality": "2k"
+    }
+  ]
+}
