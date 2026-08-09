@@ -1,0 +1,25 @@
+{
+  "id": "conv-1786263486250-uqn0zkxsn",
+  "providerId": "claude",
+  "title": "Fix gzh-design WeChat image base64 token overflow",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786263486250,
+  "updatedAt": 1786276677178,
+  "lastResponseAt": 1786276677178,
+  "sessionId": "dc7a7b8c-fb98-4f8f-a66d-c507b81f4b17",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "dc7a7b8c-fb98-4f8f-a66d-c507b81f4b17"
+  },
+  "currentNote": "02-稿件库/01-创作中稿件/让AI自动改Prompt，它把规则写了8遍--自动化的膨胀陷阱-20260809/05-发布包/长文发布包.md",
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 309,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 80192,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 80501,
+    "percentage": 40
+  }
+}
