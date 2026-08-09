@@ -1,0 +1,25 @@
+{
+  "id": "conv-1786247944780-gwq2u2ht1",
+  "providerId": "claude",
+  "title": "Discuss writing AI agent expansion trap next in...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786247944780,
+  "updatedAt": 1786248124856,
+  "lastResponseAt": 1786248124856,
+  "sessionId": "dcf3f6fc-ff62-41ca-9b30-aa08767665de",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "dcf3f6fc-ff62-41ca-9b30-aa08767665de"
+  },
+  "currentNote": "内容创作看板.md",
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 5787,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 37120,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 42907,
+    "percentage": 21
+  }
+}
