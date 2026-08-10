@@ -1,0 +1,24 @@
+{
+  "id": "conv-1786370697277-lhl6p3hnw",
+  "providerId": "claude",
+  "title": "Start deep interview to create WeChat article a...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786370697277,
+  "updatedAt": 1786370758519,
+  "lastResponseAt": 1786370750621,
+  "sessionId": "ea9ab62d-2996-4841-b113-30c8e37be144",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "ea9ab62d-2996-4841-b113-30c8e37be144"
+  },
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 4935,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 24704,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 29639,
+    "percentage": 15
+  }
+}

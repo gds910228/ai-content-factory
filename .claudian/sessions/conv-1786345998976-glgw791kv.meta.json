@@ -4,14 +4,13 @@
   "title": "Fix 400 base64 token overflow for gzh-design We...",
   "titleGenerationStatus": "success",
   "createdAt": 1786345998976,
-  "updatedAt": 1786349118701,
+  "updatedAt": 1786370520371,
   "lastResponseAt": 1786349118701,
   "sessionId": "45a472a8-6d32-48a2-b7e8-5f697ea89e04",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
     "providerSessionId": "45a472a8-6d32-48a2-b7e8-5f697ea89e04"
   },
-  "currentNote": "02-稿件库/01-创作中稿件/Prompt Engineering的下一站--从写好一句话到设计一个系统-20260810/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
     "inputTokens": 435,
