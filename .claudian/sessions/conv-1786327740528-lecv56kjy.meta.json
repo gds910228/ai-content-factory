@@ -1,0 +1,25 @@
+{
+  "id": "conv-1786327740528-lecv56kjy",
+  "providerId": "claude",
+  "title": "Confirm long AI prompt article finale and draft...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786327740528,
+  "updatedAt": 1786327875786,
+  "lastResponseAt": 1786327875786,
+  "sessionId": "8aae9c95-1f06-412b-b043-8c9110117e4f",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "8aae9c95-1f06-412b-b043-8c9110117e4f"
+  },
+  "currentNote": "内容创作看板.md",
+  "usage": {
+    "model": "glm-5.2",
+    "inputTokens": 2507,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 27584,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 30091,
+    "percentage": 15
+  }
+}
