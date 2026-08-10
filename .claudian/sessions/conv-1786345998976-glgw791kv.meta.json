@@ -1,0 +1,10 @@
+{
+  "id": "conv-1786345998976-glgw791kv",
+  "providerId": "claude",
+  "title": "Fix 400 base64 token overflow for gzh-design We...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1786345998976,
+  "updatedAt": 1786346047000,
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.2"
+}

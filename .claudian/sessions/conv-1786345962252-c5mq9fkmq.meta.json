@@ -1,0 +1,14 @@
+{
+  "id": "conv-1786345962252-c5mq9fkmq",
+  "providerId": "claude",
+  "title": "/gzh-design",
+  "titleGenerationStatus": "pending",
+  "createdAt": 1786345962252,
+  "updatedAt": 1786345966683,
+  "sessionId": "1c8e4c41-14e5-43e3-8461-12134bd4fca1",
+  "selectedModel": "claude-code/glm-5.2",
+  "providerState": {
+    "providerSessionId": "1c8e4c41-14e5-43e3-8461-12134bd4fca1"
+  },
+  "currentNote": "02-稿件库/01-创作中稿件/Prompt Engineering的下一站--从写好一句话到设计一个系统-20260810/05-发布包/长文发布包.md"
+}
