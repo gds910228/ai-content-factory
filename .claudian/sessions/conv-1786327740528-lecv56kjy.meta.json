@@ -4,8 +4,8 @@
   "title": "Confirm long AI prompt article finale and draft...",
   "titleGenerationStatus": "success",
   "createdAt": 1786327740528,
-  "updatedAt": 1786333892206,
-  "lastResponseAt": 1786333892206,
+  "updatedAt": 1786339723006,
+  "lastResponseAt": 1786339723006,
   "sessionId": "8aae9c95-1f06-412b-b043-8c9110117e4f",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -13,12 +13,12 @@
   },
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 277,
+    "inputTokens": 4169,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 197184,
+    "cacheReadInputTokens": 205120,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 197461,
-    "percentage": 99
+    "contextTokens": 209289,
+    "percentage": 100
   }
 }
