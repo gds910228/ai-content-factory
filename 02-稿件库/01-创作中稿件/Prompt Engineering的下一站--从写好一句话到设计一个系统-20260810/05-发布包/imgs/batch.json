@@ -1,0 +1,60 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "prompts/01-infographic-rule-bloat-three-losses.md"
+      ],
+      "image": "01-infographic-rule-bloat-three-losses.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "prompts/02-infographic-less-is-more-physics.md"
+      ],
+      "image": "02-infographic-less-is-more-physics.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "prompts/03-framework-system-five-faces.md"
+      ],
+      "image": "03-framework-system-five-faces.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": [
+        "prompts/04-comparison-template-to-system.md"
+      ],
+      "image": "04-comparison-template-to-system.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-05",
+      "promptFiles": [
+        "prompts/05-cover-series-finale.md"
+      ],
+      "image": "05-cover-series-finale.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    }
+  ],
+  "jobs": 4
+}
