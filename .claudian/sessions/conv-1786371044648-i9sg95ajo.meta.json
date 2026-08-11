@@ -4,8 +4,8 @@
   "title": "撰写微信公众号文章分享Xpert专家平台副业收入经验提升账号粘性",
   "titleGenerationStatus": "success",
   "createdAt": 1786371044648,
-  "updatedAt": 1786414128436,
-  "lastResponseAt": 1786414128436,
+  "updatedAt": 1786414310654,
+  "lastResponseAt": 1786414310654,
   "sessionId": "90761ff7-75ae-4442-a71b-d0bc36a12c3d",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {
@@ -13,12 +13,12 @@
   },
   "usage": {
     "model": "glm-5.2",
-    "inputTokens": 4621,
+    "inputTokens": 7542,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 162176,
+    "cacheReadInputTokens": 167552,
     "contextWindow": 200000,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 166797,
-    "percentage": 83
+    "contextTokens": 175094,
+    "percentage": 88
   }
 }
