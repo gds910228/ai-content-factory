@@ -4,8 +4,7 @@
   "title": "Fix WeChat MP HTML image 400 error via non-base64",
   "titleGenerationStatus": "success",
   "createdAt": 1785638130732,
-  "updatedAt": 1785671627466,
-  "lastResponseAt": 1785657664265,
+  "lastActivityAt": 1785657664265,
   "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
   "usage": {

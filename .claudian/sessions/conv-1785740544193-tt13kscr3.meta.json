@@ -4,8 +4,7 @@
   "title": "Fix GZH article 400 error with img tags vs LLM ...",
   "titleGenerationStatus": "success",
   "createdAt": 1785740544193,
-  "updatedAt": 1785764266233,
-  "lastResponseAt": 1785743911744,
+  "lastActivityAt": 1785743911744,
   "sessionId": "675ef38d-3543-4cbc-9ea1-2aad14d12d56",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

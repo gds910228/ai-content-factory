@@ -4,8 +4,7 @@
   "title": "Insert generated images into Harness article draft",
   "titleGenerationStatus": "success",
   "createdAt": 1783861169540,
-  "updatedAt": 1783862039882,
-  "lastResponseAt": 1783861222323,
+  "lastActivityAt": 1783861222323,
   "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
   "usage": {

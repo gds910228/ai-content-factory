@@ -4,8 +4,7 @@
   "title": "Fix gzh-design WeChat article 400 token overflow",
   "titleGenerationStatus": "success",
   "createdAt": 1786173446040,
-  "updatedAt": 1786247904535,
-  "lastResponseAt": 1786194200051,
+  "lastActivityAt": 1786194200051,
   "sessionId": "53039258-e40d-4977-92d9-f8a5a6df67cc",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

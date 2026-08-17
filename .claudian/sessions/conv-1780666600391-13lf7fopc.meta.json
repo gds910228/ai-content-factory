@@ -4,8 +4,7 @@
   "title": "使用Skills做内容创作",
   "titleGenerationStatus": "success",
   "createdAt": 1780666600391,
-  "updatedAt": 1783862907309,
-  "lastResponseAt": 1783859712395,
+  "lastActivityAt": 1783859712395,
   "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
   "usage": {

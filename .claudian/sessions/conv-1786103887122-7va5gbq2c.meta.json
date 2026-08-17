@@ -4,8 +4,7 @@
   "title": "Automate article illustration and fix base64 error",
   "titleGenerationStatus": "success",
   "createdAt": 1786103887123,
-  "updatedAt": 1786157128576,
-  "lastResponseAt": 1786104619529,
+  "lastActivityAt": 1786104619529,
   "sessionId": "2e58841f-e7cf-4320-9e4c-d9754ef8b4cd",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

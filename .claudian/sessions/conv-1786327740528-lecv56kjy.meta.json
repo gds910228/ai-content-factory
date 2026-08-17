@@ -4,8 +4,7 @@
   "title": "Confirm long AI prompt article finale and draft...",
   "titleGenerationStatus": "success",
   "createdAt": 1786327740528,
-  "updatedAt": 1786345950351,
-  "lastResponseAt": 1786345748143,
+  "lastActivityAt": 1786345748143,
   "sessionId": "8aae9c95-1f06-412b-b043-8c9110117e4f",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

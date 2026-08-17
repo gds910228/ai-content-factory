@@ -4,8 +4,7 @@
   "title": "Format WeChat Official Account article with spe...",
   "titleGenerationStatus": "success",
   "createdAt": 1786161359102,
-  "updatedAt": 1786173410410,
-  "lastResponseAt": 1786167212864,
+  "lastActivityAt": 1786167212864,
   "sessionId": "16ca480e-462b-4b62-aa73-2746fa833254",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

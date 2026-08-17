@@ -4,8 +4,7 @@
   "title": "Fix gzh-design WeChat image base64 token overflow",
   "titleGenerationStatus": "success",
   "createdAt": 1786263486250,
-  "updatedAt": 1786327708557,
-  "lastResponseAt": 1786276677178,
+  "lastActivityAt": 1786276677178,
   "sessionId": "dc7a7b8c-fb98-4f8f-a66d-c507b81f4b17",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

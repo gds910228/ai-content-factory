@@ -4,8 +4,7 @@
   "title": "Continue generating images with baoyu illustrator",
   "titleGenerationStatus": "success",
   "createdAt": 1785501019451,
-  "updatedAt": 1785501501668,
-  "lastResponseAt": 1785501390291,
+  "lastActivityAt": 1785501390291,
   "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
   "usage": {

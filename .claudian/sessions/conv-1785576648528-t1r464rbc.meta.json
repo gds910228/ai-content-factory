@@ -4,8 +4,7 @@
   "title": "Generate long-form multi-platform distribution ...",
   "titleGenerationStatus": "success",
   "createdAt": 1785576648528,
-  "updatedAt": 1785582816985,
-  "lastResponseAt": 1785577237150,
+  "lastActivityAt": 1785577237150,
   "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
   "usage": {

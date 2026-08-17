@@ -4,8 +4,7 @@
   "title": "Arrange images into WeChat article with gzh-design",
   "titleGenerationStatus": "success",
   "createdAt": 1785739823241,
-  "updatedAt": 1785740435842,
-  "lastResponseAt": 1785739874345,
+  "lastActivityAt": 1785739874345,
   "sessionId": "d8a9f260-97db-493a-9cc5-bdab7f6ef42d",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

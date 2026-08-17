@@ -4,8 +4,7 @@
   "title": "使用topic-filter查找Agent技能精简相关素材的选题",
   "titleGenerationStatus": "success",
   "createdAt": 1785401370813,
-  "updatedAt": 1785501528664,
-  "lastResponseAt": 1785500681676,
+  "lastActivityAt": 1785500681676,
   "sessionId": null,
   "selectedModel": "claude-code/glm-5.2",
   "usage": {

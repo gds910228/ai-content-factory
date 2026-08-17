@@ -4,8 +4,7 @@
   "title": "Run baoyu article end-to-end illustration workflow",
   "titleGenerationStatus": "success",
   "createdAt": 1786156424192,
-  "updatedAt": 1786157130643,
-  "lastResponseAt": 1786157077104,
+  "lastActivityAt": 1786157077104,
   "sessionId": "0d4135c9-a82d-4ac7-a63f-1e0b0794d324",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

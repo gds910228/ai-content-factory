@@ -4,8 +4,7 @@
   "title": "Analyze character input",
   "titleGenerationStatus": "success",
   "createdAt": 1780527649244,
-  "updatedAt": 1780534320392,
-  "lastResponseAt": 1780529817763,
+  "lastActivityAt": 1780529817763,
   "sessionId": null,
   "usage": {
     "model": "glm-4.7",

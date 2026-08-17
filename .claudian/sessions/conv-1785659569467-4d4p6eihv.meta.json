@@ -4,8 +4,7 @@
   "title": "Generate full weekly knowledge base summary report",
   "titleGenerationStatus": "success",
   "createdAt": 1785659569467,
-  "updatedAt": 1785671594368,
-  "lastResponseAt": 1785665742551,
+  "lastActivityAt": 1785665742551,
   "sessionId": "94e5ad89-61f8-4e74-9e1e-059a8db083c0",
   "selectedModel": "claude-code/glm-5.2",
   "providerState": {

@@ -4,8 +4,7 @@
   "title": "内容创作流和Skills生成",
   "titleGenerationStatus": "success",
   "createdAt": 1780534491499,
-  "updatedAt": 1780726318288,
-  "lastResponseAt": 1780717288045,
+  "lastActivityAt": 1780717288045,
   "sessionId": null,
   "usage": {
     "model": "glm-5.1",
