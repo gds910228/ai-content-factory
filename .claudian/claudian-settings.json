@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "claude-code/glm-5.2",
+  "model": "claude-code/glm-5.3",
   "thinkingBudget": "off",
   "effortLevel": "max",
   "serviceTier": "default",
@@ -37,8 +37,8 @@
       "lastModel": "haiku",
       "modelEnvironmentType": "model",
       "titleModelEnvironmentType": "",
-      "environmentVariables": "ANTHROPIC_API_KEY=ark-336b8f34-7073-4e83-89cd-524028c09220-6f70b\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=glm-5.2",
-      "environmentHash": "runtime-input:v1:fa1ffd73f677286375464a3d42787a82d9ede675ad03e076476049f66453cb6d"
+      "environmentVariables": "ANTHROPIC_API_KEY=ark-336b8f34-7073-4e83-89cd-524028c09220-6f70b\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=glm-5.3",
+      "environmentHash": "runtime-input:v1:414b5236901b5e897ced11de09639f24c14a76b33ac31effbf9e2df9f1886fc5"
     },
     "codex": {
       "enabled": false,
@@ -103,7 +103,7 @@
     "model": "claude-code/glm-5.2"
   },
   "savedProviderModel": {
-    "claude": "claude-code/glm-5.2"
+    "claude": "claude-code/glm-5.3"
   },
   "savedProviderEffort": {
     "claude": "max"

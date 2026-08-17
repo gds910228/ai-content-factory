@@ -6,7 +6,7 @@
   "createdAt": 1780666600391,
   "lastActivityAt": 1783859712395,
   "sessionId": null,
-  "selectedModel": "claude-code/glm-5.2",
+  "selectedModel": "claude-code/glm-5.3",
   "usage": {
     "model": "claude-code/glm-5.2",
     "inputTokens": 0,

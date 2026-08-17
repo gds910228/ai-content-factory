@@ -5,10 +5,12 @@
   "titleGenerationStatus": "success",
   "createdAt": 1786939455295,
   "lastActivityAt": 1786939740456,
-  "sessionId": "583b232e-8548-4580-88e3-80e8d35c9cb4",
-  "selectedModel": "claude-code/glm-5.2",
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.3",
   "providerState": {
-    "providerSessionId": "583b232e-8548-4580-88e3-80e8d35c9cb4"
+    "previousProviderSessionIds": [
+      "583b232e-8548-4580-88e3-80e8d35c9cb4"
+    ]
   },
   "currentNote": "02-稿件库/02-已发布稿件归档/Xpert专家平台副业-20260810/05-发布包/图文发布包.md",
   "usage": {

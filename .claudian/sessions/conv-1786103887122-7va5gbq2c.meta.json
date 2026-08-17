@@ -5,10 +5,12 @@
   "titleGenerationStatus": "success",
   "createdAt": 1786103887123,
   "lastActivityAt": 1786104619529,
-  "sessionId": "2e58841f-e7cf-4320-9e4c-d9754ef8b4cd",
-  "selectedModel": "claude-code/glm-5.2",
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.3",
   "providerState": {
-    "providerSessionId": "2e58841f-e7cf-4320-9e4c-d9754ef8b4cd"
+    "previousProviderSessionIds": [
+      "2e58841f-e7cf-4320-9e4c-d9754ef8b4cd"
+    ]
   },
   "currentNote": "02-稿件库/01-创作中稿件/你的Prompt该重构了吗--Agent Skill健康度自检清单-20260807/05-发布包/长文发布包.md",
   "usage": {

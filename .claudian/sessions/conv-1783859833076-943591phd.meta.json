@@ -6,7 +6,7 @@
   "createdAt": 1783859833076,
   "lastActivityAt": 1783861152086,
   "sessionId": null,
-  "selectedModel": "claude-code/glm-5.2",
+  "selectedModel": "claude-code/glm-5.3",
   "currentNote": "02-稿件库/01-创作中稿件/我对Harness的观点和实操心得-20260712/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.2",
