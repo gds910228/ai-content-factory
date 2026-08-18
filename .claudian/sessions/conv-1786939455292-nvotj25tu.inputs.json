@@ -34,6 +34,19 @@
       "contentDigest": "24803104d77668fcb352bee7c25724d576c3086a652f574a4a6f1231a6aec622",
       "providerUserMessageId": "0d7703aa-0f46-42c0-8ebd-d2cc1b1fd00a",
       "providerAssistantMessageId": "55f93993-d030-4edc-9fde-57be7cd7bcba"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787041665797-i95n3d0",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1787041665794-bmgiske",
+      "timestamp": 1787041665794,
+      "rawDisplayText": "帮我生图",
+      "canonicalText": "帮我生图",
+      "images": [],
+      "contentDigest": "fc1bc14f4314ea49faef33210f2d81a4d11022632a6805d10ed1a430eacd766a",
+      "providerUserMessageId": "6e47cfb5-1ce0-4b48-bb06-1ef1a778e759"
     }
   ]
 }
