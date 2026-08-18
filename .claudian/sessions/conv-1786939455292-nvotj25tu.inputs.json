@@ -46,7 +46,8 @@
       "canonicalText": "帮我生图",
       "images": [],
       "contentDigest": "fc1bc14f4314ea49faef33210f2d81a4d11022632a6805d10ed1a430eacd766a",
-      "providerUserMessageId": "6e47cfb5-1ce0-4b48-bb06-1ef1a778e759"
+      "providerUserMessageId": "6e47cfb5-1ce0-4b48-bb06-1ef1a778e759",
+      "providerAssistantMessageId": "5fe686c1-0413-4cdb-a85a-7aaded0a02f3"
     }
   ]
 }

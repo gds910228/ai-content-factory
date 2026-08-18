@@ -4,7 +4,7 @@
   "title": "制定小红书Xpert创作活动指南",
   "titleGenerationStatus": "success",
   "createdAt": 1786939455295,
-  "lastActivityAt": 1787041665794,
+  "lastActivityAt": 1787042843799,
   "sessionId": "583b232e-8548-4580-88e3-80e8d35c9cb4",
   "selectedModel": "claude-code/glm-5.3",
   "providerState": {
@@ -15,11 +15,11 @@
   },
   "usage": {
     "model": "glm-5.3",
-    "inputTokens": 4496,
+    "inputTokens": 1330,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 59328,
+    "cacheReadInputTokens": 124992,
     "contextWindow": 200000,
-    "contextTokens": 63824,
-    "percentage": 32
+    "contextTokens": 126322,
+    "percentage": 63
   }
 }
