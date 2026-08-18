@@ -1,0 +1,32 @@
+{
+  "jobs": 3,
+  "tasks": [
+    {
+      "id": "card-02-task-daily",
+      "promptFiles": ["prompts/02-content-task-daily-v2.md"],
+      "image": "02-content-task-daily.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-03-growth-list",
+      "promptFiles": ["prompts/03-content-growth-list-v2.md"],
+      "image": "03-content-growth-list.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-04-fit-comparison",
+      "promptFiles": ["prompts/04-ending-fit-comparison-v2.md"],
+      "image": "04-ending-fit-comparison.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    }
+  ]
+}
