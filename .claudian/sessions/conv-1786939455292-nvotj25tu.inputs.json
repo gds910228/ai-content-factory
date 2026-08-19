@@ -48,6 +48,33 @@
       "contentDigest": "fc1bc14f4314ea49faef33210f2d81a4d11022632a6805d10ed1a430eacd766a",
       "providerUserMessageId": "6e47cfb5-1ce0-4b48-bb06-1ef1a778e759",
       "providerAssistantMessageId": "5fe686c1-0413-4cdb-a85a-7aaded0a02f3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787111873269-ewa9mc2",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1787111873245-mzx2aqh",
+      "timestamp": 1787111873245,
+      "rawDisplayText": "Xpert小红书活动笔记审核结果通知\nHi～感谢参与本次活动，我们已经审核了你的笔记，您的笔记因不符合活动规则要求，暂时无法通过审核，需要进行修改，具体原因如下：\n请删除兼职、副业、结算、到账等相关描述，内容重点放在真实 AI 项目经历和使用体验即可。\n\n如果仍在投稿期内，可以按照活动指南调整内容或重新创作后再次提交表单即可。\n感谢你的理解与参与，期待后续合作~",
+      "canonicalText": "Xpert小红书活动笔记审核结果通知\nHi～感谢参与本次活动，我们已经审核了你的笔记，您的笔记因不符合活动规则要求，暂时无法通过审核，需要进行修改，具体原因如下：\n请删除兼职、副业、结算、到账等相关描述，内容重点放在真实 AI 项目经历和使用体验即可。\n\n如果仍在投稿期内，可以按照活动指南调整内容或重新创作后再次提交表单即可。\n感谢你的理解与参与，期待后续合作~",
+      "images": [],
+      "contentDigest": "9681a1af396e06b062d160f941780b02eb44019a038ee5065034e3e9a3c9465b",
+      "providerUserMessageId": "f04733a2-a3c6-4b3b-bc78-d64d669a8617"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787112054499-6ame62c",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1787112054476-aqd02yi",
+      "timestamp": 1787112054476,
+      "rawDisplayText": "质检员告知如下，请修改调整。\n\nXpert小红书活动笔记审核结果通知\nHi～感谢参与本次活动，我们已经审核了你的笔记，您的笔记因不符合活动规则要求，暂时无法通过审核，需要进行修改，具体原因如下：\n请删除兼职、副业、结算、到账等相关描述，内容重点放在真实 AI 项目经历和使用体验即可。\n\n如果仍在投稿期内，可以按照活动指南调整内容或重新创作后再次提交表单即可。\n感谢你的理解与参与，期待后续合作~",
+      "canonicalText": "质检员告知如下，请修改调整。\n\nXpert小红书活动笔记审核结果通知\nHi～感谢参与本次活动，我们已经审核了你的笔记，您的笔记因不符合活动规则要求，暂时无法通过审核，需要进行修改，具体原因如下：\n请删除兼职、副业、结算、到账等相关描述，内容重点放在真实 AI 项目经历和使用体验即可。\n\n如果仍在投稿期内，可以按照活动指南调整内容或重新创作后再次提交表单即可。\n感谢你的理解与参与，期待后续合作~",
+      "images": [],
+      "contentDigest": "649d60314469df1dcc2b47ebf77da3a672bba40c1ffd8f051c9faf2b642f5305",
+      "providerUserMessageId": "8666585a-5fae-43e5-a7dd-893816f86cdb",
+      "providerAssistantMessageId": "34b6d874-13fc-4ef6-8a34-eb85726238e2"
     }
   ]
 }
