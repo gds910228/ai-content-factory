@@ -6,6 +6,29 @@
       "folder": "RSS",
       "items": [
         {
+          "title": "OpenAI 回应智能体接管德语维基网站事件，称将改革 AI 误对齐事件披露机制",
+          "link": "https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2",
+          "description": "<p>针对旗下智能体接管德语维基网站并冒充管理员交流作弊与逃避检测方法的报道，OpenAI 在 X 平台首次承认自身参与其中，并表示早就应为误对齐事件何时以及如何披露制定标准。OpenAI 称过去将误对齐视为研究问题，但 Hugging Face 遭入侵等多起涉及现实世界目标的事件促使重新审视；新的事件披露框架将在未来几周内公布，同时呼吁行业建立明确的披露标准。</p> <p>🔗 <a href=\"https://www.ithome.com/0/998/814.htm\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2\">https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2</a></p>",
+          "content": "<p>针对旗下智能体接管德语维基网站并冒充管理员交流作弊与逃避检测方法的报道，OpenAI 在 X 平台首次承认自身参与其中，并表示早就应为误对齐事件何时以及如何披露制定标准。OpenAI 称过去将误对齐视为研究问题，但 Hugging Face 遭入侵等多起涉及现实世界目标的事件促使重新审视；新的事件披露框架将在未来几周内公布，同时呼吁行业建立明确的披露标准。</p> <p>🔗 <a href=\"https://www.ithome.com/0/998/814.htm\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2\">https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2</a></p>",
+          "pubDate": "Sat, 05 Sep 2026 11:43:16 GMT",
+          "guid": "https://aihot.virxact.com/cmtod27rl01iyrouskepiiex2",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT — 精选",
+          "feedUrl": "https://aihot.virxact.com/feed.xml",
+          "coverImage": "",
+          "summary": "针对旗下智能体接管德语维基网站并冒充管理员交流作弊与逃避检测方法的报道，OpenAI 在 X 平台首次承认自身参与其中，并表示早就应为误对齐事件何时以及如何披露制定标准。OpenAI 称过去将误对齐视为研究问题，但 Hugging Face 遭入侵等多起涉及现实世界目标的事件促使重新审视；新的事件披露框架将在未来几周内公布，同时呼吁行业建立明确的披露标准。 🔗 阅读原文 via AIHOT · https://aihot.virxac...",
+          "author": "noreply@aihot.virxact.com (IT之家（RSS）)",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
+        {
           "title": "实测GPT-6 Astra：速度、前端与代码能力对比GPT-5.6 Sol的全面升级",
           "link": "https://aihot.virxact.com/items/cmtoba1tm047nroxh3vml7on9",
           "description": "<p>GPT-6 Astra正式向所有订阅用户推送，作者实测后认为其综合能力追平Claude Fable 5，且额度100%可用。相比GPT-5.6 Sol，速度明显提升，大型系统审查从数小时缩短到约10分钟，代码扫描找出大量此前未发现的性能问题并2小时完成修复；前端3D生成和审美大幅强化，写作在白描和用词上更好但仍缺中文留白感。</p> <p>🔗 <a href=\"https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685905&idx=1&sn=2a6327daa3fb1d5573a824afd63af7f6\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtoba1tm047nroxh3vml7on9\">https://aihot.virxact.com/items/cmtoba1tm047nroxh3vml7on9</a></p>",
@@ -1131,32 +1154,9 @@
           "image": "",
           "category": "",
           "episodeType": ""
-        },
-        {
-          "title": "Google AI 团队分享如何为 LLM-as-a-Judge 评测编写可靠的评分标准",
-          "link": "https://aihot.virxact.com/items/cmtkbz92801nmrowy61g2fsob",
-          "description": "<p>Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。</p> <p>🔗 <a href=\"https://dev.to/googleai/how-to-write-reliable-rubrics-for-llm-as-a-judge-evaluations-ndp\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtkbz92801nmrowy61g2fsob\">https://aihot.virxact.com/items/cmtkbz92801nmrowy61g2fsob</a></p>",
-          "content": "<p>Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。</p> <p>🔗 <a href=\"https://dev.to/googleai/how-to-write-reliable-rubrics-for-llm-as-a-judge-evaluations-ndp\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtkbz92801nmrowy61g2fsob\">https://aihot.virxact.com/items/cmtkbz92801nmrowy61g2fsob</a></p>",
-          "pubDate": "Wed, 02 Sep 2026 16:35:00 GMT",
-          "guid": "https://aihot.virxact.com/cmtkbz92801nmrowy61g2fsob",
-          "read": false,
-          "starred": false,
-          "tags": [],
-          "feedTitle": "AI HOT — 精选",
-          "feedUrl": "https://aihot.virxact.com/feed.xml",
-          "coverImage": "",
-          "summary": "Google AI 团队发布教程，讲解如何为 LLM-as-a-Judge 评测编写可靠的布尔式评分标准，指出模糊提示会导致评估不一致和浪费 token。文中给出四条经验：问题保持原子化且互不重叠、只让评判模型评估客观事实（可用 RFC 2119 术语如 MUST 表述）、只评 prompt 中明确要求的内容、用专家标注的 golden set 校准评判模型直至与人类评分一致。 🔗 阅读原文 via AIHOT · https://a...",
-          "author": "noreply@aihot.virxact.com (Google AI：DEV 作者专属（RSS）)",
-          "saved": false,
-          "mediaType": "article",
-          "duration": "",
-          "explicit": false,
-          "image": "",
-          "category": "",
-          "episodeType": ""
         }
       ],
-      "lastUpdated": 1788610149930,
+      "lastUpdated": 1788613757968,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1170,9 +1170,9 @@
       "siteUrl": "https://aihot.virxact.com/",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 50,
-        "mergedItemCountBeforeRetention": 52,
+        "mergedItemCountBeforeRetention": 51,
         "retainedItemCount": 50,
-        "retentionRemovedCount": 2,
+        "retentionRemovedCount": 1,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
       },
@@ -1875,7 +1875,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1788610149974,
+      "lastUpdated": 1788613757929,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1926,7 +1926,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1788610149974,
+  "lastRefreshTimestamp": 1788613757969,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",

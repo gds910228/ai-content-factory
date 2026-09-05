@@ -85,6 +85,20 @@
       "contentDigest": "475dc5fadcda8c425d0cda93dbbeef5762527a285d8d3ac61751f43dd7a5256a",
       "providerUserMessageId": "fe3d7608-c1ec-484d-9694-ea81d904bb52",
       "providerAssistantMessageId": "5318c8fd-5470-46ed-b642-14ba2538fcb5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788614556510-n8wjfcd",
+      "userTurnOrdinal": 7,
+      "state": "accepted",
+      "localMessageId": "msg-1788614556503-pxmulkf",
+      "timestamp": 1788614556503,
+      "rawDisplayText": "大部分原因是模型升级能力被固化进模型了，如果有部分是别的原因你可以帮我编。留下来自然是是实践中一直稳定可用且满足效果",
+      "canonicalText": "大部分原因是模型升级能力被固化进模型了，如果有部分是别的原因你可以帮我编。留下来自然是是实践中一直稳定可用且满足效果",
+      "images": [],
+      "contentDigest": "330541210bde08e6ddf4abc2926991029b788ace29019a3215a526ed4d8b8df0",
+      "providerUserMessageId": "fd4ea013-4e9a-4c2e-9f0d-b576167a1ac5",
+      "providerAssistantMessageId": "2fb28f81-7c53-4b07-b42c-85dff7d2f2b8"
     }
   ]
 }
