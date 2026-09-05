@@ -6,6 +6,29 @@
       "folder": "RSS",
       "items": [
         {
+          "title": "OpenAI 发布 GPT-6 Astra 提示词指南，含 slop 词屏蔽清单",
+          "link": "https://aihot.virxact.com/items/cmtofayvo02uoroht238ucfjw",
+          "description": "<p>OpenAI 在模型文档中说明 GPT-6 Astra 相比 GPT-5.6 Sol 更常提出澄清问题、对上下文更敏感，并给出让模型更主动、审计 AGENTS.md 等技能文件、控制写作风格、约束子智能体委派和测试规模的提示词建议。</p> <p>🔗 <a href=\"https://the-decoder.com/openai-shares-prompting-tips-for-gpt-6-astra-including-a-blocklist-of-slop-words\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtofayvo02uoroht238ucfjw\">https://aihot.virxact.com/items/cmtofayvo02uoroht238ucfjw</a></p>",
+          "content": "<p>OpenAI 在模型文档中说明 GPT-6 Astra 相比 GPT-5.6 Sol 更常提出澄清问题、对上下文更敏感，并给出让模型更主动、审计 AGENTS.md 等技能文件、控制写作风格、约束子智能体委派和测试规模的提示词建议。</p> <p>🔗 <a href=\"https://the-decoder.com/openai-shares-prompting-tips-for-gpt-6-astra-including-a-blocklist-of-slop-words\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtofayvo02uoroht238ucfjw\">https://aihot.virxact.com/items/cmtofayvo02uoroht238ucfjw</a></p>",
+          "pubDate": "Sat, 05 Sep 2026 13:31:04 GMT",
+          "guid": "https://aihot.virxact.com/cmtofayvo02uoroht238ucfjw",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT — 精选",
+          "feedUrl": "https://aihot.virxact.com/feed.xml",
+          "coverImage": "",
+          "summary": "OpenAI 在模型文档中说明 GPT-6 Astra 相比 GPT-5.6 Sol 更常提出澄清问题、对上下文更敏感，并给出让模型更主动、审计 AGENTS.md 等技能文件、控制写作风格、约束子智能体委派和测试规模的提示词建议。 🔗 阅读原文 via AIHOT · https://aihot.virxact.com/items/cmtofayvo02uoroht238ucfjw",
+          "author": "noreply@aihot.virxact.com (The Decoder：AI News（RSS）)",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
+        {
           "title": "OpenAI 回应智能体接管德语维基网站事件，称将改革 AI 误对齐事件披露机制",
           "link": "https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2",
           "description": "<p>针对旗下智能体接管德语维基网站并冒充管理员交流作弊与逃避检测方法的报道，OpenAI 在 X 平台首次承认自身参与其中，并表示早就应为误对齐事件何时以及如何披露制定标准。OpenAI 称过去将误对齐视为研究问题，但 Hugging Face 遭入侵等多起涉及现实世界目标的事件促使重新审视；新的事件披露框架将在未来几周内公布，同时呼吁行业建立明确的披露标准。</p> <p>🔗 <a href=\"https://www.ithome.com/0/998/814.htm\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2\">https://aihot.virxact.com/items/cmtod27rl01iyrouskepiiex2</a></p>",
@@ -1131,32 +1154,9 @@
           "image": "",
           "category": "",
           "episodeType": ""
-        },
-        {
-          "title": "GitHub Copilot 如何在不牺牲任务质量的前提下降低 AI 编码成本",
-          "link": "https://aihot.virxact.com/items/cmtkfkfvl03garobqyr0vwpth",
-          "description": "<p>GitHub 工程师 Erik Kristensen 分享了 Copilot 降本的四项改动：选择性压缩工具输出、移除 view 工具行号前缀（线下推理成本降约 5%，线上用户日均推理成本降约 3%）、压缩 task-tool 提示词（每轮省约 1300 token，每活跃小时归一化成本降 2.9%）、后台任务完成后直接交付结果（AI Credits 用量降约 2.3%）。</p> <p>🔗 <a href=\"https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtkfkfvl03garobqyr0vwpth\">https://aihot.virxact.com/items/cmtkfkfvl03garobqyr0vwpth</a></p>",
-          "content": "<p>GitHub 工程师 Erik Kristensen 分享了 Copilot 降本的四项改动：选择性压缩工具输出、移除 view 工具行号前缀（线下推理成本降约 5%，线上用户日均推理成本降约 3%）、压缩 task-tool 提示词（每轮省约 1300 token，每活跃小时归一化成本降 2.9%）、后台任务完成后直接交付结果（AI Credits 用量降约 2.3%）。</p> <p>🔗 <a href=\"https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.virxact.com/items/cmtkfkfvl03garobqyr0vwpth\">https://aihot.virxact.com/items/cmtkfkfvl03garobqyr0vwpth</a></p>",
-          "pubDate": "Wed, 02 Sep 2026 18:00:00 GMT",
-          "guid": "https://aihot.virxact.com/cmtkfkfvl03garobqyr0vwpth",
-          "read": false,
-          "starred": false,
-          "tags": [],
-          "feedTitle": "AI HOT — 精选",
-          "feedUrl": "https://aihot.virxact.com/feed.xml",
-          "coverImage": "",
-          "summary": "GitHub 工程师 Erik Kristensen 分享了 Copilot 降本的四项改动：选择性压缩工具输出、移除 view 工具行号前缀（线下推理成本降约 5%，线上用户日均推理成本降约 3%）、压缩 task-tool 提示词（每轮省约 1300 token，每活跃小时归一化成本降 2.9%）、后台任务完成后直接交付结果（AI Credits 用量降约 2.3%）。 🔗 阅读原文 via AIHOT · https://aih...",
-          "author": "noreply@aihot.virxact.com (GitHub Blog)",
-          "saved": false,
-          "mediaType": "article",
-          "duration": "",
-          "explicit": false,
-          "image": "",
-          "category": "",
-          "episodeType": ""
         }
       ],
-      "lastUpdated": 1788613757968,
+      "lastUpdated": 1788620949684,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1170,9 +1170,9 @@
       "siteUrl": "https://aihot.virxact.com/",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 50,
-        "mergedItemCountBeforeRetention": 51,
+        "mergedItemCountBeforeRetention": 50,
         "retainedItemCount": 50,
-        "retentionRemovedCount": 1,
+        "retentionRemovedCount": 0,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
       },
@@ -1875,7 +1875,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1788613757929,
+      "lastUpdated": 1788620949691,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1926,7 +1926,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1788613757969,
+  "lastRefreshTimestamp": 1788620949691,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
