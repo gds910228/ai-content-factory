@@ -139,7 +139,8 @@
       "canonicalText": "/multi-platform-distribution 生成长文发布包",
       "images": [],
       "contentDigest": "95f3fead17b4d8f5a4132797d90a15a2290ff3441137078dfbbdcac2dcec9bb1",
-      "providerUserMessageId": "0a36e0ad-0be9-4021-b9af-f4798f250140"
+      "providerUserMessageId": "0a36e0ad-0be9-4021-b9af-f4798f250140",
+      "providerAssistantMessageId": "ff272e1e-4525-4e08-85c4-17e1b7d7f714"
     }
   ]
 }
