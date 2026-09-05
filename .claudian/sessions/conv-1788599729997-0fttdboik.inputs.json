@@ -57,6 +57,20 @@
       "contentDigest": "fd67ee2c14770271dd7ed77f2b6adb958953f78347e7d8664753acef1c2f27c4",
       "providerUserMessageId": "2c3a9c4e-1b0d-4f65-a98f-5465ceb6a99e",
       "providerAssistantMessageId": "ba3618ae-ae58-453d-8504-6c4d9ba046eb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788612436643-lak1u9b",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1788612436637-f7q5644",
+      "timestamp": 1788612436637,
+      "rawDisplayText": "生活中会分类收集提示词，在实战中不断迭代更新，不管是生图生视频，还是Coding场景，越来越发现提示词不用设计得很精细复杂，许多场景用最基础的提示词结构，把核心内容带上出来的效果都让人满意。 我已经有一年多没有更新维护之前一直使用的提示词了，想要实现一些场景把需求描述清楚即可",
+      "canonicalText": "生活中会分类收集提示词，在实战中不断迭代更新，不管是生图生视频，还是Coding场景，越来越发现提示词不用设计得很精细复杂，许多场景用最基础的提示词结构，把核心内容带上出来的效果都让人满意。 我已经有一年多没有更新维护之前一直使用的提示词了，想要实现一些场景把需求描述清楚即可",
+      "images": [],
+      "contentDigest": "cc4a3916789721b58428a9fb2b4c574212e3aa046a0ed860fbed71904343e0a4",
+      "providerUserMessageId": "f803a718-798f-4b8c-88ae-94e4f339d0e9",
+      "providerAssistantMessageId": "74b889b1-6947-4953-be14-84d051cb57fe"
     }
   ]
 }
