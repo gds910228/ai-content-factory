@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1788599729997-0fttdboik",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788599730107-guwvw4w",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1788599729993-et68u3c",
+      "timestamp": 1788599729993,
+      "rawDisplayText": "请帮我生成一份周度知识库总结报告，范围是全库。报告模板的位置在 00-模板库/模板-AI自动总结 你需要：\n1. 梳理本周新增的选题、素材、文章\n2. 提炼最有价值的3个核心观点\n3. 发现3个潜在的知识连接点\n4. 评估当前内容质量，提出改进建议\n5. 识别2个新的创作方向",
+      "canonicalText": "请帮我生成一份周度知识库总结报告，范围是全库。报告模板的位置在 00-模板库/模板-AI自动总结 你需要：\n1. 梳理本周新增的选题、素材、文章\n2. 提炼最有价值的3个核心观点\n3. 发现3个潜在的知识连接点\n4. 评估当前内容质量，提出改进建议\n5. 识别2个新的创作方向",
+      "images": [],
+      "contentDigest": "2001e129889ae7e5593e04061d1f47e5c32823137e4258d46d30f0ff2c464176",
+      "providerUserMessageId": "58f48bf6-8ac2-46a8-b2f1-135be94660bb",
+      "providerAssistantMessageId": "200e5c63-e098-4177-971f-8dadff66305a"
+    }
+  ]
+}

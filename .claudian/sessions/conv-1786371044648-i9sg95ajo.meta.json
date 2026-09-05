@@ -5,12 +5,13 @@
   "titleGenerationStatus": "success",
   "createdAt": 1786371044648,
   "lastActivityAt": 1786421421464,
-  "sessionId": null,
+  "sessionId": "90761ff7-75ae-4442-a71b-d0bc36a12c3d",
   "selectedModel": "claude-code/glm-5.3",
   "providerState": {
     "previousProviderSessionIds": [
       "90761ff7-75ae-4442-a71b-d0bc36a12c3d"
-    ]
+    ],
+    "providerSessionId": "90761ff7-75ae-4442-a71b-d0bc36a12c3d"
   },
   "usage": {
     "model": "glm-5.2",
