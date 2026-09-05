@@ -15,6 +15,20 @@
       "contentDigest": "2001e129889ae7e5593e04061d1f47e5c32823137e4258d46d30f0ff2c464176",
       "providerUserMessageId": "58f48bf6-8ac2-46a8-b2f1-135be94660bb",
       "providerAssistantMessageId": "200e5c63-e098-4177-971f-8dadff66305a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788608465804-red6d1x",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1788608465800-5abqial",
+      "timestamp": 1788608465800,
+      "rawDisplayText": "/topic-filter   01-选题库/03-行业干货选题池，里面的《模型越来越强， harness该留下什么？》和《我对 AI Coding 的一点思考：从 Spec 驱动转向环境与验证驱动》，我觉得有些观点是相似的，帮我结合起来筛选题",
+      "canonicalText": "/topic-filter   01-选题库/03-行业干货选题池，里面的《模型越来越强， harness该留下什么？》和《我对 AI Coding 的一点思考：从 Spec 驱动转向环境与验证驱动》，我觉得有些观点是相似的，帮我结合起来筛选题",
+      "images": [],
+      "contentDigest": "c79fe21145ad4f6c97b0c61bbb26dca5d33a44f873d4809166c26ecf285db68b",
+      "providerUserMessageId": "999095b7-0396-4510-8fd1-a77017fcc22f",
+      "providerAssistantMessageId": "b01b62aa-feff-4982-927b-deee8dac5455"
     }
   ]
 }
