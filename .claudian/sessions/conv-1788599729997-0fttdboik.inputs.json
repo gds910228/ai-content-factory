@@ -43,6 +43,20 @@
       "contentDigest": "30892ed4149a621c36b583564e46c6ab0f9e4a1fe2fe1e020df6ad716abb80b1",
       "providerUserMessageId": "fcb25f1e-665b-4b2a-b9a7-7e4754a39fb8",
       "providerAssistantMessageId": "c4d6785f-9bd2-42d6-b560-69b1840c0d5f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788611407270-wrbwwlf",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1788611407264-48htho9",
+      "timestamp": 1788611407264,
+      "rawDisplayText": "太多了不止一次经历过，AI在2023年刚火起来的时候，我负责公司一个AI导购项目，那会调Prompt许多次，许多指令遵循不够严谨，增加了few-shot，2024年下半年ChatGpt升级多次后发现同样的提示词不需要写得很复杂了。这个场景你帮我润色更生动一些",
+      "canonicalText": "太多了不止一次经历过，AI在2023年刚火起来的时候，我负责公司一个AI导购项目，那会调Prompt许多次，许多指令遵循不够严谨，增加了few-shot，2024年下半年ChatGpt升级多次后发现同样的提示词不需要写得很复杂了。这个场景你帮我润色更生动一些",
+      "images": [],
+      "contentDigest": "fd67ee2c14770271dd7ed77f2b6adb958953f78347e7d8664753acef1c2f27c4",
+      "providerUserMessageId": "2c3a9c4e-1b0d-4f65-a98f-5465ceb6a99e",
+      "providerAssistantMessageId": "ba3618ae-ae58-453d-8504-6c4d9ba046eb"
     }
   ]
 }
