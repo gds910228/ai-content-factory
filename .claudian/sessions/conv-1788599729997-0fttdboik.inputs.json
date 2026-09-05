@@ -125,7 +125,8 @@
       "canonicalText": "/style-write 选择标题，开始写作",
       "images": [],
       "contentDigest": "ffb1c686631ecb6ee0aa2eb6ded2b492c8cebac054230913842734f762dfc36a",
-      "providerUserMessageId": "96665d4d-7ac6-4c9a-a148-e0f589438523"
+      "providerUserMessageId": "96665d4d-7ac6-4c9a-a148-e0f589438523",
+      "providerAssistantMessageId": "54d8a763-cc8b-4543-bfbf-fb45de1b991b"
     }
   ]
 }
