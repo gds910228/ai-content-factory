@@ -127,6 +127,19 @@
       "contentDigest": "ffb1c686631ecb6ee0aa2eb6ded2b492c8cebac054230913842734f762dfc36a",
       "providerUserMessageId": "96665d4d-7ac6-4c9a-a148-e0f589438523",
       "providerAssistantMessageId": "54d8a763-cc8b-4543-bfbf-fb45de1b991b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788627591461-mrn89m7",
+      "userTurnOrdinal": 10,
+      "state": "accepted",
+      "localMessageId": "msg-1788627591454-m7bmhw0",
+      "timestamp": 1788627591454,
+      "rawDisplayText": "/multi-platform-distribution 生成长文发布包",
+      "canonicalText": "/multi-platform-distribution 生成长文发布包",
+      "images": [],
+      "contentDigest": "95f3fead17b4d8f5a4132797d90a15a2290ff3441137078dfbbdcac2dcec9bb1",
+      "providerUserMessageId": "0a36e0ad-0be9-4021-b9af-f4798f250140"
     }
   ]
 }
