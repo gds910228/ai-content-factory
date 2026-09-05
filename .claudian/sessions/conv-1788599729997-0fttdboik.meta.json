@@ -4,7 +4,7 @@
   "title": "生成周度知识库总结报告",
   "titleGenerationStatus": "success",
   "createdAt": 1788599730001,
-  "lastActivityAt": 1788608788681,
+  "lastActivityAt": 1788609539323,
   "sessionId": "78cb6eb8-38b8-4b11-b39e-488d1aa184c3",
   "selectedModel": "claude-code/glm-5.3",
   "providerState": {
@@ -12,12 +12,12 @@
   },
   "usage": {
     "model": "glm-5.3",
-    "inputTokens": 3797,
+    "inputTokens": 794,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 94528,
+    "cacheReadInputTokens": 104640,
     "contextWindow": 200000,
-    "contextTokens": 98325,
-    "percentage": 49,
+    "contextTokens": 105434,
+    "percentage": 53,
     "contextWindowIsAuthoritative": true
   }
 }

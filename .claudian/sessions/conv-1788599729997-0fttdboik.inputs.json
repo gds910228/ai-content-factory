@@ -29,6 +29,20 @@
       "contentDigest": "c79fe21145ad4f6c97b0c61bbb26dca5d33a44f873d4809166c26ecf285db68b",
       "providerUserMessageId": "999095b7-0396-4510-8fd1-a77017fcc22f",
       "providerAssistantMessageId": "b01b62aa-feff-4982-927b-deee8dac5455"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788609217326-o0uu50t",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1788609217321-m84y58f",
+      "timestamp": 1788609217321,
+      "rawDisplayText": "/deep-interview 开始访谈",
+      "canonicalText": "/deep-interview 开始访谈",
+      "images": [],
+      "contentDigest": "30892ed4149a621c36b583564e46c6ab0f9e4a1fe2fe1e020df6ad716abb80b1",
+      "providerUserMessageId": "fcb25f1e-665b-4b2a-b9a7-7e4754a39fb8",
+      "providerAssistantMessageId": "c4d6785f-9bd2-42d6-b560-69b1840c0d5f"
     }
   ]
 }
