@@ -211,6 +211,34 @@
       "contentDigest": "701b643113c96eee289c66a11837bb76d43c0f3c2ad19891983b06d1791c7fac",
       "providerUserMessageId": "a751dba7-f93d-4599-a0bb-3e57deac4297",
       "providerAssistantMessageId": "d67120da-c035-40ab-bda7-d2bf6c01fa8f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788677028795-fxn5yhp",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1788677028782-wtjv3vm",
+      "timestamp": 1788677028782,
+      "rawDisplayText": "/deep-interview 帮我做访谈",
+      "canonicalText": "/deep-interview 帮我做访谈",
+      "images": [],
+      "contentDigest": "1e7f0ba0070fc56296297a3c758097db625077180a55d731f848a9aacef4a173",
+      "providerUserMessageId": "8f63220a-d022-48d6-b263-8a031b14714c",
+      "providerAssistantMessageId": "b8b878b7-33ec-422e-b318-cb8f487c78cb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788679869150-4za4ke0",
+      "userTurnOrdinal": 17,
+      "state": "accepted",
+      "localMessageId": "msg-1788679869135-hq2iz9v",
+      "timestamp": 1788679869135,
+      "rawDisplayText": "眼见为实，跑一遍看测试效果，还有别的更好方式吗？",
+      "canonicalText": "眼见为实，跑一遍看测试效果，还有别的更好方式吗？",
+      "images": [],
+      "contentDigest": "cebfc93558db8273bc8076cb574af76c052269a6e6455768f590cd2a800a22d4",
+      "providerUserMessageId": "7e34280c-853a-4950-975c-e65f0e24b204",
+      "providerAssistantMessageId": "2ab306e9-189a-49e2-abaf-b9fb9c7e2ad4"
     }
   ]
 }
