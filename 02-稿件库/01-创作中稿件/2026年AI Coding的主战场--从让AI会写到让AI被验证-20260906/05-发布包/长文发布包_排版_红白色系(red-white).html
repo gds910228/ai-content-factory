@@ -1,0 +1,337 @@
+<section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
+
+  <!-- 1. 开头引言卡片 -->
+  <section style="margin:10px 10px 32px;background:#ffffff;border-radius:12px;box-shadow:0 4px 24px -4px rgba(220,38,38,0.15);padding:28px 24px 22px;overflow:hidden;">
+    <p style="font-size:42px;color:#DC2626;font-weight:900;margin:0;line-height:0.6;">
+      <span leaf="">"</span>
+    </p>
+    <p style="font-size:16px;font-weight:800;color:#1C1917;margin:12px 0 8px;line-height:1.75;padding-left:4px;">
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">验证</span></span>
+      <span leaf="">，而不是生成，才是真正的</span>
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">瓶颈</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 2. 前言正文 -->
+  <section style="padding:0 10px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">上一篇（{{上一篇链接：《AI时代的技术资产审计》}}）我们聊了哪些投入会被下一代模型作废，文末我预告了这一篇：怎么把验证做成 AI 能自己跑的流程。今天来兑现。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先问一个场景。AI 写完代码，跟你说一句：我做完了。你接下来干什么？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我猜大多数人的答案，和我以前一模一样：</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">眼见为实，跑一遍看效果</span></span><span leaf="">。打开页面，把主流程从头到尾点一遍，没问题，交付。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">听起来很稳对吧？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我以前也这么觉得，直到翻车翻多了才看明白：</span><strong><span leaf="">跑一遍，恰恰是整个验证体系里最薄的一层。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，这篇文章就干一件事：把跑一遍这个动作，从你手上挪到 AI 自己手上。</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">3 个土办法，1 张清单</span></span><span leaf="">，零基建门槛，看完今天就能用。</span>
+    </p>
+  </section>
+
+  <!-- 3. 前言导读 -->
+  <section style="padding:0 10px 32px;">
+    <p style="font-size:14px;color:#9CA3AF;margin:0 0 14px;letter-spacing:1px;">
+      <span leaf="">📌 本文看点</span>
+    </p>
+    <section style="display:flex;justify-content:space-between;">
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">01</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">跑一遍漏掉的三类雷</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">02</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">为什么验证成了主战场</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">03</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">3 个土办法和 1 张清单</span></p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 4. 第一章 -->
+  <section style="margin-top:16px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">01</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">MINEFIELD</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">跑一遍，漏掉的是三类雷</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先讲我印象最深的一次翻车。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">以前做小程序，AI 把功能写完，我把主流程从头到尾点了一遍：建单、提交、查询，全都是好的，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">看着没问题就交付了</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">结果几天后用户反馈来的时候我人是懵的：输入框里粘贴了一长串带表情的文本，页面</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">直接白屏</span></span><span leaf="">；另一个没数据的列表页，显示成一片空白。我回头排查，还发现一个更隐蔽的问题：AI 之前帮我修一个小 bug 时，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">顺手改了另一个模块的判断逻辑</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我验证的是新改的功能，它弄坏的是我根本没想到要看一眼的地方。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">感觉就像你验收了一套精装修，水电全通、墙面锃亮，结果</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">隔壁房间被施工队悄悄拆了堵承重墙</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那次之后我复盘，发现眼见为实有个天生的缺陷：</span><strong><span leaf="">它只覆盖你想得到的路径。</span></strong><span leaf="">具体说，漏三类雷：</span>
+    </p>
+
+    <section style="margin-bottom:14px;">
+      <p style="margin:0 0 6px;">
+        <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">边界输入</span></span>
+      </p>
+      <p style="font-size:14px;color:#4B5563;margin:0;line-height:1.7;text-align:justify;">
+        <span leaf="">长文本、特殊字符、表情符号</span>
+      </p>
+    </section>
+    <section style="margin-bottom:14px;">
+      <p style="margin:0 0 6px;">
+        <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">异常状态</span></span>
+      </p>
+      <p style="font-size:14px;color:#4B5563;margin:0;line-height:1.7;text-align:justify;">
+        <span leaf="">空列表、弱网、没权限</span>
+      </p>
+    </section>
+    <section style="margin-bottom:24px;">
+      <p style="margin:0 0 6px;">
+        <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">被顺手改坏的旧功能</span></span>
+      </p>
+      <p style="font-size:14px;color:#4B5563;margin:0;line-height:1.7;text-align:justify;">
+        <span leaf="">AI 修 bug 时动了别处，而你根本没想到那里要看</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 5. 第二章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">02</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">THE SHIFT</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">为什么验证成了主战场</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">不是我一个人的执念，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">整个行业都在收敛到同一个判断</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">淘天团队说得很直白：</span><strong style="color:#DC2626;"><span leaf="">AI 的能力边界，是由可验证的反馈决定的。</span></strong><span leaf=""> coding 之所以最先被 AI 拿下，不是因为简单，而是因为编译过没过、测试绿没绿，机器自己就能判。他们给企业画的分层验证体系是：编译、单测这类</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">秒级反馈</span></span><span leaf="">给 AI 高频自主迭代用；集成测试、浏览器自动化这类</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">分钟级反馈</span></span><span leaf="">覆盖更真实的行为；人工判断只留给机器裁决不了的部分，业务价值、用户体验、伦理边界。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">更有说服力的是 Anthropic 的内部数据：</span><strong><span leaf="">验证类 skill，是他们对 Claude 产出质量影响最可测量的一类。</span></strong><span leaf="">说白了，连造模型的公司，都在把验证做成 AI 自己跑的流程。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">道理其实不复杂。启动一个 agent 只要一句话，但</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">收口一点都不便宜</span></span><span leaf="">。当 AI 生成代码的速度远超你能验证的速度，你囤的不是效率，是</span><span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">认知债</span></span><span leaf="">：代码看着干净、测试看着全绿，但没有人真正理解它。最麻烦的是，这种债不疼不痒，出事之前你根本感觉不到它的存在，它滋生的是虚假的信心。</span>
+    </p>
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「验证，而不是生成，才是真正的瓶颈。」</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 6. 第三章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">03</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">HOW-TO</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">3 个土办法，今天就能用</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">道理讲完，上土办法。都不成体系，但真管用，每一条都是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一句话 prompt 级别的动作</span></span><span leaf="">。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">第一刀：跑的动作，外包给 AI。</span>
+    </p>
+    <p style="margin-bottom:12px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">现在 AI 写完代码，我不再自己先点，而是直接一句话：</span>
+    </p>
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">写完先自己跑测试，全绿再给我看。</span>
+      </p>
+    </section>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">跑的动作外包回给了 AI，我只看它贴出来的测试结果。账很好算：它</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">30 秒跑完 20 个用例</span></span><span leaf="">，全程不喊累不嫌烦；我自己点主流程至少 10 分钟，还只覆盖 happy path。同样的时间，我可以让它再跑三轮边界用例。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">第二刀：动手之前，先答影响面。</span>
+    </p>
+    <p style="margin-bottom:12px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">让 AI 改东西之前，必须先回答我一句：</span>
+    </p>
+    <section style="background:#FEF2F2;border-radius:10px;padding:18px 20px;margin-bottom:24px;border:1px solid #FECACA;">
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">这次改动涉及哪几个文件？会不会影响别的地方？</span>
+      </p>
+    </section>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">答不上来就不许动手。说来也怪，光是多这一句，它乱改的次数肉眼可见地少了。改动范围，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">变成了它的自我约束</span></span><span leaf="">。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">第三刀：边界清单，翻车变资产。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我把翻过车的边界输入，长文本、特殊字符、空列表、弱网，存成一张清单。新功能交付前，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">让 AI 按清单逐条自测一遍</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这张清单每翻一次车才长一条，但它本身就是资产：</span><strong style="color:#DC2626;"><span leaf="">翻过的车，不再翻第二次。</span></strong>
+    </p>
+    <section style="border-left:4px solid #D6D3D1;padding:14px 20px;margin-bottom:24px;background:#FAFAFA;border-radius:0 8px 8px 0;">
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">小技巧：清单不用一开始就建全，从空表开始，每翻一次车补一条。半年后回头看，你会发现自己攒下了一份</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">比任何教程都贴合你项目的检查表</span></span><span leaf="">。</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 7. 第四章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">04</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">AUTONOMY</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">你攒的不是测试，是自主权</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">聊到这，可以把上一篇的话接上了。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">上一篇（{{上一篇链接}}）说，人的主观认识是模型永远拿不到的信息：什么算做完了、什么算够好了，这些标准只在你脑子里。</span><strong><span leaf="">验证，就是把这些只在你脑子里的标准，一条一条翻译成机器能自己跑的信号。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我那张边界清单，每一条都是我用一次翻车换来的判断，现在它们变成了 AI 能自己执行的检查项。所以验证这件事，本质上是在攒</span><span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">增值区的资产</span></span><span leaf="">，上一篇说贬值区和增值区，验证就是你最该建的那个增值区。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">它直接决定一件事：</span><strong><span leaf="">你验证得越便宜、越可靠，就敢把越大的活交给 AI 自己跑。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">反过来看也成立。说白了：你只敢跑一遍就交付，不是因为你谨慎，是你的</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">验证能力只支撑得起这么多自主权</span></span><span leaf="">。敢不敢放手，从来不是性格问题，是验证能力问题。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 8. 尾声（结语章） -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">∞</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">THE END</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">从下一次翻车开始</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">别再用我点了一遍安慰自己了。</span>
+    </p>
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「跑一遍是在检查这一次，攒一套验证是在保障每一次。」</span>
+      </p>
+    </section>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">下一次翻车，先别沮丧，把它变成</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一条清单、一个测试</span></span><span leaf="">。那才是你从 AI 时代真正带走的东西。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">也很想听听：你现在敢让 AI 自己跑多大的活？是一段函数、一个模块，还是一整个项目？评论区聊聊你的验证做法，让我们</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">互相抄抄作业</span></span><span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 9. END 分割线 -->
+  <section style="padding:0 10px;">
+    <section style="text-align:center;margin:0 0 32px;">
+      <section style="display:flex;align-items:center;justify-content:center;">
+        <span style="height:2px;width:60px;background:linear-gradient(to right,transparent,#DC2626);margin-right:12px;"><span leaf=""><br></span></span>
+        <span style="font-size:11px;color:#DC2626;letter-spacing:3px;font-weight:700;"><span leaf="">END</span></span>
+        <span style="height:2px;width:60px;background:linear-gradient(to left,transparent,#DC2626);margin-left:12px;"><span leaf=""><br></span></span>
+      </section>
+    </section>
+  </section>
+
+  <!-- 10. 尾部签名区 -->
+  <section style="padding:0 10px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我是 {{作者名}}，用 AI 陪伴成长，用技术创造价值。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">如果这篇帮你省下了下一次翻车的时间，欢迎</span>
+      <strong style="color:#DC2626;"><span leaf="">点赞、在看、转发</span></strong>
+      <span leaf="">三连。关注「AI启蒙学习」并星标，下一篇，聊聊验证做深之后，怎么让 AI 跑完整条交付链路，我们下篇见。</span>
+    </p>
+  </section>
+
+</section>

@@ -1,0 +1,6 @@
+[
+  {"op":"insert","anchor":"悄悄拆了堵承重墙","file":"01-framework-blindspot-three-mines.png","alt":"眼见为实的盲区","caption":"图1｜跑一遍漏掉的三类雷"},
+  {"op":"insert","anchor":"才是真正的瓶颈","file":"02-framework-verification-pyramid-v2.png","alt":"分层验证金字塔","caption":"图2｜分层验证：越往下，AI 越自主"},
+  {"op":"insert","anchor":"不再翻第二次","file":"03-infographic-three-cuts-v3.png","alt":"三个土办法卡片","caption":"图3｜3 个土办法，今天就能用"},
+  {"op":"insert","anchor":"只支撑得起这么多自主权","file":"04-infographic-autonomy-formula.png","alt":"自主权公式天平","caption":"图4｜验证能力 = 你敢放手的自主权"}
+]

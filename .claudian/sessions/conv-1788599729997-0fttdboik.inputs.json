@@ -323,6 +323,20 @@
       "contentDigest": "37c42a292e675643ddfc3cdcf897949897240760c3965d43ea19810c1d878b99",
       "providerUserMessageId": "be8428ff-e483-4d6d-96a0-04c207301940",
       "providerAssistantMessageId": "28e433b1-f717-4e50-b7a6-fd02d74f2b3d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788712864446-e1o1zw2",
+      "userTurnOrdinal": 24,
+      "state": "accepted",
+      "localMessageId": "msg-1788712864425-uenfxus",
+      "timestamp": 1788712864425,
+      "rawDisplayText": "/gzh-design 给02-稿件库/01-创作中稿件/2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906/05-发布包/长文发布包，一键排成公众号文章",
+      "canonicalText": "/gzh-design 给02-稿件库/01-创作中稿件/2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906/05-发布包/长文发布包，一键排成公众号文章",
+      "images": [],
+      "contentDigest": "7a699e5ba3330ea2eb54a4759c4756b0a15235218d6d9bf5d750e73acb7ea8a5",
+      "providerUserMessageId": "f6c75f1d-17ab-49e9-b6ff-952f647c4879",
+      "providerAssistantMessageId": "a3737830-f73b-40b0-bd29-eea4a3f08a37"
     }
   ]
 }
