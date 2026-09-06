@@ -183,6 +183,34 @@
       "contentDigest": "68670eb5f2bce6cce8169cba240f40f3d10b5adaec1c00f5742980791c406f0a",
       "providerUserMessageId": "f3f2aaeb-c644-430a-9e23-1135aa79340f",
       "providerAssistantMessageId": "827fd792-6bff-4249-8856-c745039a2e57"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788668531486-o1q49vk",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1788668531473-9tg63p0",
+      "timestamp": 1788668531473,
+      "rawDisplayText": "下一个选题会是什么 有计划吗",
+      "canonicalText": "下一个选题会是什么 有计划吗",
+      "images": [],
+      "contentDigest": "a5e41ae9447e0bc2794241af516087be77994ed6bae84fbcb1f0fbd33fe1f972",
+      "providerUserMessageId": "ad6a781d-ae47-4975-9426-8883271bc834",
+      "providerAssistantMessageId": "4b03a7e6-356a-4086-9ec6-30d9347f3fa3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788672964456-8tabdmq",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1788672964439-xjqo0c1",
+      "timestamp": 1788672964439,
+      "rawDisplayText": "启动 记得在文章中关联提示上一篇已发布文章（我会手动设置链接）",
+      "canonicalText": "启动 记得在文章中关联提示上一篇已发布文章（我会手动设置链接）",
+      "images": [],
+      "contentDigest": "701b643113c96eee289c66a11837bb76d43c0f3c2ad19891983b06d1791c7fac",
+      "providerUserMessageId": "a751dba7-f93d-4599-a0bb-3e57deac4297",
+      "providerAssistantMessageId": "d67120da-c035-40ab-bda7-d2bf6c01fa8f"
     }
   ]
 }
