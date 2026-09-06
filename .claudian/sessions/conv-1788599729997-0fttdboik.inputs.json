@@ -253,6 +253,20 @@
       "contentDigest": "35783f84f34ef9b1c6a3f68812668e9f00834984404e95eddd7a56980b109a14",
       "providerUserMessageId": "06556943-8fbc-4bcb-8a61-c786b3910a30",
       "providerAssistantMessageId": "fd4eff3b-2ee2-4160-9563-563f9feb7dec"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788698679911-jz6l9x5",
+      "userTurnOrdinal": 19,
+      "state": "accepted",
+      "localMessageId": "msg-1788698679896-8ei1ken",
+      "timestamp": 1788698679896,
+      "rawDisplayText": "你帮我编写",
+      "canonicalText": "你帮我编写",
+      "images": [],
+      "contentDigest": "cb9aa0db4e355fdc35a2f51298e8ed457b7f177efd6a077f6b7518dcd2afe645",
+      "providerUserMessageId": "6a1cd429-c63d-4670-9d52-858e608261f9",
+      "providerAssistantMessageId": "208f1c67-2488-4b15-bf05-b083423d1d27"
     }
   ]
 }
