@@ -1,33 +1,9 @@
 {
   "tasks": [
     {
-      "id": "illustration-01",
-      "promptFiles": ["prompts/01-framework-blindspot-three-mines.md"],
-      "image": "01-framework-blindspot-three-mines.png",
-      "provider": "modelscope",
-      "ar": "16:9",
-      "quality": "2k"
-    },
-    {
-      "id": "illustration-02",
-      "promptFiles": ["prompts/02-framework-verification-pyramid.md"],
-      "image": "02-framework-verification-pyramid.png",
-      "provider": "modelscope",
-      "ar": "16:9",
-      "quality": "2k"
-    },
-    {
-      "id": "illustration-03",
-      "promptFiles": ["prompts/03-infographic-three-cuts.md"],
-      "image": "03-infographic-three-cuts.png",
-      "provider": "modelscope",
-      "ar": "16:9",
-      "quality": "2k"
-    },
-    {
-      "id": "illustration-04",
-      "promptFiles": ["prompts/04-infographic-autonomy-formula.md"],
-      "image": "04-infographic-autonomy-formula.png",
+      "id": "illustration-03-v3",
+      "promptFiles": ["prompts/03-infographic-three-cuts-v3.md"],
+      "image": "03-infographic-three-cuts-v3.png",
       "provider": "modelscope",
       "ar": "16:9",
       "quality": "2k"
