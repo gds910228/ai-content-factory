@@ -309,6 +309,19 @@
       "contentDigest": "4947b5098fd5e85185a92928aac938e1a188dbe401b81d270862011c7275ee12",
       "providerUserMessageId": "a3dd683b-15b7-47e7-9520-e4d146c51dd3",
       "providerAssistantMessageId": "95cdfef5-ab4a-42a3-a389-c574dbd9b189"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788710625733-t9w7nna",
+      "userTurnOrdinal": 23,
+      "state": "accepted",
+      "localMessageId": "msg-1788710625716-59zkjvv",
+      "timestamp": 1788710625717,
+      "rawDisplayText": "/baoyu-article-illustrator 给整篇文章配图：分析文章结构、决定在哪些位置插图、生成每张图的提示词、调起画图引擎、保存到目录下，不需要把图嵌回文章。\nModelScope 的 MODELSCOPE_API_KEY已配置在系统用户变量中。",
+      "canonicalText": "/baoyu-article-illustrator 给整篇文章配图：分析文章结构、决定在哪些位置插图、生成每张图的提示词、调起画图引擎、保存到目录下，不需要把图嵌回文章。\nModelScope 的 MODELSCOPE_API_KEY已配置在系统用户变量中。",
+      "images": [],
+      "contentDigest": "37c42a292e675643ddfc3cdcf897949897240760c3965d43ea19810c1d878b99",
+      "providerUserMessageId": "be8428ff-e483-4d6d-96a0-04c207301940"
     }
   ]
 }
