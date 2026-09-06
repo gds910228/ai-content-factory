@@ -1,33 +1,33 @@
 {
   "tasks": [
     {
-      "id": "illustration-01",
-      "promptFiles": ["prompts/01-comparison-hoard-vs-keep.md"],
-      "image": "01-comparison-hoard-vs-keep.png",
+      "id": "illustration-01-v2",
+      "promptFiles": ["prompts/01-comparison-hoard-vs-keep-v2.md"],
+      "image": "01-comparison-hoard-vs-keep-v2.png",
       "provider": "modelscope",
       "ar": "16:9",
       "quality": "2k"
     },
     {
-      "id": "illustration-02",
-      "promptFiles": ["prompts/02-framework-depreciate-vs-appreciate.md"],
-      "image": "02-framework-depreciate-vs-appreciate.png",
+      "id": "illustration-02-v2",
+      "promptFiles": ["prompts/02-framework-depreciate-vs-appreciate-v2.md"],
+      "image": "02-framework-depreciate-vs-appreciate-v2.png",
       "provider": "modelscope",
       "ar": "16:9",
       "quality": "2k"
     },
     {
-      "id": "illustration-03",
-      "promptFiles": ["prompts/03-infographic-three-questions.md"],
-      "image": "03-infographic-three-questions.png",
+      "id": "illustration-03-v2",
+      "promptFiles": ["prompts/03-infographic-three-questions-v2.md"],
+      "image": "03-infographic-three-questions-v2.png",
       "provider": "modelscope",
       "ar": "16:9",
       "quality": "2k"
     },
     {
-      "id": "illustration-04",
-      "promptFiles": ["prompts/04-infographic-24h-rule.md"],
-      "image": "04-infographic-24h-rule.png",
+      "id": "illustration-04-v2",
+      "promptFiles": ["prompts/04-infographic-24h-rule-v2.md"],
+      "image": "04-infographic-24h-rule-v2.png",
       "provider": "modelscope",
       "ar": "16:9",
       "quality": "2k"
