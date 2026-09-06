@@ -239,6 +239,20 @@
       "contentDigest": "cebfc93558db8273bc8076cb574af76c052269a6e6455768f590cd2a800a22d4",
       "providerUserMessageId": "7e34280c-853a-4950-975c-e65f0e24b204",
       "providerAssistantMessageId": "2ab306e9-189a-49e2-abaf-b9fb9c7e2ad4"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788680507735-vhfrp5z",
+      "userTurnOrdinal": 18,
+      "state": "accepted",
+      "localMessageId": "msg-1788680507720-y26ct4l",
+      "timestamp": 1788680507720,
+      "rawDisplayText": "这情况以前还是挺多的，你根据经验帮我编写",
+      "canonicalText": "这情况以前还是挺多的，你根据经验帮我编写",
+      "images": [],
+      "contentDigest": "35783f84f34ef9b1c6a3f68812668e9f00834984404e95eddd7a56980b109a14",
+      "providerUserMessageId": "06556943-8fbc-4bcb-8a61-c786b3910a30",
+      "providerAssistantMessageId": "fd4eff3b-2ee2-4160-9563-563f9feb7dec"
     }
   ]
 }
