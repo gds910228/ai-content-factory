@@ -295,6 +295,20 @@
       "contentDigest": "7644ef585e6aa3bde4c1706742161db3e88bd7029040033809b0ccecf4b21603",
       "providerUserMessageId": "23d85127-0959-4eb2-b0b3-210fef488b8c",
       "providerAssistantMessageId": "455f5372-d6bd-4357-aa39-fd204efd0037"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788709656033-biqxb0x",
+      "userTurnOrdinal": 22,
+      "state": "accepted",
+      "localMessageId": "msg-1788709656018-1kyzumj",
+      "timestamp": 1788709656018,
+      "rawDisplayText": "/multi-platform-distribution 给定稿生成发布包",
+      "canonicalText": "/multi-platform-distribution 给定稿生成发布包",
+      "images": [],
+      "contentDigest": "4947b5098fd5e85185a92928aac938e1a188dbe401b81d270862011c7275ee12",
+      "providerUserMessageId": "a3dd683b-15b7-47e7-9520-e4d146c51dd3",
+      "providerAssistantMessageId": "95cdfef5-ab4a-42a3-a389-c574dbd9b189"
     }
   ]
 }
