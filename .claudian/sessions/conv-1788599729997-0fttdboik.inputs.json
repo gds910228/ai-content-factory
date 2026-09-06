@@ -169,6 +169,20 @@
       "contentDigest": "ee15103e9f239f43e7b27fd040f13b0d5a783ce2cc07d032c21dbb8cbdd1b8cc",
       "providerUserMessageId": "146e87c3-0ab5-422a-b029-2b8dfae0fbec",
       "providerAssistantMessageId": "cad41385-01b4-40b7-ad21-882e77028943"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788668130144-2tlhe1k",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1788668130130-o3k5ugz",
+      "timestamp": 1788668130130,
+      "rawDisplayText": "这篇文章发布了，更新已创作稿件位置，内容创作看板和知识库数据仪表板",
+      "canonicalText": "这篇文章发布了，更新已创作稿件位置，内容创作看板和知识库数据仪表板",
+      "images": [],
+      "contentDigest": "68670eb5f2bce6cce8169cba240f40f3d10b5adaec1c00f5742980791c406f0a",
+      "providerUserMessageId": "f3f2aaeb-c644-430a-9e23-1135aa79340f",
+      "providerAssistantMessageId": "827fd792-6bff-4249-8856-c745039a2e57"
     }
   ]
 }
