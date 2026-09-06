@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>长文发布包_排版_红白色系(red-white)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; padding:0; background:#f0f0f0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; color:#333; }
+  .bar { position:sticky; top:0; z-index:999; background:#1C1917; color:#fff; padding:10px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; box-shadow:0 2px 10px rgba(0,0,0,0.18); }
+  .bar .t { font-size:14px; font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .copy-btn { flex-shrink:0; background:#fff; color:#1C1917; border:none; padding:8px 16px; border-radius:6px; font-size:14px; font-weight:700; cursor:pointer; transition:all .15s; }
+  .copy-btn:hover { background:#FEE2E2; color:#DC2626; }
+  .copy-btn.ok { background:#D1FAE5; color:#065F46; }
+  .copy-btn.fail { background:#FEE2E2; color:#991B1B; }
+  .hint { max-width:677px; margin:14px auto 0; padding:0 10px; font-size:13px; color:#888; line-height:1.6; }
+  .stage { padding:16px 0 48px; }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <span class="t">长文发布包_排版_红白色系(red-white)</span>
+    <button class="copy-btn" id="copyBtn" onclick="copyToGzh()">复制到公众号</button>
+  </div>
+  <p class="hint">① 点右上角「复制到公众号」 → ② 微信公众号编辑器 Ctrl/⌘+V 粘贴。若图片未带入，改用 Ctrl/⌘+A 全选本页正文再复制；仍不行就用同目录「_含图_自包含.html」。</p>
+  <div class="stage" id="stage">
+<section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
+
+  <!-- 1. 开头引言卡片 -->
+  <section style="margin:10px 10px 32px;background:#ffffff;border-radius:12px;box-shadow:0 4px 24px -4px rgba(220,38,38,0.15);padding:28px 24px 22px;overflow:hidden;">
+    <p style="font-size:42px;color:#DC2626;font-weight:900;margin:0;line-height:0.6;">
+      <span leaf="">"</span>
+    </p>
+    <p style="font-size:16px;font-weight:800;color:#1C1917;margin:12px 0 8px;line-height:1.75;padding-left:4px;">
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">技巧会贬值</span></span>
+      <span leaf="">，</span>
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">主观认识</span></span>
+      <span leaf="">是模型永远拿不到的信息。</span>
+    </p>
+  </section>
+
+  <!-- 2. 前言正文 -->
+  <section style="padding:0 10px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">2023 年 AI 刚火那会儿，我在公司负责一个 AI 导购项目。那时候</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">调 Prompt 是真苦</span></span><span leaf="">：指令写得再细，模型就是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不严谨地遵循</span></span><span leaf="">，你限定好推荐的范围，它时不时自由发挥。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">没办法，只能</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">上 few-shot</span></span><span leaf="">：精心写好几组示例塞进提示词，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一个字一个字地抠</span></span><span leaf="">。改了不知道多少版才勉强稳住，中间真有几次想摔键盘。那版核心提示词被我打磨了很久，长到我都不敢轻易动它，生怕改一个字又把别的地方改坏。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">2024 年下半年，ChatGPT 连续升级了几次。有一天我把当年的老提示词翻出来，跟新模型跑了一遍同样的任务：</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">few-shot 不带了、指令砍掉一大半</span></span><span leaf="">，它做得比当年那版精心调教的还要好。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">前后就隔了</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一年多</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那一刻的感觉很复杂。一方面是爽，终于不用伺候提示词了；另一方面有点空，我熬夜抠出来的那些技巧，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一夜之间变成了多余的动作</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">后来我才知道，这不是我一个人的经历。兄弟们你是不是也有过这种时刻？收藏夹里躺着几十上百条提示词，硬盘里装着一堆 MCP 和 Skills，每次模型一升级，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">心里就咯噔一下</span></span><span leaf="">：这些宝贝，还作数吗？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，我从 2023 年踩坑到现在，整整 3 年，才把这件事想明白。今天这篇文章就是一次</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">完整的资产审计</span></span><span leaf="">：哪些东西被模型升级作废了，哪些越放越值钱，以及一套你能直接</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">截图带走的自检清单</span></span><span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 3. 前言导读 -->
+  <section style="padding:0 10px 32px;">
+    <p style="font-size:14px;color:#9CA3AF;margin:0 0 14px;letter-spacing:1px;">
+      <span leaf="">📌 本文看点</span>
+    </p>
+    <section style="display:flex;justify-content:space-between;">
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">01</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">一年多没维护提示词的家底</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">02</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">贬值区与增值区的分界线</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">03</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">能截图带走的三问清单</span></p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 4. 第一章 -->
+  <section style="margin-top:16px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">01</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">MY INVENTORY</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">先报个家底：我一年多没维护过提示词了</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先交代一下现状，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">有点反直觉</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我生活中有</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">分类收集提示词的习惯</span></span><span leaf="">，生图的、生视频的、写代码的，各放一类，在</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">实战中不断迭代</span></span><span leaf="">。这个习惯我保持到现在。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">但是说出来你可能不信：</span><strong style="color:#DC2626;"><span leaf="">我已经一年多没有更新维护之前一直使用的提示词了。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">不是懒，是真的不需要了。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">现在的我，想要实现什么场景，用</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">最基础的提示词结构</span></span><span leaf="">，把核心内容带上，出来的效果基本上都让人满意。说白了就是一句话：<strong><span leaf="">把需求描述清楚，就够了。</span></strong></span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">更扎心的是我家底的另一面。VibeCoding 火起来那阵，我跟大多数人一样，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">看到有人推荐一个 MCP 就装一个</span></span><span leaf="">，刷到新的 Skills 就先下载，硬盘里囤了一堆 Plugin，觉得多装一个就多一分生产力。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">现在回头看，这些东西大部分已经</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">彻底吃灰</span></span><span leaf="">，有的甚至被我</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">直接删掉了</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">留下来的是什么？恰恰是那些</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">最朴素的东西</span></span><span leaf="">：几个常用场景的提示词，维护到稳定之后，就再没动过。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那种感觉，就像你精心装修了一屋子智能设备，最后发现</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">天天用的还是那盏普通台灯</span></span><span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 5. 第二章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">02</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">THE PATTERN</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">不是我退步了，是规律到了</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那些被删掉的 MCP、Skills、Plugin，是怎么死的？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我复盘过，大部分原因只有一个：</span><strong style="color:#DC2626;"><span leaf="">模型升级，能力被固化进模型了。</span></strong><span leaf=""> 比如以前需要一个 Skill 教 AI 怎么规划任务，现在模型自己就会；以前要靠一个 Plugin 补上某个能力缺口，现在原生就支持。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">次要原因也有几个：有的是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">维护成本太高</span></span><span leaf="">，版本一更新就不兼容，调试它的时间比手写还长；有的是通用型工具，套进自己的工作流就是不匹配；还有的是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">功能重叠</span></span><span leaf="">，装了五个同类的，最后只用一个。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">关键是，这不是我一个人的体验，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">整个行业都在发生同样的事</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">Anthropic 把 Claude Code 的系统提示词</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">删掉了 80% 以上</span></span><span leaf="">，那可是他们打磨了一年多、被数百万开发者每天使用的核心资产，编码评测</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">没有任何可测量的损失</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">腾讯一个团队给自家 harness 框架做减法：</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">根指令删掉 61%，skills 砍掉 40%</span></span><span leaf="">，agent 从 10 个减到 6 个。删完之后他们问自己同一个问题：这一条，到底还有没有用？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">连造模型的、最会写提示词的人都在做减法，你我有什么底气觉得自己囤的技巧能保值？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">淘天团队给过一个判断标准，我原话搬给你：</span>
+    </p>
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「下一代 SOTA 模型发布时，我正在做的这件事，是获益，还是作废？」</span>
+      </p>
+    </section>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">按这个标准，投入可以分成两类。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">一类是</span><span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">贬值区</span></span><span leaf="">：凡是补偿模型能力缺口的投入，精细的提示词技巧、复杂的流程编排、教模型做事的教程。模型每次升级，都在吸收这一层。<strong><span leaf="">你今天熬夜学的技巧，可能就是明天模型的原生功能。</span></strong></span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">另一类是</span><span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">增值区</span></span><span leaf="">：凡是给模型提供它自己造不出来的信息的投入。你的业务上下文、你的项目环境、你独有的判断标准。这些信息只能从你这里来，<strong><span leaf="">不可能从模型的权重里长出来。</span></strong></span>
+    </p>
+    <p style="font-size:15px;margin:0 0 24px;text-align:center;color:#DC2626;font-weight:700;letter-spacing:1px;border-top:1px solid #FEE2E2;border-bottom:1px solid #FEE2E2;padding:14px 10px;">
+      <span leaf="">你囤的每一条技巧，都在赌模型做不到那件事；而模型每次升级，都在让一批赌注到期。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">既然规律躲不开，怎么办？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我的答案不是躺平不学，而是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">换一套判断标准</span></span><span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 6. 第三章 -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">03</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">CHECKLIST</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">一套能截图带走的自检清单</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">空讲道理没用，给你点能直接上手的。我现在判断一个东西值不值得囤，就靠</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">三个问题</span></span><span leaf="">。拿到任何一条技巧、一个工具，先过一遍：</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">第一问：这个信息的源头，在公开语料里吗？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">比如某个提示词模板、某个写作框架，本质上是对公开知识的整理。源头在公开语料里的东西，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">迟早会被模型内化</span></span><span leaf="">，别花大功夫囤。模型下一两代就能自己做到。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">第二问：它藏在你自己的项目或环境里吗？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">比如跑测试必须加的某个参数、部署脚本里的特殊配置。这类信息模型读不到，但它自己能发现。正确做法不是写进提示词，而是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">做成工具、脚本、linter 规则</span></span><span leaf="">，让模型直接调用。写成指令反而会过期。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">第三问：它只存在于你的脑子里吗？</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">比如你的价值排序、你为什么这么设计的理由、你对什么叫够好的判断。<strong><span leaf="">这是模型永远拿不到的信息，也是你唯一不可替代的资产。</span></strong> 我的做法是把这些</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">前置梳理清楚、外化成文档</span></span><span leaf="">，让每次对话都直接受益。</span>
+    </p>
+
+    <section style="border-left:4px solid #D6D3D1;padding:14px 20px;margin-bottom:24px;background:#FAFAFA;border-radius:0 8px 8px 0;">
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">说实话，三问里我最想让你记住的就是这一问。前两问还能从别处找答案，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">这一问只有你自己能回答</span></span><span leaf="">。</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">三问过完，基本就能判断这东西</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">是资产还是负债</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">再补一条我的收藏纪律：</span>
+    </p>
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「24 小时法则：看到对眼的工具先收藏可以，但前提是 24 小时内你有时间去实践一遍。不然大概率吃灰，就没必要收藏了。」</span>
+      </p>
+    </section>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <strong><span leaf="">小技巧：</span></strong><span leaf=""> 我会定期（大概每遇到一次大版本升级）把收藏夹整个过一遍，用三问重新审一遍每一项。审完通常能</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">删掉三分之一</span></span><span leaf="">，删的时候一点都不心疼，因为知道它们不是资产，是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">自我安慰</span></span><span leaf="">。</span>
+    </p>
+  </section>
+
+  <!-- 章节分割线 -->
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <!-- 7. 第四章（结语） -->
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">∞</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">THE END</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">最后说点心里话</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">聊这么多，其实最想说的就一句：</span>
+    </p>
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「人的主观认识这部分，是模型永远拿不到的信息，必须要前置梳理明确好。」</span>
+      </p>
+    </section>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">模型越来越强，技巧层的东西一直在贬值，这个趋势不会停。但你对需求的理解决定你能把 AI 用到什么程度，这件事</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不但不贬值，反而越来越值钱</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我现在的时间是这样花的：一小部分用来追最前沿的领域知识和工具迭代，保持不掉队就行；大部分时间拿来做两件事，把这些新观点、新工具</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">应用到实际工作里</span></span><span leaf="">，或者</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">特意构建一些小项目来体验一番</span></span><span leaf="">。有了积累，就写成文章分享出来，就像现在这篇。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">为什么坚持写？因为</span><strong style="color:#DC2626;"><span leaf="">把道理给别人讲明白，才是真的懂。</span></strong>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">现在轮到你了，今晚就打开你的收藏夹，用三个问题加 24 小时法则过一遍，看看你的资产库里，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">有多少是真正的资产</span></span><span leaf="">。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">也很想听听：这三年里，你手里有什么东西是一直没被作废、越用越顺手的？评论区聊聊，让我们</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">互相抄抄作业</span></span><span leaf="">。</span>
+    </p>
+
+    <section style="border-left:4px solid #D6D3D1;padding:14px 20px;margin-bottom:24px;background:#FAFAFA;border-radius:0 8px 8px 0;">
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">参考：本文行业数据来自 Anthropic、腾讯云开发者社区、淘天技术团队的公开分享。</span>
+      </p>
+    </section>
+  </section>
+
+  <!-- 8. END 分割线 -->
+  <section style="padding:0 10px;">
+    <section style="text-align:center;margin:0 0 32px;">
+      <section style="display:flex;align-items:center;justify-content:center;">
+        <span style="height:2px;width:60px;background:linear-gradient(to right,transparent,#DC2626);margin-right:12px;"><span leaf=""><br></span></span>
+        <span style="font-size:11px;color:#DC2626;letter-spacing:3px;font-weight:700;"><span leaf="">END</span></span>
+        <span style="height:2px;width:60px;background:linear-gradient(to left,transparent,#DC2626);margin-left:12px;"><span leaf=""><br></span></span>
+      </section>
+    </section>
+  </section>
+
+  <!-- 9. 尾部签名区 -->
+  <section style="padding:0 10px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我是 {{作者名}}，用 AI 陪伴成长，用技术创造价值。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">如果这篇文章帮你省下了囤积工具的时间，欢迎</span>
+      <strong style="color:#DC2626;"><span leaf="">点赞、在看、转发</span></strong>
+      <span leaf="">三连。关注「AI启蒙学习」并星标，下一篇文章，聊聊怎么把验证做成 AI 能自己跑的流程，我们下篇见。</span>
+    </p>
+  </section>
+
+</section>
+  </div>
+  <script>
+    function copyToGzh(){
+      var stage = document.getElementById('stage');
+      var btn = document.getElementById('copyBtn');
+      var range = document.createRange();
+      range.selectNodeContents(stage);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch(e){ ok = false; }
+      sel.removeAllRanges();
+      if(ok){
+        btn.textContent = '已复制 ✓ 去公众号粘贴';
+        btn.classList.add('ok');
+      } else {
+        btn.textContent = '请手动 Ctrl/⌘+A 全选复制';
+        btn.classList.add('fail');
+      }
+    }
+  </script>
+</body>
+</html>

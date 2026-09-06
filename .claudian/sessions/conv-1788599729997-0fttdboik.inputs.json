@@ -155,6 +155,20 @@
       "contentDigest": "37c42a292e675643ddfc3cdcf897949897240760c3965d43ea19810c1d878b99",
       "providerUserMessageId": "67604c1a-135c-4f25-a0d8-2f8688ea771c",
       "providerAssistantMessageId": "e6a28596-8903-440a-ab16-520cd86c746e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788663506670-01dg7v8",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1788663506658-0vlmoy2",
+      "timestamp": 1788663506658,
+      "rawDisplayText": "/gzh-design 02-稿件库/01-创作中稿件/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/05-发布包/长文发布包，一键排成公众号文章",
+      "canonicalText": "/gzh-design 02-稿件库/01-创作中稿件/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/05-发布包/长文发布包，一键排成公众号文章",
+      "images": [],
+      "contentDigest": "ee15103e9f239f43e7b27fd040f13b0d5a783ce2cc07d032c21dbb8cbdd1b8cc",
+      "providerUserMessageId": "146e87c3-0ab5-422a-b029-2b8dfae0fbec",
+      "providerAssistantMessageId": "cad41385-01b4-40b7-ad21-882e77028943"
     }
   ]
 }
