@@ -141,6 +141,20 @@
       "contentDigest": "9064c3829ebe7cd45adc5b458e820116c3d5b221ed724544ac4e01f47d9fb1c1",
       "providerUserMessageId": "65eb8858-d4e3-4899-8000-f55d7d18deaa",
       "providerAssistantMessageId": "6d2b9e64-9065-4f95-888f-e14bd53483ab"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788945184848-i8mciv0",
+      "userTurnOrdinal": 11,
+      "state": "accepted",
+      "localMessageId": "msg-1788945184839-a0o1uwh",
+      "timestamp": 1788945184839,
+      "rawDisplayText": "我自己擅长Coding和Agent众测，以及高经济价值出题投入，这个语音项目只是简单投入拿到了试音奖励，结算时在Xpert余额提现，现在更新了是每周结算一次，频率高了很多。",
+      "canonicalText": "我自己擅长Coding和Agent众测，以及高经济价值出题投入，这个语音项目只是简单投入拿到了试音奖励，结算时在Xpert余额提现，现在更新了是每周结算一次，频率高了很多。",
+      "images": [],
+      "contentDigest": "bd4e046a2787631f536d4b1c1018a48048ffaaa5cccd035f738866649fa2517b",
+      "providerUserMessageId": "ecacc47f-e7d2-4b30-9bf6-f93e408ad3ea",
+      "providerAssistantMessageId": "f2c8902a-c677-4d30-8526-5cab8f9a9843"
     }
   ]
 }
