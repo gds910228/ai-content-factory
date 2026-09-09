@@ -113,6 +113,34 @@
       "contentDigest": "5f88331ab512860350b7a3786a178184b1ad502808031a6b5c50a2f780c7e3b7",
       "providerUserMessageId": "65815e0a-c0b4-4ec3-8119-34979af45fc7",
       "providerAssistantMessageId": "0e0b79f2-05ae-4272-b177-1f5d9c5290da"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788942363489-855mrfq",
+      "userTurnOrdinal": 9,
+      "state": "accepted",
+      "localMessageId": "msg-1788942363481-g8ka2c1",
+      "timestamp": 1788942363481,
+      "rawDisplayText": "录音棚是免费提供有专业设备，在家保持安静环境也可。要先在Xpert注册",
+      "canonicalText": "录音棚是免费提供有专业设备，在家保持安静环境也可。要先在Xpert注册",
+      "images": [],
+      "contentDigest": "70e796e2010217ac21d9e38af9bbd1dd22e05748b2067d499f724f1dab49e84a",
+      "providerUserMessageId": "c9882634-9f56-45ae-9fe8-6aafd5aa65f1",
+      "providerAssistantMessageId": "f2d152b2-370f-47e4-9071-58cd6d9f155b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788942574027-1070pqs",
+      "userTurnOrdinal": 10,
+      "state": "accepted",
+      "localMessageId": "msg-1788942574018-d95y2pp",
+      "timestamp": 1788942574018,
+      "rawDisplayText": "说到字节跳动这个背书 没有怀疑，大都是好奇和尝试的心态，毕竟聊聊天就能赚钱，何乐而不为。都是第一次，爱聊天有专业性的朋友会积极主动一些",
+      "canonicalText": "说到字节跳动这个背书 没有怀疑，大都是好奇和尝试的心态，毕竟聊聊天就能赚钱，何乐而不为。都是第一次，爱聊天有专业性的朋友会积极主动一些",
+      "images": [],
+      "contentDigest": "9064c3829ebe7cd45adc5b458e820116c3d5b221ed724544ac4e01f47d9fb1c1",
+      "providerUserMessageId": "65eb8858-d4e3-4899-8000-f55d7d18deaa",
+      "providerAssistantMessageId": "6d2b9e64-9065-4f95-888f-e14bd53483ab"
     }
   ]
 }
