@@ -27,7 +27,8 @@
       "canonicalText": "你是否多模态模型，有办法正常读取这四张图片吗，确保不要报错即可。如果不行我可以粘贴每张图片介绍的文本内容给你",
       "images": [],
       "contentDigest": "dcb596c9aa7f90c894a403e50e9c9805c6f319f6ff0efe73d7ccba9a01bb0617",
-      "providerUserMessageId": "bafeee6d-fd9a-4adf-8d94-511c4e6ff8a9"
+      "providerUserMessageId": "bafeee6d-fd9a-4adf-8d94-511c4e6ff8a9",
+      "providerAssistantMessageId": "9396b81c-f031-48a1-8f38-4509ede52cb1"
     }
   ]
 }
