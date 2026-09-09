@@ -1,0 +1,4 @@
+﻿ocr_1.txt = 情景模拟.png (551 chars)
+ocr_2.txt = 情绪陪伴.png (553 chars)
+ocr_3.txt = 专业咨询.png (551 chars)
+ocr_4.txt = 自然闲聊.png (545 chars)

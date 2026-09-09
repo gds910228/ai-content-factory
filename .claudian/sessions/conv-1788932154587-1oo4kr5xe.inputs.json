@@ -15,6 +15,19 @@
       "contentDigest": "f0ef91b42723a7ac76a65a3d86c6771dfe6a23815f52a7797ac73027d04799f8",
       "providerUserMessageId": "e1823ef1-4ffa-4767-a9ef-0dfe7bf93498",
       "providerAssistantMessageId": "927fc8f1-c61a-410f-b752-a7918819a87c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788933060422-xwa3y4s",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1788933060416-fbdrqv4",
+      "timestamp": 1788933060416,
+      "rawDisplayText": "你是否多模态模型，有办法正常读取这四张图片吗，确保不要报错即可。如果不行我可以粘贴每张图片介绍的文本内容给你",
+      "canonicalText": "你是否多模态模型，有办法正常读取这四张图片吗，确保不要报错即可。如果不行我可以粘贴每张图片介绍的文本内容给你",
+      "images": [],
+      "contentDigest": "dcb596c9aa7f90c894a403e50e9c9805c6f319f6ff0efe73d7ccba9a01bb0617",
+      "providerUserMessageId": "bafeee6d-fd9a-4adf-8d94-511c4e6ff8a9"
     }
   ]
 }
