@@ -6,7 +6,7 @@
   "createdAt": 1785764378498,
   "lastActivityAt": 1785845664160,
   "sessionId": null,
-  "selectedModel": "claude-code/glm-5.3",
+  "selectedModel": "claude-code/glm-5.3-flash",
   "providerState": {
     "previousProviderSessionIds": [
       "6d0867a4-3658-4688-b817-2ee81cc705c2"
