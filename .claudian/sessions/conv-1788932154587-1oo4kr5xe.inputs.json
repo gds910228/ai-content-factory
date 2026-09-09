@@ -197,6 +197,20 @@
       "contentDigest": "9b92ee04f26bdb0df25bea71d7e1142b61aee8da54925b7e9ca3ec242a5f81e5",
       "providerUserMessageId": "bfa1444e-85f9-4128-9e41-fa72a1faa5fd",
       "providerAssistantMessageId": "6bcbf34d-4d2d-4754-828b-e38057094f5c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788958242813-hib63j9",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1788958242803-mdh7hx8",
+      "timestamp": 1788958242803,
+      "rawDisplayText": "/multi-platform-distribution 生成发布包，注意小红书平台对二维码，平台引流限制比较大，处理好文案和建议的发布图片",
+      "canonicalText": "/multi-platform-distribution 生成发布包，注意小红书平台对二维码，平台引流限制比较大，处理好文案和建议的发布图片",
+      "images": [],
+      "contentDigest": "20e71dffc07f22e2a097eda4fc01e7f1ce5c364654598c45dedea6d588468ea6",
+      "providerUserMessageId": "dacbb9aa-8698-4d5d-bad5-f8691ae740c7",
+      "providerAssistantMessageId": "571baafa-a374-482d-bd98-fce26db678b2"
     }
   ]
 }
