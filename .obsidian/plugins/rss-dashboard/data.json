@@ -1156,7 +1156,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1788930093806,
+      "lastUpdated": 1788933694442,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1170,9 +1170,9 @@
       "siteUrl": "https://aihot.news/",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 50,
-        "mergedItemCountBeforeRetention": 75,
+        "mergedItemCountBeforeRetention": 56,
         "retainedItemCount": 50,
-        "retentionRemovedCount": 25,
+        "retentionRemovedCount": 6,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
       },
@@ -1875,7 +1875,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1788930093812,
+      "lastUpdated": 1788933694386,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1926,7 +1926,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1788930093812,
+  "lastRefreshTimestamp": 1788933694443,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
