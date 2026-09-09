@@ -155,6 +155,20 @@
       "contentDigest": "bd4e046a2787631f536d4b1c1018a48048ffaaa5cccd035f738866649fa2517b",
       "providerUserMessageId": "ecacc47f-e7d2-4b30-9bf6-f93e408ad3ea",
       "providerAssistantMessageId": "f2c8902a-c677-4d30-8526-5cab8f9a9843"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788948952849-4uf8k4a",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1788948952839-a2ubble",
+      "timestamp": 1788948952839,
+      "rawDisplayText": "轻投入，平台改为周结",
+      "canonicalText": "轻投入，平台改为周结",
+      "images": [],
+      "contentDigest": "84f848d88b80a6c4d2452f934f10835f2714725ac7b15dd31e16cd567bb91f4b",
+      "providerUserMessageId": "af2c5ed8-9d32-437a-93bf-e10495691ab3",
+      "providerAssistantMessageId": "cb6839af-5643-4ecd-9e48-c6f65e7d4ddb"
     }
   ]
 }
