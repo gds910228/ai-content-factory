@@ -169,6 +169,20 @@
       "contentDigest": "84f848d88b80a6c4d2452f934f10835f2714725ac7b15dd31e16cd567bb91f4b",
       "providerUserMessageId": "af2c5ed8-9d32-437a-93bf-e10495691ab3",
       "providerAssistantMessageId": "cb6839af-5643-4ecd-9e48-c6f65e7d4ddb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788955614863-1933dww",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1788955614854-0ez6ix2",
+      "timestamp": 1788955614854,
+      "rawDisplayText": "这些都是字节在垂直类方向的持续投入，我理解都是为了优化大模型在垂直类领域能力，以提高行业竞争力。推荐项目如果身边有贴合对应领域的朋友，会推，应该不存在不推的吧（你觉得什么情况下会有边界呢）。3.那位5500的朋友差不多一个月吧。",
+      "canonicalText": "这些都是字节在垂直类方向的持续投入，我理解都是为了优化大模型在垂直类领域能力，以提高行业竞争力。推荐项目如果身边有贴合对应领域的朋友，会推，应该不存在不推的吧（你觉得什么情况下会有边界呢）。3.那位5500的朋友差不多一个月吧。",
+      "images": [],
+      "contentDigest": "56505a7eadca1572f50b1e830a6c0c634b22d36f1c4b6fc1d892c51c8b14e6db",
+      "providerUserMessageId": "2335faa8-d635-4b08-93f9-cd4bffba1ce3",
+      "providerAssistantMessageId": "4959c979-823c-43fd-90f0-2a8b517ac13d"
     }
   ]
 }
