@@ -1,6 +1,0 @@
-﻿ocr_1.txt = 观点交流.png (547 chars)
-ocr_2.txt = 教学辅导.png (545 chars)
-ocr_3.txt = 情景模拟.png (551 chars)
-ocr_4.txt = 情绪陪伴.png (553 chars)
-ocr_5.txt = 专业咨询.png (551 chars)
-ocr_6.txt = 自然闲聊.png (545 chars)
