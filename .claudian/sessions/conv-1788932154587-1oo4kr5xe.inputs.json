@@ -29,6 +29,19 @@
       "contentDigest": "dcb596c9aa7f90c894a403e50e9c9805c6f319f6ff0efe73d7ccba9a01bb0617",
       "providerUserMessageId": "bafeee6d-fd9a-4adf-8d94-511c4e6ff8a9",
       "providerAssistantMessageId": "9396b81c-f031-48a1-8f38-4509ede52cb1"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788934160399-m9guxr8",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1788934160393-4e6e2cf",
+      "timestamp": 1788934160393,
+      "rawDisplayText": "增加了语音录制两张图片（教学辅导和观点交流），我发现图片的文本内容只突出了重点内容细节，我还是整理了文本内容请你重新查阅评估：02-稿件库/01-创作中稿件/AI副业实测01-AI语音对话录制-20260909/assets/发文素材/项目-AI语音对话录制/图文文本内容.txt",
+      "canonicalText": "增加了语音录制两张图片（教学辅导和观点交流），我发现图片的文本内容只突出了重点内容细节，我还是整理了文本内容请你重新查阅评估：02-稿件库/01-创作中稿件/AI副业实测01-AI语音对话录制-20260909/assets/发文素材/项目-AI语音对话录制/图文文本内容.txt",
+      "images": [],
+      "contentDigest": "472cc1ecd6a71d5b238a5365e930d66d8e1f1050b618e98d074425c73020384f",
+      "providerUserMessageId": "cb5ad81a-4276-47bb-97d4-3cf4792080c8"
     }
   ]
 }
