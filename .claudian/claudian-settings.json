@@ -50,7 +50,7 @@
       "environmentVariables": "",
       "environmentHash": "",
       "installationMethodsByHost": {
-        "device:d5c94893-05c0-4c2d-95de-2fcbf519fbb3": "native-windows"
+        "device-e6f2b1f648d80d2b6d8163ed7603fa4a62750e50fc6fced69168209b04db14f2": "native-windows"
       },
       "wslDistroOverridesByHost": {},
       "visibleModels": null,
@@ -121,11 +121,14 @@
   "expandFileEditsByDefault": false,
   "chatViewPlacement": "right-sidebar",
   "enableDualPane": true,
-  "enableFilePane": true,
   "dualPaneSide": "right",
+  "restoreTabsOnStartup": true,
+  "collabEnabled": false,
+  "collabProjectsFolder": "workspace",
+  "collabGitPath": "",
   "sessionManagerOrganization": "list",
   "sessionManagerSort": "last-updated",
-  "pinnedLinkedNotePaths": [],
+  "pinnedLinkedContentPaths": [],
   "hiddenProviderCommands": {},
   "maxTabs": 3,
   "tabBarPosition": "input"
