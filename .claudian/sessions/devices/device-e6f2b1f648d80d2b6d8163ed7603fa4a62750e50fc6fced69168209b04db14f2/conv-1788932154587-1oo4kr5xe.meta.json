@@ -4,7 +4,7 @@
   "title": "设计Xpert专家平台副业推广系列并生成AI语音对话录制首次推广初稿并关联往期文章",
   "titleGenerationStatus": "success",
   "createdAt": 1788932154590,
-  "lastActivityAt": 1788934160393,
+  "lastActivityAt": 1788934846866,
   "sessionId": "5d6e3ece-7776-4e86-9076-dce0bc4a86f4",
   "selectedModel": "claude-code/glm-5.3-flash",
   "providerState": {
@@ -12,12 +12,12 @@
   },
   "usage": {
     "model": "glm-5.3-flash",
-    "inputTokens": 1880,
+    "inputTokens": 846,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 79488,
+    "cacheReadInputTokens": 95104,
     "contextWindow": 200000,
-    "contextTokens": 81368,
-    "percentage": 41,
+    "contextTokens": 95950,
+    "percentage": 48,
     "contextWindowIsAuthoritative": true
   }
 }

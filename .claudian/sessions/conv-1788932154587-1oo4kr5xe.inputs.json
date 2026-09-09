@@ -41,7 +41,22 @@
       "canonicalText": "增加了语音录制两张图片（教学辅导和观点交流），我发现图片的文本内容只突出了重点内容细节，我还是整理了文本内容请你重新查阅评估：02-稿件库/01-创作中稿件/AI副业实测01-AI语音对话录制-20260909/assets/发文素材/项目-AI语音对话录制/图文文本内容.txt",
       "images": [],
       "contentDigest": "472cc1ecd6a71d5b238a5365e930d66d8e1f1050b618e98d074425c73020384f",
-      "providerUserMessageId": "cb5ad81a-4276-47bb-97d4-3cf4792080c8"
+      "providerUserMessageId": "cb5ad81a-4276-47bb-97d4-3cf4792080c8",
+      "providerAssistantMessageId": "bf2f2c3e-7c9d-4b92-9a3b-cd80320f5b08"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788934767950-sowaxz8",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1788934767944-yxeqi5r",
+      "timestamp": 1788934767944,
+      "rawDisplayText": "/deep-interview 开始访谈吧",
+      "canonicalText": "/deep-interview 开始访谈吧",
+      "images": [],
+      "contentDigest": "0e32a50f102cfa9b0b093fddebd8cbe8c86bb11df0d3429c2c8fda68bf30d31c",
+      "providerUserMessageId": "84158798-e240-4d4e-82c9-b480b7decc70",
+      "providerAssistantMessageId": "8f148ed7-4316-44ac-8d9f-cd0f119f2926"
     }
   ]
 }
