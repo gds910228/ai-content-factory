@@ -211,6 +211,20 @@
       "contentDigest": "20e71dffc07f22e2a097eda4fc01e7f1ce5c364654598c45dedea6d588468ea6",
       "providerUserMessageId": "dacbb9aa-8698-4d5d-bad5-f8691ae740c7",
       "providerAssistantMessageId": "571baafa-a374-482d-bd98-fce26db678b2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788958676185-e1krnrf",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1788958676173-a6p8afm",
+      "timestamp": 1788958676173,
+      "rawDisplayText": "/gzh-design 给02-稿件库/01-创作中稿件/AI副业实测01-AI语音对话录制-20260909/05-发布包/长文发布包  一键排成公众号文章",
+      "canonicalText": "/gzh-design 给02-稿件库/01-创作中稿件/AI副业实测01-AI语音对话录制-20260909/05-发布包/长文发布包  一键排成公众号文章",
+      "images": [],
+      "contentDigest": "52be3c7827ce2ea0118405b5bd2e478cd1e00a8cd842fba9540bcebed709cf3b",
+      "providerUserMessageId": "a1f7a0f3-8e0e-4ea5-91c0-6374f166c08d",
+      "providerAssistantMessageId": "8e372b61-cbbc-4bc8-93fc-076ec3ff1431"
     }
   ]
 }
