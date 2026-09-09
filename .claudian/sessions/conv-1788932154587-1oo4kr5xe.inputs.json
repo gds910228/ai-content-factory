@@ -195,7 +195,8 @@
       "canonicalText": "同意 /style-write   生成初稿",
       "images": [],
       "contentDigest": "9b92ee04f26bdb0df25bea71d7e1142b61aee8da54925b7e9ca3ec242a5f81e5",
-      "providerUserMessageId": "bfa1444e-85f9-4128-9e41-fa72a1faa5fd"
+      "providerUserMessageId": "bfa1444e-85f9-4128-9e41-fa72a1faa5fd",
+      "providerAssistantMessageId": "6bcbf34d-4d2d-4754-828b-e38057094f5c"
     }
   ]
 }
