@@ -225,6 +225,20 @@
       "contentDigest": "52be3c7827ce2ea0118405b5bd2e478cd1e00a8cd842fba9540bcebed709cf3b",
       "providerUserMessageId": "a1f7a0f3-8e0e-4ea5-91c0-6374f166c08d",
       "providerAssistantMessageId": "8e372b61-cbbc-4bc8-93fc-076ec3ff1431"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789528878639-al9yxv3",
+      "userTurnOrdinal": 17,
+      "state": "accepted",
+      "localMessageId": "msg-1789528878613-aom98dy",
+      "timestamp": 1789528878613,
+      "rawDisplayText": "Xpert 专家平台正在招募各领域专家，先人一步参与头部 AI 能力建设，时间自由，还能副业赚钱。\n链接：https://www.corexpertdata.com?r_sk=Er7zH-edcqeEOsch&r_sc=1&r_fl=2，   Xpert平台邀新活动出来，帮我自然插入更新发布包以及长文发布包的排版",
+      "canonicalText": "Xpert 专家平台正在招募各领域专家，先人一步参与头部 AI 能力建设，时间自由，还能副业赚钱。\n链接：https://www.corexpertdata.com?r_sk=Er7zH-edcqeEOsch&r_sc=1&r_fl=2，   Xpert平台邀新活动出来，帮我自然插入更新发布包以及长文发布包的排版",
+      "images": [],
+      "contentDigest": "1b596593853daae7b729ece6fbc9158456b47108e83bc795dccb1d233b26bb6e",
+      "providerUserMessageId": "ca5b7c18-aae1-41b4-85d9-51a24c7bb913",
+      "providerAssistantMessageId": "03a8a8a2-982b-4123-b0de-6edda7552e04"
     }
   ]
 }
