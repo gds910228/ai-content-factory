@@ -1,0 +1,41 @@
+{
+  "jobs": 4,
+  "tasks": [
+    {
+      "id": "card-01-cover-5pits",
+      "promptFiles": ["prompts/01-infographic-cover-5pits.md"],
+      "image": "01-infographic-cover-5pits.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-02-pit-overview",
+      "promptFiles": ["prompts/02-infographic-pit-overview.md"],
+      "image": "02-infographic-pit-overview.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-03-quote-line",
+      "promptFiles": ["prompts/03-infographic-quote-line.md"],
+      "image": "03-infographic-quote-line.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-04-ending-fit",
+      "promptFiles": ["prompts/04-comparison-ending-fit.md"],
+      "image": "04-comparison-ending-fit.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    }
+  ]
+}

@@ -34,6 +34,19 @@
       "contentDigest": "b0ec1777e4c1120ddd45a3fd9b11d87708a64b0800a187ae825dbd6bb3bb6753",
       "providerUserMessageId": "f91f65cd-4ce9-4f20-8bf4-5685b3a0812f",
       "providerAssistantMessageId": "6eb52ab0-6d94-4bdc-bb9a-e94427481834"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789966547046-g9yu13c",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1789966547042-08vwmu2",
+      "timestamp": 1789966547042,
+      "rawDisplayText": "/baoyu-article-illustrator 给文章配图",
+      "canonicalText": "/baoyu-article-illustrator 给文章配图",
+      "images": [],
+      "contentDigest": "8ae8f1c6675615fc992d7169740499361df5aa7eb1ad5ed4b9414aa1694dedf5",
+      "providerUserMessageId": "b9e7fea6-dbea-4afb-bb57-d2c246b3093a"
     }
   ]
 }

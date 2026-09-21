@@ -6,6 +6,29 @@
       "folder": "RSS",
       "items": [
         {
+          "title": "通义千问发布 Qwen-Image-2.1：7B 单检查点同时支持图像生成与编辑",
+          "link": "https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj",
+          "description": "<p>通义千问发布 Qwen-Image-2.1，一个 7B 参数的原生图像生成与编辑模型，生成和编辑共用单一检查点，最多支持 10 张参考图。模型自带提示词增强 LLM，已集成 diffusers 和 ComfyUI，并在 Hugging Face Spaces 提供免安装的浏览器在线 demo：https://huggingface.co/spaces/hugging-apps/qwen-image-2-1</p> <p>🔗 <a href=\"https://x.com/Alibaba_Qwen/status/2101866671900401913\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj\">https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj</a></p>",
+          "content": "<p>通义千问发布 Qwen-Image-2.1，一个 7B 参数的原生图像生成与编辑模型，生成和编辑共用单一检查点，最多支持 10 张参考图。模型自带提示词增强 LLM，已集成 diffusers 和 ComfyUI，并在 Hugging Face Spaces 提供免安装的浏览器在线 demo：https://huggingface.co/spaces/hugging-apps/qwen-image-2-1</p> <p>🔗 <a href=\"https://x.com/Alibaba_Qwen/status/2101866671900401913\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj\">https://aihot.news/items/cmuao05at0q8uro5tpc85e2kj</a></p>",
+          "pubDate": "Mon, 21 Sep 2026 02:50:40 GMT",
+          "guid": "https://aihot.virxact.com/cmuao05at0q8uro5tpc85e2kj",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT — 精选",
+          "feedUrl": "https://aihot.virxact.com/feed.xml",
+          "coverImage": "",
+          "summary": "通义千问发布 Qwen-Image-2.1，一个 7B 参数的原生图像生成与编辑模型，生成和编辑共用单一检查点，最多支持 10 张参考图。模型自带提示词增强 LLM，已集成 diffusers 和 ComfyUI，并在 Hugging Face Spaces 提供免安装的浏览器在线 demo：https://huggingface.co/spaces/hugging-apps/qwen-image-2-1 🔗 阅读原文 via AIH...",
+          "author": "noreply@aihot.news (X：通义千问 / Qwen (@Alibaba_Qwen))",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
+        {
           "title": "数字生命卡兹克访谈汉化组：AI 时代字幕组与漫画组的真实处境",
           "link": "https://aihot.news/items/cmualyqxc0nztro5tbldva2bh",
           "description": "<p>作者访谈多位字幕组与漫画汉化组成员，发现他们并不抵触AI。Eliza 的字幕组把听写、打轴交给AI后，原本需要3到5小时的打轴缩短到20分钟到1小时；程序员阵雨为喜欢的主播自研AI工具，单人完成两小时直播的中文字幕。漫画汉化组则因嵌字质量等原因仍坚持人工制作，成员看重的是同好社群与爱好本身。</p> <p>🔗 <a href=\"https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686509&idx=1&sn=1b5ee8ab30c5825eaff76083e1f8dbcc\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/cmualyqxc0nztro5tbldva2bh\">https://aihot.news/items/cmualyqxc0nztro5tbldva2bh</a></p>",
@@ -1131,32 +1154,9 @@
           "image": "",
           "category": "",
           "episodeType": ""
-        },
-        {
-          "title": "OpenAI 推出 ChatGPT Ads 新功能：Sponsored Agents 测试并集成 HubSpot 与 Shopify",
-          "link": "https://aihot.news/items/cmu4574wb09w5ro4w7cdwfm7l",
-          "description": "<p>OpenAI 为 ChatGPT Ads 推出多项 AI 驱动的新体验。Sponsored Agents 允许用户在点击广告后与明确标识的商业赞助智能体对话，目前在美国部分广告主中测试。</p> <p>🔗 <a href=\"https://openai.com/index/reimagining-advertising-with-ai\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/cmu4574wb09w5ro4w7cdwfm7l\">https://aihot.news/items/cmu4574wb09w5ro4w7cdwfm7l</a></p>",
-          "content": "<p>OpenAI 为 ChatGPT Ads 推出多项 AI 驱动的新体验。Sponsored Agents 允许用户在点击广告后与明确标识的商业赞助智能体对话，目前在美国部分广告主中测试。</p> <p>🔗 <a href=\"https://openai.com/index/reimagining-advertising-with-ai\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/cmu4574wb09w5ro4w7cdwfm7l\">https://aihot.news/items/cmu4574wb09w5ro4w7cdwfm7l</a></p>",
-          "pubDate": "Wed, 16 Sep 2026 13:00:00 GMT",
-          "guid": "https://aihot.virxact.com/cmu4574wb09w5ro4w7cdwfm7l",
-          "read": false,
-          "starred": false,
-          "tags": [],
-          "feedTitle": "AI HOT — 精选",
-          "feedUrl": "https://aihot.virxact.com/feed.xml",
-          "coverImage": "",
-          "summary": "OpenAI 为 ChatGPT Ads 推出多项 AI 驱动的新体验。Sponsored Agents 允许用户在点击广告后与明确标识的商业赞助智能体对话，目前在美国部分广告主中测试。 🔗 阅读原文 via AIHOT · https://aihot.news/items/cmu4574wb09w5ro4w7cdwfm7l",
-          "author": "noreply@aihot.news (OpenAI：官网动态（RSS · 排除企业/客户案例）)",
-          "saved": false,
-          "mediaType": "article",
-          "duration": "",
-          "explicit": false,
-          "image": "",
-          "category": "",
-          "episodeType": ""
         }
       ],
-      "lastUpdated": 1789960382000,
+      "lastUpdated": 1789967583291,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1170,9 +1170,9 @@
       "siteUrl": "https://aihot.news/",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 50,
-        "mergedItemCountBeforeRetention": 95,
+        "mergedItemCountBeforeRetention": 51,
         "retainedItemCount": 50,
-        "retentionRemovedCount": 45,
+        "retentionRemovedCount": 1,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
       },
@@ -1875,7 +1875,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1789960382072,
+      "lastUpdated": 1789967583309,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1926,7 +1926,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1789960382072,
+  "lastRefreshTimestamp": 1789967583309,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
