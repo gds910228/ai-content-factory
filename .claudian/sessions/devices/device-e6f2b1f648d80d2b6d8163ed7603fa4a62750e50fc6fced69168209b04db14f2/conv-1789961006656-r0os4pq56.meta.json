@@ -4,7 +4,7 @@
   "title": "梳理Xpert稿件素材评估小红书发文活动可行性",
   "titleGenerationStatus": "success",
   "createdAt": 1789961006659,
-  "lastActivityAt": 1789966547042,
+  "lastActivityAt": 1789969794094,
   "sessionId": "7f776772-aadf-4185-84cb-a902fb12767c",
   "selectedModel": "claude-code/glm-5.3-flash",
   "providerState": {
@@ -13,12 +13,12 @@
   "linkedContentPath": "02-稿件库/02-已发布稿件归档/Xpert专家平台副业-20260810/assets/Xpert｜小红书创作活动指南（第二期）.md",
   "usage": {
     "model": "glm-5.3-flash",
-    "inputTokens": 824,
+    "inputTokens": 304,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 105920,
+    "cacheReadInputTokens": 177088,
     "contextWindow": 200000,
-    "contextTokens": 106744,
-    "percentage": 53,
+    "contextTokens": 177392,
+    "percentage": 89,
     "contextWindowIsAuthoritative": true
   }
 }
