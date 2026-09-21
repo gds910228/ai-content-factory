@@ -1,0 +1,23 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "card-01-cover-5pits-v4",
+      "promptFiles": ["prompts/01-infographic-cover-5pits-v4.md"],
+      "image": "01-infographic-cover-5pits-v4.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-04-ending-fit-v4",
+      "promptFiles": ["prompts/04-comparison-ending-fit-v3.md"],
+      "image": "04-comparison-ending-fit-v4.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    }
+  ]
+}
