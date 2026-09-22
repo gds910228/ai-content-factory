@@ -1,0 +1,35 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-02-v2",
+      "promptFiles": [
+        "prompts\\02-infographic-5-signals-checklist-v2.md"
+      ],
+      "image": "02-infographic-5-signals-checklist-v2.png",
+      "provider": "modelscope",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-03-v2",
+      "promptFiles": [
+        "prompts\\03-comparison-3s-vs-30min-v2.md"
+      ],
+      "image": "03-comparison-3s-vs-30min-v2.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-04-v2",
+      "promptFiles": [
+        "prompts\\04-flowchart-3-defense-lines-v2.md"
+      ],
+      "image": "04-flowchart-3-defense-lines-v2.png",
+      "provider": "modelscope",
+      "ar": "3:2",
+      "quality": "2k"
+    }
+  ],
+  "jobs": 3
+}
