@@ -1,0 +1,55 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\prompts\\01-infographic-5-signals-selftest.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\01-infographic-5-signals-selftest.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\prompts\\02-comparison-3s-vs-30min.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\02-comparison-3s-vs-30min.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\prompts\\03-infographic-new-accident.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\03-infographic-new-accident.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-04",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\prompts\\04-flowchart-three-defenses.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\04-flowchart-three-defenses.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-05",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\prompts\\05-framework-dual-roles.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\用了三个月AI，我反而看不懂自己的项目了-20260922\\05-发布包\\配图素材\\05-framework-dual-roles.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ],
+  "jobs": 4
+}
