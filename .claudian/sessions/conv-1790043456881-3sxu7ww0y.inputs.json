@@ -48,6 +48,20 @@
       "contentDigest": "cb9aa0db4e355fdc35a2f51298e8ed457b7f177efd6a077f6b7518dcd2afe645",
       "providerUserMessageId": "2041d63c-d54f-4c0d-94d8-3e5b94521e01",
       "providerAssistantMessageId": "fd5c7769-d234-48ec-86c8-01687d1851b6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790050465211-bbzhspp",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1790050465205-wvamt0c",
+      "timestamp": 1790050465205,
+      "rawDisplayText": "4",
+      "canonicalText": "4",
+      "images": [],
+      "contentDigest": "f9a59c31b71949a427133fdad4266898b725168f0f9d7b6580fc5aa14cb104de",
+      "providerUserMessageId": "fa6efb2f-1bf0-4ab9-aec4-64f37bf54750",
+      "providerAssistantMessageId": "9277cdf0-f65a-4d2b-9eb6-d6fb9dcd0664"
     }
   ]
 }
