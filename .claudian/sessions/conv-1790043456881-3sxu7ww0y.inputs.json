@@ -74,7 +74,8 @@
       "canonicalText": "/style-write 生成初稿",
       "images": [],
       "contentDigest": "7644ef585e6aa3bde4c1706742161db3e88bd7029040033809b0ccecf4b21603",
-      "providerUserMessageId": "44e15b09-4d8c-4719-b8e5-7abeac30f943"
+      "providerUserMessageId": "44e15b09-4d8c-4719-b8e5-7abeac30f943",
+      "providerAssistantMessageId": "7d235ed6-a5ab-46c0-8b49-bb35e55e0564"
     }
   ]
 }
