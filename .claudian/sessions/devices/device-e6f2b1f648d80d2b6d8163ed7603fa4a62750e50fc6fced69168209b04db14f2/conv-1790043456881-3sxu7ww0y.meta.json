@@ -1,0 +1,24 @@
+{
+  "id": "conv-1790043456881-3sxu7ww0y",
+  "providerId": "claude",
+  "title": "使用/topic-filter工具筛选题",
+  "titleGenerationStatus": "success",
+  "createdAt": 1790043456882,
+  "lastActivityAt": 1790044202185,
+  "sessionId": "7803cc51-ebe0-443a-bf10-226a71a5cb42",
+  "selectedModel": "claude-code/glm-5.3",
+  "providerState": {
+    "providerSessionId": "7803cc51-ebe0-443a-bf10-226a71a5cb42"
+  },
+  "linkedContentPath": "05-数据复盘库/周度总结-2026-09-22.md",
+  "usage": {
+    "model": "glm-5.3",
+    "inputTokens": 8684,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 54656,
+    "contextWindow": 200000,
+    "contextTokens": 63340,
+    "percentage": 32,
+    "contextWindowIsAuthoritative": true
+  }
+}

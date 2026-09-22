@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1790043456881-3sxu7ww0y",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790043456919-1jmetzm",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1790043456879-ygcawkd",
+      "timestamp": 1790043456879,
+      "rawDisplayText": "/topic-filter 帮我筛选题",
+      "canonicalText": "/topic-filter 帮我筛选题",
+      "context": {
+        "linkedContent": {
+          "path": "05-数据复盘库/周度总结-2026-09-22.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "658415cf5b8e978d3df60b07a8d885d5c2ecf4879351434c98f57bf937b9a662",
+      "providerUserMessageId": "7a9d4818-8625-4233-9277-ea112b607360",
+      "providerAssistantMessageId": "644a1084-7504-439d-aa5d-e69a09eb523d"
+    }
+  ]
+}
