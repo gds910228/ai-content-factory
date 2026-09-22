@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1790055906462-i6m63g4vx",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790055906501-kp5pbu2",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1790055906458-3zpt465",
+      "timestamp": 1790055906458,
+      "rawDisplayText": "/baoyu-article-illustrator   给整篇文章配图：分析文章结构、决定在哪些位置插图、生成每张图的提示词、调起画图引擎、保存到目录下，不需要把图嵌回文章。\nModelScope 的 MODELSCOPE_API_KEY已配置在系统用户变量中。",
+      "canonicalText": "/baoyu-article-illustrator   给整篇文章配图：分析文章结构、决定在哪些位置插图、生成每张图的提示词、调起画图引擎、保存到目录下，不需要把图嵌回文章。\nModelScope 的 MODELSCOPE_API_KEY已配置在系统用户变量中。",
+      "context": {
+        "linkedContent": {
+          "path": "02-稿件库/01-创作中稿件/用了三个月AI，我反而看不懂自己的项目了-20260922/05-发布包/长文发布包.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "5ea08c7b98fac8fa5ab82c505bb05484fb4bbdca02b1652cd24ca8a5732821d5",
+      "providerUserMessageId": "b5f80183-ed4c-4b13-9e58-25f55862dae8"
+    }
+  ]
+}
