@@ -6,7 +6,7 @@
   "createdAt": 1788930706310,
   "lastActivityAt": 1788930739019,
   "sessionId": null,
-  "selectedModel": "claude-code/glm-5.3-flash",
+  "selectedModel": "claude-code/glm-5.3",
   "usage": {
     "model": "claude-code/glm-5.3-flash",
     "inputTokens": 18427,
