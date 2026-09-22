@@ -34,6 +34,20 @@
       "contentDigest": "abb3024bea945d2224eb6026cfe905696c3c98efe29411a07c9a436f2cbf1dcc",
       "providerUserMessageId": "253baedd-3256-430b-a88f-4c8c8694fbbe",
       "providerAssistantMessageId": "dafa975e-6ac0-4f0a-bf91-f296e80f9e1e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790047277690-nsiv4zr",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1790047277685-4u01gzp",
+      "timestamp": 1790047277685,
+      "rawDisplayText": "你帮我编写",
+      "canonicalText": "你帮我编写",
+      "images": [],
+      "contentDigest": "cb9aa0db4e355fdc35a2f51298e8ed457b7f177efd6a077f6b7518dcd2afe645",
+      "providerUserMessageId": "2041d63c-d54f-4c0d-94d8-3e5b94521e01",
+      "providerAssistantMessageId": "fd5c7769-d234-48ec-86c8-01687d1851b6"
     }
   ]
 }
