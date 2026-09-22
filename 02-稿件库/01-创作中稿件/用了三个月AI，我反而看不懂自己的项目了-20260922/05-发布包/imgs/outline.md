@@ -45,6 +45,20 @@ insert_back: false
 ## Illustration 4
 **Position**: 第四节防线三之后【配图2】占位处
 **Purpose**: 全文方法论核心资产；三道防线流程图（文章已规划，900×600 横版）
-**Visual Content**: 三阶段流程：事前（AI 出 2-3 方案 → 我选 + 一行决策）→ 事中（AI 讲一遍 → 我复述 ✓ 门禁）→ 事后（三行沉淀 → 喂回新会话）；底部结论「+10 分钟，把判断权拿回来」
-**Filename**: 04-flowchart-3-defense-lines.png
+**Visual Content**: 三阶段流程：事前（AI 出 2-3 方案 → 我选 + 一行决策）→ 事中（AI 讲一遍 → 我复述 ✓ 门禁）→ 事后（三行沉淀 → 回填新会话）；底部结论「+10 分钟，把判断权拿回来」
+**Filename**: 04-flowchart-3-defense-lines-v4.png
 **Aspect**: 3:2
+
+---
+
+## 定稿记录（视觉质检后）
+
+| 序号 | 定稿文件 | 质检结论 | 弃用候选（保留备查） |
+|---|---|---|---|
+| 00 | 00-scene-cover-agree-button.png | ✅ 一次通过：标题/副标/按钮/手指全部正确 | — |
+| 01 | 01-scene-mindless-approve.png | ✅ 一次通过：「同意」「今天第 41 次 · 同意」正确 | — |
+| 02 | 02-infographic-5-signals-checklist-v3.png | ✅ 恰好 5 行、全空复选框、「审批按钮」正确、无版本角标 | v1（第4/5行重复缺字+误勾选）；v2（右上角泄漏 v2 角标） |
+| 03 | 03-comparison-3s-vs-30min-v3.png | ✅ 左右对称标签「点同意/看懂」、无杂字、红条正确 | v1（「E6EDFO」杂字泄漏）；v2（右侧缺「看懂」标签） |
+| 04 | 04-flowchart-3-defense-lines-v4.png | ✅ 全部文字正确 + 底部结论条 + 回环虚线箭头齐全（全图+局部放大双重核验） | v1（两处小字乱码）；v2（第三卡正文与底部条乱码）；v3（底部结论条缺失） |
+
+生成引擎：ModelScope `Tongyi-MAI/Z-Image-Turbo`，经 baoyu-image-gen 批量接口，共 12 次生成（5 首轮 + 3 v2 + 3 v3 + 1 v4）。
