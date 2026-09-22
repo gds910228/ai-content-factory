@@ -62,6 +62,19 @@
       "contentDigest": "f9a59c31b71949a427133fdad4266898b725168f0f9d7b6580fc5aa14cb104de",
       "providerUserMessageId": "fa6efb2f-1bf0-4ab9-aec4-64f37bf54750",
       "providerAssistantMessageId": "9277cdf0-f65a-4d2b-9eb6-d6fb9dcd0664"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790051249843-hqmjomt",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1790051249834-alfyprx",
+      "timestamp": 1790051249834,
+      "rawDisplayText": "/style-write 生成初稿",
+      "canonicalText": "/style-write 生成初稿",
+      "images": [],
+      "contentDigest": "7644ef585e6aa3bde4c1706742161db3e88bd7029040033809b0ccecf4b21603",
+      "providerUserMessageId": "44e15b09-4d8c-4719-b8e5-7abeac30f943"
     }
   ]
 }
