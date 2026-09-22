@@ -15,6 +15,19 @@
       "contentDigest": "2001e129889ae7e5593e04061d1f47e5c32823137e4258d46d30f0ff2c464176",
       "providerUserMessageId": "88f450c6-be72-48d8-be14-c55bca26480a",
       "providerAssistantMessageId": "d1bc715f-1789-4d07-ac1c-b312cf213ae3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790042837095-5iouf5m",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1790042837088-64uh0uq",
+      "timestamp": 1790042837088,
+      "rawDisplayText": "/topic-filter 帮我筛选题",
+      "canonicalText": "/topic-filter 帮我筛选题",
+      "images": [],
+      "contentDigest": "658415cf5b8e978d3df60b07a8d885d5c2ecf4879351434c98f57bf937b9a662",
+      "providerUserMessageId": "62b36aa8-1ec5-4bdb-b2c9-5a7e13440a7e"
     }
   ]
 }

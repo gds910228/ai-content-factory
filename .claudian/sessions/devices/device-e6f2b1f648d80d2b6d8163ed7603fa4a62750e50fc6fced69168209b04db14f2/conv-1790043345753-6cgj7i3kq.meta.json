@@ -1,0 +1,11 @@
+{
+  "id": "conv-1790043345753-6cgj7i3kq",
+  "providerId": "claude",
+  "title": "使用话题过滤器筛选题目",
+  "titleGenerationStatus": "success",
+  "createdAt": 1790043345758,
+  "lastActivityAt": 1790043346141,
+  "sessionId": null,
+  "selectedModel": "claude-code/glm-5.3",
+  "linkedContentPath": "05-数据复盘库/周度总结-2026-09-22.md"
+}

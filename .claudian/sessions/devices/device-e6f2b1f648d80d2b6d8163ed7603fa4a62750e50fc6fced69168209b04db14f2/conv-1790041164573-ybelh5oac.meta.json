@@ -4,20 +4,17 @@
   "title": "生成全库周度知识库总结报告 完成多维度内容梳理与分析",
   "titleGenerationStatus": "success",
   "createdAt": 1790041164578,
-  "lastActivityAt": 1790042103546,
-  "sessionId": "7089a327-cdca-449e-aa03-57eff92439f0",
+  "lastActivityAt": 1790043244599,
+  "sessionId": null,
   "selectedModel": "claude-code/glm-5.3",
-  "providerState": {
-    "providerSessionId": "7089a327-cdca-449e-aa03-57eff92439f0"
-  },
   "usage": {
     "model": "glm-5.3",
-    "inputTokens": 6848,
+    "inputTokens": 0,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 75776,
+    "cacheReadInputTokens": 0,
     "contextWindow": 200000,
-    "contextTokens": 82624,
-    "percentage": 41,
+    "contextTokens": 0,
+    "percentage": 0,
     "contextWindowIsAuthoritative": true
   }
 }
