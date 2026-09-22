@@ -36,8 +36,8 @@
       "lastModel": "haiku",
       "modelEnvironmentType": "model",
       "titleModelEnvironmentType": "",
-      "environmentVariables": "ANTHROPIC_API_KEY=ark-336b8f34-7073-4e83-89cd-524028c09220-6f70b\nANTHROPIC_BASE_URL=https://ark.cn-beijing.volces.com/api/coding\nANTHROPIC_MODEL=glm-5.3",
-      "environmentHash": "runtime-input:v1:414b5236901b5e897ced11de09639f24c14a76b33ac31effbf9e2df9f1886fc5"
+      "environmentVariables": "ANTHROPIC_API_KEY=523fcb9896784f5ebf3a2cd808f8f8ee.4FkjwzhKzoIO0SVb\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.3",
+      "environmentHash": "runtime-input:v1:13fe5506be088a899d9fe0e778371f4efb7af92254c2a17eca03928b11657c9d"
     },
     "codex": {
       "enabled": false,

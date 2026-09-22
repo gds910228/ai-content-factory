@@ -1,0 +1,629 @@
+<section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
+
+  <section style="margin:10px 10px 32px;background:#ffffff;border-radius:12px;box-shadow:0 4px 24px -4px rgba(220,38,38,0.15);padding:28px 24px 22px;overflow:hidden;">
+    <p style="font-size:42px;color:#DC2626;font-weight:900;margin:0;line-height:0.6;">
+      <span leaf="">"</span>
+    </p>
+    <p style="font-size:16px;font-weight:800;color:#1C1917;margin:12px 0 8px;line-height:1.75;padding-left:4px;">
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">写得飞快</span></span>
+      <span leaf="">的是 AI，</span>
+      <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">付账单</span></span>
+      <span leaf="">的是你。</span>
+    </p>
+  </section>
+
+  <section style="padding:0 10px;">
+    <section style="border-left:4px solid #D6D3D1;padding:14px 20px;margin-bottom:24px;background:#FAFAFA;border-radius:0 8px 8px 0;">
+      <p style="font-size:14px;color:#374151;margin:0;line-height:1.8;text-align:justify;">
+        <span leaf="">关注「AI启蒙学习」，看一个 AI 独立开发者的实战踩坑笔记。这一篇，是给所有让 AI 写过代码的人做的一次体检。</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">去年我接了一个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">海外独立站的商城单</span></span>
+      <span leaf="">。交付那天一切顺利：主流程我亲手点过一遍，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">测试全绿</span></span>
+      <span leaf="">，客户验收也痛快。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">三个月后，客户回来要加一个</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">限时促销功能</span></span>
+      <span leaf="">。我打开代码，愣住了。就那么看着，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">越看越陌生</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那种感觉怎么说呢？就像走进一间名义上是我的房子，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">每面墙都是别人砌的</span></span>
+      <span leaf="">，我连哪面是承重墙都不知道。我不是看不懂语法，是不知道这里为什么这么写、</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">动了会不会塌</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">更讽刺的是我当时的本能反应：不是去读代码，而是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">开一个新会话，把代码喂给 AI</span></span>
+      <span leaf="">，问它：这里能不能改？</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「这个项目写在我的名下，但住在我脑子外面。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，这不是我一个人的问题。AI 用得越顺手，越多人活成了同一个角色：AI 甩出一个方案，你看一眼 </span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">diff</span></span>
+      <span leaf="">，点个同意。</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一天几十次，次次如此</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FFF;border-radius:12px;padding:6px;border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);margin-bottom:10px;">
+      <section style="margin:0;border-radius:8px;overflow:hidden;">
+        <span leaf=""><img src="imgs/01-scene-mindless-approve.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这篇文章我想把这件事讲透：为什么会这样，账最后有多贵，以及我后来给自己装上的 </span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">3 道防线</span></span>
+      <span leaf="">。先别翻走，下一节就是 5 信号自测清单，中 3 条以上，你就已经在</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">当审批按钮</span></span>
+      <span leaf="">了。</span>
+    </p>
+  </section>
+
+  <section style="padding:0 10px 32px;">
+    <p style="font-size:14px;color:#9CA3AF;margin:0 0 14px;letter-spacing:1px;">
+      <span leaf="">📌 本文看点</span>
+    </p>
+    <section style="display:flex;justify-content:space-between;">
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">01</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">5 信号自测清单</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">02</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">3 秒对 30 分钟的账</span></p>
+      </section>
+      <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;text-align:center;border:1px solid #FEE2E2;">
+        <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">03</span></p>
+        <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">3 道防线实操</span></p>
+      </section>
+    </section>
+  </section>
+
+  <section style="margin-top:16px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">01</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">SELF-CHECK</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">先自测：5 个信号，你中了几条</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">花 30 秒，对照一下这 5 个信号：</span>
+    </p>
+
+    <section style="margin-bottom:24px;">
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">别人问你设计决策，你只能说：</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">AI 说这样好</span></span><span leaf="">。</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">超过三个月，没有</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">手写过一个完整模块</span></span><span leaf="">。</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">3</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">改 bug 的</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">第一反应是问 AI</span></span><span leaf="">，而不是读代码。</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">4</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">说不出你的项目里</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">最脆弱的三个位置</span></span><span leaf="">在哪。</span></p>
+      </section>
+      <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">5</span></span>
+        <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">离开 AI，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不敢碰自己的代码</span></span><span leaf="">。</span></p>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <strong style="color:#DC2626;"><span leaf="">中 3 条，你基本上已经是审批按钮了。</span></strong>
+      <span leaf="">中 5 条？恭喜，你和当年的我一样，全中。</span>
+    </p>
+
+    <section style="background:#FFF;border-radius:12px;padding:6px;border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);margin-bottom:8px;">
+      <section style="margin:0;border-radius:8px;overflow:hidden;">
+        <span leaf=""><img src="imgs/02-infographic-5-signals-checklist-v3.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+      </section>
+    </section>
+    <p style="font-size:12px;color:#9CA3AF;text-align:center;margin:0 0 24px;">
+      <span leaf="">— 5 个信号自测卡</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这份清单不是我从哪本书上抄的，是我给自己做体检做出来的。现在我还会隔一阵拿出来过一遍，就当</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">给项目做体检</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">02</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">THE MATH</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">不是你懒：这是一道 3 秒对 30 分钟的算术题</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先交代一下背景。头三个月是我用 AI 最爽的时候：原来一单要磨一个多月，那阵子</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一个月能交两单</span></span>
+      <span leaf="">。每天的工作就是提需求、看 </span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">diff</span></span>
+      <span leaf="">、点同意，我当时真觉得</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">效率翻了十倍</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">爽期过后，再回头看那 5 条全中，我第一反应也是怀疑自己：是不是我太懒，不愿意认真看代码？</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">后来我想明白了：</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「沦为审批按钮不是态度问题，是结构问题。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">你算一道题就懂了。AI </span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">每 30 秒</span></span>
+      <span leaf="">给你一个方案，你真看懂一个要 30 分钟。点同意的成本是 </span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">3 秒</span></span>
+      <span leaf="">，看懂的成本是 </span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">30 分钟</span></span>
+      <span leaf="">。一次长会话里，这道选择题你要做几十次。</span>
+    </p>
+
+    <section style="background:#FFF;border-radius:12px;padding:6px;border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);margin-bottom:10px;">
+      <section style="margin:0;border-radius:8px;overflow:hidden;">
+        <span leaf=""><img src="imgs/03-comparison-3s-vs-30min-v3.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">前面几个 </span>
+      <span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:14px;font-weight:600;"><span leaf="">diff</span></span>
+      <span leaf="">，你还认真读。到第十次，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">决策疲劳</span></span>
+      <span leaf="">上来了，再加上前面都没出事的侥幸，点同意就变成了</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">肌肉记忆</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">其实这不是懒，是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">认知负荷的必然结果</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">还有更深的一层。AI 的 KPI 是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">把任务做完</span></span>
+      <span leaf="">，你的 KPI 应该是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">对项目有掌握</span></span>
+      <span leaf="">。换句话说，你们俩从第一天起，就没在同一个方向使劲。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">所以会出现一种新型的交付事故：</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「任务全部成功，理解全部失败。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这种事故最阴险的地方，是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不报红字</span></span>
+      <span leaf="">。代码跑得好好的，测试全绿，你根本察觉不到自己已经出了事故。直到三个月后客户说：给我加个促销功能。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">而且这个状态，是有官方名字的。Anthropic 的开发者把它叫</span>
+      <span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">「审批按钮」</span></span>
+      <span leaf="">，把背后那个越来越看不懂的系统叫</span>
+      <span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">「智能体黑箱」</span></span>
+      <span leaf="">：任务越做越多，人对问题、方案、影响的掌握，越来越少。巨头内部在对抗的，就是你我每天都在经历的事。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <strong style="color:#DC2626;"><span leaf="">说白了，AI 提效的账不是按天结的，是按季度结的。</span></strong>
+      <span leaf="">爽在前面，账在后面。</span>
+    </p>
+  </section>
+
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">03</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">THE BILL</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">账单来了：一个让我丢人，一个让我后悔</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">维护期一到，账单一起来了。两笔，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一笔丢人，一笔后悔</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">先说丢人的那次。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">一次线上故障，客户的</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">下单模块</span></span>
+      <span leaf="">出了问题，客户就在消息那头等着。我打开代码，发现自己对这个模块的全部认知，就四个字：</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">AI 说好了</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">正常工程师排查问题，脑子里是有一张</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">嫌疑名单</span></span>
+      <span leaf="">的：先查哪、后查哪、哪里历史上就脆。我没有名单，我连怀疑谁都不会。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">最后怎么解决的？说出来丢人：我把整个模块贴给一个新会话，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">让 AI 帮我猜，AI 写的代码哪里会坏</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">那一单赚的钱，还没有我烧掉的排查时间值钱。</span>
+    </p>
+
+    <p style="font-size:15px;margin:0 0 24px;text-align:center;color:#DC2626;font-weight:700;letter-spacing:1px;border-top:1px solid #FEE2E2;border-bottom:1px solid #FEE2E2;padding:14px 10px;">
+      <span leaf="">最无力的不是不会修，是连怀疑的方向都没有。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">再说后悔的那次。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">有合作方问我：你这个结算模块，为什么不用现成的方案？我张嘴就来了一句：</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">AI 建议的</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说完那半秒我就后悔了。因为这四个字翻译过来就是：</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不是我做的，我也不太懂</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">还有报价的时候。讲不清自己项目技术决策的人，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">报价都是虚的</span></span>
+      <span leaf="">。客户一句你这个凭什么贵这么多，你就只能降。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">理解空心化</span></span>
+      <span leaf="">这个东西，平时不疼，</span>
+      <span style="background:linear-gradient(180deg,transparent 60%,#FECACA 60%);font-weight:700;color:#1C1917;"><span leaf="">一到别人提问的场合就疼</span></span>
+      <span leaf="">。</span>
+    </p>
+  </section>
+
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">04</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">DEFENSE LINES</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">3 道防线：把判断权从 AI 手里拿回来</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">话说回来，防线不是让你少用 AI，是让你分清：什么可以放心交给 AI，什么必须留在自己手里。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我的分界线就一条：</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「体力可以外包，判断不能。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">编译、脚手架、样板代码，这些是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">体力</span></span>
+      <span leaf="">，产出的东西你不需要逐行理解也能负责。选型、架构、取舍，这些是</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">判断</span></span>
+      <span leaf="">，一旦外包，项目就跟你没关系了，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">你只剩署名权</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">在这条线之上，我把防线放在三个位置。</span>
+    </p>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">防线一，事前：方案不让 AI 单独定</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我的做法是让它</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一次出 2 到 3 个方案</span></span>
+      <span leaf="">，我来选，并且在需求文档里写一行为什么选这个、不选那个。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">就一行。比如独立站改版那次，我写的是：</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">选 B，因为要给多语言留扩展</span></span>
+      <span leaf="">。三个月后客户真的提了多语言需求，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">我 10 秒钟就敢接这单</span></span>
+      <span leaf="">，因为我知道当初为什么这么选。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-left:4px solid #DC2626;border-radius:0 8px 8px 0;padding:14px 20px;margin-bottom:24px;">
+      <p style="font-size:14px;font-weight:700;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">💡 小技巧：这一行不用写得漂亮，写清楚就行。三个月后，它可能是你对这个决策唯一的记忆。</span>
+      </p>
+    </section>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">防线二，事中：每过一个阶段，让 AI 讲一遍</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">每做完一个阶段，我会直接跟它说：</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">用普通人听得懂的话讲讲，你刚才做了什么、为什么这么做、放弃了什么</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">然后我复述。</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">复述得出来，进下一阶段</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-left:4px solid #DC2626;border-radius:0 8px 8px 0;padding:14px 20px;margin-bottom:24px;">
+      <p style="font-size:14px;font-weight:700;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">💡 小技巧：复述不出来就让它再讲一遍，别嫌慢。这一步，不！能！跳！</span>
+      </p>
+    </section>
+
+    <p style="font-size:15px;font-weight:800;color:#1C1917;margin:28px 0 14px;padding-left:10px;border-left:3px solid #DC2626;line-height:1.4;">
+      <span leaf="">防线三，事后：会话收尾，强制沉淀三行</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">就三行：</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">这次做了什么；为什么这么做；放弃了哪些方案</span></span>
+      <span leaf="">。新会话开场，先把这三行喂回去，让它知道之前的判断，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">别从头猜</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <section style="background:#FFF;border-radius:12px;padding:6px;border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);margin-bottom:8px;">
+      <section style="margin:0;border-radius:8px;overflow:hidden;">
+        <span leaf=""><img src="imgs/04-flowchart-3-defense-lines-v4.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+      </section>
+    </section>
+    <p style="font-size:12px;color:#9CA3AF;text-align:center;margin:0 0 24px;">
+      <span leaf="">— 三道防线流程图：事前选型 / 事中讲懂 / 事后沉淀</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">三道防线加起来，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一个会话多花 10 分钟</span></span>
+      <span leaf="">。但它是我能想到的，把判断权从 AI 手里拿回来的</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">最具体的动作</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">回头再看第一节那 5 个信号，基本都能被这三道防线接住：</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">决策有记录，阶段讲得懂，为什么留得下来</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">多说一句：很多初学者把问题诊断成代码看不懂，然后跑去补编程课，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">方向错了</span></span>
+      <span leaf="">。代码随时可以再读，真正丢了找不回来的，是决策，是那些为什么。AI 的会话一清空，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">所有的为什么就集体蒸发</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <strong style="color:#DC2626;"><span leaf="">那才是最贵的损失。</span></strong>
+    </p>
+  </section>
+
+  <section style="padding:0 10px;">
+    <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;">
+      <span leaf=""><br></span>
+    </section>
+  </section>
+
+  <section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+    <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+      <section style="display:flex;align-items:center;">
+        <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">05</span></span>
+        <section>
+          <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;">
+            <span leaf="">EVEN ANTHROPIC</span>
+          </p>
+          <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;">
+            <span leaf="">这场仗，Anthropic 也在打</span>
+          </h3>
+        </section>
+      </section>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">装完这三道防线，我一度以为这只是我的个人教训。直到后来我看到 </span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">Anthropic 开发者分享的理解验证工作流</span></span>
+      <span leaf="">，才发现人家走得比我系统得多：把 AI 定位成一个高效且睿智的教师，任务做完不算完，要确认人对问题、方案、影响有了</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">能复述、能辩护的掌握</span></span>
+      <span leaf="">，才算完。中间还有增量教学、用户复述、清单加测验一整套。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我看到的第一反应是安慰：原来巨头内部也在对抗同一个问题，说明</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">审批按钮不是我个人能力差</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">第二反应是后怕：人家把这件事当成</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">工作流级别的基础设施</span></span>
+      <span leaf="">在做，而外面大多数人，包括爽期里的我，连问题都还没意识到。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">这个系列其实已经聊到第二篇了。上一篇《从人肉跑一遍到 AI 自己验》讲机器那一侧：跑的动作，可以外包给 AI。这一篇开始补人这一侧：机器验不了的，你自己怎么算真的懂。至于那套工作流完整的 </span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">8 步拆解</span></span>
+      <span leaf="">，展开又是一整篇，想看的评论区说一声，这里先埋个钩子。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">说实话，写到这里，我想对还在坑里的朋友说两句掏心窝的。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">第一句，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">别用产出速度当唯一指标</span></span>
+      <span leaf="">。三个月内你会觉得自己是天才，但维护期的账单，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">不会发朋友圈</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">第二句，别把锅甩给自己技术不够强，然后去学更多提效技巧，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">那是往同一个坑里踩油门</span></span>
+      <span leaf="">。方向反了：</span>
+      <strong style="color:#DC2626;"><span leaf="">不是让 AI 更快，是让自己更懂。</span></strong>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">如果时光倒流，我会对刚开始用 AI 写代码的自己说：从第一个项目开始，把 AI 当两个角色用。</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">干活的时候，它是员工；交付的时候，它是老师</span></span>
+      <span leaf="">。别只让它干活。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我工位上贴着一句话，也送给你：</span>
+    </p>
+
+    <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+      <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+        <span leaf="">「项目可以是 AI 写的，但得是你的。」</span>
+      </p>
+    </section>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">现在就开始吧。拿你手头最近的一个 AI 会话，按第三道防线</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">补一份三行沉淀</span></span>
+      <span leaf="">，10 分钟，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">今天就做</span></span>
+      <span leaf="">。</span>
+    </p>
+
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">对了，开头那 5 个信号，你中了几条？中 3 条以上的，</span>
+      <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">评论区聊聊你的翻车现场</span></span>
+      <span leaf="">，让我看看这坑里到底蹲了多少人。</span>
+    </p>
+  </section>
+
+  <section style="padding:0 10px;">
+    <section style="text-align:center;margin:0 0 32px;">
+      <section style="display:flex;align-items:center;justify-content:center;">
+        <span style="height:2px;width:60px;background:linear-gradient(to right,transparent,#DC2626);margin-right:12px;"><span leaf=""><br></span></span>
+        <span style="font-size:11px;color:#DC2626;letter-spacing:3px;font-weight:700;"><span leaf="">END</span></span>
+        <span style="height:2px;width:60px;background:linear-gradient(to left,transparent,#DC2626);margin-left:12px;"><span leaf=""><br></span></span>
+      </section>
+    </section>
+  </section>
+
+  <section style="padding:0 10px;">
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">我是 {{作者名}}，一个 AI 独立开发者，在「AI启蒙学习」分享实战踩坑笔记。</span>
+    </p>
+    <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+      <span leaf="">如果你觉得今天这篇有收获，欢迎</span>
+      <strong style="color:#DC2626;"><span leaf="">点赞、在看、转发</span></strong>
+      <span leaf="">三连。新朋友点个关注，把「AI启蒙学习」设为星标⭐——这个 AI 协作避坑系列会一直写下去：机器怎么验、人怎么懂、8 步工作流怎么落地，一篇比一篇硬核。我们下篇见。</span>
+    </p>
+  </section>
+
+</section>
