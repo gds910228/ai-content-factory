@@ -66,7 +66,7 @@
     <span leaf="">这里放开篇金句，衬线字体自带书卷气，</span><span leaf="">留白让文字自己呼吸。</span>
   </p>
   <p style="font-size: 12px;color: #A3A3A3;margin: 0;letter-spacing: 1.5px;">
-    <span leaf="">—— 作者名（按文章作者/主题而定）</span>
+    <span leaf="">—— 艾启蒙</span>
   </p>
 </section>
 ```
@@ -423,7 +423,7 @@
 ```html
 <section style="padding: 0 16px 40px;">
   <p style="margin-bottom: 26px;font-size: 15px;line-height: 1.9;text-align: justify;color: #525252;">
-    <span leaf="">我是 {{作者名}}，{{一句话简介，如：热衷于分享 AI 观察与干货}}。</span>
+    <span leaf="">我是艾启蒙，用AI陪伴成长，用技术创造价值！</span>
   </p>
   <p style="margin-bottom: 26px;font-size: 15px;line-height: 1.9;text-align: justify;color: #525252;">
     <span leaf="">如果你觉得今天这篇有收获，欢迎</span>

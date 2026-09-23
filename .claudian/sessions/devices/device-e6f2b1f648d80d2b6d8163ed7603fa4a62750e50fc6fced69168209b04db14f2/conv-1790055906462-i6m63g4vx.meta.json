@@ -4,7 +4,7 @@
   "title": "为整篇文章生成插图并保存到目录",
   "titleGenerationStatus": "success",
   "createdAt": 1790055906467,
-  "lastActivityAt": 1790084581905,
+  "lastActivityAt": 1790144965488,
   "sessionId": "3ed48ac6-b209-457c-803d-2caf2bea9206",
   "selectedModel": "claude-code/glm-5.3",
   "providerState": {
@@ -13,15 +13,15 @@
     ],
     "providerSessionId": "3ed48ac6-b209-457c-803d-2caf2bea9206"
   },
-  "linkedContentPath": "02-稿件库/01-创作中稿件/用了三个月AI，我反而看不懂自己的项目了-20260922/05-发布包/长文发布包.md",
+  "linkedContentPath": "02-稿件库/02-已发布稿件归档/用了三个月AI，我反而看不懂自己的项目了-20260922/05-发布包/长文发布包.md",
   "usage": {
     "model": "glm-5.3",
-    "inputTokens": 594,
+    "inputTokens": 238,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 150976,
+    "cacheReadInputTokens": 169536,
     "contextWindow": 200000,
-    "contextTokens": 151570,
-    "percentage": 76,
+    "contextTokens": 169774,
+    "percentage": 85,
     "contextWindowIsAuthoritative": true
   }
 }

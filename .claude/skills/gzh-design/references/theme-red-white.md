@@ -58,7 +58,7 @@
 > **文案策略（先读，比代码重要）**：
 > - 引言卡金句和公众号外标题是**两层**，视角要错开——外标题卖"为什么点开"，引言卡卖"核心观点是什么"
 > - 已知外标题时，金句**禁止原样复述**其核心关键词；从文章第一段或核心论点提炼一句有张力的判断句
-> - 右下署名按文章实际作者填，未知则整行删掉，**不要固定写"甲木"**
+> - 右下署名：文章有明确作者写其名，未知时写默认署名「—— 艾启蒙」，**不要写"甲木"**
 > - 红底白字标签仅在本卡片内使用（视觉焦点），正文中的关键词标签一律用浅红底深红字（组件 7b）
 
 ```html
@@ -73,7 +73,7 @@
     <span leaf="">{{金句收尾}}</span>
   </p>
   <p style="text-align:right;font-size:12px;color:#9CA3AF;margin:8px 0 0;letter-spacing:1px;">
-    <span leaf="">—— {{作者名，未知则删整行}}</span>
+    <span leaf="">—— 艾启蒙</span>
   </p>
 </section>
 ```
@@ -524,7 +524,7 @@
     <span leaf=""><img src="{{个人名片或引导图URL，无则删本 section}}" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
   </section>
   <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
-    <span leaf="">我是 {{作者名}}，{{一句话简介，如：热衷于分享 AI 观察与干货}}。</span>
+    <span leaf="">我是艾启蒙，用AI陪伴成长，用技术创造价值！</span>
   </p>
   <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
     <span leaf="">如果你觉得今天这篇有收获，欢迎</span>
