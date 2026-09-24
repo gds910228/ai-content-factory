@@ -5,12 +5,13 @@
   "titleGenerationStatus": "success",
   "createdAt": 1789961006659,
   "lastActivityAt": 1789969794094,
-  "sessionId": null,
+  "sessionId": "7f776772-aadf-4185-84cb-a902fb12767c",
   "selectedModel": "claude-code/glm-5.3",
   "providerState": {
     "previousProviderSessionIds": [
       "7f776772-aadf-4185-84cb-a902fb12767c"
-    ]
+    ],
+    "providerSessionId": "7f776772-aadf-4185-84cb-a902fb12767c"
   },
   "linkedContentPath": "02-稿件库/02-已发布稿件归档/Xpert专家平台副业-20260810/assets/Xpert｜小红书创作活动指南（第二期）.md",
   "usage": {
