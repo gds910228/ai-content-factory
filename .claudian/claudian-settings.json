@@ -1,7 +1,7 @@
 {
   "userName": "",
   "permissionMode": "yolo",
-  "model": "claude-code/glm-5.3",
+  "model": "claude-code/glm-5.3-flash",
   "thinkingBudget": "off",
   "effortLevel": "max",
   "serviceTier": "default",
@@ -36,8 +36,8 @@
       "lastModel": "haiku",
       "modelEnvironmentType": "model",
       "titleModelEnvironmentType": "",
-      "environmentVariables": "ANTHROPIC_API_KEY=523fcb9896784f5ebf3a2cd808f8f8ee.4FkjwzhKzoIO0SVb\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.3",
-      "environmentHash": "runtime-input:v1:13fe5506be088a899d9fe0e778371f4efb7af92254c2a17eca03928b11657c9d"
+      "environmentVariables": "ANTHROPIC_API_KEY=523fcb9896784f5ebf3a2cd808f8f8ee.4FkjwzhKzoIO0SVb\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.3-flash",
+      "environmentHash": "runtime-input:v1:9f1e1607bb915490575bbb6692c4b4aa3d590065f4374c830a96dcc0ce347f33"
     },
     "codex": {
       "enabled": false,
@@ -102,7 +102,7 @@
     "model": "claude-code/glm-5.2"
   },
   "savedProviderModel": {
-    "claude": "claude-code/glm-5.3"
+    "claude": "claude-code/glm-5.3-flash"
   },
   "savedProviderEffort": {
     "claude": "max"

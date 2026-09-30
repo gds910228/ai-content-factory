@@ -6,7 +6,7 @@
   "createdAt": 1790043456882,
   "lastActivityAt": 1790055477346,
   "sessionId": null,
-  "selectedModel": "claude-code/glm-5.3",
+  "selectedModel": "claude-code/glm-5.3-flash",
   "linkedContentPath": "05-数据复盘库/周度总结-2026-09-22.md",
   "usage": {
     "model": "glm-5.3",
