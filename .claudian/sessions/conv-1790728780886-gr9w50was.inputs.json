@@ -43,6 +43,34 @@
       "contentDigest": "d41b3ac689d6dbe039b0b4fb474381974af04ccfc610536eeb9647cdb6563ae7",
       "providerUserMessageId": "843c9847-7bd5-4079-a61f-b3af50978841",
       "providerAssistantMessageId": "90848fd3-8424-41d4-a6ba-55540a82012e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790733056815-iwcollx",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1790733056809-8izrb6m",
+      "timestamp": 1790733056809,
+      "rawDisplayText": "没找到你说的命令行界面 算了吧，给我接下来的创作选题排序",
+      "canonicalText": "没找到你说的命令行界面 算了吧，给我接下来的创作选题排序",
+      "images": [],
+      "contentDigest": "9573642db47e2ba893e3db3df35e9465f3218b850b6eb9d6b881499527ebd1a9",
+      "providerUserMessageId": "9db30929-a7a0-443b-9772-b2497fc7ec7a",
+      "providerAssistantMessageId": "47d743a0-6ecb-4212-aecf-863d0d519192"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790736243161-0l0yxoa",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1790736243154-30ifxso",
+      "timestamp": 1790736243154,
+      "rawDisplayText": "/deep-interview  选择：别当AI的审批按钮，开始访谈",
+      "canonicalText": "/deep-interview  选择：别当AI的审批按钮，开始访谈",
+      "images": [],
+      "contentDigest": "be6091e2e77f7b1edacf501bc5a889e60e71bb8cbbc7f7ab31a3f92aa300bce5",
+      "providerUserMessageId": "8dfceedf-742d-4762-906b-35799a0733fc",
+      "providerAssistantMessageId": "59bfb41b-4f90-4259-b5f5-811c137c7741"
     }
   ]
 }
