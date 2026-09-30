@@ -197,6 +197,20 @@
       "contentDigest": "2e6666f0a94ff2757879e79b1da2e6b73434dbe0d64600e8ab55181cab8817f8",
       "providerUserMessageId": "407f0f3f-6438-4530-a5fe-2f9df9f67afd",
       "providerAssistantMessageId": "31fcde75-6c9c-42a5-8b1a-1808ce564cb8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790747997048-eg2zgic",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1790747997039-c7z834i",
+      "timestamp": 1790747997039,
+      "rawDisplayText": "选2",
+      "canonicalText": "选2",
+      "images": [],
+      "contentDigest": "1eff26961041c4c8cc33e424b1ebc5727fc12bbed5fc6250a14d684dcde1ceca",
+      "providerUserMessageId": "7776be13-f4aa-4566-aaa4-b8b82c5dd5a5",
+      "providerAssistantMessageId": "456ef487-49d3-4765-9519-e2ad8c20dc1d"
     }
   ]
 }
