@@ -1,0 +1,335 @@
+{
+  "id": "conv-1790728780886-gr9w50was",
+  "providerId": "claude",
+  "title": "生成周度知识库总结报告",
+  "titleGenerationStatus": "success",
+  "createdAt": 1790728780889,
+  "lastActivityAt": 1790729471512,
+  "sessionId": "21b092d3-dd32-4b7d-acb7-87422060e77d",
+  "selectedModel": "claude-code/glm-5.3-flash",
+  "providerState": {
+    "providerSessionId": "21b092d3-dd32-4b7d-acb7-87422060e77d",
+    "subagentData": {
+      "call_2a0e294f5d9843cbbd7b2e85": {
+        "id": "call_2a0e294f5d9843cbbd7b2e85",
+        "description": "核查上期行动执行证据",
+        "prompt": "你在 Obsidian 知识库 \"D:\\Program Files\\Obsidian\\repository\\ArcherArticle\" 中做只读探查（medium 深度）。这是一份周报的\"上期行动计划执行核查\"环节，需要逐项找证据。上期（2026-09-22 生成）的行动项及需要核查的事实：\n\n1. 【数据回流】读取 \"05-数据复盘库\" 目录下所有文件名清单；找到数据仪表板文件（可能叫 \"📋 知识库数据仪表板.md\" 或类似），报告其中数据的最后日期/最新回填记录（是否仍停在 2026-06-01，有无 09 月新增数据行）。\n2. 【互链核查】读取 \"02-稿件库/02-已发布稿件归档/2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906/04-定稿.md\"，检查：(a) 是否仍含 \"{{上一篇链接}}\" 或类似未替换占位符；(b) 文中 wikilink 都指向哪些文章（列出）。再读 \"02-稿件库/02-已发布稿件归档/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/04-定稿.md\"，检查它是否有指向《主战场》或其他已发文章的 wikilink。\n3. 【MOC 存在性】全库搜索文件名或内容含 \"MOC\"、\"笔记地图\"、\"导航\"、\"索引\" 的 .md（排除 .obsidian/.git/.claudian/.trash），判断 Prompt 系列或全库是否建了 MOC。\n4. 【AI副业实测01 状态】读取 \"02-稿件库/02-已发布稿件归档/AI副业实测01-AI语音对话录制-20260909/00-系列总纲.md\" 中的台账/状态部分（该系列当前标记是\"创作中/待定\"还是\"已发布/已完成\"？有无 09-22 之后的更新痕迹）。\n5. 【审批按钮选题状态】读取 \"01-选题库/04-已完成选题归档/2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂.md\" 的 frontmatter（选题状态是待创作/已完成？创建/修改痕迹）。\n6. 【存量选题状态】用 grep 检查以下 4 个文件的 frontmatter \"选题状态\" 字段当前值：\"01-选题库/02-用户痛点选题池/2026-09-05 意图债--你没写下来的决策，AI每次都重新向你收费.md\"、\"01-选题库/02-用户痛点选题池/2026-09-05 你的每条Prompt都是赌注--Anthropic删掉80%系统提示词的启示.md\"、\"01-选题库/02-用户痛点选题池/2026-09-05 AI写得快交付慢--阿姆达尔定律卡住了你的AI提效.md\"、\"01-选题库/03-行业干货选题池/2026-09-05 淘天和腾讯押注同一件事--两份大厂内部实录里的AI投入分界线.md\"，以及 01-选题库/01-热点选题池 下 4 个文件是否还在（Loop Engineering 相关 3 个 + Graph Engineering 1 个）。\n7. 【根目录卫生】\"Untitled Kanban.md\" 是否仍在库根目录，内容是什么。\n8. 【理解验证素材】\"04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流.md\" 的 frontmatter/入库日期信息。\n9. 【已发布稿件归档总数】\"02-稿件库/02-已发布稿件归档\" 下共多少个文章文件夹（一级目录计数）。\n\n返回格式：按上述 9 项编号逐项给出事实结论（含关键引文/数字/文件路径），不确定的明确标注。不要给建议，只要事实。",
+        "status": "completed",
+        "toolCalls": [
+          {
+            "id": "call_144e9b085fa543a18c8eb879",
+            "name": "Bash",
+            "input": {
+              "command": "ls -la \"D:/Program Files/Obsidian/repository/ArcherArticle/05-数据复盘库/\"",
+              "description": "List files in 05-数据复盘库 directory"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "total 184\ndrwxr-xr-x 1 Administrator 197121     0 Sep 22 09:54 .\ndrwxr-xr-x 1 Administrator 197121     0 Sep 30 08:16 ..\n-rw-r--r-- 1 Administrator 197121   997 Jun  8 11:40 14 天 AI 内容工厂训练营学习复盘.md\n-rw-r--r-- 1 Administrator 197121  9971 Jun  1 21:31 AI自动总结-2026-06-01.md\n-rw-r--r-- 1 Administrator 197121 12903 Jun  1 22:28 周复盘-2026-06-1.md\n-rw-r--r-- 1 Administrator 197121   666 Jun  1 20:14 周复盘-2026-x-x.md\n-rw-r--r-- 1 Administrator 197121  9803 Aug  9 11:43 周度总结-2026-06-24.md\n-rw-r--r-- 1 Administrator 197121 12632 Sep  5 12:14 周度总结-2026-07-11.md\n-rw-r--r-- 1 Administrator 197121 17631 Sep  5 12:13 周度总结-2026-08-02.md\n-rw-r--r-- 1 Administrator 197121 17012 Aug 31 13:17 周度总结-2026-08-17.md\n-rw-r--r-- 1 Administrator 197121 17704 Sep  5 17:20 周度总结-2026-09-05.md\n-rw-r--r-- 1 Administrator 197121 22730 Sep 30 08:17 周度总结-2026-09-22.md\n-rw-r--r-- 1 Administrator 197121 18098 Jun  1 21:37 知识关联分析-2026-06-01-HarnessEngineering.md\n-rw-r--r-- 1 Administrator 197121  3747 Jun  1 14:06 📋 知识库数据仪表板.md"
+          },
+          {
+            "id": "call_0ace8c204d9e490989ca37ef",
+            "name": "Bash",
+            "input": {
+              "command": "ls \"D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/\"",
+              "description": "List published article archive folders"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906\nAI写代码总翻车？这是你一定会遇到的4种翻车场景-20260604\nAI副业实测01-AI语音对话录制-20260909\nAI工作流的护城河：你的Skills库才是真正的资产-20260606\nAI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905\nPrompt Engineering的下一站--从写好一句话到设计一个系统-20260810\nXpert专家平台副业-20260810\nXpert小红书活动二期-20260921\n你的Prompt该重构了吗--Agent Skill健康度自检清单-20260807\n你越强调AI越不听话--Prompt工程里的恶性循环-20260730\n别对AI说不要--正向指令为什么比否定指令更管用-20260802\n我对Harness的观点和实操心得-20260712\n把1500行Prompt砍到300行--Agent Skill的分层重构法-20260804\n用了三个月AI，我反而看不懂自己的项目了-20260922\n让AI自动改Prompt，它把规则写了8遍--自动化的膨胀陷阱-20260809"
+          },
+          {
+            "id": "call_5ef0aebfc2b647889f0c2b4c",
+            "name": "Bash",
+            "input": {
+              "command": "ls \"D:/Program Files/Obsidian/repository/ArcherArticle/01-选题库/01-热点选题池/\" \"D:/Program Files/Obsidian/repository/ArcherArticle/\"",
+              "description": "List hotspot topic pool and vault root"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "D:/Program Files/Obsidian/repository/ArcherArticle/:\n00-模板库\n01-选题库\n02-稿件库\n03-素材库\n04-日常素材\n05-数据复盘库\nUntitled Kanban.md\nassets\ndeep-interview.skill\nscripts\nstyle-write.skill\ntopic-filter.skill\n内容创作看板.md\n\nD:/Program Files/Obsidian/repository/ArcherArticle/01-选题库/01-热点选题池/:\nLoop Engineering 到底是什么？看这一篇就够了.md\nLoop Engineering 已死？ 一文带你了解Graph Engineering.md\n从零开始玩转循环 (Getting started with loops)【译】.md\n对Loop Engineering的思考.md"
+          },
+          {
+            "id": "call_247f721d1def42dabf4efdc4",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\05-数据复盘库\\📋 知识库数据仪表板.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t> 本笔记是知识库的数据管理中心，所有查询统一在此展示，数据实时更新，无需手动维护。\n2\t\n3\t---\n4\t\n5\t## 📊 知识库数据总览\n6\t\n7\t自动统计选题库、稿件库、素材库的各项数据，生成一目了然的统计表格。\n8\t\n9\t```dataviewjs\n10\t// 选题库统计\n11\tconst allTopics = dv.pages('\"01-选题库\"');\n12\tconst pending = allTopics.where(t => t.选题状态 === \"待创作\").length;\n13\tconst creating = allTopics.where(t => t.选题状态 === \"创作中\").length;\n14\tconst completed = allTopics.where(t => t.选题状态 === \"已完成\").length;\n15\tconst total = allTopics.length;\n16\t\n17\t// 稿件库统计\n18\tconst drafts = dv.pages('\"02-稿件库/01-创作中稿件\"').length;\n19\tconst published = dv.pages('\"02-稿件库/02-已发布稿件归档\"').length;\n20\t\n21\t// 素材库统计\n22\tconst materials = dv.pages('\"03-素材库\"').length;\n23\t\n24\t// 日常素材统计\n25\tconst dailyMaterials = dv.pages('\"04-日常素材\"').length;\n26\t\n27\t// 渲染统计表格\n28\tdv.table([\"统计项\", \"数量\"], [\n29\t  [\"📚 选题总数\", total],\n30\t  [\"⏳ 待创作选题\", pending],\n31\t  [\"✍️ 创作中选题\", creating],\n32\t  [\"✅ 已完成选题\", completed],\n33\t  [\"📝 创作中稿件\", drafts],\n34\t  [\"📤 已发布稿件\", published],\n35\t  [\"📦 素材总数\", materials],\n36\t  [\"📥 待分类日常素材\", dailyMaterials]\n37\t]);\n38\t```\n39\t\n40\t> **效果说明：** 使用 DataviewJS（JavaScript 语法）进行更灵活的统计。自动统计选题库、稿件库、素材库的各项数据，生成一个一目了然的统计表格。所有数据实时更新，无需手动维护。\n41\t\n42\t---\n43\t\n44\t## 📋 待创作选题清单\n45\t\n46\t自动列出所有待创作的选题，按优先级从高到低排序。\n47\t\n48\t```dataview\n49\tTABLE WITHOUT ID\n50\t  file.link AS \"选题标题\",\n51\t  选题类型 AS \"类型\",\n52\t  创作优先级 AS \"优先级\",\n53\t  创建日期 AS \"创建日期\"\n54\tFROM \"01-选题库\"\n55\tWHERE 选题状态 = \"待创作\"\n56\tSORT 创作优先级 DESC, 创建日期 ASC\n57\t```\n58\t\n59\t> **效果说明：** 这个查询会自动扫描「01-选题库」下所有笔记的 YAML 字段，筛选出「选题状态」为\"待创作\"的笔记，以表格形式展示标题（可点击跳转）、类型、优先级和创建日期。当你在选题库中新增或修改选题状态后，表格会自动更新。\n60\t\n61\t---\n62\t\n63\t## ✍️ 稿件创作进度\n64\t\n65\t自动列出所有创作中的稿件及其文件夹路径。\n66\t\n67\t```dataview\n68\tTABLE WITHOUT ID\n69\t  file.link AS \"稿件文件\",\n70\t  file.folder AS \"所在文件夹\"\n71\tFROM \"02-稿件库/01-创作中稿件\"\n72\tSORT file.ctime DESC\n73\t```\n74\t\n75\t> **效果说明：** 自动扫描「02-稿件库/01-创作中稿件」下的所有文件，显示每个文件（访谈记录、初稿、改稿记录、定稿）及其所在文件夹。你可以快速了解当前有哪些稿件正在创作中。当稿件通过 Kanban 看板标记为已发布并移动到「02-已发布稿件归档」后，此列表会自动移除对应条目。\n76\t\n77\t---\n78\t\n79\t## 🕐 最近7天新增选题\n80\t\n81\t自动筛选最近7天内创建的选题，辅助决策本周优先创作哪些内容。\n82\t\n83\t```dataview\n84\tTABLE WITHOUT ID\n85\t  file.link AS \"选题标题\",\n86\t  选题类型 AS \"类型\",\n87\t  创作优先级 AS \"优先级\",\n88\t  创建日期 AS \"创建日期\"\n89\tFROM \"01-选题库\"\n90\tWHERE 创建日期 >= date(today) - dur(7 days)\n91\tSORT 创建日期 DESC\n92\t```\n93\t\n94\t> **效果说明：** 自动筛选最近7天内创建的选题，帮助你快速回顾近期的选题灵感，辅助决策本周优先创作哪些内容。\n95\t\n96\t---\n97\t\n98\t## 💡 内联查询用法参考\n99\t\n100\t除了在代码块中创建完整查询，你还可以在任意笔记的正文中使用**内联查询**，实时显示某个字段值：\n101\t\n102\t- 当前笔记的创建日期是：`= this.file.ctime`\n103\t- 当前笔记所在文件夹：`= this.file.folder`\n104\t- 当前笔记的选题状态：`= this.选题状态`\n105\t"
+          },
+          {
+            "id": "call_f15da95913f549738afb12ae",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\Untitled Kanban.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t\n3\tkanban-plugin: board\n4\t\n5\t---\n6\t\n7\t"
+          },
+          {
+            "id": "call_a1952575c24742eea6bb10ce",
+            "name": "Bash",
+            "input": {
+              "command": "ls \"D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906/\" \"D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/\" \"D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/AI副业实测01-AI语音对话录制-20260909/\"",
+              "description": "List files in three article archive folders"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906/:\n01-访谈记录.md\n02-初稿.md\n03-改稿记录.md\n04-定稿.md\n05-发布包\nassets\nimgs\n长文发布包_排版_红白色系(red-white)_预览_含图.html\n长文发布包_排版_红白色系(red-white)_预览_含图_自包含.html\n\nD:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/AI副业实测01-AI语音对话录制-20260909/:\n00-系列总纲.md\n01-访谈记录.md\n02-初稿.md\n03-改稿记录.md\n04-定稿.md\n05-发布包\nassets\n长文发布包_排版_红白色系(red-white).html\n长文发布包_排版_红白色系(red-white)_预览.html\n长文发布包_排版_红白色系(red-white)_预览_含图.html\n长文发布包_排版_红白色系(red-white)_预览_含图_自包含.html\n\nD:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/:\n01-访谈记录.md\n02-初稿.md\n03-改稿记录.md\n04-定稿.md\n05-发布包\nassets\nimgs"
+          },
+          {
+            "id": "call_8566d63a33f64930a409fdd1",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906\\04-定稿.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t# 从人肉跑一遍到AI自己验：我的3个土办法和1张边界清单\n2\t\n3\t上一篇（{{上一篇链接：《AI时代的技术资产审计》}}）我们聊了哪些投入会被下一代模型作废，文末我预告了这一篇：怎么把验证做成 AI 能自己跑的流程。今天来兑现。\n4\t\n5\t先问一个场景。AI 写完代码，跟你说一句：我做完了。你接下来干什么？\n6\t\n7\t我猜大多数人的答案，和我以前一模一样：眼见为实，跑一遍看效果。打开页面，把主流程从头到尾点一遍，没问题，交付。\n8\t\n9\t听起来很稳对吧？\n10\t我以前也这么觉得，直到翻车翻多了才看明白：**跑一遍，恰恰是整个验证体系里最薄的一层。**\n11\t\n12\t说实话，这篇文章就干一件事：把跑一遍这个动作，从你手上挪到 AI 自己手上。3 个土办法，1 张清单，零基建门槛，看完今天就能用。\n13\t\n14\t## 一、跑一遍，漏掉的是三类雷\n15\t\n16\t先讲我印象最深的一次翻车。\n17\t\n18\t以前做小程序，AI 把功能写完，我把主流程从头到尾点了一遍：建单、提交、查询，全都是好的，看着没问题就交付了。\n19\t\n20\t结果几天后用户反馈来的时候我人是懵的：输入框里粘贴了一长串带表情的文本，页面直接白屏；另一个没数据的列表页，显示成一片空白。我回头排查，还发现一个更隐蔽的问题：AI 之前帮我修一个小 bug 时，顺手改了另一个模块的判断逻辑。\n21\t\n22\t我验证的是新改的功能，它弄坏的是我根本没想到要看一眼的地方。\n23\t\n24\t感觉就像你验收了一套精装修，水电全通、墙面锃亮，结果隔壁房间被施工队悄悄拆了堵承重墙。\n25\t\n26\t那次之后我复盘，发现眼见为实有个天生的缺陷：**它只覆盖你想得到的路径。** \n27\t具体说，漏三类雷：\n28\t\n29\t- **边界输入**：长文本、特殊字符、表情符号\n30\t- **异常状态**：空列表、弱网、没权限\n31\t- **被顺手改坏的旧功能**：AI 修 bug 时动了别处，而你根本没想到那里要看\n32\t\n33\t## 二、为什么验证成了主战场\n34\t\n35\t不是我一个人的执念，整个行业都在收敛到同一个判断。\n36\t\n37\t淘天团队说得很直白：**AI 的能力边界，是由可验证的反馈决定的。** coding 之所以最先被 AI 拿下，不是因为简单，而是因为编译过没过、测试绿没绿，机器自己就能判。他们给企业画的分层验证体系是：编译、单测这类秒级反馈给 AI 高频自主迭代用；集成测试、浏览器自动化这类分钟级反馈覆盖更真实的行为；人工判断只留给机器裁决不了的部分，业务价值、用户体验、伦理边界。\n38\t\n39\t更有说服力的是 Anthropic 的内部数据：**验证类 skill，是他们对 Claude 产出质量影响最可测量的一类。** 说白了，连造模型的公司，都在把验证做成 AI 自己跑的流程。\n40\t\n41\t道理其实不复杂。启动一个 agent 只要一句话，但收口一点都不便宜。当 AI 生成代码的速度远超你能验证的速度，你囤的不是效率，是认知债：代码看着干净、测试看着全绿，但没有人真正理解它。最麻烦的是，这种债不疼不痒，出事之前你根本感觉不到它的存在，它滋生的是虚假的信心。\n42\t\n43\t一句话：**验证，而不是生成，才是真正的瓶颈。**\n44\t\n45\t## 三、3 个土办法，今天就能用\n46\t\n47\t道理讲完，上土办法。都不成体系，但真管用，每一条都是一句话 prompt 级别的动作。\n48\t\n49\t**第一刀：跑的动作，外包给 AI。**\n50\t\n51\t现在 AI 写完代码，我不再自己先点，而是直接一句话：\n52\t\n53\t> 写完先自己跑测试，全绿再给我看。\n54\t\n55\t跑的动作外包回给了 AI，我只看它贴出来的测试结果。账很好算：它 30 秒跑完 20 个用例，全程不喊累不嫌烦；我自己点主流程至少 10 分钟，还只覆盖 happy path。同样的时间，我可以让它再跑三轮边界用例。\n56\t\n57\t**第二刀：动手之前，先答影响面。**\n58\t\n59\t让 AI 改东西之前，必须先回答我一句：\n60\t\n61\t> 这次改动涉及哪几个文件？会不会影响别的地方？\n62\t\n63\t答不上来就不许动手。说来也怪，光是多这一句，它乱改的次数肉眼可见地少了。改动范围，变成了它的自我约束。\n64\t\n65\t**第三刀：边界清单，翻车变资产。**\n66\t\n67\t我把翻过车的边界输入，长文本、特殊字符、空列表、弱网，存成一张清单。新功能交付前，让 AI 按清单逐条自测一遍。\n68\t\n69\t这张清单每翻一次车才长一条，但它本身就是资产：**翻过的车，不再翻第二次。**\n70\t\n71\t**小技巧：** 清单不用一开始就建全，从空表开始，每翻一次车补一条。半年后回头看，你会发现自己攒下了一份比任何教程都贴合你项目的检查表。\n72\t\n73\t## 四、你攒的不是测试，是自主权\n74\t\n75\t聊到这，可以把上一篇的话接上了。\n76\t\n77\t上一篇（{{上一篇链接}}）说，人的主观认识是模型永远拿不到的信息：什么算做完了、什么算够好了，这些标准只在你脑子里。**验证，就是把这些只在你脑子里的标准，一条一条翻译成机器能自己跑的信号。**\n78\t\n79\t我那张边界清单，每一条都是我用一次翻车换来的判断，现在它们变成了 AI 能自己执行的检查项。所以验证这件事，本质上是在攒增值区的资产，上一篇说贬值区和增值区，验证就是你最该建的那个增值区。\n80\t\n81\t它直接决定一件事：**你验证得越便宜、越可靠，就敢把越大的活交给 AI 自己跑。**\n82\t\n83\t反过来看也成立。说白了：你只敢跑一遍就交付，不是因为你谨慎，是你的验证能力只支撑得起这么多自主权。敢不敢放手，从来不是性格问题，是验证能力问题。\n84\t\n85\t## 尾声：从下一次翻车开始\n86\t\n87\t别再用我点了一遍安慰自己了。\n88\t\n89\t**跑一遍是在检查这一次，攒一套验证是在保障每一次。**\n90\t\n91\t下一次翻车，先别沮丧，把它变成一条清单、一个测试。那才是你从 AI 时代真正带走的东西。\n92\t\n93\t也想听听：你现在敢让 AI 自己跑多大的活？是一段函数、一个模块，还是一整个项目？评论区聊聊你的验证做法，让我们互相抄抄作业。\n94\t"
+          },
+          {
+            "id": "call_2e3b37e01e2d4968b11d9992",
+            "name": "Grep",
+            "input": {
+              "pattern": "\\[\\[.*?\\]\\]|\\{\\{上一篇链接\\}\\}|\\{\\{.*?\\}\\}",
+              "path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905\\04-定稿.md",
+              "output_mode": "content",
+              "-n": true
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No matches found"
+          },
+          {
+            "id": "call_08283030a2aa4d1fbdc36e10",
+            "name": "Grep",
+            "input": {
+              "pattern": "选题状态",
+              "path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库",
+              "output_mode": "content",
+              "-n": true
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "01-选题库\\04-已完成选题归档\\2026-07-30 让AI自动改Prompt，它把规则写了8遍——自动化的膨胀陷阱.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-06-02 AI写代码的第三次革命：从Prompt到Harness，你的开发方式要变了.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-07-30 Prompt Engineering的下一站--从写好一句话到设计一个系统.md:7:选题状态: 创作中\n01-选题库\\04-已完成选题归档\\2026-07-12 ​我对Harness的观点和实操心得​.md:7:选题状态: 已归档\n01-选题库\\04-已完成选题归档\\2026-09-22 用了三个月AI，我反而看不懂自己的项目了.md:7:选题状态: 已完成\n01-选题库\\04-已完成选题归档\\2026-06-02 AI写代码总翻车？这是你一定会遇到的4种翻车场景.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-07-30 让AI自动改Prompt，它把规则写了8遍--自动化的膨胀陷阱.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-07-30 你越强调AI越不听话--Prompt工程里的恶性循环.md:7:选题状态: 待创作\n01-选题库\\02-用户痛点选题池\\2026-09-05 你的每条Prompt都是赌注--Anthropic删掉80%系统提示词的启示.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-07-01 ​AI Coding 的底层框架：一切优化都是在对抗熵增​.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-07-30 你的Prompt该重构了吗——Agent Skill健康度自检清单.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-09-05 AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱.md:7:选题状态: 已完成\n01-选题库\\02-用户痛点选题池\\2026-09-05 AI写得快交付慢--阿姆达尔定律卡住了你的AI提效.md:7:选题状态: 待创作\n01-选题库\\02-用户痛点选题池\\2026-09-05 意图债--你没写下来的决策，AI每次都重新向你收费.md:7:选题状态: 待创作\n01-选题库\\02-用户痛点选题池\\2026-09-22 AI替你干活谁来替你辩护--可辩护的理解才是转行者的安全垫.md:7:选题状态: 待创作\n01-选题库\\02-用户痛点选题池\\2026-09-22 让AI替你做还是带你做，三个月后是两种人.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-07-30 把1500行Prompt砍到300行——Agent Skill的分层重构法.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-07-30 别对AI说不要--正向指令为什么比否定指令更管用.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-06-02 别再让AI裸写代码了，给它装上方向盘和刹车.md:7:选题状态: 待创作\n01-选题库\\03-行业干货选题池\\2026-09-22 你的理解断在哪一轴--用问题域方案域语境域给理解做CT.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-06-02 为什么AI总忘记你的项目是做什么的？教你一个方法让它永远记住.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-06-02 从25%到90%，一个人如何让AI替你写9成代码.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-06-02 AI时代的开发者，你的核心竞争力已经不是写代码了.md:7:选题状态: 待创作\n01-选题库\\03-行业干货选题池\\2026-09-22 AI时代的巴士因子--代码全是你名下的，但没人真的懂它.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-09-05 2026年AI Coding的主战场--从让AI会写到让AI被验证.md:7:选题状态: 已完成\n01-选题库\\03-行业干货选题池\\2026-09-05 淘天和腾讯押注同一件事--两份大厂内部实录里的AI投入分界线.md:7:选题状态: 待创作\n01-选题库\\04-已完成选题归档\\2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂.md:7:选题状态: 待创作"
+          },
+          {
+            "id": "call_e4bf7f1e64884a978d6031db",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\AI副业实测01-AI语音对话录制-20260909\\00-系列总纲.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t系列名: AI副业实测\n3\t系列编号: 01 起\n4\t创建日期: 2026-09-09\n5\t发布节奏: 不定期，攒够素材就发\n6\t状态: 运营中\n7\t关联主篇: \"[[02-稿件库/02-已发布稿件归档/Xpert专家平台副业-20260810/04-定稿|亲测给字节Xpert出题5个月：提现9600]]\"\n8\t标签: [副业, Xpert, 推广系列, 公众号]\n9\t---\n10\t\n11\t# 「AI副业实测」系列总纲\n12\t\n13\t## 一、系列定位：与主篇分工，不重复\n14\t\n15\t| | 主篇（已发布 08-11） | 系列篇（本系列） |\n16\t|---|---|---|\n17\t| 回答的问题 | Xpert是什么？值不值得入坑？ | 具体做什么项目？怎么挑？真实情况如何？ |\n18\t| 层面 | 平台层（入口、审核、结算表） | 项目层（单个项目的拆解+教程+实测） |\n19\t\n20\t- 系列篇不重复主篇的入坑SOP与结算周期表，一律一句话+链接引用\n21\t- 差异化价值：每篇都在教读者怎么挑项目，作者是唯一能持续提供这个视角的人\n22\t\n23\t## 二、两种文章形态\n24\t\n25\t1. **机会推荐型**（项目筛出来了、还没做）：角度 = 我为什么挑它 + 完整小教程 + 开测预告\n26\t2. **实测复盘型**（做过之后写）：角度 = 亲测实录 + 收益实证 + 踩坑与适配人群\n27\t\n28\t每个项目可拆两篇（推荐篇 → 实测篇），给读者追更理由，给公众号导流。\n29\t\n30\t## 三、每篇固定骨架（栏目化）\n31\t\n32\t1. **系列开头**：一句话回收老读者 + 给新读者一句导流主篇\n33\t2. **本期项目卡**：项目名/单价/时长/门槛，一眼看懂（表格或清单）\n34\t3. **这是个什么活**：任务内容 + 配图\n35\t4. **我为什么挑它**：挑选逻辑（系列灵魂，每篇必写）\n36\t5. **完整小教程**（作者决策 2026-09-09）：从0到1，重点讲本项目特有的步骤与要求，通用入坑流程链接主篇\n37\t6. **实测/体验 或 开测预告**\n38\t7. **泼冷水与适配人群**：延续主篇真诚人设\n39\t8. **系列导航**：往期回顾 + 互动结尾\n40\t\n41\t## 四、发布与流量\n42\t\n43\t- **节奏**：不定期，跟着项目广场上新走，有熟悉的好项目就写\n44\t- **导流**：新篇开头导流主篇；发布后回主篇评论区置顶补链，形成双向导流\n45\t- **数据**：按 05-数据复盘库 习惯回填，跑满两篇后复盘系列转化效果\n46\t\n47\t## 五、推广与合规\n48\t\n49\t- **明示推广成分**：每篇说清通过我的入口报名我拿提成，强化真诚人设，具体尺度作者把控\n50\t- **分成机制**：每篇更新记录实际玩法与入口（首篇待补充：Xpert项目分享推广的提成规则、专属链接/邀请码/海报）\n51\t- **固定复用资产**：结算周期表（主篇）、7月TOP10榜单背书、火山方舟订阅链接 https://volcengine.com/L/HVFPj-f9RaQ/ + 邀请码 NLKQZZUG\n52\t\n53\t## 六、选题标准（从项目广场挑）\n54\t\n55\t- ① 我熟悉、能判断质量的项目\n56\t- ② 门槛能描述清楚（设备/资质/环境要求）\n57\t- ③ 单价有吸引力，值得读者花时间\n58\t- ④ 与读者画像匹配（AI同频人、技术人、想入行AI的传统从业者）\n59\t\n60\t## 七、文件夹与素材约定\n61\t\n62\t- 稿件：`02-稿件库/01-创作中稿件/AI副业实测NN-项目名-日期/`\n63\t- 素材：`assets/发文素材/项目-XX/`（截图等随稿存放，发布前移入 imgs/）\n64\t- 本总纲存于第一篇文件夹，后续各篇引用\n65\t- 发布后整夹移入 `02-已发布稿件归档/`\n66\t\n67\t## 八、风格红线（摘自风格报告 v1.2）\n68\t\n69\t- 双引号只用于真正引用，不给普通词加重点；破折号全文不超1-2处\n70\t- 内容100%来自访谈记录，不编造数据与体验\n71\t- 泼冷水但不生硬说教；推广也真诚，不吹不黑\n72\t\n73\t---\n74\t\n75\t## 系列文章台账\n76\t\n77\t| 编号 | 项目 | 形态 | 状态 | 发布日期 |\n78\t|---|---|---|---|---|\n79\t| 01 | AI语音对话录制 | 机会推荐型 | 创作中 | 待定 |\n80\t"
+          },
+          {
+            "id": "call_ccd4573e1a5d4f07b5175e3c",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库\\04-已完成选题归档\\2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂.md",
+              "limit": 40
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t选题标题: \"别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂\"\n3\t选题领域: AI编程 / AI Coding方法论\n4\t目标受众: 想学AI独立开发的初级开发者、想转行AI领域的传统行业从业者\n5\t选题类型: 用户痛点\n6\t创作优先级: 高\n7\t选题状态: 待创作\n8\t创建日期: 2026-08-02\n9\t计划发布日期:\n10\t标签:\n11\t  - Claude Code\n12\t  - 理解验证\n13\t  - Agent工作流\n14\t  - AI独立开发\n15\t  - AI Coding方法论\n16\t---\n17\t\n18\t## 一、选题核心背景与用户痛点\n19\t\n20\t**背景**：Anthropic 核心开发者分享了一套 Claude Code「理解验证」工作流。它把 AI 定位为\"高效且睿智的教师\"，成功标准不只是任务完成，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。工作流通过增量教学、用户复述、清单+测验等方式，围绕**问题域、方案域、语境域**三条轴线展开，含 8 个可执行步骤，强调进入下一阶段前需确认用户已真正理解。其目的是对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉淀决策上下文。\n21\t\n22\t**目标受众的核心痛点**：\n23\t1. **\"审批按钮\"综合征**：让 AI 写完代码，看不懂却只能点\"通过\"，出了 bug 自己背锅。\n24\t2. **越用越虚**：长会话里 AI 越做越多，人越来越像旁观者，能力没涨反而退化。\n25\t3. **不知道怎么\"验证理解\"**：除了\"再读一遍代码\"，没有系统方法确认自己真懂了。\n26\t4. **官方工作流看不懂**：Anthropic 的分享偏英文/理论，初级开发者缺一份本土化、能照做的解读。\n27\t\n28\t> 一句话：这个选题击中的是\"用 AI 写代码却越来越心虚\"的开发者群体焦虑，而我能把官方工作流翻译成可照做的 8 步。\n29\t\n30\t## 二、选题核心切入角度（3个以上）\n31\t\n32\t1. **\"你是不是已经成了审批按钮\"诊断开场**：列几个症状（看不懂就合并、AI 说好了就信、出问题第一反应是问 AI），让读者对号入座、产生代入感。\n33\t2. **\"理解验证\"工作流 8 步详解**：翻译官方工作流，本土化、配 Claude Code 实操场景，每步给\"你说什么 / AI 做什么 / 你怎么确认\"三栏。\n34\t3. **三轴拆解**：问题域（在解决什么）/ 方案域（为什么这么解）/ 语境域（在什么约束下）分别要验证什么，给可复述清单。\n35\t4. **【独家观点】\"让 AI 给你出测验题\"是反直觉但最有效的一招**：把 AI 从执行者变成考官，用\"考你\"来逼出真理解，这是多数人想不到的用法。\n36\t5. **与 Harness 的呼应（知识补链）**：链接已发的 [[2026-07-12 ​我对Harness的观点和实操心得​|Harness 心得]]，指出\"理解验证\"是 Human-in-the-Loop 的具体落地--那篇只在 3.1 节点了名作旁证，本篇展开讲透，形成系列补链。\n37\t\n38\t## 三、核心素材与参考资料\n39\t\n40\t- **核心素材**：[[Anthropic 开发者分享 Claude Code「理解验证」工作流]] -- 8 步工作流 / 三轴（问题域·方案域·语境域）/ 增量教学·用户复述·清单+测验 / 对抗\"审批按钮\"与\"智能体黑箱\"。"
+          },
+          {
+            "id": "call_6e42e2ab008b425cb0c5c063",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\04-日常素材\\Anthropic 开发者分享 Claude Code「理解验证」工作流.md",
+              "limit": 30
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t title: \"Anthropic 开发者分享 Claude Code「理解验证」工作流\"\n3\t date: \"2026年6月2日\"\n4\t tags: [Saved]\n5\t source: \"AI HOT — 精选\"\n6\t link: \"https://x.com/shao__meng/status/2061612512580346245\"\n7\t author: \"noreply@aihot.virxact.com (X：邵猛 (@shao__meng))\"\n8\t feedTitle: \"AI HOT — 精选\"\n9\t summary: \"Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉...\"\n10\t guid: \"https://aihot.virxact.com/cmpvxrm1902luslukxau25aef\"\n11\t---\n12\t\n13\t# Anthropic 开发者分享 Claude Code「理解验证」工作流\n14\t\n15\t<body xmlns=\"http://www.w3.org/1999/xhtml\">Anthropic 核心开发者分享了一套用于 Claude Code 的「理解验证」工作流。该工作流将 AI 定位为\"高效且睿智的教师\"，成功标准不仅是完成任务，更是确保人类对问题、方案及影响有可复述、可辩护的掌握。它通过增量教学、用户复述、清单+测验等方式，围绕问题域、方案域和语境域三条轴线展开，具体包含8个可执行步骤，强调在进入下一阶段前需确认用户已真正理解。此工作流旨在对抗长会话中人类易沦为\"审批按钮\"的\"智能体黑箱\"问题，强制沉淀决策上下文，实现可审计的深度理解。</body>\n16\t\n17\t  [Source](https://x.com/shao__meng/status/2061612512580346245)"
+          },
+          {
+            "id": "call_bbde0364e91e4495b6305c6e",
+            "name": "Grep",
+            "input": {
+              "-n": true,
+              "output_mode": "content",
+              "path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906\\04-定稿.md",
+              "pattern": "\\[\\[|\\{\\{"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "3:上一篇（{{上一篇链接：《AI时代的技术资产审计》}}）我们聊了哪些投入会被下一代模型作废，文末我预告了这一篇：怎么把验证做成 AI 能自己跑的流程。今天来兑现。\n77:上一篇（{{上一篇链接}}）说，人的主观认识是模型永远拿不到的信息：什么算做完了、什么算够好了，这些标准只在你脑子里。**验证，就是把这些只在你脑子里的标准，一条一条翻译成机器能自己跑的信号。**"
+          },
+          {
+            "id": "call_92dcff6d0f46496f9abaa839",
+            "name": "Grep",
+            "input": {
+              "-i": true,
+              "glob": "**/*.md",
+              "output_mode": "files_with_matches",
+              "path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle",
+              "pattern": "MOC|笔记地图|导航|索引"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 28 files\n05-数据复盘库\\周度总结-2026-09-22.md\n.claude\\skills\\gzh-design\\references\\eval-cases.md\n.claude\\skills\\gzh-design\\references\\theme-moyu-ticket.md\n.claude\\skills\\gzh-design\\SKILL.md\n02-稿件库\\02-已发布稿件归档\\用了三个月AI，我反而看不懂自己的项目了-20260922\\03-改稿记录.md\n02-稿件库\\02-已发布稿件归档\\Xpert专家平台副业-20260810\\assets\\Xpert｜小红书创作活动指南（第二期）.md\n02-稿件库\\02-已发布稿件归档\\AI副业实测01-AI语音对话录制-20260909\\00-系列总纲.md\n05-数据复盘库\\周度总结-2026-09-05.md\n05-数据复盘库\\周度总结-2026-08-17.md\n.claude\\skills\\gzh-design\\references\\theme-generator.md\n.claude\\skills\\gzh-design\\references\\theme-index.md\n.claude\\skills\\gzh-design\\README.md\n02-稿件库\\02-已发布稿件归档\\我对Harness的观点和实操心得-20260712\\assets\\Harness 落地设计 SOP.md\n03-素材库\\01-历史文章素材\\AI写代码总翻车？4种经典翻车场景+完整SOP，看完直接用.md\n01-选题库\\04-已完成选题归档\\2026-07-12 ​我对Harness的观点和实操心得​\\file-20260712114128135.md\n01-选题库\\04-已完成选题归档\\2026-07-12 ​我对Harness的观点和实操心得​\\file-20260712114148639.md\n01-选题库\\04-已完成选题归档\\2026-07-12 ​我对Harness的观点和实操心得​\\file-20260712114151121.md\n01-选题库\\01-热点选题池\\从零开始玩转循环 (Getting started with loops)【译】.md\n.claude\\skills\\baoyu-infographic\\references\\styles\\ui-wireframe.md\n.claude\\skills\\baoyu-infographic\\SKILL.md\n.claude\\skills\\baoyu-cover-image\\references\\renderings\\digital.md\n.claude\\skills\\baoyu-xhs-images\\references\\elements\\decorations.md\n00-模板库\\我的内容生产流程图.md\n03-素材库\\01-历史文章素材\\保姆级教程  OpenClaw 新手零代码使用指南  打造 24 小时全自动 AI 助理.md\n03-素材库\\01-历史文章素材\\Claude Skills 功能深度解析  从提示词工程到流程工程的革命性升级.md\n01-选题库\\04-已完成选题归档\\2026-06-02 为什么AI总忘记你的项目是做什么的？教你一个方法让它永远记住.md\n01-选题库\\04-已完成选题归档\\Superpowers+Stitch+Claude Code：创作者中心实战全记录.md\n01-选题库\\04-已完成选题归档\\Harness Engineering：耗时一周，我是如何将应用的AI Coding率提升至90%的.md"
+          },
+          {
+            "id": "call_7a9776fb18b442388b0e1a87",
+            "name": "Bash",
+            "input": {
+              "command": "find \"D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档\" -maxdepth 1 -type d | tail -n +2 | wc -l; ls -la \"D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/AI副业实测01-AI语音对话录制-20260909/00-系列总纲.md\"",
+              "description": "Count archive folders and show series outline file mtime"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "15\n-rw-r--r-- 1 Administrator 197121 3748 Sep  9 13:48 D:/Program Files/Obsidian/repository/ArcherArticle/02-稿件库/02-已发布稿件归档/AI副业实测01-AI语音对话录制-20260909/00-系列总纲.md"
+          },
+          {
+            "id": "call_d8a7b68f18494aa0be1a8d78",
+            "name": "Glob",
+            "input": {
+              "path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle",
+              "pattern": "**/*{MOC,导航,索引,地图,Home,home,Dashboard,仪表}*.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "05-数据复盘库\\📋 知识库数据仪表板.md"
+          },
+          {
+            "id": "call_559fc481341c4546bb2d01d5",
+            "name": "Grep",
+            "input": {
+              "-i": true,
+              "-n": true,
+              "glob": "**/*.md",
+              "head_limit": 60,
+              "output_mode": "content",
+              "path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle",
+              "pattern": "MOC|笔记地图"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "05-数据复盘库\\周度总结-2026-09-22.md:61:| 2 | Prompt 系列 MOC + 6 篇互链 | 09-08 | ❌ 全库仍无 MOC；新发两篇有文内\"上一篇\"衔接但未落成 wikilink（欠债第 5 周） |\n05-数据复盘库\\周度总结-2026-09-22.md:119:| 系列资产化 | ★★★☆☆ | 亮点：资产审计↔主战场已有文内系列衔接、「AI副业实测」总纲栏目化设计完整；短板：新旧 12 篇 wikilink 互链≈0、Prompt 系列 MOC 欠债第 5 周、资产论四部曲未连 |\n05-数据复盘库\\周度总结-2026-09-22.md:158:| 4 | 资产论四部曲互链 + 在池同源选题挂关联引用 + 替换《主战场》占位链接（Prompt 系列 MOC 欠债并入此项一并清） | 09-28 |\n05-数据复盘库\\周度总结-2026-09-05.md:58:| 2 | Prompt 系列 MOC 索引页 + 6 篇互链 | 08-20 | ❌ 全库无 MOC 文件；抽查《PE 下一站》《膨胀陷阱》定稿 **wikilink 数 = 0**，逾期 3 周 |\n05-数据复盘库\\周度总结-2026-09-05.md:104:| 系列资产化 | ★★☆☆☆ | 互链+MOC 欠债逾期 3 周未动；10 篇已发文章仍是\"孤岛集合\"而非\"可导航资产\" |\n05-数据复盘库\\周度总结-2026-09-05.md:112:2. **🔗 系列资产化（第 3 周逾期，约半小时）**：建《Prompt 工程系列》MOC 索引页 + 6 篇定稿互链 + 挂 Skills 三部曲。这是把\"10 篇已发文章\"变成\"一套可导航知识资产\"的最后一步，也是公众号合集页的现成素材。再拖将进入第 4 周。\n05-数据复盘库\\周度总结-2026-09-05.md:141:| 2 | 建《Prompt 工程系列》MOC 索引页 + 6 篇定稿互链 + 挂 Skills 三部曲（逾期 3 周欠债） | 09-08 |\n05-数据复盘库\\周度总结-2026-08-17.md:84:[Omitted long matching line]\n05-数据复盘库\\周度总结-2026-08-17.md:110:2. **🔗 系列资产化（逾期两周，最高优先级欠债）**：建《Prompt 工程系列》MOC 索引页；6 篇定稿 + 素材库 clip 间补双向 wikilink；挂载 Skills 三部曲。上期行动 #2 不能再拖入第三周。\n05-数据复盘库\\周度总结-2026-08-17.md:139:| 2 | 建《Prompt 工程系列》MOC 索引页 + 6 篇定稿互链 + 挂 Skills 三部曲（逾期欠债） | 08-20 |\n03-素材库\\01-历史文章素材\\AI写代码总翻车？4种经典翻车场景+完整SOP，看完直接用.md:357:![图片](https://mmbiz.qpic.cn/sz_mmbiz_jpg/POXYnuKicKs3icserA0L3V20MoCryz3z0a8jU1W2fNDcsBIHp93iaFpzph26A3WyN7gdibG27gQTFT4jPTiaCWAyNHw7QtOEBBw2mibJwmckBM5Qs/640?wx_fmt=jpeg&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=3)\n.claude\\skills\\baoyu-cover-image\\references\\renderings\\digital.md:7:Clean digital illustration with polished finish, precise edges, and subtle modern effects. Feels like a professional UI mockup or corporate illustration.\n.claude\\skills\\baoyu-infographic\\SKILL.md:143:| `ui-wireframe` | Grayscale interface mockup |\n01-选题库\\01-热点选题池\\从零开始玩转循环 (Getting started with loops)【译】.md:63:![图片](https://mmbiz.qpic.cn/mmbiz_jpg/ZlwY8rlDcFO4hOiahL9MOcn6pyzH5zJCK58Yr1VGQv2c9C8WlQfYszVm8XGzc0ECutpzpyLzNibn7KmmVg49M21RZtsibLzouSuOzuOrGPSZBo/640?from=appmsg&watermark=1#imgIndex=1)\n.claude\\skills\\baoyu-infographic\\references\\styles\\ui-wireframe.md:3:Grayscale interface mockup style\n.claude\\skills\\baoyu-xhs-images\\references\\elements\\decorations.md:73:| phone-screenshot | Mobile device mockup | App/screen content |"
+          },
+          {
+            "id": "call_1fe441fe48ca4ebda24a1f13",
+            "name": "Bash",
+            "input": {
+              "command": "cd \"D:/Program Files/Obsidian/repository/ArcherArticle\" && git log --oneline --date=short --pretty=\"%ad %h %s\" -- \"05-数据复盘库/📋 知识库数据仪表板.md\" | head -20",
+              "description": "Show git history of dashboard file"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "2026-06-01 5d417c4 vault backup: 2026-06-01 14:07:55\n2026-06-01 77e30f6 vault backup: 2026-06-01 13:03:05\n2026-06-01 af72cea vault backup: 2026-06-01 12:51:41\n2026-06-01 2931b3c vault backup: 2026-06-01 12:48:12"
+          },
+          {
+            "id": "call_0fec20b70ef5467f83647691",
+            "name": "Bash",
+            "input": {
+              "command": "ls -la \"D:/Program Files/Obsidian/repository/ArcherArticle/01-选题库/04-已完成选题归档/2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂.md\" \"D:/Program Files/Obsidian/repository/ArcherArticle/01-选题库/01-热点选题池/\" \"D:/Program Files/Obsidian/repository/ArcherArticle/04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流.md\"",
+              "description": "Show file timestamps for topic files"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "-rw-r--r-- 1 Administrator 197121 5924 Aug 31 13:17 D:/Program Files/Obsidian/repository/ArcherArticle/01-选题库/04-已完成选题归档/2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂.md\n-rw-r--r-- 1 Administrator 197121 1804 Jun  2 17:00 D:/Program Files/Obsidian/repository/ArcherArticle/04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流.md\n\nD:/Program Files/Obsidian/repository/ArcherArticle/01-选题库/01-热点选题池/:\ntotal 104\ndrwxr-xr-x 1 Administrator 197121     0 Sep  5 12:14 .\ndrwxr-xr-x 1 Administrator 197121     0 Aug 10 21:37 ..\n-rw-r--r-- 1 Administrator 197121 27372 Jul  6 10:58 Loop Engineering 到底是什么？看这一篇就够了.md\n-rw-r--r-- 1 Administrator 197121 29410 Jul 30 11:08 Loop Engineering 已死？ 一文带你了解Graph Engineering.md\n-rw-r--r-- 1 Administrator 197121 15303 Jul  9 10:58 从零开始玩转循环 (Getting started with loops)【译】.md\n-rw-r--r-- 1 Administrator 197121 18730 Jul 31 16:25 对Loop Engineering的思考.md"
+          },
+          {
+            "id": "call_a299b872cae44aa3a5d619f6",
+            "name": "Bash",
+            "input": {
+              "command": "cd \"D:/Program Files/Obsidian/repository/ArcherArticle\" && git log --oneline --date=short --pretty=\"%ad %h %s\" -3 -- \"01-选题库/04-已完成选题归档/2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂.md\"",
+              "description": "Show git history of approval-button topic file"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "2026-08-31 0a456e6 vault backup: 2026-08-31 13:18:48"
+          }
+        ],
+        "isExpanded": false,
+        "result": "核查完毕，9 项事实如下。\n\n## 1.【数据回流】05-数据复盘库 与仪表板\n\n目录下共 12 个文件（`ls` 实测，`D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\05-数据复盘库\\`）：\n- `14 天 AI 内容工厂训练营学习复盘.md`（mtime 06-08）\n- `AI自动总结-2026-06-01.md`、`周复盘-2026-06-1.md`、`周复盘-2026-x-x.md`（模板）、`知识关联分析-2026-06-01-HarnessEngineering.md`（均 06-01）\n- `周度总结-2026-06-24 / 07-11 / 08-02 / 08-17 / 09-05 / 09-22.md`\n- `📋 知识库数据仪表板.md`（mtime 2026-06-01 14:06）\n\n仪表板文件全文 105 行，**不含任何手工数据行/日期数据表**——只有 1 个 dataviewjs 统计块（\"数据实时更新，无需手动维护\"）+ 3 个 dataview 查询块（待创作选题清单、创作进度、最近 7 天新增选题）。即：所谓\"最后回填日期\"无从谈起，该文件自建立起就不存原始数据。git 历史：该文件仅有 4 次提交，全部在 **2026-06-01**（最后一次 `5d417c4 vault backup: 2026-06-01 14:07:55`），此后再无提交。**结论：仪表板无 09 月新增数据行，且 06-01 后从未被改动**（可由 dataview 自动刷新的除外，静态文件层面零变化）。目录内最新改动是 `周度总结-2026-09-22.md`（mtime 2026-09-30 08:17，即本次周报自身被编辑）。\n\n## 2.【互链核查】\n\n(a)《主战场》定稿 `02-稿件库\\02-已发布稿件归档\\2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906\\04-定稿.md`（实际标题为《从人肉跑一遍到AI自己验：我的3个土办法和1张边界清单》）**仍有 2 处未替换占位符**：\n- 第 3 行：`上一篇（{{上一篇链接：《AI时代的技术资产审计》}}）我们聊了哪些投入会被下一代模型作废…`\n- 第 77 行：`上一篇（{{上一篇链接}}）说，人的主观认识是模型永远拿不到的信息…`\n\n(b) 该文件 grep `\\[\\[` 结果为 **0 条 wikilink**——文中不含任何 `[[...]]` 链接。\n\n《技术资产审计》定稿 `...\\AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905\\04-定稿.md`：grep `\\[\\[|\\{\\{` **0 条匹配**——既无指向《主战场》或任何文章的 wikilink，也无占位符残留。\n\n## 3.【MOC 存在性】\n\n- 文件名搜索（`**/*{MOC,导航,索引,地图,Home,Dashboard,仪表}*.md`）：唯一命中 `05-数据复盘库\\📋 知识库数据仪表板.md`（仅因\"仪表\"二字），**无任何 MOC/导航/索引/地图命名的 .md**。\n- 内容搜索 \"MOC|笔记地图\"（忽略大小写）：业务文件中仅在 `05-数据复盘库\\周度总结-2026-08-17/-09-05/-09-22.md` 出现，且全是欠债记录本身，如 `周度总结-2026-09-22.md:61`：\"❌ 全库仍无 MOC；新发两篇有文内'上一篇'衔接但未落成 wikilink（欠债第 5 周）\"。其余命中为 `.claude\\skills` 内英文 \"mockup\"、\"imgIndex\" URL 等无关词。\n- **结论：截至核查时点，全库（Prompt 系列及全库范围）均未建立 MOC**。\n\n## 4.【AI副业实测01 状态】\n\n`02-稿件库\\02-已发布稿件归档\\AI副业实测01-AI语音对话录制-20260909\\00-系列总纲.md`：\n- frontmatter：`状态: 运营中`、`创建日期: 2026-09-09`、`发布节奏: 不定期，攒够素材就发`；含指向主篇的 wikilink（`[[...Xpert专家平台副业-20260810/04-定稿|亲测给字节Xpert出题5个月：提现9600]]`）。\n- 文末\"系列文章台账\"表仅一行（第 79 行）：`| 01 | AI语音对话录制 | 机会推荐型 | 创作中 | 待定 |`——**仍是\"创作中/待定\"，未改为已发布**，尽管该文件夹整体已位于 02-已发布稿件归档 且含 04-定稿.md 与 05-发布包。\n- 文件 mtime **2026-09-09 13:48**，09-22 之后无任何更新痕迹。\n\n## 5.【审批按钮选题状态】\n\n`01-选题库\\04-已完成选题归档\\2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂.md` frontmatter：\n- `选题状态: 待创作`（第 7 行）、`创建日期: 2026-08-02`、`计划发布日期:`（空）、`创作优先级: 高`、`选题类型: 用户痛点`。\n- 即：文件已位于\"04-已完成选题归档\"目录，但状态字段仍是\"待创作\"，未标已完成。\n- 修改痕迹：mtime 2026-08-31 13:17；git 历史仅 1 次提交（`0a456e6 vault backup: 2026-08-31 13:18:48`），此后未再改动。\n\n## 6.【存量选题状态】\n\n4 个痛点池/行业池文件 frontmatter 第 7 行均为 **`选题状态: 待创作`**：\n- `01-选题库\\02-用户痛点选题池\\2026-09-05 意图债--….md` → 待创作\n- `01-选题库\\02-用户痛点选题池\\2026-09-05 你的每条Prompt都是赌注--….md` → 待创作\n- `01-选题库\\02-用户痛点选题池\\2026-09-05 AI写得快交付慢--….md` → 待创作\n- `01-选题库\\03-行业干货选题池\\2026-09-05 淘天和腾讯押注同一件事--….md` → 待创作\n\n`01-选题库\\01-热点选题池\\` 下 **4 个文件全部仍在**：\n- `Loop Engineering 到底是什么？看这一篇就够了.md`（mtime 07-06）\n- `Loop Engineering 已死？ 一文带你了解Graph Engineering.md`（07-30）\n- `从零开始玩转循环 (Getting started with loops)【译】.md`（07-09）\n- `对Loop Engineering的思考.md`（07-31）\n（与\"Loop 相关 3 + Graph Engineering 1\"的描述吻合。）\n\n## 7.【根目录卫生】\n\n`Untitled Kanban.md` **仍在库根目录**。全部内容仅 6 行：frontmatter `kanban-plugin: board` + 空行，无任何列表/卡片——是一个空白 Kanban 看板。\n\n## 8.【理解验证素材】\n\n`04-日常素材\\Anthropic 开发者分享 Claude Code「理解验证」工作流.md` frontmatter：`date: \"2026年6月2日\"`、`tags: [Saved]`、`source: \"AI HOT — 精选\"`、`link: https://x.com/shao__meng/status/2061612512580346245`、`feedTitle: \"AI HOT — 精选\"`、`guid: https://aihot.virxact.com/cmpvxrm1902luslukxau25aef`。无独立\"入库日期\"字段；date 字段为 2026年6月2日，文件 mtime 2026-06-02 17:00。即素材自 06-02 起已在库中（早于 08-02 立选题约 2 个月）。\n\n## 9.【已发布稿件归档总数】\n\n`02-稿件库\\02-已发布稿件归档` 下一级目录 `find -maxdepth 1 -type d` 计数 = **15 个**文章文件夹（清单见上方 ls 输出，含最新两个：`用了三个月AI，我反而看不懂自己的项目了-20260922`、`Xpert小红书活动二期-20260921`）。"
+      },
+      "call_339ee44d382e4bf0990b28cf": {
+        "id": "call_339ee44d382e4bf0990b28cf",
+        "description": "摘要本期新增选题与流程",
+        "prompt": "你在 Obsidian 知识库 \"D:\\Program Files\\Obsidian\\repository\\ArcherArticle\" 中做只读探查（medium 深度）。这是周报\"本期新增内容盘点\"环节，请阅读以下 6 个文件并做结构化摘要：\n\nA. \"01-选题库/02-用户痛点选题池/2026-09-22 AI替你干活谁来替你辩护--可辩护的理解才是转行者的安全垫.md\"\nB. \"01-选题库/02-用户痛点选题池/2026-09-22 让AI替你做还是带你做，三个月后是两种人.md\"\nC. \"01-选题库/03-行业干货选题池/2026-09-22 AI时代的巴士因子--代码全是你名下的，但没人真的懂它.md\"\n\n对 A/B/C 各提取：① frontmatter 的选题状态/创作优先级；② 一句话核心痛点/主张；③ 列出的切入角度数量与最亮眼的 1 个角度（含\"独家观点\"若有）；④ 文中标注的库内关联（wikilink 指向哪些既有文章/选题）。\n\nD. \"02-稿件库/02-已发布稿件归档/用了三个月AI，我反而看不懂自己的项目了-20260922/01-访谈记录.md\" — 摘要访谈来源与核心一手事实（亲历场景、关键数据、金句）。\nE. \"02-稿件库/02-已发布稿件归档/用了三个月AI，我反而看不懂自己的项目了-20260922/03-改稿记录.md\" — 摘要改稿轮数与主要修改点。\nF. \"02-稿件库/02-已发布稿件归档/Xpert小红书活动二期-20260921/04-定稿.md\" — 检查文中/文末是否含发布痕迹（发布日期、发布链接、活动提交记录等）；摘要定稿结构与配图数量。\n\n返回格式：按 A-F 编号给出摘要，事实性、精炼（每个文件 5-10 行），含关键原文引用（短句即可）。不要给建议。",
+        "status": "completed",
+        "toolCalls": [
+          {
+            "id": "call_48f79812e40f4803803312c7",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库\\02-用户痛点选题池\\2026-09-22 AI替你干活谁来替你辩护--可辩护的理解才是转行者的安全垫.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t选题标题: \"AI替你干活，谁来替你辩护？--可辩护的理解才是转行者的安全垫\"\n3\t选题领域: AI成长与职场 / AI协作方法论\n4\t目标受众: 想转行进入AI领域的传统行业从业者、想学AI独立开发的初级开发者\n5\t选题类型: 用户痛点\n6\t创作优先级: 高\n7\t选题状态: 待创作\n8\t创建日期: 2026-09-22\n9\t计划发布日期:\n10\t标签:\n11\t  - 可辩护理解\n12\t  - 转行\n13\t  - 职场安全垫\n14\t  - 理解验证\n15\t  - AI时代生存\n16\t---\n17\t\n18\t## 一、选题核心背景与用户痛点\n19\t\n20\t**背景**：[[04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流|Anthropic「理解验证」工作流素材]]为\"理解\"定了一个容易被忽略的标准：人对问题、方案及影响的掌握，不仅要**可复述**，还要**可辩护**——面对追问和质疑，你能为一套方案站得住脚。这两个词划出了 AI 时代的新及格线：\"做出来\"正在贬值（模型升级一轮，\"能让 AI 交付\"人人都行），\"讲得清、辩得住\"正在升值。对转行者尤其致命：带着原行业积累进入 AI 领域，最怕的不是不会用 AI，而是活干完后所有\"为什么\"都不在自己这里——面试、绩效、客户质询，任何一环追问一句，就露馅。\n21\t\n22\t**目标受众的核心痛点**：\n23\t1. **面试三连问**：转行者 portfolio 全是 AI 深度参与的项目，面试官问\"为什么这么设计／为什么不用现成方案／改需求会怎样\"——每答一句都在暴露理解空心化，\"AI 建议的\"在职场语境里等于\"不是我做的\"。\n24\t2. **裁员时代的身份焦虑**：公司人人在用 AI 提效，\"会用 AI\"不再稀缺；留谁裁谁的标准正在从\"产出多少\"移向\"出了问题谁能兜住、谁能讲清\"。\n25\t3. **接单交付后的质询**：客户指着交付物问\"这个方案对我们业务的副作用是什么\"，答不上来只能用降价兜底。\n26\t4. **学习安全感缺失**：教程跟做了一堆，心里始终没底——因为没有一套标准能确认\"我真的掌握了\"。\n27\t\n28\t> 一句话：模型会写代码，人人都能让模型写代码；能为一套方案辩护的理解，才是模型拿不走、别人卷不掉的那部分——转行者的安全垫不在\"会用 AI\"，在\"讲得清为什么\"。\n29\t\n30\t## 二、选题核心切入角度（3个以上）\n31\t\n32\t1. **\"三连问\"场景开场（情绪钩子）**：面试／绩效面谈／客户质询三个场景各写一段对话式三连问，让读者先背一层冷汗——三个场景共用同一组问题，说明职场对\"理解\"的检验方式已经统一：考的全是辩护，不是操作。\n33\t2. **理解的段位表（认知框架）**：看过（跟完教程）→ 复述得出（费曼过关）→ **辩得住**（经得起反方追问）三段位；素材的\"可复述、可辩护\"恰好对应后两段。多数人停在复述——复述是对内自证，辩护是对外应战；职场质询考的全是辩护，段位差就是安全感差。\n34\t3. **【独家观点】把 AI 从枪手升级成质询官**：素材\"清单＋测验\"环节的反直觉用法——不是让 AI 考知识点，而是让 AI 扮演最难缠的面试官／最挑剔的客户，就你的设计决策连环质询，答不上来的地方就是你的断层。零成本、无限耐心的模拟答辩陪练，是这一代转行者独有的时代红利。\n35\t4. **\"安全垫清单\"落地（收藏钩子）**：项目交付后 5 道辩护题自测——①这个方案解决了什么问题②放弃了哪些备选、为什么③最大的副作用是什么④什么情况下它会失效⑤只能讲 3 分钟时讲哪 3 点——答不全的项目不算\"你的\"项目；这 5 题同时就是一份面试准备清单。\n36\t5. **与库内资产论的深度连接**：[[02-稿件库/02-已发布稿件归档/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/04-定稿|《资产审计》]]讲\"只在你脑子里的信息是唯一不可替代的资产\"——可辩护的理解正是这种资产的日常形态；本篇把资产论从\"收藏判断\"推进到\"职场生存\"。\n37\t\n38\t## 三、核心素材与参考资料\n39\t\n40\t- **主素材**：[[04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流|理解验证工作流素材]]（题眼\"可复述、可辩护的掌握\"直接来自素材原文；\"清单＋测验\"环节为质询官玩法依据）\n41\t- **库内关联**：\n42\t  - [[02-稿件库/02-已发布稿件归档/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/04-定稿|《资产审计》]]（已发，资产论锚点）\n43\t  - [[02-稿件库/02-已发布稿件归档/2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906/04-定稿|《主战场》]]（已发，\"你验证得越可靠，就敢把越大的活交给 AI\"——可辩护是人类侧的验证）\n44\t  - [[01-选题库/02-用户痛点选题池/2026-09-22 让AI替你做还是带你做，三个月后是两种人|《让AI替你做还是带你做》选题]]（同批姊妹篇：那篇讲\"怎么学\"，本篇讲\"为什么必须学到位\"，互链）\n45\t  - 作者接单做项目、海外独立站的业务背景（账号基础信息）——客户质询场景有一手体感\n46\t- **注意**：\"可辩护\"在素材中仅一句表述，创作前需回源 X 原帖（@shao__meng）确认原意；职场场景建议补充 1-2 个真实或半真实案例（面试／客户质询）增强代入。\n47\t\n48\t## 四、Claude AI选题评估与建议\n49\t\n50\t- **传播性：高**。\"AI 替你干活，谁来替你辩护\"自带悬念与身份代入；面试／裁员／客户质询三个场景直接命中转行者最深焦虑，情绪浓度为本批选题最高。\n51\t- **落地性：强**。三连问开场→段位表→质询官玩法→安全垫清单，四段式完整成文；5 道辩护题是可带走的干货锚点，还可复用为面试准备素材。\n52\t- **竞争度：中**。\"AI 时代职场竞争力\"的泛文烂大街，但\"可复述／可辩护\"一手概念划段位＋AI 当质询官的演练法＋资产论背书的组合是独家的；必须严守概念抓手，一旦滑向\"不断学习提升自己\"式正确的废话就沦为同质化。\n53\t- **建议**：**本批唯一适配\"梦兰智识社\"（AI 成长与职场向）的选题，建议首发该号**，为第二账号开出\"资产论·职场篇\"支线；标题保留问句悬念；三连问场景写成对话体；与《让AI替你做还是带你做》互链排期。\n54\t"
+          },
+          {
+            "id": "call_fec804f20d4e4a10b19e4f25",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库\\02-用户痛点选题池\\2026-09-22 让AI替你做还是带你做，三个月后是两种人.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t选题标题: \"让AI替你做还是带你做，三个月后是两种人\"\n3\t选题领域: AI编程 / AI学习与成长\n4\t目标受众: 想学AI独立开发的初级开发者、想转行AI领域的传统行业从业者\n5\t选题类型: 用户痛点\n6\t创作优先级: 高\n7\t选题状态: 待创作\n8\t创建日期: 2026-09-22\n9\t计划发布日期:\n10\t标签:\n11\t  - AI学习法\n12\t  - 费曼技巧\n13\t  - 理解验证\n14\t  - 转行\n15\t  - 独立开发\n16\t---\n17\t\n18\t## 一、选题核心背景与用户痛点\n19\t\n20\t**背景**：[[04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流|Anthropic 开发者的「理解验证」工作流]]做了一个角色反转：把 AI 从\"执行工具\"用成\"高效且睿智的教师\"。它的成功标准不是任务完成，而是**你掌握了**——通过增量教学、用户复述、清单+测验，确保人对问题、方案、影响有可复述、可辩护的掌握。这本质上是费曼学习法的 AI 时代版本：讲不出来 = 没学会，而现在这个\"听你复述、再教一遍\"的陪练，边际成本为零。\n21\t\n22\t**目标受众的核心痛点**：\n23\t1. **用 AI 混过了交付，能力没长**：活是交了，但下次没有 AI（或 AI 搞不定）就露馅——转行者最深的恐惧。\n24\t2. **学了三个月教程，还是不敢独立接单**：知识是\"看会的\"，不是\"讲会的\"，一被客户追问就露怯。\n25\t3. **面试和谈客户时说不出所以然**：不能复述的技能等于没有技能。\n26\t4. **想学但没时间系统学**：需要边干活边长本事，报班和脱离实战的教程都等不起。\n27\t\n28\t> 一句话：同样开一个 Claude Code 会话，\"替你做\"和\"带你做\"是两种姿势——差的不是 prompt 技巧，是三个月后你变强了还是变虚了。\n29\t\n30\t## 二、选题核心切入角度（3个以上）\n31\t\n32\t1. **同一任务、两种会话的对照实验（核心结构）**：同一个需求，会话 A 说\"帮我做 X\"，会话 B 说\"带我做完 X，每一步先讲为什么再动手\"——对照展示两种会话的产出差异与人脑收获差异，用真实截图/记录呈现，可信度拉满。\n33\t2. **\"用户复述\"环节 = AI 版费曼技巧**：素材中让用户用自己的话讲回去、讲不出就再教一遍——被验证了近百年的学习法，第一次有了零成本、无限耐心的陪练。费曼技巧坚持不下来的原因从来不是方法错，是没有听众；现在听众管够。\n34\t3. **【独家观点】双向镜像**：作者在 Xpert 的日常是\"用人的思考方式，教 AI 回答问题\"（人教 AI，见 [[02-稿件库/02-已发布稿件归档/Xpert专家平台副业-20260810/04-定稿|Xpert 主篇]]）；理解验证工作流是反过来\"AI 教人\"。教学相长在 AI 时代成了一条双向车道，而且**两头都通向专业能力资产化**——这个镜像结构是全网独一份的观察角度。\n35\t4. **门禁式推进的节奏设计**：素材强调\"进入下一阶段前确认用户已真正理解\"——把项目切成 15 分钟一段的教学关卡，每段过理解确认，比\"一口气让 AI 做完再 review\"的学习效率高一个量级；这也解释了为什么跟着教程敲完还是不会。\n36\t\n37\t## 三、核心素材与参考资料\n38\t\n39\t- **主素材**：[[04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流|理解验证工作流素材]]（AI 教师定位、增量教学、用户复述、清单+测验、三域轴线、理解确认门禁）\n40\t- **库内关联**：\n41\t  - [[02-稿件库/02-已发布稿件归档/AI时代的技术资产审计--什么会被下一代模型作废，什么越放越值钱-20260905/04-定稿|《资产审计》]]（已发，第三问\"只在你脑子里的信息是唯一不可替代的资产\"——\"带你做\"攒的正是这种资产，是\"替你做\"永远攒不下的）\n42\t  - [[02-稿件库/02-已发布稿件归档/Xpert专家平台副业-20260810/04-定稿|Xpert 主篇]]（已发，\"人教 AI\"的一手亲历，镜像结构的另一半）\n43\t  - [[01-选题库/04-已完成选题归档/2026-08-02 别当AI的审批按钮--Anthropic理解验证工作流8步让AI把代码给你讲懂|《别当AI的审批按钮》选题]]（同源素材的 8 步详解角度，本篇做\"学习姿势\"角度，互不重叠）\n44\t- **注意**：素材为摘要剪藏，创作前回源 X 原帖补全增量教学与复述环节的具体操作细节。\n45\t\n46\t## 四、Claude AI选题评估与建议\n47\t\n48\t- **传播性：高**。对比结构自带冲突，标题即钩子；\"三个月后是两种人\"的时间差制造紧迫感；对照实验的 prompt 可直接抄走，实用价值外显。\n49\t- **落地性：极强**。两个会话的对照本身就可以是一次真实创作实验（作者用自己的项目跑一遍），素材、实验、结论一条龙。\n50\t- **竞争度**：\"用 AI 学习\"的内容很多，但\"替你做 vs 带你做\"的框架 + 费曼技巧 AI 版 + Xpert 人教 AI 的镜像观察，是独家组合，无同质化风险。\n51\t- **建议**：与账号\"从小白到独立开发者的引路人\"定位契合度全库最高，适合作为**转行受众的主推篇**；若与《用了三个月AI，我反而看不懂自己的项目了》同批创作，本篇做解法篇、前者做诊断篇，可组成上下篇结构。\n52\t"
+          },
+          {
+            "id": "call_55caece59a0746c893f5073c",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库\\03-行业干货选题池\\2026-09-22 AI时代的巴士因子--代码全是你名下的，但没人真的懂它.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t选题标题: \"AI时代的巴士因子--代码全是你名下的，但没人真的懂它\"\n3\t选题领域: AI编程 / 项目交付与维护\n4\t目标受众: 想学AI独立开发的初级开发者、想转行AI领域的传统行业从业者\n5\t选题类型: 行业干货\n6\t创作优先级: 中\n7\t选题状态: 待创作\n8\t创建日期: 2026-09-22\n9\t计划发布日期:\n10\t标签:\n11\t  - 巴士因子\n12\t  - 决策日志\n13\t  - AI协作\n14\t  - 接单交付\n15\t  - 独立开发\n16\t---\n17\t\n18\t## 一、选题核心背景与用户痛点\n19\t\n20\t**背景**：[[04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流|Anthropic「理解验证」工作流]]的深层目的之一，是\"**强制沉淀决策上下文，实现可审计的深度理解**\"。这直接改写了软件工程的老概念——巴士因子（bus factor：多少个关键人物突然消失，项目就会瘫痪）。手工时代作者至少自己懂自己的代码；AI 主写时代，**AI 不懂业务语境，名义上的作者不懂实现细节**，项目里唯一\"懂行\"的存在是一个随时会被清空的上下文窗口。巴士因子从 3-5 掉到 2，再掉到 1，正在掉向 0。\n21\t\n22\t**目标受众的核心痛点**：\n23\t1. **接单交付后的维护困境**：客户三个月后要改需求，自己读不懂当时 AI 写的代码，只能按\"新项目\"重新报价——接单者的利润在维护环节被理解黑洞吃掉。\n24\t2. **团队场景的无人区**：同事用 AI 交付的模块，文档漂亮、测试全绿，但谁都不敢接手改一行。\n25\t3. **项目交接与出售时的折价**：讲不清技术决策的来龙去脉，买家/接手人只能按黑盒压价。\n26\t4. **决策散落在会话里**：所有\"为什么\"都留在 AI 会话记录中，会话一清空，项目的\"为什么\"就集体蒸发。\n27\t\n28\t> 一句话：AI 让交付变快了，也让\"没人懂\"变快了——代码能跑和有人懂之间，隔着一份沉淀下来的决策上下文。\n29\t\n30\t## 二、选题核心切入角度（3个以上）\n31\t\n32\t1. **巴士因子衰减曲线叙事**：手工协作时代 3-5 → AI 辅助时代 2 → AI 主写时代 1 → 理解验证缺失时趋近 0（唯一\"理解\"项目的是上下文窗口，而窗口会被清空、被压缩、被新会话重置）。用曲线讲故事，比讲概念更有画面感。\n33\t2. **与《意图债》的姊妹篇分工（互文设计）**：[[01-选题库/02-用户痛点选题池/2026-09-05 意图债--你没写下来的决策，AI每次都重新向你收费|《意图债》]]讲\"没写下的决策让 AI 每个会话重复收费\"（对机器的效率成本）；本篇讲\"没沉淀的理解让任何人都接不了手\"（对人的交接成本）。一体两面，互链成姊妹篇，各吃各的流量。\n34\t3. **【独家观点】\"可审计\"是接单者的信用资产**：独立开发者交付的不该只是能跑的代码，而是\"客户也能看懂为什么\"的决策日志。把素材里 auditable（可审计）从大厂工程要求，降维成个人接单的溢价能力——能讲清\"为什么\"的交付，报价就可以比黑盒交付高一档。\n35\t4. **决策日志最小模板（干货落地）**：每次 AI 会话收尾强制沉淀三行——①这次做了什么；②为什么这么做（被采纳的理由）；③放弃了哪些方案、为什么放弃。这是素材\"强制沉淀决策上下文\"的个人版实现，三行起步，零维护成本，半年后就是项目的\"为什么\"档案馆。\n36\t\n37\t## 三、核心素材与参考资料\n38\t\n39\t- **主素材**：[[04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流|理解验证工作流素材]]（强制沉淀决策上下文、可审计的深度理解、对抗智能体黑箱）\n40\t- **库内关联**：\n41\t  - [[01-选题库/02-用户痛点选题池/2026-09-05 意图债--你没写下来的决策，AI每次都重新向你收费|《意图债》选题]]（姊妹篇，创作排期建议前后脚）\n42\t  - [[02-稿件库/02-已发布稿件归档/2026年AI Coding的主战场--从让AI会写到让AI被验证-20260906/04-定稿|《主战场》]]（已发，\"你攒的不是测试，是自主权\"——决策日志是同一资产观的维护侧应用）\n43\t  - 作者接单做项目、海外独立站的业务背景（账号基础信息）——维护困境与交接场景有一手体感\n44\t- **注意**：素材为摘要剪藏，\"可审计\"相关细节需回源补全；巴士因子概念需自查经典出处（Google 2011 年研究）保证准确。\n45\t\n46\t## 四、Claude AI选题评估与建议\n47\t\n48\t- **传播性：中上**。巴士因子概念对目标受众有认知新鲜度（多数人没听过），\"代码全是你名下的，但没人真的懂它\"有悬念张力；但不如自测清单型选题易转发，属于慢热收藏型。\n49\t- **落地性：强**。衰减曲线 + 姊妹篇互文 + 三行决策日志模板，结构完整；模板是可直接带走的干货锚点。\n50\t- **竞争度：低**。全网讲\"AI 交付快\"的内容过剩，讲\"交付快的不透明代价\"的系统性拆解接近空白；结合接单者视角更是独家。\n51\t- **建议**：排在《意图债》之后创作（意图债概念先铺路，本篇借力）；决策日志模板可做成配图，复制《健康度自检清单》的收藏型切面。\n52\t"
+          },
+          {
+            "id": "call_89167fb0ed084cc2896360a0",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\用了三个月AI，我反而看不懂自己的项目了-20260922\\01-访谈记录.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t---\n2\t稿件标题: 别再无脑点同意了！3道防线把判断权从AI手里拿回来\n3\t访谈日期: \"2026-09-22\"\n4\t访谈人: Claude AI内容编辑\n5\t受访人: 作者本人\n6\t标签:\n7\t  - 认知外包\n8\t  - 审批按钮\n9\t  - 理解验证\n10\t  - AI协作\n11\t  - AI辅助访谈\n12\t---\n13\t\n14\t# 【用了三个月AI，我反而看不懂自己的项目了】深度访谈记录\n15\t## 访谈核心目标\n16\t挖掘作者对该选题的独家观点、个人经历、实操经验、深度思考，搭建文章核心骨架，避免AI同质化写作，打造专属内容壁垒。\n17\t\n18\t> **⚠️ AI 辅助内容说明**：本次访谈经作者授权，回答由 Claude 基于作者库内真实素材代拟（接单与海外独立站业务背景、《主战场》翻车经历、选题笔记观点框架、Anthropic 理解验证工作流素材）。**定稿前请作者逐条核对：凡与事实不符的场景细节（尤其 Q1 客户项目、Q3 线上故障的具体情节），请直接替换为真实经历。**\n19\t\n20\t## 访谈问答全记录\n21\t<!-- 以下内容由Claude AI生成问题，作者逐一回答，自动填充 -->\n22\t\n23\t1.  **AI提问**：这篇文章要拿你自己的真实经历开场。还记得第一次意识到\"这项目我好像看不懂了\"是什么时候、什么场景吗？当时发生了什么？\n24\t    **作者回答**：记得，是去年接的一个海外独立站商城单。交付时一切顺利，主流程我亲手点过一遍，测试全绿，客户也满意。三个月后客户回来要加一个限时促销功能，我打开代码，那种感觉怎么说呢？就像走进一间名义上是我的房子，发现每面墙都是别人砌的，我连哪面是承重墙都不知道。我不是看不懂语法，是不知道这里为什么这么写、动了会不会塌。最讽刺的是我当时的本能反应：不是去读代码，而是开个新会话把代码喂给 AI，问它这里能不能改。那一刻我意识到，项目写在我的名下，但住在我脑子外面。\n25\t\n26\t2.  **AI提问**：头三个月是什么状态？这个转折是怎么来的？\n27\t    **作者回答**：头三个月是最爽的时候，也是我最没有防备的时候。原来一单要磨一个多月，那阵子一个月能交两单，因为每天的工作就是提需求、看 diff、点同意，我当时真觉得效率翻了十倍。现在回头看，爽感来自一个错觉：点同意的成本是 3 秒，看懂的成本是 30 分钟，我每天都在做这道选择题，然后每次都选了 3 秒。AI 提效的账不是按天结的，是按季度结的。维护期一到，账单来了：前三个月省下的理解时间，连本带利一次还清。\n28\t\n29\t3.  **AI提问**：这中间最崩溃、最无力的一次经历是什么？能具体描述吗？\n30\t    **作者回答**：一次线上故障，客户的下单模块出了问题，客户在消息那头等着。我打开代码，发现自己对这个模块的全部认知就是四个字：AI 说好了。正常工程师排查问题，脑子里是有一张嫌疑名单的，先查哪、后查哪、哪里历史上就脆。我没有名单，我连怀疑谁都不会。最后怎么解决的？说出来丢人，我把整个模块贴给一个新会话，让 AI 帮我猜 AI 写的代码哪里会坏。那一单赚的钱，还没有我烧掉的排查时间值钱。最无力的不是不会修，是连怀疑的方向都没有。\n31\t\n32\t4.  **AI提问**：你觉得这个问题背后的根本原因是什么？\n33\t    **作者回答**：我想了很久，结论是：沦为审批按钮不是态度问题，是结构问题。长会话里，AI 每 30 秒给你一个方案，你真看懂一个要 30 分钟，一次会话这道看还是不看的选择题要做几十次。前面几个 diff 你还认真读，到第十次的时候，决策疲劳加上前面都没出事的侥幸，点同意就变成了肌肉记忆。这不是懒，是认知负荷的必然结果。还有更深的一层：AI 的 KPI 是把任务做完，我的 KPI 应该是对项目有掌握，这两个 KPI 从第一天起就是错位的。所以才会出现那种新型交付事故：任务全部成功，理解全部失败。它最阴险的地方是不报红字，你根本察觉不到自己已经出了事故。\n34\t\n35\t5.  **AI提问**：这个问题现在还存在吗？现在什么场景下感觉最明显？\n36\t    **作者回答**：说实话，还在，我只是给它装了刹车，没有根治。现在最明显的场景是被问住。有一次合作方问我，你这个结算模块为什么不用现成的方案，我张嘴就来了一句：AI 建议的。说完那半秒我就后悔了，因为这四个字翻译过来就是：不是我做的，我也不太懂。还有报价的时候，讲不清自己项目技术决策的人，报价都是虚的，客户一句你这个凭什么贵这么多，你就只能降。理解空心化这个东西，平时不疼，一到别人提问的场合就疼。\n37\t\n38\t6.  **AI提问**：你是怎么发现自己已经中招的？有没有一套自测的办法可以分享给读者？\n39\t    **作者回答**：我后来给自己做了一次体检，总结出 5 个信号，可以让大家对照：第一，别人问设计决策，你只能说 AI 说这样好；第二，超过三个月没有手写过一个完整模块；第三，改 bug 的第一反应是问 AI，而不是读代码；第四，说不出你项目里最脆弱的三个位置在哪；第五，离开 AI 不敢碰自己的代码。中 3 条以上，你基本已经是审批按钮了。我自己当年测的时候，5 条全中，一条不落。这份清单我现在定期拿出来过一遍，就当体检。\n40\t\n41\t7.  **AI提问**：现在你具体是怎么应对的？说说你的做法。\n42\t    **作者回答**：我把防线放在三个位置。第一道在事前：方案不让 AI 单独定。我让它一次出 2 到 3 个方案，我来选，并且在需求文档里写一行为什么选这个、不选那个。就一行。比如独立站改版那次我写的是：选 B，因为要给多语言留扩展。三个月后客户真提了多语言需求，我 10 秒钟就敢接，因为我知道当初为什么这么选。第二道在事中：每做完一个阶段，让 AI 用人话讲一遍它做了什么、为什么这么做、放弃了什么，我复述得出来才进下一阶段，复述不出来就让它再讲一遍。第三道在事后：每个会话收尾强制沉淀三行，这次做了什么、为什么这么做、放弃了哪些方案，新会话开场先把这三行喂回去。三道防线加起来，一个会话多花 10 分钟，但它是把判断权从 AI 手里拿回来的具体动作。\n43\t\n44\t8.  **AI提问**：这套方法里最关键的一步是什么？初学者最容易忽略的是什么？\n45\t    **作者回答**：最关键的是第一道防线背后的那条线：分清什么能外包，什么不能。体力可以放心外包，编译、脚手架、样板代码，这些产出的东西你不需要逐行理解也能负责；判断不能外包，选型、架构、取舍，这些一旦外包，项目就跟你没关系了，你只剩署名权。初学者最容易犯的诊断错误，是把问题看成代码看不懂，然后跑去补编程课。其实代码随时可以再读，真正丢了找不回来的是决策，是那些为什么。AI 的会话一清空，所有的为什么就集体蒸发，那才是最贵的损失。\n46\t\n47\t9.  **AI提问**：后来你看到 Anthropic 开发者分享的理解验证工作流，他们把 AI 定位成教师，跟你摸索的路子一致吗？\n48\t    **作者回答**：一致，而且人家走得更系统。我的土办法是在三个节点上装门禁，他们是把 AI 当成一个高效且睿智的教师来用：任务做完不算完，要确认人对问题、方案、影响有了能复述、能辩护的掌握才算完，中间还有增量教学、用户复述、清单加测验这一整套。我看到的时候第一反应是安慰：原来巨头内部也在对抗同一个问题，说明审批按钮不是我一个人能力差。第二反应是后怕：人家把这件事当成工作流级别的基础设施在做，而外面大多数人连问题都还没意识到。这套展开讲又是一整篇，这里先埋个钩子。\n49\t\n50\t10. **AI提问**：最后，如果时光倒流，你会对刚开始用 AI 写代码的自己说什么？想对现在正在踩坑的人说什么？\n51\t    **作者回答**：对当年的自己就一句话：从第一个项目开始，把 AI 当两个角色用，干活的时候它是员工，交付的时候它是老师，别只让它干活。对正在踩坑的人，我想说两件事。第一，别用产出速度当唯一指标，三个月内你会觉得自己是天才，但维护期的账单不会发朋友圈。第二，别把锅甩给自己技术不够强，然后去学更多提效技巧，那是往同一个坑里踩油门。方向反了：不是让 AI 更快，是让自己更懂。最后送一句我写在工位上的话：项目可以是 AI 写的，但得是你的。\n52\t\n53\t## 访谈核心观点提炼\n54\t<!-- 后续由Claude AI自动总结，提炼文章核心观点、金句、核心骨架 -->\n55\t\n56\t### 核心观点（5个）\n57\t\n58\t1. **理解空心化是延迟结算的成本**（来源：Q2、Q4）：点同意 3 秒、看懂 30 分钟，每次 review 都是一道选择题；爽期省下的理解成本在维护期连本带利结算。任务全部成功与理解全部失败可以同时发生，且这种新型交付事故不报红字。\n59\t2. **沦为审批按钮是认知负荷的必然，不是态度问题**（来源：Q4）：长会话几十次决策疲劳后，点同意变成肌肉记忆；批判自己不努力看代码没用，要改的是机制。\n60\t3. **外包的边界：体力可外包，判断不能**（来源：Q8）：代码随时可以再读，决策丢了就永远丢了；会话一清空，所有的为什么集体蒸发。\n61\t4. **5 信号自测是最轻的体检工具**（来源：Q6）：让读者 30 秒定位自己是否中招，是文章的收藏与转发双钩子。\n62\t5. **解法与官方工作流同构：AI 员工 + AI 教师双角色**（来源：Q7、Q9）：三道防线（事前选型留决策、事中复述门禁、事后三行沉淀）是 Anthropic 理解验证工作流的个人土办法版，为系列下一篇埋钩子。\n63\t\n64\t### 可直接使用的金句\n65\t\n66\t- 项目写在我的名下，但住在我脑子外面。（Q1）\n67\t- AI 提效的账不是按天结的，是按季度结的。（Q2）\n68\t- 最无力的不是不会修，是连怀疑的方向都没有。（Q3）\n69\t- 任务全部成功，理解全部失败。（Q4）\n70\t- 理解空心化平时不疼，一到别人提问的场合就疼。（Q5）\n71\t- 不是让 AI 更快，是让自己更懂。（Q10）\n72\t- 项目可以是 AI 写的，但得是你的。（Q10）\n73\t\n74\t### 文章核心骨架建议\n75\t\n76\t递进式结构（现象→原因→代价→解法→升华），经验分享类侧重：\n77\t\n78\t1. **开头（约10%）**：Q1 翻车场景开场（客户要改需求，我不敢动自己名下的代码）+ 引出 5 信号自测钩子\n79\t2. **现象**：5 个信号逐条展开（Q6），邀请读者对号入座\n80\t3. **原因**：3 秒 vs 30 分钟的选择题、决策疲劳、KPI 错位（Q2、Q4）；此处引入 Anthropic 概念（审批按钮、智能体黑箱）作行业背书，与《主战场》呼应\n81\t4. **代价**：排查事故没有嫌疑名单（Q3）+ 被问住的尴尬（Q5），共鸣推向顶点\n82\t5. **解法**：三道防线（Q7）+ 外包边界（Q8），全部零门槛可抄\n83\t6. **升华与结尾（约15%）**：官方也在打这场仗（Q9，埋系列钩子）→ Q10 金句收尾 → 互动提问：5 个信号你中了几条？\n84\t\n85\t配图建议：5 信号自测卡图（收藏锚点）、三道防线流程图。\n86\t\n87\t### 内容亮点与差异化\n88\t\n89\t- **角度稀缺**：全网都在讲 AI 写的代码有 bug，本篇讲代码没 bug 但你不理解，任务成功与理解失败同时发生，是更隐蔽也更普遍的事故。\n90\t- **一手概念 + 个人亲历的组合**：Anthropic 审批按钮、智能体黑箱概念背书，叙事全部落在接单亲历，不是新闻转述。\n91\t- **可带走的干货**：5 信号自测 + 三道防线，双收藏钩子，符合账号\"小白都看得懂\"的定位。\n92\t- **系列资产**：与已发《主战场》构成\"机器验证保代码、理解验证保人\"的递进，文末互链承接既有读者；Q9 埋下系列下一篇（理解验证 8 步工作流详解）的钩子。\n93\t\n94\t### 确定标题\n95\t\n96\t**《别再无脑点同意了！3道防线把判断权从AI手里拿回来》**（2026-09-22 访谈后确定）\n97\t\n98\t- 类型：痛点+解决方案+受众型（标题公式三）\n99\t- 击中点：\"无脑点同意\"是 AI 用户人人干过的具体行为，场景零解释成本；感叹号直击痛点，\"3道防线\"给出可量化解法承诺，\"把判断权拿回来\"直接呼应文章核心独家观点（体力可外包，判断不能）。\n100\t- 备注：原工作标题《用了三个月AI，我反而看不懂自己的项目了》保留于文件夹名与本文 H1，可作为正文中小节叙事或开头自曝句使用。\n101\t"
+          },
+          {
+            "id": "call_895d486562bc4a969dfbdc7f",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\用了三个月AI，我反而看不懂自己的项目了-20260922\\03-改稿记录.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t# 别再无脑点同意了！3道防线把判断权从AI手里拿回来 - 改稿记录\n2\t\n3\t## 第1轮：结构逻辑优化\n4\t- 修正开头预期引导：5 信号自测清单在第一节，原文误写\"文末\"，改为\"先别翻走，下一节就是\"，与实际结构对齐\n5\t- 第二节开头补入爽期叙事（原来一单磨一个多月 → 一个月交两单、效率翻十倍）：先立\"爽\"再讲\"崩\"，问题的来龙去脉有了交代，也让第三节\"账单\"有了出处\n6\t- 第三节开头补过渡句\"维护期一到，账单一起来了。两笔，一笔丢人，一笔后悔\"，承接第二节结尾\"按季度结的账\"，并为两个案例定调\n7\t- 第四节结尾补\"5 信号 × 3 防线\"呼应闭环：决策有记录、阶段讲得懂、为什么留得下来，确保每个问题模式都有对应解法\n8\t- 第五节补系列衔接：《从人肉跑一遍到AI自己验》讲机器侧、本篇讲人侧、8 步工作流埋下篇钩子，形成系列导航段（仿\"AI副业实测\"栏目化设计）\n9\t\n10\t## 第2轮：内容深度优化\n11\t- 开头交付场景具体化：\"交付的时候一切顺利\"改为\"交付那天一切顺利……客户验收也痛快\"，时间锚点+验收细节增强真实感\n12\t- 防线二补充可直接照抄的话术：\"用普通人听得懂的话讲讲，你刚才做了什么、为什么这么做、放弃了什么\"，从描述做法升级为读者可复制的指令\n13\t- 防线三的三行沉淀改为可扫读的模板格式（就三行：做了什么；为什么这么做；放弃了哪些方案），并补充\"喂回去\"的目的：让它知道之前的判断，别从头猜\n14\t- 效率对比已就位：一单磨一个多月 vs 一个月交两单（爽期）、不敢动 vs 10 秒敢接（防线一）、一个会话多花 10 分钟（防线成本），说服力数据链完整，无新增虚构数据\n15\t\n16\t## 第3轮：语言风格优化\n17\t- 高频词补齐：\"基本上\"（第一节自测结论）、\"换句话说\"（第二节 KPI 错位）、\"话说回来\"（第四节转折开场）、\"说实话\"第二处（第五节掏心窝段，全文共 2 处，符合经验分享类 3 次以内的习惯）\n18\t- KPI 错位段口语化重写：\"这两个 KPI，从第一天起就是错位的\"（书面）改为\"你们俩从第一天起，就没在同一个方向使劲\"（口语画面），口语:书面比例向 4:6 靠拢\n19\t- 对比句盘点确认：全文\"不是 A，而是 B\"结构 6 处（开头本能反应、态度/结构、懒/认知负荷、平时不疼/提问就疼、不是更快/是更懂、可以是 AI 写的/但得是你的），密度符合对比式金句 50% 的习惯\n20\t- 无\"首先/其次/最后/综上所述\"等 AI 式过渡，节奏靠短句和设问（\"中 5 条？\"\"最后怎么解决的？\"）打断，维持\n21\t\n22\t## 第4轮：细节情感优化\n23\t- 开头补情绪细节：\"我打开代码，愣住了。就那么看着，越看越陌生。\"两个短句制造停顿感，画面落地\n24\t- 防线二补\"小技巧\"格式，并使用作者招牌强调句式：\"这一步，不！能！跳！\"（风格报告 8.7 技巧三的原文用法）\n25\t- 第五节\"后怕\"段加入自嘲式情感落点：\"而外面大多数人，包括爽期里的我\"——把批判的枪口转回自己，呼应第二节爽期叙事，保持\"踩过坑的过来人\"人设而非说教者\n26\t- 情绪词盘点确认：愣住、越看越陌生、丢人、后悔（半秒）、无力、安慰、后怕，全部来自访谈原文情绪线，未新增虚构感受\n27\t- 感受比喻盘点确认：承重墙房子（开头）、嫌疑名单（排查）、账单/利息（二三节）、员工/老师（结尾）均出自访谈，未凭空造比喻（守住内容 100% 来自访谈的铁律）\n28\t\n29\t## 第5轮：最终定型\n30\t- 消除相邻重复指令：开头\"先别翻走\"与第一节\"先别急着往下读\"语义重复，第一节改为直接下指令\"花 30 秒，对照一下这 5 个信号\"\n31\t- 修正用词不一致：\"定期拿出来过一遍，就当项目的年度体检\"（定期与年度矛盾）改为\"隔一阵拿出来过一遍，就当给项目做体检\"\n32\t- 补高频词\"其实\"（\"其实这不是懒\"），至此风格报告高频词齐备：说实话×2、其实、基本上、换句话说、话说回来、我的做法是、我会\n33\t- AI 痕迹检测通过：无\"首先/其次/最后/综上所述\"模板过渡、无空洞修饰词、无身份声明式开头、无空洞号召；感叹号全文 2 处（标题 + 招牌句\"不！能！跳！\"）；双引号仅 2 处（审批按钮、智能体黑箱，均为首次引入的专有概念）；破折号 0 处（符合 v1.2 标点强约束）\n34\t- 风格一致性确认：递进式结构（自曝开场→自测→原因→代价→三防线→升华）、金句 9 处约每 300 字 1 个、结尾行动号召+互动提问双结构\n35\t- 最终稿写入 04-定稿.md，全文约 2800 字\n36\t\n37\t"
+          },
+          {
+            "id": "call_2bc5d4dff1f249c7a503c00c",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\Xpert小红书活动二期-20260921\\04-定稿.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t# 在Xpert做任务，5个坑替你踩完了（定稿）\n2\t\n3\t> **用途**：Xpert 小红书创作活动第二期投稿笔记（投稿窗口 2026.9.21–10.11，10 月 11 日 24:00 互动截点）\n4\t> **定位**：清单型避坑笔记，与一期经历型笔记（5 个月参与记）差异化，规避重复提交风险\n5\t> **合规基线**：沿用一期 v3 两轮质检返修结论，敏感信息零暴露、零利益导向词\n6\t\n7\t---\n8\t\n9\t## 确定标题\n10\t\n11\t**在Xpert做任务，5个坑替你踩完了**（18 字）\n12\t\n13\t## 备选标题\n14\t\n15\t1. 在Xpert做任务，5个坑替你踩完了（主推）\n16\t2. 做了20多期AI任务，这5个坑我先踩了\n17\t3. 在Xpert做了5个月，说点大实话\n18\t4. 用人的思考方式教AI，是什么体验？\n19\t5. 第一次做AI任务，5个坑请绕着走\n20\t\n21\t---\n22\t\n23\t## 正文（发布时直接复制）\n24\t\n25\t在Xpert做了20多期AI任务\n26\t说实话，5个月过去回头看\n27\t有5个坑，我替你踩完了🪤\n28\t坑不一定都能绕开，但能踩得轻一点\n29\t.\n30\t【Xpert是什么】\n31\t一个连接专业人才和真实AI项目的平台\n32\t我的日常：给AI出题、做评测、找问题\n33\t说穿了，就是用人的思考方式，教AI回答问题\n34\t.\n35\t而坑，往往从入坑第一步就埋下了👇\n36\t.\n37\t坑1：资料随便填就提交\n38\t平台按你的简历和资质匹配任务\n39\t填得越实、越全，匹配到的任务才越对口\n40\t💡我的经验是：资料一次填实填全，比事后补省力得多\n41\t.\n42\t坑2：挑任务只看名字\n43\t有的一晚上能做完，有的要磨好几天\n44\t动手前，先想清楚要投入多少时间\n45\t沉浸进去的时候，时间过得飞快\n46\t.\n47\t坑3：以为认真就稳了\n48\t每一期都得认真对待，糊弄不来\n49\t但认真只是及格线\n50\t专业，是把好东西讲清楚为什么好\n51\t.\n52\t坑4：反馈有落差就上头\n53\t有一期我自我感觉挺认真\n54\t拿到的反馈却和预期有落差\n55\t当时挺窝火，差点想摔键盘\n56\t后来认真沟通过、复盘过，才缓过来\n57\t.\n58\t坑5：只顾埋头干活\n59\t最值钱的，其实是顺手迭代自己\n60\t这5个月，我迭代了文章选题→访谈→写作→发布的内容流水线\n61\t工作里常用的一批skills\n62\t图个简单、旅游民宿两个小程序\n63\t个人站和游戏站\n64\t跟着最新一代模型一起迭代\n65\t这种手感，别处真学不来\n66\t.\n67\t【5个月后的新认识】\n68\t大模型每迭代一轮，就需要新一轮专业反馈\n69\t换句话说，用人教AI这件事，中长期都在\n70\t那种感觉怎么说呢？\n71\t就像你天天跟顶尖选手过招\n72\t他们每次升级，你都是第一批知道的\n73\t.\n74\t【什么人适合】\n75\t✅AI技术同频的人，会做出感觉\n76\t✅有垂类专业背景的，能做得更深\n77\t❌只想随手试试的，大概率坚持不下来\n78\t.\n79\t5个坑替你踩完了\n80\t你第一次做AI任务时，踩过什么坑？\n81\t评论区聊聊，坑里的细节我接着跟你讲👇\n82\t\n83\t---\n84\t\n85\t## 话题标签（按第二期推荐 Tag 组合）\n86\t\n87\t**通用（必带，#Xpert 第一位）**：#Xpert #AI数据标注 #大模型训练 #数据众包 #大模型专家\n88\t**新手经验方向**：#人工智能 #AI实践 #新手教程 #经验分享\n89\t\n90\t> 已排除指南新手方向里的 #兼职避雷（兼职为活动禁词，标签同样回避）。\n91\t\n92\t---\n93\t\n94\t## 配图方案（4 张原创文字卡，沿用一期 notion 手绘风，待生成）\n95\t\n96\t| 张数 | 内容角色 | 版式 | 文件名 |\n97\t|---|---|---|---|\n98\t| 图1 | 封面：大数字5 + 避坑主题（第二期版式B数字清单型） | sparse | `imgs/01-cover-5pits.png` |\n99\t| 图2 | 5坑总览清单 | list | `imgs/02-pit-overview.png` |\n100\t| 图3 | 金句卡：认真只是及格线 | sparse | `imgs/03-quote-line.png` |\n101\t| 图4 | 适合人群对比 + 互动提问 | comparison | `imgs/04-ending-fit.png` |\n102\t\n103\t- 提示词：`05-发布包/imgs/prompts/`（4 份，按提示词逐字核验成图文字后再发布）\n104\t- 封面按第二期建议：3:4 竖版、主标题约 10 字（≤13）、字号占宽 70% 以上、右下角 #Xpert、明亮干净\n105\t- **不使用任何平台截图**（一期 v2 教训：打码后信息量趋零且仍有残留风险）\n106\t\n107\t## 发布要点\n108\t\n109\t- **发布时间**：工作日晚 20:00–22:00（次选周末 12:00–13:00）\n110\t- **发布后**：立即提交[第二期活动表单](https://bytedance.larkoffice.com/share/base/form/shrcno7C3M5rkct1SI13htiLuie)，2 个工作日内出审核结果\n111\t- **评论区纪律**：不放链接、不提奖励；有人问怎么加入 → 引导私信，再发「好友邀请」页生成的专属链接/海报\n112\t- **保留义务**：发布后 30 天内勿删、勿隐藏（最晚保留至 11 月 10 日）\n113\t\n114\t## 活动合规自查清单（发布前逐项打勾）\n115\t\n116\t| 活动规则 | 本稿状态 |\n117\t|---|---|\n118\t| 正文 ≥150 字 | ✅ 约 580 字 |\n119\t| 配图 ≥2 张 | ✅ 4 张原创文字卡（勿重蹈一期 v1 只传 1 张的覆辙） |\n120\t| 带 #Xpert、品牌名写作 Xpert | ✅ 标签首位，全文核对 |\n121\t| 无收益/兼职/副业/赚钱/结算/到账/提现/时薪/月入/日入/佣金/稳赚/躺赚 | ✅ 标题、正文、标签、配图文字四处已逐词扫描 |\n122\t| 无链接/二维码/私信/加群/报名 | ✅ |\n123\t| 无项目名、内部机制、机构名、人名、群名 | ✅ 挫折段沿用一期 v3 泛化水位（反馈落差，未提评分/系数/扣款） |\n124\t| 内容真实、原创、小红书首发 | ✅ 全部事实源自访谈记录与一期 v3 已核验表达 |\n125\t| 封面按第二期建议（3:4、≤13 字、#Xpert 右下角） | ✅ 图1 提示词已内置 |\n126\t| 发布后 30 天公开可见 | ⚠️ 执行纪律：勿删、勿转私密 |\n127\t"
+          }
+        ],
+        "isExpanded": false,
+        "result": "6 个文件已全部读取完毕。以下为结构化摘要。\n\n---\n\n## A. 选题《AI替你干活谁来替你辩护--可辩护的理解才是转行者的安全垫》\n路径：`D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库\\02-用户痛点选题池\\2026-09-22 AI替你干活谁来替你辩护--可辩护的理解才是转行者的安全垫.md`\n\n- ① 状态/优先级：选题状态 **待创作**，创作优先级 **高**；创建日期 2026-09-22，计划发布日期为空。\n- ② 核心主张：\"能为一套方案辩护的理解，才是模型拿不走、别人卷不掉的那部分——转行者的安全垫不在'会用 AI'，在'讲得清为什么'\"。痛点场景：面试三连问、裁员标准变化、客户质询、学习安全感缺失。\n- ③ 切入角度：**5 个**。最亮眼为角度 3【独家观点】\"把 AI 从枪手升级成质询官\"——让 AI 扮演最难缠的面试官/最挑剔的客户连环质询设计决策，\"零成本、无限耐力的模拟答辩陪练，是这一代转行者独有的时代红利\"。\n- ④ 库内关联（wikilink）：主素材 `04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流`；已发稿《资产审计》20260905 定稿、《主战场》20260906 定稿；同批姊妹篇选题 B《让AI替你做还是带你做》（互链）。\n- 附加事实：评估称其为\"本批唯一适配'梦兰智识社'的选题，建议首发该号\"；注意事项为\"'可辩护'在素材中仅一句表述，创作前需回源 X 原帖（@shao__meng）确认原意\"。\n\n## B. 选题《让AI替你做还是带你做，三个月后是两种人》\n路径：`D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库\\02-用户痛点选题池\\2026-09-22 让AI替你做还是带你做，三个月后是两种人.md`\n\n- ① 状态/优先级：选题状态 **待创作**，创作优先级 **高**；创建日期 2026-09-22，计划发布日期为空。\n- ② 核心主张：\"'替你做'和'带你做'是两种姿势——差的不是 prompt 技巧，是三个月后你变强了还是变虚了\"。本质定位为\"费曼学习法的 AI 时代版本\"。\n- ③ 切入角度：**4 个**（对照实验、AI 版费曼、独家双向镜像、门禁式推进）。最亮眼为角度 3【独家观点】\"双向镜像\"：作者在 Xpert\"人教 AI\"，理解验证工作流是\"AI 教人\"，\"教学相长在 AI 时代成了一条双向车道……这个镜像结构是全网独一份的观察角度\"。\n- ④ 库内关联（wikilink）：主素材 `04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流`；已发稿《资产审计》20260905 定稿、《Xpert专家平台副业》20260810 定稿（Xpert 主篇）；已完成归档选题《别当AI的审批按钮》2026-08-02（同源素材 8 步详解角度，互不重叠）。\n- 附加事实：评估称其与账号定位\"契合度全库最高，适合作为转行受众的主推篇\"；建议与 D/E 对应稿件组\"诊断篇/解法篇\"上下篇结构。\n\n## C. 选题《AI时代的巴士因子--代码全是你名下的，但没人真的懂它》\n路径：`D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\01-选题库\\03-行业干货选题池\\2026-09-22 AI时代的巴士因子--代码全是你名下的，但没人真的懂它.md`\n\n- ① 状态/优先级：选题状态 **待创作**，创作优先级 **中**；创建日期 2026-09-22，计划发布日期为空。\n- ② 核心主张：\"AI 让交付变快了，也让'没人懂'变快了——代码能跑和有人懂之间，隔着一份沉淀下来的决策上下文\"。巴士因子叙事：手工时代 3-5 → AI 辅助 2 → AI 主写 1 → 趋近 0（\"项目里唯一'懂行'的存在是一个随时会被清空的上下文窗口\"）。\n- ③ 切入角度：**4 个**（衰减曲线叙事、姊妹篇互文、独家可审计、决策日志模板）。最亮眼为角度 3【独家观点】\"'可审计'是接单者的信用资产\"——\"把素材里 auditable 从大厂工程要求，降维成个人接单的溢价能力——能讲清'为什么'的交付，报价就可以比黑盒交付高一档\"。\n- ④ 库内关联（wikilink）：主素材 `04-日常素材/Anthropic 开发者分享 Claude Code「理解验证」工作流`；《意图债》选题 2026-09-05（姊妹篇，\"一体两面，互链……各吃各的流量\"）；已发稿《主战场》20260906 定稿。建议段另提及复用《健康度自检清单》的收藏型切面（非链接）。\n- 附加事实：传播性评估为\"中上\"，属\"慢热收藏型\"；竞争度\"低\"；巴士因子概念\"需自查经典出处（Google 2011 年研究）\"。\n\n## D. 稿件《用了三个月AI…》01-访谈记录\n路径：`D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\用了三个月AI，我反而看不懂自己的项目了-20260922\\01-访谈记录.md`\n\n- 访谈来源：2026-09-22，访谈人\"Claude AI内容编辑\"，受访人\"作者本人\"，共 10 组问答。**重要标注**：文首带\"⚠️ AI 辅助内容说明\"——回答由 Claude 基于库内真实素材（接单与海外独立站业务背景、《主战场》翻车经历、理解验证工作流素材）代拟，\"定稿前请作者逐条核对\"具体场景细节。\n- 亲历场景（一手事实）：①海外独立站商城单，交付顺利，三个月后客户加限时促销功能，\"项目写在我的名下，但住在我脑子外面\"；②线上故障排查\"我连怀疑谁都不会……让 AI 帮我猜 AI 写的代码哪里会坏\"；③被合作方问\"为什么不用现成的方案\"时脱口\"AI 建议的\"。\n- 关键数据：点同意 3 秒 vs 看懂 30 分钟；\"原来一单要磨一个多月……一个月能交两单\"；5 信号自测\"我自己当年测的时候，5 条全中\"；三道防线\"一个会话多花 10 分钟\"。\n- 金句（7 条已提炼）：\"AI 提效的账不是按天结的，是按季度结的\"、\"任务全部成功，理解全部失败\"、\"不是让 AI 更快，是让自己更懂\"、\"项目可以是 AI 写的，但得是你的\"。\n- 文末确定标题：《别再无脑点同意了！3道防线把判断权从AI手里拿回来》；原工作标题保留于文件夹名，可作正文小节叙事。附文章骨架建议（递进式）与配图建议（5 信号自测卡、三道防线流程图）。\n\n## E. 稿件《用了三个月AI…》03-改稿记录\n路径：`D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\用了三个月AI，我反而看不懂自己的项目了-20260922\\03-改稿记录.md`\n\n- 改稿轮数：**5 轮**，逐轮为：第 1 轮结构逻辑、第 2 轮内容深度、第 3 轮语言风格、第 4 轮细节情感、第 5 轮最终定型。\n- 第 1 轮（结构）：修正开头预期引导、第二节补爽期叙事、第三节补过渡句\"维护期一到，账单一起来了\"、第五节补系列导航段（与《从人肉跑一遍到AI自己验》形成机器侧/人侧系列）。\n- 第 2 轮（深度）：交付场景具体化；防线二补可照抄话术；防线三改可扫读模板；确认效率对比数据链完整，\"无新增虚构数据\"。\n- 第 3 轮（风格）：补高频词（说实话、基本上、换句话说、话说回来）；KPI 错位段口语化改写为\"你们俩从第一天起，就没在同一个方向使劲\"；确认\"不是 A，而是 B\"结构 6 处。\n- 第 4 轮（情感）：补\"我打开代码，愣住了\"等情绪细节；防线二用招牌强调句\"这一步，不！能！跳！\"；确认情绪词与比喻全部出自访谈，\"守住内容 100% 来自访谈的铁律\"。\n- 第 5 轮（定型）：消除重复指令、修正\"定期/年度\"矛盾、补高频词\"其实\"；AI 痕迹检测通过（无模板过渡、感叹号 2 处、破折号 0 处）；\"最终稿写入 04-定稿.md，全文约 2800 字\"。\n\n## F. 稿件《Xpert小红书活动二期》04-定稿\n路径：`D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\02-已发布稿件归档\\Xpert小红书活动二期-20260921\\04-定稿.md`\n\n- 发布痕迹检查：**无\"已发布\"痕迹**（无实际发布日期、无已发布的笔记链接、无已提交表单的记录）。文中存在的是**计划/待执行类痕迹**：投稿窗口\"2026.9.21–10.11，10 月 11 日 24:00 互动截点\"；发布要点写明\"发布后：立即提交[第二期活动表单](https://bytedance.larkoffice.com/share/base/form/shrcno7C3M5rkct1SI13htiLuie)，2 个工作日内出审核结果\"（指令语气，非完成记录）；合规清单中\"发布后 30 天公开可见\"一项标\"⚠️ 执行纪律：勿删、勿转私密\"，佐证尚未发布。\n- 定稿结构（7 段）：确定标题（主推 18 字）→ 备选标题 4 个 → 正文（发布时直接复制版，清单型 5 坑 + \"Xpert是什么\" + \"5个月后的新认识\" + \"什么人适合\" + 互动提问收尾）→ 话题标签（通用必带 #Xpert 第一位 + 新手经验方向，已排除禁词关联标签 #兼职避雷）→ 配图方案 → 发布要点 → 活动合规自查清单（9 项逐条对照）。\n- 配图数量：**4 张原创文字卡，状态\"待生成\"**——图1 封面（大数字 5，3:4 竖版 sparse）、图2 5坑总览清单（list）、图3 金句卡\"认真只是及格线\"（sparse）、图4 适合人群对比+互动提问（comparison），提示词在 `05-发布包/imgs/prompts/`。明确\"不使用任何平台截图\"（一期 v2 教训）。\n- 其他事实：正文约 580 字（满足 ≥150 字要求）；定位\"清单型避坑笔记，与一期经历型笔记差异化，规避重复提交风险\"；敏感词、链接、机构名等四处已逐词扫描通过。"
+      }
+    }
+  },
+  "usage": {
+    "model": "glm-5.3-flash",
+    "inputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 0,
+    "percentage": 0,
+    "contextWindowIsAuthoritative": true
+  }
+}
