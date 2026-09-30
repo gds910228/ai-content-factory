@@ -195,7 +195,8 @@
       "canonicalText": "/style-write  可以适当引用之前发送过的文章，然后生成初稿",
       "images": [],
       "contentDigest": "2e6666f0a94ff2757879e79b1da2e6b73434dbe0d64600e8ab55181cab8817f8",
-      "providerUserMessageId": "407f0f3f-6438-4530-a5fe-2f9df9f67afd"
+      "providerUserMessageId": "407f0f3f-6438-4530-a5fe-2f9df9f67afd",
+      "providerAssistantMessageId": "31fcde75-6c9c-42a5-8b1a-1808ce564cb8"
     }
   ]
 }
