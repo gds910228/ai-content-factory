@@ -239,6 +239,20 @@
       "contentDigest": "37c42a292e675643ddfc3cdcf897949897240760c3965d43ea19810c1d878b99",
       "providerUserMessageId": "0c8b8a77-89ac-4303-b348-bb0f4f928a5e",
       "providerAssistantMessageId": "9cf5d2a2-f49a-434b-b0cb-ccf452d3a346"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790752379852-jhpiogg",
+      "userTurnOrdinal": 18,
+      "state": "accepted",
+      "localMessageId": "msg-1790752379833-ijxdpu3",
+      "timestamp": 1790752379833,
+      "rawDisplayText": "/gzh-design 将图文排成公众号文章",
+      "canonicalText": "/gzh-design 将图文排成公众号文章",
+      "images": [],
+      "contentDigest": "291911c45ee307883fb60cb0409ae09819771defd04043ba6a7cb47207fe3a7d",
+      "providerUserMessageId": "c65352f3-08ae-44bf-b7a1-b3f2e32c79f3",
+      "providerAssistantMessageId": "7de471b1-d776-44d7-93ad-e5079f69d49e"
     }
   ]
 }

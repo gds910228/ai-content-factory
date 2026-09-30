@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>04-定稿_排版_红白色系(red-white)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; padding:0; background:#f0f0f0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; color:#333; }
+  .bar { position:sticky; top:0; z-index:999; background:#1C1917; color:#fff; padding:10px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; box-shadow:0 2px 10px rgba(0,0,0,0.18); }
+  .bar .t { font-size:14px; font-weight:700; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .copy-btn { flex-shrink:0; background:#fff; color:#1C1917; border:none; padding:8px 16px; border-radius:6px; font-size:14px; font-weight:700; cursor:pointer; transition:all .15s; }
+  .copy-btn:hover { background:#FEE2E2; color:#DC2626; }
+  .copy-btn.ok { background:#D1FAE5; color:#065F46; }
+  .copy-btn.fail { background:#FEE2E2; color:#991B1B; }
+  .hint { max-width:677px; margin:14px auto 0; padding:0 10px; font-size:13px; color:#888; line-height:1.6; }
+  .stage { padding:16px 0 48px; }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <span class="t">04-定稿_排版_红白色系(red-white)</span>
+    <button class="copy-btn" id="copyBtn" onclick="copyToGzh()">复制到公众号</button>
+  </div>
+  <p class="hint">① 点右上角「复制到公众号」 → ② 微信公众号编辑器 Ctrl/⌘+V 粘贴。若图片未带入，改用 Ctrl/⌘+A 全选本页正文再复制；仍不行就用同目录「_含图_自包含.html」。</p>
+  <div class="stage" id="stage">
+<section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
+
+<section style="margin:10px 10px 32px;background:#ffffff;border-radius:12px;box-shadow:0 4px 24px -4px rgba(220,38,38,0.15);padding:28px 24px 22px;overflow:hidden;">
+  <p style="font-size:42px;color:#DC2626;font-weight:900;margin:0;line-height:0.6;"><span leaf="">"</span></p>
+  <p style="font-size:16px;font-weight:800;color:#1C1917;margin:12px 0 8px;line-height:1.75;padding-left:4px;">
+    <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">任务完成</span></span>
+    <span leaf="">和</span>
+    <span style="background:#DC2626;color:#FFFFFF;padding:2px 8px;border-radius:4px;"><span leaf="">理解完成</span></span>
+    <span leaf="">，从此是两条验收线</span>
+  </p>
+  <p style="text-align:right;font-size:12px;color:#9CA3AF;margin:8px 0 0;letter-spacing:1px;"><span leaf="">—— 艾启蒙</span></p>
+</section>
+
+<section style="padding:0 10px;">
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">上一篇《别再无脑点同意了》的结尾，我埋了个钩子：Anthropic 开发者分享的那套</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">理解验证工作流</span></span>
+    <span leaf="">，8 步展开又是一整篇，想看的评论区说一声。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">这篇就是来还愿的。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">先把丑话说在前面：官方公开的内容只有</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">一页纸的概述</span></span>
+    <span leaf="">，完整的 8 步并没有逐条铺开。所以今天这篇不是官方翻译，是我把那套思路拿到自己手头项目上跑了几个月的</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">实操版</span></span>
+    <span leaf="">：我怎么用的，哪里疼，最后改成了什么样。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">为什么这事值得单独写一篇？因为我后来发现，</span>
+    <span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">审批按钮</span></span>
+    <span leaf="">的对立面不是更努力地看代码，而是</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">你根本说不清自己哪里没懂</span></span>
+    <span leaf="">。看完这篇你会拿到一套能直接抄的东西：每个阶段收尾的固定三问、复述确认的判断标准，以及一条把理解验收从玄学变成硬门槛的规则。</span>
+  </p>
+</section>
+
+<section style="padding:0 10px 32px;">
+  <p style="font-size:14px;color:#9CA3AF;margin:0 0 14px;letter-spacing:1px;"><span leaf="">📌 本文看点</span></p>
+  <section style="display:flex;justify-content:space-between;">
+    <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+      <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">01</span></p>
+      <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">理解会从三个地方漏掉</span></p>
+    </section>
+    <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;margin-right:8px;text-align:center;border:1px solid #FEE2E2;">
+      <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">02</span></p>
+      <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">三问不过版：理解也过验收</span></p>
+    </section>
+    <section style="flex:1;background:#FEF2F2;border-radius:10px;padding:16px 12px;text-align:center;border:1px solid #FEE2E2;">
+      <p style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:12px;font-weight:800;padding:2px 10px;border-radius:4px;margin:0 0 8px;"><span leaf="">03</span></p>
+      <p style="font-size:13px;font-weight:700;color:#1C1917;margin:0;"><span leaf="">AI 的 KPI 与你的 KPI</span></p>
+    </section>
+  </section>
+</section>
+
+<section style="margin-top:16px;margin-bottom:28px;padding:0 10px;">
+  <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+    <section style="display:flex;align-items:center;">
+      <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">01</span></span>
+      <section>
+        <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">BACKGROUND</span></p>
+        <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">先交代我拿什么验证的</span></h3>
+      </section>
+    </section>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">上篇讲过我沦为审批按钮的翻车史，这篇先交代</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">验证的靶子</span></span>
+    <span leaf="">。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">拿到这套工作流的时候，我还在 VibeCoding 口喷。遇到复杂一点的需求，第一反应是先让 Gemini 出 PRO 和 DEV 文档，前端后端的项目进度分别要一遍，再连同新需求一起丢给 Gemini 评估。一个需求</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">四道手续</span></span>
+    <span leaf="">：先等它出文档，再去前端要进度，再去后端要进度，最后合并评估。</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">链条越长，我离代码越远</span></span>
+    <span leaf="">。我心里清楚这么干活不对劲，但没别的办法。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">所以看到那套工作流，我的反应很直接：</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">能不能简化我的流程，提高点效率</span></span>
+    <span leaf="">。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">我的做法是立马挨个拿自己的项目开刀：图个简单、富屿扇海居两个微信小程序，加上</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">个人站和游戏站</span></span>
+    <span leaf="">，全部拿来做需求功能的迭代优化，一个一个验证。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">为什么非要四个项目一起跑？说实话，</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">单项目容易自欺</span></span>
+    <span leaf="">：跑通了，可能只是这个项目恰好简单。四个跑下来，哪些动作是通用的，哪些只是巧合，一目了然。</span>
+  </p>
+</section>
+
+<section style="padding:0 10px;">
+  <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;"><span leaf=""><br></span></section>
+</section>
+
+<section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+  <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+    <section style="display:flex;align-items:center;">
+      <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">02</span></span>
+      <section>
+        <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">THREE LEAKS</span></p>
+        <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">理解会从三个地方漏掉</span></h3>
+      </section>
+    </section>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">四个月跑下来，我先说结论：</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">理解这个东西，会从三个地方漏掉</span></span>
+    <span leaf="">。</span>
+  </p>
+  <section style="margin-bottom:24px;">
+    <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">会话内流失。上下文一长，前面讲过的东西它自己就忘了，后面给的方案跟前面定的决策打架。代价是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">返工</span></span><span leaf="">：前面刚定好的事，后面悄悄被推翻。</span></p>
+    </section>
+    <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">会话间清零。新开会话，冷启动。上一批为什么这么设计、哪个接口不能动，它一概不知，你从头再喂一遍。代价是</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">重复沟通</span></span><span leaf="">：同样的背景，讲一次是必要，讲三次就是白干。</span></p>
+    </section>
+    <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">3</span></span>
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">从未落纸。最隐蔽的一类：哪些文件是生成的不能手改、部署有什么顺序讲究，这些规则从来没写下来过，只在你脑子里。代价最贵：哪天你忙忘了、人不在，</span><span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">这条规则就当没存在过</span></span><span leaf="">。</span></p>
+    </section>
+  </section>
+  <section style="background:#FFF;border-radius:12px;padding:6px;border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);margin-bottom:8px;">
+    <section style="margin:0;border-radius:8px;overflow:hidden;">
+      <span leaf=""><img src="05-发布包/imgs/01-framework-three-leaks.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+    </section>
+  </section>
+  <p style="font-size:12px;color:#9CA3AF;text-align:center;margin:0 0 24px;"><span leaf="">— 理解的三条泄漏路径</span></p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">你发现没有，这三个地方漏掉的是同一种东西：</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">项目的语境</span></span>
+    <span leaf="">。问题域你可以补文档，方案域可以让 AI 讲，唯独这些藏在项目环境和习惯里的东西，</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">模型权重里长不出来</span></span>
+    <span leaf="">。漏掉多少，你就当多少次审批按钮。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">漏点摸清了，对策其实很朴素。</span>
+  </p>
+</section>
+
+<section style="padding:0 10px;">
+  <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;"><span leaf=""><br></span></section>
+</section>
+
+<section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+  <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+    <section style="display:flex;align-items:center;">
+      <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">03</span></span>
+      <section>
+        <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">THREE QUESTIONS</span></p>
+        <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">我的实操版：阶段收尾三问</span></h3>
+      </section>
+    </section>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">我的用法很朴素：</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">每个阶段结束讲</span></span>
+    <span leaf="">。一批功能做完，我不急着开下一批，先让它按固定三问讲一遍：</span>
+  </p>
+  <section style="margin-bottom:24px;">
+    <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">这次做了什么；</span></p>
+    </section>
+    <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">2</span></span>
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">为什么这么做；</span></p>
+    </section>
+    <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#DC2626;color:#fff;font-size:12px;font-weight:700;border-radius:50%;flex-shrink:0;margin-top:2px;"><span leaf="">3</span></span>
+      <p style="font-size:15px;color:#374151;margin:0;line-height:1.8;flex:1;"><span leaf="">放弃了哪些方案。</span></p>
+    </section>
+  </section>
+  <section style="background:#FEF2F2;border-left:4px solid #DC2626;border-radius:0 8px 8px 0;padding:14px 20px;margin-bottom:24px;">
+    <p style="font-size:14px;font-weight:700;color:#991B1B;margin:0;line-height:1.8;">
+      <span leaf="">💡 小技巧：这三问的话术可以直接抄——用普通人听得懂的话讲讲，你刚才做了什么、为什么这么做、放弃了哪些方案。</span>
+    </p>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">它讲的时候，我只干一件事：</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">跟着复述</span></span>
+    <span leaf="">。这套动作的成本低到几乎无感：它讲一遍，你复述一遍，一个批次多花不了几分钟。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">复述得出来，这批就算过。复述卡壳，就让它换个说法再讲一遍，别嫌慢。因为</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">卡壳的位置，往往就是我没真懂的位置</span></span>
+    <span leaf="">。这种感觉怎么说呢？就像学生时代自查背课文，背到哪一句卡住，哪一句就是没记住的，比任何一句我觉得都会了都诚实。</span>
+  </p>
+  <section style="background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:18px 22px;margin-bottom:24px;">
+    <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+      <span leaf="">「三问讲不清，这一批就不算完——跟测试不绿不合并，是一个道理。」</span>
+    </p>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">四个项目跑下来我才发现，这套东西真正值钱的不是讲懂，是</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">把理解变成批次的验收标准</span></span>
+    <span leaf="">。换句话说，理解成了和代码同级的交付物：</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">代码要过测试，理解要过三问</span></span>
+    <span leaf="">。</span>
+  </p>
+  <section style="background:#FFF;border-radius:12px;padding:6px;border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);margin-bottom:8px;">
+    <section style="margin:0;border-radius:8px;overflow:hidden;">
+      <span leaf=""><img src="05-发布包/imgs/02-infographic-three-questions-gate.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+    </section>
+  </section>
+  <p style="font-size:12px;color:#9CA3AF;text-align:center;margin:0 0 24px;"><span leaf="">— 三问不过版：把理解变成验收标准</span></p>
+</section>
+
+<section style="padding:0 10px;">
+  <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;"><span leaf=""><br></span></section>
+</section>
+
+<section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+  <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+    <section style="display:flex;align-items:center;">
+      <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">04</span></span>
+      <section>
+        <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">CASE STUDY</span></p>
+        <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">真实战场：个人站内容管理后台</span></h3>
+      </section>
+    </section>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">光说方法太虚，讲一个真实的过程。个人站新增内容管理后台，需求内容比较多，我拆成了几批做。第一批挺顺：一个会话里边聊边做，它讲得清楚，我也跟得上。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">问题出在第二批。新开会话，冷启动。干干净净的一个新会话，</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">像刚入职第一天的新人</span></span>
+    <span leaf="">：东西在哪不知道，规矩是什么没听过。它不知道第一批为什么把内容模型设计成那样，不知道哪个接口是给小程序用的不能动。我把上一批的决策重新喂一遍，喂完发现，</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">它给的方案还是跟第一批定下来的东西打架</span></span>
+    <span leaf="">。说实话，那一刻挺挫败的：我都教过它一遍了，怎么还是不对。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">更烦的是那些从来没写下来的</span>
+    <span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">隐性规则</span></span>
+    <span leaf="">。哪些文件是生成的不能手改，部署有什么顺序讲究，每次都得我现场想起来，再口述给它。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">那一刻我突然意识到一件事：</span>
+    <strong style="color:#DC2626;"><span leaf="">分批次开发，本质上是每个新会话都在接手一个别人的项目</span></strong>
+    <span leaf="">，上一个会话就是那个别人。靠我的脑子当两个会话之间的传话筒，既不可靠，也不可复用。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">所以我现在的解法，是把理解搬出脑子、搬进项目环境，正经开始搭</span>
+    <span style="background:#FEE2E2;color:#991B1B;padding:2px 6px;border-radius:3px;font-weight:700;"><span leaf="">Harness 框架</span></span>
+    <span leaf="">：</span>
+  </p>
+  <section style="margin-bottom:14px;">
+    <p style="margin:0 0 6px;">
+      <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">三行沉淀</span></span>
+    </p>
+    <p style="font-size:14px;color:#4B5563;margin:0;line-height:1.7;text-align:justify;">
+      <span leaf="">每批收尾，把做了什么、为什么、放弃了什么写进 CLAUDE.md。新会话开场先读这个，不用我重新讲。</span>
+    </p>
+  </section>
+  <section style="margin-bottom:14px;">
+    <p style="margin:0 0 6px;">
+      <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">隐性规则显性化</span></span>
+    </p>
+    <p style="font-size:14px;color:#4B5563;margin:0;line-height:1.7;text-align:justify;">
+      <span leaf="">哪些不能手改、什么顺序部署，逐条写下来，写一次管所有会话。</span>
+    </p>
+  </section>
+  <section style="margin-bottom:14px;">
+    <p style="margin:0 0 6px;">
+      <span style="display:inline-block;font-size:14px;font-weight:700;color:#991B1B;background:#FEE2E2;padding:3px 10px;border-radius:999px;"><span style="display:inline-block;width:6px;height:6px;background:#DC2626;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span><span leaf="">重复操作 skill 化</span></span>
+    </p>
+    <p style="font-size:14px;color:#4B5563;margin:0;line-height:1.7;text-align:justify;">
+      <span leaf="">同样的活儿第二次干，就做成 skill，连讲都省了。</span>
+    </p>
+  </section>
+  <section style="background:#FEF2F2;border-left:4px solid #DC2626;border-radius:0 8px 8px 0;padding:14px 20px;margin-bottom:24px;">
+    <p style="font-size:14px;font-weight:700;color:#991B1B;margin:0;line-height:1.8;">
+      <span leaf="">💡 小技巧：三行沉淀的话术也可以直接抄——收尾时在会话里说一句，把我们这批的结论整理成三行：做了什么、为什么、放弃了什么，我会贴进 CLAUDE.md。</span>
+    </p>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">这里注意区分一下：第三节的固定三问，是</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">让它讲给我听</span></span>
+    <span leaf="">，验收我的理解；这三行沉淀，是</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">我写给它读</span></span>
+    <span leaf="">，给下个会话铺路。方向相反，缺一不可。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">之前写过一篇《我对 Harness 的观点和实操心得》，当时更多是讲给 AI 立规矩。这次不一样：这些沉淀锁住的不只是它的行为，还有我的理解。我的角色，也从传话筒变成了</span>
+    <strong style="color:#DC2626;"><span leaf="">规则的维护者</span></strong>
+    <span leaf="">。</span>
+  </p>
+</section>
+
+<section style="padding:0 10px;">
+  <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;"><span leaf=""><br></span></section>
+</section>
+
+<section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+  <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+    <section style="display:flex;align-items:center;">
+      <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">05</span></span>
+      <section>
+        <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">TWO LINES</span></p>
+        <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">想明白的事：两条验收线</span></h3>
+      </section>
+    </section>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">跑完四个项目，我最大的变化是</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">对做完的定义</span></span>
+    <span leaf="">变了。以前一批功能合了就算完。现在三问讲不清，就不算完。</span>
+    <strong style="color:#DC2626;"><span leaf="">任务完成和理解完成，从此是两条验收线。</span></strong>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">那套工作流里有句话我一直记得：成功标准不是任务完成，是你对问题、方案、影响有</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">可复述、可辩护的掌握</span></span>
+    <span leaf="">。翻译成大白话：</span>
+    <strong style="color:#DC2626;"><span leaf="">AI 做完是它的 KPI，你讲得清才是你的 KPI。</span></strong>
+    <span leaf="">你们俩从第一天起，就没在同一个方向使劲。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">对我来说这不是什么理念，是饭碗。独立接单的人，</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">讲得清为什么的交付，报价才硬气</span></span>
+    <span leaf="">；将来要转行、要被面试，能辩护的理解就是</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">安全垫</span></span>
+    <span leaf="">。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">说到底，</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">理解验证不是对 AI 的不信任，是对自己的投资</span></span>
+    <span leaf="">。AI 每个会话都是冷启动，但你的理解可以驻留：沉淀进 CLAUDE.md，沉进 Harness，越积越厚。</span>
+  </p>
+  <section style="background:#FFF;border-radius:12px;padding:6px;border:1px solid #E5E7EB;box-shadow:0 4px 12px -2px rgba(0,0,0,0.08);margin-bottom:8px;">
+    <section style="margin:0;border-radius:8px;overflow:hidden;">
+      <span leaf=""><img src="05-发布包/imgs/03-comparison-two-acceptance-lines.png" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+    </section>
+  </section>
+  <p style="font-size:12px;color:#9CA3AF;text-align:center;margin:0 0 24px;"><span leaf="">— 两条验收线：AI 的 KPI 与你的 KPI</span></p>
+</section>
+
+<section style="padding:0 10px;">
+  <section style="height:1px;background:linear-gradient(to right,transparent,#FCA5A5,#DC2626,#FCA5A5,transparent);margin:0;"><span leaf=""><br></span></section>
+</section>
+
+<section style="margin-top:48px;margin-bottom:28px;padding:0 10px;">
+  <section style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:3px solid #DC2626;">
+    <section style="display:flex;align-items:center;">
+      <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:18px;font-weight:900;padding:4px 14px;border-radius:6px;margin-right:14px;line-height:1.3;"><span leaf="">∞</span></span>
+      <section>
+        <p style="font-size:10px;color:#DC2626;font-weight:700;letter-spacing:3px;margin:0 0 2px;text-transform:uppercase;"><span leaf="">THE END</span></p>
+        <h3 style="font-size:18px;font-weight:800;color:#1C1917;margin:0;letter-spacing:0.5px;"><span leaf="">写在最后</span></h3>
+      </section>
+    </section>
+  </section>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">这个系列聊到第三篇了。《从人肉跑一遍到AI自己验》讲</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">机器那一侧</span></span>
+    <span leaf="">：跑的动作可以外包给 AI。《别再无脑点同意了》讲人这一侧的病：你怎么沦为审批按钮。这一篇补上工具：</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">理解怎么验收，怎么驻留</span></span>
+    <span leaf="">。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">现在就可以开始：拿你手头最近的一个开发批次，按三问让它讲一遍，你复述一遍。卡壳了别慌，恭喜你，</span>
+    <span style="border-bottom:2px solid #FECACA;font-weight:600;"><span leaf="">找到没懂的位置了</span></span>
+    <span leaf="">。这套动作我自己也磨了几个月才顺手，你不用再磨，直接抄作业就行。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">对了，你上一次复述自己项目卡壳，是什么时候？评论区聊聊。</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">至于问题域、方案域、语境域这三条轴上，理解具体怎么断、断在哪一轴，展开又是一整篇。想看的，评论区说一声。</span>
+  </p>
+</section>
+
+<section style="padding:0 10px;">
+  <section style="text-align:center;margin:0 0 32px;">
+    <section style="display:flex;align-items:center;justify-content:center;">
+      <span style="height:2px;width:60px;background:linear-gradient(to right,transparent,#DC2626);margin-right:12px;"><span leaf=""><br></span></span>
+      <span style="font-size:11px;color:#DC2626;letter-spacing:3px;font-weight:700;"><span leaf="">END</span></span>
+      <span style="height:2px;width:60px;background:linear-gradient(to left,transparent,#DC2626);margin-left:12px;"><span leaf=""><br></span></span>
+    </section>
+  </section>
+</section>
+
+<section style="padding:0 10px;">
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">我是艾启蒙，用AI陪伴成长，用技术创造价值！</span>
+  </p>
+  <p style="margin-bottom:20px;font-size:15px;line-height:1.8;text-align:justify;">
+    <span leaf="">如果你觉得今天这篇有收获，欢迎</span>
+    <strong style="color:#DC2626;"><span leaf="">点赞、在看、转发</span></strong>
+    <span leaf="">三连，我们下篇见。</span>
+  </p>
+</section>
+
+</section>
+  </div>
+  <script>
+    function copyToGzh(){
+      var stage = document.getElementById('stage');
+      var btn = document.getElementById('copyBtn');
+      var range = document.createRange();
+      range.selectNodeContents(stage);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch(e){ ok = false; }
+      sel.removeAllRanges();
+      if(ok){
+        btn.textContent = '已复制 ✓ 去公众号粘贴';
+        btn.classList.add('ok');
+      } else {
+        btn.textContent = '请手动 Ctrl/⌘+A 全选复制';
+        btn.classList.add('fail');
+      }
+    }
+  </script>
+</body>
+</html>
