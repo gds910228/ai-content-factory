@@ -1,0 +1,45 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-00",
+      "promptFiles": [
+        "prompts/00-scene-cover-three-questions.md"
+      ],
+      "image": "00-scene-cover-three-questions.png",
+      "provider": "modelscope",
+      "ar": "2.35:1",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "prompts/01-framework-three-leaks.md"
+      ],
+      "image": "01-framework-three-leaks.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "prompts/02-infographic-three-questions-gate.md"
+      ],
+      "image": "02-infographic-three-questions-gate.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "prompts/03-comparison-two-acceptance-lines.md"
+      ],
+      "image": "03-comparison-two-acceptance-lines.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ],
+  "jobs": 4
+}
