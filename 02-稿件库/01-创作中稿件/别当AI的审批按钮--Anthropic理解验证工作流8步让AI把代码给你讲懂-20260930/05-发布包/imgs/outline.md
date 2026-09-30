@@ -13,10 +13,11 @@ generated: 2026-09-30
 # 配图大纲 ·《代码能跑不算完》
 
 ## Illustration 0
-**Position**: 封面（公众号头条 900×383，21:9）
-**Purpose**: 首屏钩子——「讲不清就别合并」的视觉化，延续系列封面版式（21:9 横幅）
-**Visual Content**: 合并按钮被三问门禁拦住；主标题+副标题
-**Filename**: 00-scene-cover-three-questions.png
+**Position**: 封面（公众号头条 900×383，2.35:1）
+**Purpose**: 首屏钩子——「讲不清就别合并」的视觉化，延续系列封面版式（超宽横幅）
+**Visual Content**: 合并按钮被三根纯色门条拦住；主标题+双行副标题（三问集中排版）
+**Filename**: 00-scene-cover-three-questions-v2.png
+**Note**: v1（00-scene-cover-three-questions.png）门条文字渲染缺陷已保留作对比；v2 门条改纯色、三问移入副标题区，文字零错，**以 v2 为最终封面**
 
 ## Illustration 1
 **Position**: 第二节末（三漏框架，对应定稿【配图建议：三漏示意图】）
