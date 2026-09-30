@@ -15,6 +15,34 @@
       "contentDigest": "2001e129889ae7e5593e04061d1f47e5c32823137e4258d46d30f0ff2c464176",
       "providerUserMessageId": "1c582785-e440-4bec-8c85-6bce04c3163a",
       "providerAssistantMessageId": "d86ea9db-9b37-4cc4-8740-331bd966e966"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790730646213-1slurqf",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1790730646209-x5x1c15",
+      "timestamp": 1790730646209,
+      "rawDisplayText": "最近已发布稿件归档，对应的一些选题是否有冗余，若有哪些可以归档到已完成选题，如果还能继续发挥余热写文章，给我已有选题",
+      "canonicalText": "最近已发布稿件归档，对应的一些选题是否有冗余，若有哪些可以归档到已完成选题，如果还能继续发挥余热写文章，给我已有选题",
+      "images": [],
+      "contentDigest": "0ecf77d03725c8e174e9ae2848a47bf0d064350df0e334b8521f9eb66c74b8a3",
+      "providerUserMessageId": "9a236201-ef41-4892-a824-e6f31fe6e62b",
+      "providerAssistantMessageId": "47f18303-f516-4730-af1b-89e02e6110ca"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1790731374706-z4srnrk",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1790731374698-z5to8f3",
+      "timestamp": 1790731374698,
+      "rawDisplayText": "执行这三项",
+      "canonicalText": "执行这三项",
+      "images": [],
+      "contentDigest": "d41b3ac689d6dbe039b0b4fb474381974af04ccfc610536eeb9647cdb6563ae7",
+      "providerUserMessageId": "843c9847-7bd5-4079-a61f-b3af50978841",
+      "providerAssistantMessageId": "90848fd3-8424-41d4-a6ba-55540a82012e"
     }
   ]
 }
