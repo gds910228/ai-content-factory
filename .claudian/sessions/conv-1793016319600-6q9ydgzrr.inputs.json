@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1793016319600-6q9ydgzrr",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1793016319696-6q3dstt",
+      "userTurnOrdinal": 1,
+      "state": "staged",
+      "localMessageId": "msg-1793016319597-sgrpz8b",
+      "timestamp": 1793016319597,
+      "rawDisplayText": "\\02-稿件库\\02-已发布稿件归档\\Xpert专家平台副业-20260810\\assets\\Xpert｜创作者活动指南（第三期）.docx，活动除了第三期，请先阅读。",
+      "canonicalText": "\\02-稿件库\\02-已发布稿件归档\\Xpert专家平台副业-20260810\\assets\\Xpert｜创作者活动指南（第三期）.docx，活动除了第三期，请先阅读。",
+      "images": [],
+      "contentDigest": "d98aa09ad2848115136d83bdedbbb2819bd58bef67c6b3ac905c449db8852992"
+    }
+  ]
+}
