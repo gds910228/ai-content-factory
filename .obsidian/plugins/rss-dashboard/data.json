@@ -6,6 +6,29 @@
       "folder": "RSS",
       "items": [
         {
+          "title": "Anthropic 计划今日 9AM EST 提交 S-1 IPO 申请文件",
+          "link": "https://aihot.news/items/a1ntnonrqyeglwofchegsod88",
+          "description": "<p>据 Bloomberg 报道，Anthropic 计划周一上午 9 点（美东时间）公开提交 S-1 IPO 申请，此次上市规模可能创纪录。公司预计最快在 11 月 9 日当周开始正式路演，并期望 IPO 规模达到或超过 SpaceX。作者还猜测 Anthropic 可能会伴随一次大模型发布。</p> <p>🔗 <a href=\"https://x.com/testingcatalog/status/2114696424021451174\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/a1ntnonrqyeglwofchegsod88\">https://aihot.news/items/a1ntnonrqyeglwofchegsod88</a></p>",
+          "content": "<p>据 Bloomberg 报道，Anthropic 计划周一上午 9 点（美东时间）公开提交 S-1 IPO 申请，此次上市规模可能创纪录。公司预计最快在 11 月 9 日当周开始正式路演，并期望 IPO 规模达到或超过 SpaceX。作者还猜测 Anthropic 可能会伴随一次大模型发布。</p> <p>🔗 <a href=\"https://x.com/testingcatalog/status/2114696424021451174\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/a1ntnonrqyeglwofchegsod88\">https://aihot.news/items/a1ntnonrqyeglwofchegsod88</a></p>",
+          "pubDate": "Mon, 26 Oct 2026 12:31:31 GMT",
+          "guid": "https://aihot.virxact.com/a1ntnonrqyeglwofchegsod88",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT — 精选",
+          "feedUrl": "https://aihot.virxact.com/feed.xml",
+          "coverImage": "",
+          "summary": "据 Bloomberg 报道，Anthropic 计划周一上午 9 点（美东时间）公开提交 S-1 IPO 申请，此次上市规模可能创纪录。公司预计最快在 11 月 9 日当周开始正式路演，并期望 IPO 规模达到或超过 SpaceX。作者还猜测 Anthropic 可能会伴随一次大模型发布。 🔗 阅读原文 via AIHOT · https://aihot.news/items/a1ntnonrqyeglwofchegsod88",
+          "author": "noreply@aihot.news (Testing Catalog)",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
+        {
           "title": "卡兹克手把手演示用 Codex 和 Claude 逆向改造现实硬件设备",
           "link": "https://aihot.news/items/o1r046h1yurwlvv536eergn57",
           "description": "<p>数字生命卡兹克分享用 AI 逆向改造现实设备的实操教程，以公司 4 台会议室电视为例，通过 Codex 开启 ADB 调试连接电视，清理开机广告、重做简洁桌面和粒子动态屏保，并复刻到其余 3 台。</p> <p>🔗 <a href=\"https://x.com/Khazix0918/status/2114579883527655853\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/o1r046h1yurwlvv536eergn57\">https://aihot.news/items/o1r046h1yurwlvv536eergn57</a></p>",
@@ -1131,32 +1154,9 @@
           "image": "",
           "category": "",
           "episodeType": ""
-        },
-        {
-          "title": "Wiz 披露 LiteLLM PyPI 包供应链攻击，恶意版本 v1.107.0 窃取凭据",
-          "link": "https://aihot.news/items/rmwtbq3o8rnr9kfjbgric6qew",
-          "description": "<p>Wiz 披露 10 月 21 日 11:39 UTC 有恶意版本 LiteLLM 1.107.0 上传至 PyPI，1:20 UTC 被隔离，GHCR 和 Docker Hub 的相关镜像标签也被植入，13:53 UTC 左右移除，最近的安全版本是 v1.106.2。</p> <p>🔗 <a href=\"https://www.wiz.io/blog/litellm-compromised-steals-credentials\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/rmwtbq3o8rnr9kfjbgric6qew\">https://aihot.news/items/rmwtbq3o8rnr9kfjbgric6qew</a></p>",
-          "content": "<p>Wiz 披露 10 月 21 日 11:39 UTC 有恶意版本 LiteLLM 1.107.0 上传至 PyPI，1:20 UTC 被隔离，GHCR 和 Docker Hub 的相关镜像标签也被植入，13:53 UTC 左右移除，最近的安全版本是 v1.106.2。</p> <p>🔗 <a href=\"https://www.wiz.io/blog/litellm-compromised-steals-credentials\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/rmwtbq3o8rnr9kfjbgric6qew\">https://aihot.news/items/rmwtbq3o8rnr9kfjbgric6qew</a></p>",
-          "pubDate": "Wed, 21 Oct 2026 13:44:12 GMT",
-          "guid": "https://aihot.virxact.com/rmwtbq3o8rnr9kfjbgric6qew",
-          "read": false,
-          "starred": false,
-          "tags": [],
-          "feedTitle": "AI HOT — 精选",
-          "feedUrl": "https://aihot.virxact.com/feed.xml",
-          "coverImage": "",
-          "summary": "Wiz 披露 10 月 21 日 11:39 UTC 有恶意版本 LiteLLM 1.107.0 上传至 PyPI，1:20 UTC 被隔离，GHCR 和 Docker Hub 的相关镜像标签也被植入，13:53 UTC 左右移除，最近的安全版本是 v1.106.2。 🔗 阅读原文 via AIHOT · https://aihot.news/items/rmwtbq3o8rnr9kfjbgric6qew",
-          "author": "noreply@aihot.news (Wiz：Research)",
-          "saved": false,
-          "mediaType": "article",
-          "duration": "",
-          "explicit": false,
-          "image": "",
-          "category": "",
-          "episodeType": ""
         }
       ],
-      "lastUpdated": 1793016174517,
+      "lastUpdated": 1793019774918,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1170,9 +1170,9 @@
       "siteUrl": "https://aihot.news/",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 51,
-        "mergedItemCountBeforeRetention": 101,
+        "mergedItemCountBeforeRetention": 52,
         "retainedItemCount": 50,
-        "retentionRemovedCount": 51,
+        "retentionRemovedCount": 2,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
       },
@@ -1898,7 +1898,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1793016174396,
+      "lastUpdated": 1793019774881,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1949,7 +1949,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1793016174519,
+  "lastRefreshTimestamp": 1793019774918,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
