@@ -6,13 +6,15 @@
       "schemaVersion": 1,
       "id": "msg-1793016319696-6q3dstt",
       "userTurnOrdinal": 1,
-      "state": "staged",
+      "state": "accepted",
       "localMessageId": "msg-1793016319597-sgrpz8b",
       "timestamp": 1793016319597,
       "rawDisplayText": "\\02-稿件库\\02-已发布稿件归档\\Xpert专家平台副业-20260810\\assets\\Xpert｜创作者活动指南（第三期）.docx，活动除了第三期，请先阅读。",
       "canonicalText": "\\02-稿件库\\02-已发布稿件归档\\Xpert专家平台副业-20260810\\assets\\Xpert｜创作者活动指南（第三期）.docx，活动除了第三期，请先阅读。",
       "images": [],
-      "contentDigest": "d98aa09ad2848115136d83bdedbbb2819bd58bef67c6b3ac905c449db8852992"
+      "contentDigest": "d98aa09ad2848115136d83bdedbbb2819bd58bef67c6b3ac905c449db8852992",
+      "providerUserMessageId": "0a3b9ec3-da31-4842-af55-bf4e6ddfe71f",
+      "providerAssistantMessageId": "e21160c4-3838-438a-91c2-ae42f1906596"
     }
   ]
 }

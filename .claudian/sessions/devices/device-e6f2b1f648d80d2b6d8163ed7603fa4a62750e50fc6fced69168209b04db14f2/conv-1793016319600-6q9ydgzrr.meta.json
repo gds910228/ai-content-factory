@@ -1,10 +1,23 @@
 {
   "id": "conv-1793016319600-6q9ydgzrr",
   "providerId": "claude",
-  "title": "\\02-稿件库\\02-已发布稿件归档\\Xpert专家平台副业-20260810\\assets\\Xpe...",
-  "titleGenerationStatus": "pending",
+  "title": "阅读Xpert创作者活动指南第三期文档",
+  "titleGenerationStatus": "success",
   "createdAt": 1793016319602,
-  "lastActivityAt": 1793016319602,
-  "sessionId": null,
-  "selectedModel": "claude-code/glm-5.3-flash"
+  "lastActivityAt": 1793016425706,
+  "sessionId": "978cec16-d7f6-4332-bcc4-6027d5eeb118",
+  "selectedModel": "claude-code/glm-5.3-flash",
+  "providerState": {
+    "providerSessionId": "978cec16-d7f6-4332-bcc4-6027d5eeb118"
+  },
+  "usage": {
+    "model": "glm-5.3-flash",
+    "inputTokens": 1135,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 28160,
+    "contextWindow": 200000,
+    "contextTokens": 29295,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
 }
