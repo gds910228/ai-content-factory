@@ -1,0 +1,60 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "card-03-r3",
+      "promptFiles": [
+        "prompts/03-balanced-daily-r3.md"
+      ],
+      "image": "03-xhs-daily-r3.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-04-r3",
+      "promptFiles": [
+        "prompts/04-comparison-fit-r3.md"
+      ],
+      "image": "04-xhs-fit-r3.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-05-r3",
+      "promptFiles": [
+        "prompts/05-wx-cover-r3.md"
+      ],
+      "image": "05-wx-cover-7months-r3.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-06-r3",
+      "promptFiles": [
+        "prompts/06-wx-daily-r3.md"
+      ],
+      "image": "06-wx-daily-r3.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-07-r3",
+      "promptFiles": [
+        "prompts/07-video-cover-r3.md"
+      ],
+      "image": "07-video-cover-r3.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "9:16",
+      "quality": "2k"
+    }
+  ]
+}
