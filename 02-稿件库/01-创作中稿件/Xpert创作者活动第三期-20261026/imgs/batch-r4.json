@@ -1,0 +1,38 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "card-03-r4",
+      "promptFiles": [
+        "prompts/03-balanced-daily-r4.md"
+      ],
+      "image": "03-xhs-daily-r4.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-05-r4",
+      "promptFiles": [
+        "prompts/05-wx-cover-r4.md"
+      ],
+      "image": "05-wx-cover-7months-r4.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    },
+    {
+      "id": "card-07-r4",
+      "promptFiles": [
+        "prompts/07-video-cover-r4.md"
+      ],
+      "image": "07-video-cover-r4.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "9:16",
+      "quality": "2k"
+    }
+  ]
+}
