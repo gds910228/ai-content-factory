@@ -27,7 +27,21 @@
       "canonicalText": "写新稿件，除了发布小红书笔记，还可以在微信参与贴图笔记或视频创作，创作奖励和好友邀请奖均可叠加。  这些都做，你看下发文素材还缺什么图片需要我补充，我去找，或者你可以用相关画图skill去制作。",
       "images": [],
       "contentDigest": "f16c1f8436c6ac7884e9fdc9ac28edbff9fbe7b626ff113472e26ddf9f8d2814",
-      "providerUserMessageId": "0e82ae90-89b0-4f55-83cb-c282bde2600a"
+      "providerUserMessageId": "0e82ae90-89b0-4f55-83cb-c282bde2600a",
+      "providerAssistantMessageId": "9bf23781-455e-47fa-9da6-7488ddf9e2b2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1793019477049-z0rjevb",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1793019477045-zp6msrw",
+      "timestamp": 1793019477045,
+      "rawDisplayText": "完成邮箱验证",
+      "canonicalText": "完成邮箱验证",
+      "images": [],
+      "contentDigest": "0811bfd6d242d5dcaed24760a6452d061f3618cd76c437af5d25af3b5e968a08",
+      "providerUserMessageId": "2036af04-4452-43ce-b528-0988c5fc3c11"
     }
   ]
 }
