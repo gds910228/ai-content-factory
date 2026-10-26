@@ -1,0 +1,16 @@
+{
+  "jobs": 1,
+  "tasks": [
+    {
+      "id": "card-03-r5",
+      "promptFiles": [
+        "prompts/03-balanced-daily-r5.md"
+      ],
+      "image": "03-xhs-daily-r5.png",
+      "provider": "modelscope",
+      "model": "Qwen/Qwen-Image",
+      "ar": "3:4",
+      "quality": "2k"
+    }
+  ]
+}
