@@ -24,6 +24,8 @@ Create a WeChat image-note (贴图笔记) style infographic following these guid
 ## Language
 
 - All text in Chinese (Simplified), except the brand name "Xpert" which must be spelled exactly as "Xpert" in Latin letters
+- The word "Xpert" appears EXACTLY ONCE on the whole card — only inside the small bottom label. Nowhere else.
+- No Japanese, no Korean, no English sentences anywhere
 
 ---
 
@@ -48,6 +50,7 @@ Create a WeChat image-note (贴图笔记) style infographic following these guid
 **Whitespace**: 60-70% of canvas
 - Single focal point centered, breathing room on all sides
 - Do NOT place critical content in bottom 10% or top-right corner
+- The top-left corner and top-right corner contain NO text and NO badge — only empty white background
 
 ---
 
@@ -63,7 +66,7 @@ Create a WeChat image-note (贴图笔记) style infographic following these guid
 2. One pill-shaped tag below the title:
    「真实经历分享」
 3. Small handwritten label at the bottom (above bottom 10% zone):
-   「出题 · 评测 · 找问题」
+   「Xpert 出题 · 评测 · 找问题」
 
 **Visual Concept**:
 - The same cute hand-drawn lobster line-art doodle as the cover image, small, standing at the end of a long hand-drawn path/timeline that starts as a dotted line and becomes solid — a subtle "journey" metaphor

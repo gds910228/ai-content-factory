@@ -23,7 +23,8 @@ Create a Xiaohongshu (Little Red Book) style infographic following these guideli
 
 ## Language
 
-- All text in Chinese (Simplified), except the brand name "Xpert" which must be spelled exactly as "Xpert" in Latin letters
+- All text in Chinese (Simplified); the brand name "Xpert" does NOT appear on this card
+- No Japanese, no Korean, no English sentences anywhere
 
 ---
 
@@ -48,6 +49,7 @@ Create a Xiaohongshu (Little Red Book) style infographic following these guideli
 **Whitespace**: 45-55% of canvas
 - Title at top, two columns in the middle, one question bubble at the bottom
 - Do NOT place critical content in bottom 10% or top-right corner
+- The top-left corner and top-right corner contain NO text and NO badge — only empty white background
 
 ---
 

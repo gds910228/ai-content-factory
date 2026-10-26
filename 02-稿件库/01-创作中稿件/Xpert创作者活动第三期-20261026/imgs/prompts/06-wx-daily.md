@@ -23,7 +23,8 @@ Create a WeChat image-note (贴图笔记) style infographic following these guid
 
 ## Language
 
-- All text in Chinese (Simplified), except the brand name "Xpert" which must be spelled exactly as "Xpert" in Latin letters
+- All text in Chinese (Simplified); the brand name "Xpert" does NOT appear on this card
+- No Japanese, no Korean, no English sentences anywhere
 
 ---
 
@@ -48,6 +49,7 @@ Create a WeChat image-note (贴图笔记) style infographic following these guid
 **Whitespace**: 55-65% of canvas
 - Title at top, one centered scene drawing in the middle, footer line at bottom
 - Do NOT place critical content in bottom 10% or top-right corner
+- The top-left corner and top-right corner contain NO text and NO badge — only empty white background
 
 ---
 

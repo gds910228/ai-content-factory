@@ -22,6 +22,8 @@ Create a video cover image (video thumbnail) following these guidelines:
 ## Language
 
 - All text in Chinese (Simplified), except the brand name "Xpert" which must be spelled exactly as "Xpert" in Latin letters
+- The word "Xpert" appears EXACTLY ONCE on the whole card — only inside the small pill tag. Nowhere else.
+- No Japanese, no Korean, no English sentences anywhere
 
 ---
 
@@ -46,6 +48,7 @@ Create a video cover image (video thumbnail) following these guidelines:
 **Whitespace**: 60-70% of canvas
 - Huge title in the upper-middle, mascot and doodles in the lower third
 - Do NOT place critical content in the bottom 10% (video UI overlay zone) or top-right corner
+- The top-left corner and top-right corner contain NO text and NO badge — only empty white background
 
 ---
 
