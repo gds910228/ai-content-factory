@@ -15,6 +15,19 @@
       "contentDigest": "d98aa09ad2848115136d83bdedbbb2819bd58bef67c6b3ac905c449db8852992",
       "providerUserMessageId": "0a3b9ec3-da31-4842-af55-bf4e6ddfe71f",
       "providerAssistantMessageId": "e21160c4-3838-438a-91c2-ae42f1906596"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1793017095683-pb05qeq",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1793017095679-2ivrd29",
+      "timestamp": 1793017095679,
+      "rawDisplayText": "写新稿件，除了发布小红书笔记，还可以在微信参与贴图笔记或视频创作，创作奖励和好友邀请奖均可叠加。  这些都做，你看下发文素材还缺什么图片需要我补充，我去找，或者你可以用相关画图skill去制作。",
+      "canonicalText": "写新稿件，除了发布小红书笔记，还可以在微信参与贴图笔记或视频创作，创作奖励和好友邀请奖均可叠加。  这些都做，你看下发文素材还缺什么图片需要我补充，我去找，或者你可以用相关画图skill去制作。",
+      "images": [],
+      "contentDigest": "f16c1f8436c6ac7884e9fdc9ac28edbff9fbe7b626ff113472e26ddf9f8d2814",
+      "providerUserMessageId": "0e82ae90-89b0-4f55-83cb-c282bde2600a"
     }
   ]
 }
