@@ -4,7 +4,7 @@
   "title": "阅读Xpert创作者活动指南第三期文档",
   "titleGenerationStatus": "success",
   "createdAt": 1793016319602,
-  "lastActivityAt": 1793019477045,
+  "lastActivityAt": 1793022044024,
   "sessionId": "978cec16-d7f6-4332-bcc4-6027d5eeb118",
   "selectedModel": "claude-code/glm-5.3-flash",
   "providerState": {
@@ -12,12 +12,12 @@
   },
   "usage": {
     "model": "glm-5.3-flash",
-    "inputTokens": 634,
+    "inputTokens": 2532,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 86720,
+    "cacheReadInputTokens": 138752,
     "contextWindow": 200000,
-    "contextTokens": 87354,
-    "percentage": 44,
+    "contextTokens": 141284,
+    "percentage": 71,
     "contextWindowIsAuthoritative": true
   }
 }

@@ -41,7 +41,8 @@
       "canonicalText": "完成邮箱验证",
       "images": [],
       "contentDigest": "0811bfd6d242d5dcaed24760a6452d061f3618cd76c437af5d25af3b5e968a08",
-      "providerUserMessageId": "2036af04-4452-43ce-b528-0988c5fc3c11"
+      "providerUserMessageId": "2036af04-4452-43ce-b528-0988c5fc3c11",
+      "providerAssistantMessageId": "60b23c6d-e63e-4990-a719-93ad589296ee"
     }
   ]
 }
