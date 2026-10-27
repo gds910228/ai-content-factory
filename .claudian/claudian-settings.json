@@ -2,7 +2,6 @@
   "userName": "",
   "permissionMode": "yolo",
   "model": "claude-code/glm-5.3-flash",
-  "thinkingBudget": "off",
   "effortLevel": "max",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
@@ -14,7 +13,6 @@
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
   "customContextLimits": {},
-  "customModelAliases": {},
   "keyboardNavigation": {
     "scrollUpKey": "w",
     "scrollDownKey": "s",
@@ -25,26 +23,37 @@
   "providerConfigs": {
     "claude": {
       "enabled": true,
-      "responseStyle": "Default",
       "safeMode": "acceptEdits",
       "cliPath": "",
       "cliPathsByHost": {},
       "loadUserSettings": true,
       "enableChrome": true,
       "customModels": "",
-      "defaultModel": "opus",
       "lastModel": "haiku",
       "modelEnvironmentType": "model",
       "titleModelEnvironmentType": "",
       "environmentVariables": "ANTHROPIC_API_KEY=523fcb9896784f5ebf3a2cd808f8f8ee.4FkjwzhKzoIO0SVb\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.3-flash",
-      "environmentHash": "runtime-input:v1:9f1e1607bb915490575bbb6692c4b4aa3d590065f4374c830a96dcc0ce347f33"
+      "environmentHash": "runtime-input:v1:9f1e1607bb915490575bbb6692c4b4aa3d590065f4374c830a96dcc0ce347f33",
+      "outputStyle": null,
+      "promptSuggestions": false,
+      "discoveredOutputStyles": [
+        "default",
+        "Proactive",
+        "Explanatory",
+        "Learning"
+      ],
+      "modelAliases": {},
+      "visibleModels": [
+        "glm-5.3-flash"
+      ],
+      "sessionEnvironmentHash": "runtime-input:v1:76b831f1f3699153e982df4efb1afd3a99f40d6670c89e91cd8fafc0f0e2d714",
+      "selectedModels": []
     },
     "codex": {
       "enabled": false,
       "safeMode": "workspace-write",
       "cliPath": "",
       "cliPathsByHost": {},
-      "customModels": "",
       "reasoningSummary": "detailed",
       "environmentVariables": "",
       "environmentHash": "",
@@ -52,13 +61,13 @@
         "device-e6f2b1f648d80d2b6d8163ed7603fa4a62750e50fc6fced69168209b04db14f2": "native-windows"
       },
       "wslDistroOverridesByHost": {},
-      "visibleModels": null,
-      "discoveredModels": [],
+      "visibleModels": [],
       "modelAliases": {},
-      "catalogTimestamp": 0,
-      "catalogFingerprint": "",
       "enableUltraEffort": false,
-      "responseStyle": "pragmatic"
+      "responseStyle": "pragmatic",
+      "responseVerbosity": "default",
+      "sessionEnvironmentHash": "",
+      "selectedModels": []
     },
     "opencode": {
       "cliPath": "",
@@ -68,24 +77,23 @@
       "environmentVariables": "OPENCODE_ENABLE_EXA=1",
       "modelAliases": {},
       "preferredThinkingByModel": {},
-      "selectedMode": "",
       "thinkingOptionsByModel": {},
-      "visibleModels": []
+      "visibleModels": [],
+      "selectedModels": []
     },
     "pi": {
       "cliPath": "",
       "cliPathsByHost": {},
-      "discoveredModels": [],
       "enabled": false,
       "environmentHash": "",
       "environmentVariables": "",
       "modelAliases": {},
       "preferredThinkingByModel": {},
-      "toolMode": "all",
-      "visibleModels": []
+      "sessionEnvironmentHash": "",
+      "visibleModels": [],
+      "selectedModels": []
     },
     "grok": {
-      "catalogsByHost": {},
       "cliPath": "",
       "cliPathsByHost": {},
       "enabled": false,
@@ -93,7 +101,21 @@
       "environmentVariables": "",
       "modelAliases": {},
       "preferredReasoningByModel": {},
-      "visibleModels": null
+      "visibleModels": [],
+      "selectedModelsByHost": {}
+    },
+    "deepseek": {
+      "enabled": false,
+      "codeMode": false,
+      "presetPlugins": "",
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "environmentVariables": "",
+      "environmentHash": "",
+      "visibleModels": [],
+      "modelAliases": {},
+      "preferredReasoningByModel": {},
+      "selectedModels": []
     }
   },
   "settingsProvider": "claude",
@@ -101,6 +123,7 @@
     "providerId": "claude",
     "model": "claude-code/glm-5.2"
   },
+  "inlineEditModel": null,
   "savedProviderModel": {
     "claude": "claude-code/glm-5.3-flash"
   },
@@ -108,28 +131,34 @@
     "claude": "max"
   },
   "savedProviderServiceTier": {},
-  "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
     "claude": "yolo"
   },
   "pendingProviderSessionInvalidations": {},
-  "lastCustomModel": "claude-code/glm-5.2",
-  "maxWarmAgentProcesses": 5,
   "enableAutoScroll": true,
   "showMessageTimestamps": false,
   "deferMathRenderingDuringStreaming": true,
+  "pluginRenderedFenceLanguages": [],
   "expandFileEditsByDefault": false,
   "chatViewPlacement": "right-sidebar",
+  "enableZenMode": true,
+  "zenModePosition": null,
   "enableDualPane": true,
   "dualPaneSide": "right",
   "restoreTabsOnStartup": true,
+  "skillsSynced": false,
+  "sessionManagerOrganization": "list",
+  "sessionManagerSort": "last-updated",
+  "sessionAutoArchiveAfter": "off",
+  "pinnedLinkedContentPaths": [],
+  "hiddenCommands": [],
+  "thinkingBudget": "off",
+  "customModelAliases": {},
+  "savedProviderThinkingBudget": {},
+  "lastCustomModel": "claude-code/glm-5.2",
   "collabEnabled": false,
   "collabProjectsFolder": "workspace",
   "collabGitPath": "",
-  "sessionManagerOrganization": "list",
-  "sessionManagerSort": "last-updated",
-  "pinnedLinkedContentPaths": [],
-  "hiddenProviderCommands": {},
   "maxTabs": 3,
   "tabBarPosition": "input"
 }
