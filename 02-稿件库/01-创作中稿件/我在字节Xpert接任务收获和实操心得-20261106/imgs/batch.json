@@ -1,0 +1,37 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "prompts/01-infographic-difficulty-score.md"
+      ],
+      "image": "01-infographic-difficulty-score.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Qwen/Qwen-Image"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "prompts/02-flowchart-four-step-pipeline.md"
+      ],
+      "image": "02-flowchart-four-step-pipeline.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Qwen/Qwen-Image"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "prompts/03-infographic-hourly-rates.md"
+      ],
+      "image": "03-infographic-hourly-rates.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Qwen/Qwen-Image"
+    }
+  ]
+}

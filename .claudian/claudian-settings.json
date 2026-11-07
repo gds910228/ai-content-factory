@@ -32,8 +32,8 @@
       "lastModel": "haiku",
       "modelEnvironmentType": "model",
       "titleModelEnvironmentType": "",
-      "environmentVariables": "ANTHROPIC_API_KEY=523fcb9896784f5ebf3a2cd808f8f8ee.4FkjwzhKzoIO0SVb\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.3-flash",
-      "environmentHash": "runtime-input:v1:9f1e1607bb915490575bbb6692c4b4aa3d590065f4374c830a96dcc0ce347f33",
+      "environmentVariables": "ANTHROPIC_API_KEY=c2ad8d02439a4e458bd8c288bdbc8097.UbaNhPMvFlo5gneM\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.3",
+      "environmentHash": "runtime-input:v1:13fe5506be088a899d9fe0e778371f4efb7af92254c2a17eca03928b11657c9d",
       "outputStyle": null,
       "promptSuggestions": false,
       "discoveredOutputStyles": [
@@ -44,10 +44,24 @@
       ],
       "modelAliases": {},
       "visibleModels": [
-        "glm-5.3-flash"
+        "opus"
       ],
-      "sessionEnvironmentHash": "runtime-input:v1:76b831f1f3699153e982df4efb1afd3a99f40d6670c89e91cd8fafc0f0e2d714",
-      "selectedModels": [],
+      "sessionEnvironmentHash": "runtime-input:v1:302098e7842ce8722a85e2c0112f79f957d649ef1d4ad4406f7698ed53db7944",
+      "selectedModels": [
+        {
+          "value": "opus",
+          "label": "glm-5.3",
+          "description": "Custom Opus model",
+          "reasoningMetadataResolved": true,
+          "supportedEffortLevels": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "installationMethodsByHost": {},
       "wslDistroOverridesByHost": {}
     },
@@ -144,15 +158,11 @@
   "settingsProvider": "claude",
   "lastSelectedChatModel": {
     "providerId": "claude",
-    "model": "claude-code/glm-5.2"
+    "model": "opus"
   },
   "inlineEditModel": null,
-  "savedProviderModel": {
-    "claude": "claude-code/glm-5.3-flash"
-  },
-  "savedProviderEffort": {
-    "claude": "max"
-  },
+  "savedProviderModel": {},
+  "savedProviderEffort": {},
   "savedProviderServiceTier": {},
   "savedProviderPermissionMode": {
     "claude": "yolo"
