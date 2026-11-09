@@ -6,6 +6,29 @@
       "folder": "RSS",
       "items": [
         {
+          "title": "黄仁勋职位悬了？耶鲁教授 Sonnenfeld 估计去留概率约五五开",
+          "link": "https://aihot.news/items/i8df3mmfly47axpbbr1p6ivh5",
+          "description": "<p>TechCrunch 编辑专访耶鲁管理学院教授 Jeffrey Sonnenfeld，评估 Nvidia CEO 黄仁勋因与涉嫌为中国收集情报的 Megaspeed 高管 Alice Huang 有染而面临的职位风险，Sonnenfeld 称其能否保住职位概率约五五开。</p> <p>🔗 <a href=\"https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/i8df3mmfly47axpbbr1p6ivh5\">https://aihot.news/items/i8df3mmfly47axpbbr1p6ivh5</a></p>",
+          "content": "<p>TechCrunch 编辑专访耶鲁管理学院教授 Jeffrey Sonnenfeld，评估 Nvidia CEO 黄仁勋因与涉嫌为中国收集情报的 Megaspeed 高管 Alice Huang 有染而面临的职位风险，Sonnenfeld 称其能否保住职位概率约五五开。</p> <p>🔗 <a href=\"https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/i8df3mmfly47axpbbr1p6ivh5\">https://aihot.news/items/i8df3mmfly47axpbbr1p6ivh5</a></p>",
+          "pubDate": "Mon, 09 Nov 2026 05:26:29 GMT",
+          "guid": "https://aihot.virxact.com/i8df3mmfly47axpbbr1p6ivh5",
+          "read": false,
+          "starred": false,
+          "tags": [],
+          "feedTitle": "AI HOT — 精选",
+          "feedUrl": "https://aihot.virxact.com/feed.xml",
+          "coverImage": "",
+          "summary": "TechCrunch 编辑专访耶鲁管理学院教授 Jeffrey Sonnenfeld，评估 Nvidia CEO 黄仁勋因与涉嫌为中国收集情报的 Megaspeed 高管 Alice Huang 有染而面临的职位风险，Sonnenfeld 称其能否保住职位概率约五五开。 🔗 阅读原文 via AIHOT · https://aihot.news/items/i8df3mmfly47axpbbr1p6ivh5",
+          "author": "noreply@aihot.news (TechCrunch：AI)",
+          "saved": false,
+          "mediaType": "article",
+          "duration": "",
+          "explicit": false,
+          "image": "",
+          "category": "",
+          "episodeType": ""
+        },
+        {
           "title": "数字生命卡兹克上线免费 Token 福利聚合网站 Token羊毛",
           "link": "https://aihot.news/items/e80fmjdp23n217sd6e7ky52om",
           "description": "<p>数字生命卡兹克上线免费聚合网站 Token羊毛（aihot.news/free-tokens），把各厂商公开的免费额度、签到积分、限时免费等活动汇总到一页，页面显示今日可领金额并按日、周、月分组，还设计了随领取次数升级亮度的卡片收集玩法。</p> <p>🔗 <a href=\"https://mp.weixin.qq.com/s/MyNWZlURmO0xIxQpMOQZWg\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/e80fmjdp23n217sd6e7ky52om\">https://aihot.news/items/e80fmjdp23n217sd6e7ky52om</a></p>",
@@ -1131,32 +1154,9 @@
           "image": "",
           "category": "",
           "episodeType": ""
-        },
-        {
-          "title": "百度发布 ERNIE-5.5-Flash-Base 开源 Base 模型，280B 总参数每 token 激活 14B",
-          "link": "https://aihot.news/items/r3360gkpmqpyyt2ii9cp1k9rz",
-          "description": "<p>百度文心团队发布 ERNIE-5.5-Flash-Base，在 Hugging Face 开放预训练终点 Base 权重，提供 FP8 与 BF16 两种 safetensors。</p> <p>🔗 <a href=\"https://ernie.baidu.com/zh/release/ernie-5-5-flash-base/\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/r3360gkpmqpyyt2ii9cp1k9rz\">https://aihot.news/items/r3360gkpmqpyyt2ii9cp1k9rz</a></p>",
-          "content": "<p>百度文心团队发布 ERNIE-5.5-Flash-Base，在 Hugging Face 开放预训练终点 Base 权重，提供 FP8 与 BF16 两种 safetensors。</p> <p>🔗 <a href=\"https://ernie.baidu.com/zh/release/ernie-5-5-flash-base/\">阅读原文</a></p> <p>via AIHOT · <a href=\"https://aihot.news/items/r3360gkpmqpyyt2ii9cp1k9rz\">https://aihot.news/items/r3360gkpmqpyyt2ii9cp1k9rz</a></p>",
-          "pubDate": "Wed, 04 Nov 2026 16:00:00 GMT",
-          "guid": "https://aihot.virxact.com/r3360gkpmqpyyt2ii9cp1k9rz",
-          "read": false,
-          "starred": false,
-          "tags": [],
-          "feedTitle": "AI HOT — 精选",
-          "feedUrl": "https://aihot.virxact.com/feed.xml",
-          "coverImage": "",
-          "summary": "百度文心团队发布 ERNIE-5.5-Flash-Base，在 Hugging Face 开放预训练终点 Base 权重，提供 FP8 与 BF16 两种 safetensors。 🔗 阅读原文 via AIHOT · https://aihot.news/items/r3360gkpmqpyyt2ii9cp1k9rz",
-          "author": "noreply@aihot.news (百度文心 ERNIE 官方博客)",
-          "saved": false,
-          "mediaType": "article",
-          "duration": "",
-          "explicit": false,
-          "image": "",
-          "category": "",
-          "episodeType": ""
         }
       ],
-      "lastUpdated": 1794200532186,
+      "lastUpdated": 1794204132164,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1170,9 +1170,9 @@
       "siteUrl": "https://aihot.news/",
       "lastRefreshDiagnostics": {
         "fetchedItemCount": 50,
-        "mergedItemCountBeforeRetention": 54,
+        "mergedItemCountBeforeRetention": 52,
         "retainedItemCount": 50,
-        "retentionRemovedCount": 4,
+        "retentionRemovedCount": 2,
         "skippedByRefreshCutoffCount": 0,
         "autoDeleteDurationDays": 30
       },
@@ -1875,7 +1875,7 @@
           "episodeType": ""
         }
       ],
-      "lastUpdated": 1794200532308,
+      "lastUpdated": 1794204132144,
       "autoDeleteDuration": 30,
       "maxItemsLimit": 50,
       "scanInterval": 0,
@@ -1926,7 +1926,7 @@
     }
   ],
   "refreshInterval": 60,
-  "lastRefreshTimestamp": 1794200532308,
+  "lastRefreshTimestamp": 1794204132165,
   "maxItems": 50,
   "defaultAutoDeleteDuration": 30,
   "viewStyle": "card",
