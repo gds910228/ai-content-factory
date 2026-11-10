@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#1a1a1a; font-family:'Microsoft YaHei','PingFang SC',sans-serif; display:flex; flex-direction:column; gap:40px; padding:40px 0; }
+  .card { width:1242px; height:1656px; position:relative; overflow:hidden;
+          background:linear-gradient(168deg,#081527 0%,#0E2A4E 52%,#0A1C36 100%);
+          color:#fff; padding:96px 84px 150px; display:flex; flex-direction:column; }
+  .glow1 { position:absolute; width:560px; height:560px; border-radius:50%; top:-200px; right:-160px;
+           background:radial-gradient(circle,rgba(53,224,192,0.16) 0%,transparent 70%); }
+  .glow2 { position:absolute; width:640px; height:640px; border-radius:50%; bottom:-260px; left:-220px;
+           background:radial-gradient(circle,rgba(255,169,77,0.10) 0%,transparent 70%); }
+  .top { display:flex; align-items:center; gap:18px; margin-bottom:60px; }
+  .dot { width:14px; height:14px; border-radius:50%; background:#35E0C0; box-shadow:0 0 18px #35E0C0; }
+  .tag { font-size:30px; letter-spacing:8px; color:#35E0C0; font-weight:700; }
+  .topline { flex:1; height:2px; background:linear-gradient(to right,rgba(53,224,192,0.5),transparent); }
+  .bar { position:absolute; left:0; right:0; bottom:0; height:104px; display:flex; align-items:center; justify-content:space-between;
+         padding:0 84px; background:rgba(255,255,255,0.05); border-top:1px solid rgba(255,255,255,0.12); }
+  .bar .l { font-size:28px; color:rgba(255,255,255,0.75); letter-spacing:4px; font-weight:700; }
+  .bar .r { font-size:28px; color:#35E0C0; font-weight:800; letter-spacing:2px; }
+  .h-big { font-size:96px; font-weight:900; line-height:1.24; letter-spacing:2px; }
+  .h-mid { font-size:64px; font-weight:900; line-height:1.32; }
+  .cyan { color:#35E0C0; } .org { color:#FFA94D; } .red { color:#FF6B6B; }
+  .strike { font-size:36px; color:rgba(255,255,255,0.45); text-decoration:line-through; letter-spacing:3px; margin-bottom:24px; font-weight:600; }
+  .stats { display:flex; gap:24px; margin-top:64px; }
+  .stat { flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(53,224,192,0.35); border-radius:22px; padding:36px 20px; text-align:center; }
+  .stat .n { font-size:60px; font-weight:900; color:#35E0C0; }
+  .stat .n.org2 { color:#FFA94D; }
+  .stat .t { font-size:27px; color:rgba(255,255,255,0.8); margin-top:12px; font-weight:600; }
+  .quote { margin-top:auto; border-left:6px solid #35E0C0; padding:8px 0 8px 26px; font-size:32px; color:rgba(255,255,255,0.85); line-height:1.65; }
+  /* 地图行 */
+  .map { display:flex; flex-direction:column; gap:14px; margin-top:44px; }
+  .row { display:flex; align-items:center; gap:22px; background:rgba(255,255,255,0.055); border:1px solid rgba(255,255,255,0.10); border-radius:16px; padding:17px 26px; }
+  .row.die { border:1.5px solid rgba(255,107,107,0.55); background:rgba(255,107,107,0.08); }
+  .row .no { min-width:58px; height:58px; border-radius:14px; background:rgba(53,224,192,0.16); border:1.5px solid rgba(53,224,192,0.5); color:#35E0C0;
+             display:flex; align-items:center; justify-content:center; font-size:30px; font-weight:900; }
+  .row.die .no { background:rgba(255,107,107,0.16); border-color:rgba(255,107,107,0.6); color:#FF6B6B; }
+  .row .nm { font-size:33px; font-weight:800; min-width:250px; }
+  .row .ds { font-size:27px; color:rgba(255,255,255,0.62); flex:1; }
+  .row .st { font-size:26px; color:#FF6B6B; font-weight:800; }
+  /* 对比卡 */
+  .vs { display:flex; gap:26px; margin-top:64px; align-items:stretch; }
+  .vbox { flex:1; border-radius:24px; padding:52px 30px; text-align:center; }
+  .vbox .vt { font-size:32px; font-weight:700; margin-bottom:22px; color:rgba(255,255,255,0.75); }
+  .vbox .vn { font-size:110px; font-weight:900; line-height:1; }
+  .vbox .vr { font-size:34px; font-weight:800; margin-top:22px; }
+  .vbox.l { background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.18); }
+  .vbox.l .vn { color:rgba(255,255,255,0.9); }
+  .vbox.r { background:rgba(53,224,192,0.10); border:1.5px solid rgba(53,224,192,0.5); }
+  .vbox.r .vn { color:#35E0C0; }
+  .vsbadge { align-self:center; font-size:44px; font-weight:900; color:#FFA94D; }
+  /* 清单 */
+  .cl { margin-top:52px; display:flex; flex-direction:column; gap:26px; }
+  .cl .grp { font-size:36px; font-weight:900; margin-bottom:-6px; }
+  .cl .it { display:flex; align-items:center; gap:22px; font-size:33px; line-height:1.5; }
+  .cl .it .m { font-size:36px; flex-shrink:0; }
+  /* 死亡关卡 */
+  .dies { display:flex; flex-direction:column; gap:30px; margin-top:56px; }
+  .diecard { background:rgba(255,107,107,0.08); border:1.5px solid rgba(255,107,107,0.45); border-radius:22px; padding:40px 36px; }
+  .diecard .dt { font-size:42px; font-weight:900; color:#FF6B6B; }
+  .diecard .dd { font-size:31px; color:rgba(255,255,255,0.82); margin-top:14px; line-height:1.65; }
+  /* 并发 */
+  .lanes { display:flex; flex-direction:column; gap:26px; margin-top:56px; }
+  .lane { display:flex; align-items:center; gap:26px; border-radius:22px; padding:40px 36px; }
+  .lane .ic { font-size:56px; }
+  .lane .lt { font-size:40px; font-weight:900; min-width:280px; }
+  .lane .ld { font-size:30px; color:rgba(255,255,255,0.75); line-height:1.6; }
+  .lane.a { background:rgba(53,224,192,0.10); border:1.5px solid rgba(53,224,192,0.45); }
+  .lane.b { background:rgba(255,169,77,0.10); border:1.5px solid rgba(255,169,77,0.45); }
+  /* 互动 */
+  .ask { font-size:88px; font-weight:900; line-height:1.35; }
+</style>
+</head>
+<body>
+
+<!-- 图1 封面 -->
+<div class="card" id="x1">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">AI出题 · 全流程地图</span><span class="topline"></span></div>
+  <div class="strike">出题全靠闷头摸索？</div>
+  <div class="h-big">给字节出题<br><span class="cyan">10道关</span><br>我画成了地图</div>
+  <div class="stats">
+    <div class="stat"><div class="n">3个月</div><div class="t">实战整理</div></div>
+    <div class="stat"><div class="n org2">10道关</div><div class="t">注册到结算</div></div>
+    <div class="stat"><div class="n" style="color:#FF6B6B">3个</div><div class="t">死亡关卡</div></div>
+  </div>
+  <div class="quote">从注册认证到兜底结算，一图看懂全程。<br>哪一关最容易死，图里都标了红。</div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">01 / 08</span></div>
+</div>
+
+<!-- 图2 完整地图 -->
+<div class="card" id="x2">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">全流程地图</span><span class="topline"></span></div>
+  <div class="h-mid">10道关<span class="cyan">逐关一句话</span></div>
+  <div class="map">
+    <div class="row"><span class="no">1</span><span class="nm">注册认证</span><span class="ds">简历+学历认证，一天过审</span></div>
+    <div class="row"><span class="no">2</span><span class="nm">入群领题</span><span class="ds">行业预分配，领对应题槽</span></div>
+    <div class="row die"><span class="no">3</span><span class="nm">首轮出题</span><span class="ds">难度埋材料里，不写题面</span><span class="st">★易死</span></div>
+    <div class="row"><span class="no">4</span><span class="nm">可选加固</span><span class="ds">赶时间直接跳过</span></div>
+    <div class="row die"><span class="no">5</span><span class="nm">本地自测</span><span class="ds">筛过易题，不卡提交</span><span class="st">★易死</span></div>
+    <div class="row"><span class="no">6</span><span class="nm">提交</span><span class="ds">贴表传包改状态</span></div>
+    <div class="row"><span class="no">7</span><span class="nm">平台打分</span><span class="ds">读懂状态，别瞎动</span></div>
+    <div class="row die"><span class="no">8</span><span class="nm">不达标返修</span><span class="ds">期限3天，先分档再动刀</span><span class="st">★易死</span></div>
+    <div class="row"><span class="no">9</span><span class="nm">再测再交</span><span class="ds">永远开新版本，旧版只读</span></div>
+    <div class="row"><span class="no">10</span><span class="nm">兜底结算</span><span class="ds">有安全网机制</span></div>
+  </div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">02 / 08</span></div>
+</div>
+
+<!-- 图3 死亡三关 -->
+<div class="card" id="x3">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">通关预警</span><span class="topline"></span></div>
+  <div class="h-mid">最容易死的<br><span style="color:#FF6B6B">三道关</span></div>
+  <div class="dies">
+    <div class="diecard"><div class="dt">第3关 · 首轮出题</div><div class="dd">把难度写在题面上，等于替模型把坑全填平——它轻轻松松考高分，你直接被打回</div></div>
+    <div class="diecard"><div class="dt">第5关 · 本地自测</div><div class="dd">拿本地分当提交门槛就是白磨：本地86分，平台48分照样放行，自测只用来筛过易题</div></div>
+    <div class="diecard"><div class="dt">第8关 · 不达标返修</div><div class="dd">期限一般只有3天，手慢题废；先诊断分档再动刀，别为改而改</div></div>
+  </div>
+  <div class="quote">三道关都过了，剩下的就是复制粘贴。</div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">03 / 08</span></div>
+</div>
+
+<!-- 图4 认知差 -->
+<div class="card" id="x4">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">最反直觉的一课</span><span class="topline"></span></div>
+  <div class="h-mid">本地分<span class="cyan">预测不了</span><br>平台分</div>
+  <div class="vs">
+    <div class="vbox l"><div class="vt">本地自测</div><div class="vn">86</div><div class="vr" style="color:rgba(255,255,255,0.7)">按本地线：铁定不过</div></div>
+    <div class="vsbadge">VS</div>
+    <div class="vbox r"><div class="vt">平台机评</div><div class="vn">48</div><div class="vr cyan">一轮直接放行</div></div>
+  </div>
+  <div class="quote">你测的是一个模型，判你的是另一个。<br>两套判卷标准，根本不是一回事——<br>所以本地自测只干一件事：筛掉明显过易的题。</div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">04 / 08</span></div>
+</div>
+
+<!-- 图5 免费额度 -->
+<div class="card" id="x5">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">零成本上手</span><span class="topline"></span></div>
+  <div class="h-mid">出题算力<br><span class="cyan">可以免费跑</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">2亿</div><div class="t">每晚赠送 token</div></div>
+    <div class="stat"><div class="n org2">5亿</div><div class="t">周末赠送</div></div>
+    <div class="stat"><div class="n">10小时</div><div class="t">23点至次日9点</div></div>
+  </div>
+  <div class="quote">用免费额度，就能把第一道题完整跑通一遍。<br>额度入口在工具左下角弹出，看到就领。<br>活动随时可能收回，别等。</div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">05 / 08</span></div>
+</div>
+
+<!-- 图6 并发 -->
+<div class="card" id="x6">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">并发出题</span><span class="topline"></span></div>
+  <div class="h-mid">一套提示词<br><span class="cyan">两个环境同时跑</span></div>
+  <div class="lanes">
+    <div class="lane a"><span class="ic">💻</span><span class="lt cyan">科技 / 软件线</span><span class="ld">出题8期，所有坑都在这条线上踩过，从返修3遍磨到稳定过线</span></div>
+    <div class="lane b"><span class="ic">🏦</span><span class="lt org">金融线</span><span class="ld">拿到同一套提示词，换行业字段直接上手，一次通过率比我还高</span></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="n">2人</div><div class="t">并行双线</div></div>
+    <div class="stat"><div class="n org2">16题</div><div class="t">一次交卷</div></div>
+  </div>
+  <div class="quote">双线并行的结构跑通后，出题就是流水线活。</div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">06 / 08</span></div>
+</div>
+
+<!-- 图7 适合劝退 -->
+<div class="card" id="x7">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">上车自测</span><span class="topline"></span></div>
+  <div class="h-mid">适合谁，<span class="org">劝退谁</span></div>
+  <div class="cl">
+    <div class="grp cyan">✅ 适合</div>
+    <div class="it"><span class="m">✅</span><span>有行业深水区经验：金融 / 法律 / 医疗 / 软件</span></div>
+    <div class="it"><span class="m">✅</span><span>简历学历认证能过审</span></div>
+    <div class="it"><span class="m">✅</span><span>愿意配强模型当陪练，跟得上迭代</span></div>
+    <div class="grp red" style="margin-top:26px">❌ 劝退</div>
+    <div class="it"><span class="m">❌</span><span>只看到单价就冲的：没行业纵深过不了机评</span></div>
+    <div class="it"><span class="m">❌</span><span>想一套提示词吃遍天的：6天10版是常态</span></div>
+    <div class="it"><span class="m">❌</span><span>时间碎成渣的：返修期限3天，手慢题废</span></div>
+  </div>
+  <div class="quote">个人背景不等于出题方向：学软件的做会计兼职，出财务题完全合规。</div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">07 / 08</span></div>
+</div>
+
+<!-- 图8 互动 -->
+<div class="card" id="x8">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">评论区聊聊</span><span class="topline"></span></div>
+  <div style="margin-top:80px;"></div>
+  <div class="ask">你行业里<br>有什么<span class="cyan">AI搞不定</span><br>的事？</div>
+  <div class="quote" style="margin-top:70px;">把它变成题，就是下一个机会。<br><br>评论区聊聊👇<br>觉得有用先收藏，这个系列会一直更。</div>
+  <div class="bar"><span class="l">AI出题 · 全流程系列</span><span class="r">08 / 08</span></div>
+</div>
+
+</body>
+</html>
