@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#1a1a1a; font-family:'Microsoft YaHei','PingFang SC',sans-serif; display:flex; flex-direction:column; gap:40px; padding:40px 0; }
+  .card { width:1242px; height:1656px; position:relative; overflow:hidden;
+          background:linear-gradient(168deg,#081527 0%,#0E2A4E 52%,#0A1C36 100%);
+          color:#fff; padding:96px 88px 150px; display:flex; flex-direction:column; }
+  .glow1 { position:absolute; width:560px; height:560px; border-radius:50%; top:-200px; right:-160px;
+           background:radial-gradient(circle,rgba(53,224,192,0.16) 0%,transparent 70%); }
+  .glow2 { position:absolute; width:640px; height:640px; border-radius:50%; bottom:-260px; left:-220px;
+           background:radial-gradient(circle,rgba(255,169,77,0.10) 0%,transparent 70%); }
+  .top { display:flex; align-items:center; gap:18px; margin-bottom:64px; }
+  .dot { width:14px; height:14px; border-radius:50%; background:#35E0C0; box-shadow:0 0 18px #35E0C0; }
+  .tag { font-size:30px; letter-spacing:8px; color:#35E0C0; font-weight:700; }
+  .topline { flex:1; height:2px; background:linear-gradient(to right,rgba(53,224,192,0.5),transparent); }
+  .bar { position:absolute; left:0; right:0; bottom:0; height:104px; display:flex; align-items:center; justify-content:space-between;
+         padding:0 88px; background:rgba(255,255,255,0.05); border-top:1px solid rgba(255,255,255,0.12); }
+  .bar .l { font-size:28px; color:rgba(255,255,255,0.75); letter-spacing:4px; font-weight:700; }
+  .bar .r { font-size:28px; color:#35E0C0; font-weight:800; letter-spacing:2px; }
+  .h-big { font-size:100px; font-weight:900; line-height:1.22; letter-spacing:2px; }
+  .h-mid { font-size:72px; font-weight:900; line-height:1.3; }
+  .cyan { color:#35E0C0; } .org { color:#FFA94D; }
+  .strike { font-size:38px; color:rgba(255,255,255,0.45); text-decoration:line-through; letter-spacing:3px; margin-bottom:26px; font-weight:600; }
+  .sub { font-size:34px; color:rgba(255,255,255,0.72); line-height:1.7; }
+  .stats { display:flex; gap:26px; margin-top:70px; }
+  .stat { flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(53,224,192,0.35); border-radius:22px; padding:38px 24px; text-align:center; }
+  .stat .n { font-size:66px; font-weight:900; color:#35E0C0; }
+  .stat .n.org2 { color:#FFA94D; }
+  .stat .t { font-size:28px; color:rgba(255,255,255,0.8); margin-top:12px; font-weight:600; }
+  .quote { margin-top:auto; border-left:6px solid #35E0C0; padding:8px 0 8px 28px; font-size:34px; color:rgba(255,255,255,0.85); line-height:1.65; }
+  .list { display:flex; flex-direction:column; gap:30px; margin-top:56px; }
+  .li { display:flex; align-items:center; gap:30px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:34px 36px; }
+  .li .no { width:76px; height:76px; border-radius:50%; background:linear-gradient(135deg,#35E0C0,#1FA98F); color:#06251F;
+            display:flex; align-items:center; justify-content:center; font-size:38px; font-weight:900; flex-shrink:0; }
+  .li .tx .t1 { font-size:40px; font-weight:800; letter-spacing:1px; }
+  .li .tx .t2 { font-size:29px; color:rgba(255,255,255,0.62); margin-top:8px; }
+  .cols { display:flex; gap:30px; margin-top:64px; }
+  .col { flex:1; border-radius:24px; padding:46px 38px; }
+  .col.a { background:rgba(53,224,192,0.10); border:1.5px solid rgba(53,224,192,0.45); }
+  .col.b { background:rgba(255,169,77,0.10); border:1.5px solid rgba(255,169,77,0.45); }
+  .col .ct { font-size:42px; font-weight:900; margin-bottom:26px; }
+  .col .cd { font-size:31px; line-height:1.75; color:rgba(255,255,255,0.85); }
+  .swap { margin-top:56px; text-align:center; font-size:40px; font-weight:800; color:#35E0C0; letter-spacing:2px; }
+  .steps { display:flex; flex-direction:column; gap:0; margin-top:56px; }
+  .step { display:flex; gap:34px; }
+  .step .rail { display:flex; flex-direction:column; align-items:center; }
+  .step .pn { width:86px; height:86px; border-radius:50%; background:rgba(53,224,192,0.14); border:2.5px solid #35E0C0; color:#35E0C0;
+              display:flex; align-items:center; justify-content:center; font-size:36px; font-weight:900; flex-shrink:0; }
+  .step .ln { width:3px; height:74px; background:rgba(255,255,255,0.18); }
+  .step .bd { padding-bottom:46px; }
+  .step .bd .s1 { font-size:42px; font-weight:800; padding-top:14px; }
+  .step .bd .s2 { font-size:30px; color:rgba(255,255,255,0.65); margin-top:10px; line-height:1.6; }
+  .warnlist { display:flex; flex-direction:column; gap:30px; margin-top:56px; }
+  .warn { display:flex; gap:30px; align-items:flex-start; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:36px; }
+  .warn .ic { font-size:52px; line-height:1; flex-shrink:0; }
+  .warn .w1 { font-size:40px; font-weight:800; }
+  .warn .w2 { font-size:30px; color:rgba(255,255,255,0.62); margin-top:10px; line-height:1.6; }
+</style>
+</head>
+<body>
+
+<!-- 卡1 · 首图 -->
+<div class="card" id="c1">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">字节XPERT · 高经出题实战</span><span class="topline"></span></div>
+  <div class="strike">每题返修3遍，磨到想摔键盘</div>
+  <div class="h-big">给字节出题<span class="org">8期</span><br>我把出题做成了<br><span class="cyan">流水线</span></div>
+  <div class="stats">
+    <div class="stat"><div class="n">6天</div><div class="t">迭代10版提示词</div></div>
+    <div class="stat"><div class="n org2">16题</div><div class="t">国庆一次交卷</div></div>
+    <div class="stat"><div class="n">6+2</div><div class="t">一次通过+兜底结算</div></div>
+  </div>
+  <div class="quote">每一版的文件名，都标着它吃了哪次返修的亏。<br>这套东西，现在整理成了能直接跑的资料包。</div>
+  <div class="bar"><span class="l">高经出题 · 实战资料包</span><span class="r">01 / 09</span></div>
+</div>
+
+<!-- 卡2 · 清单卡 -->
+<div class="card" id="c2">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">资料包清单</span><span class="topline"></span></div>
+  <div class="h-mid">六件套，<span class="cyan">拿来就能跑</span></div>
+  <div class="list">
+    <div class="li"><span class="no">1</span><div class="tx"><div class="t1">首轮出题提示词 <span class="cyan">科技 / 金融双行业版</span></div><div class="t2">换行业字段即复用，选题决策链全套内置</div></div></div>
+    <div class="li"><span class="no">2</span><div class="tx"><div class="t1">出题通用规则</div><div class="t2">红线 + 目标 + 考点细则，全阶段共用</div></div></div>
+    <div class="li"><span class="no">3</span><div class="tx"><div class="t1">任务说明文档</div><div class="t2">任务要求 / 行业配额 / 交付物字段规范</div></div></div>
+    <div class="li"><span class="no">4</span><div class="tx"><div class="t1">难度突破指南</div><div class="t2">轮数时长怎么堆、分数怎么压、坑怎么埋</div></div></div>
+    <div class="li"><span class="no">5</span><div class="tx"><div class="t1">质检流程及返修思路</div><div class="t2">机评机制拆解 + 按分数分档的返修动作</div></div></div>
+    <div class="li"><span class="no">6</span><div class="tx"><div class="t1">本地自测评分协议</div><div class="t2">答题/评分双窗口操作 + 评分提示词原文</div></div></div>
+  </div>
+  <div class="quote">不是零散文档，是验证过一次通过6题的整套工作流。</div>
+  <div class="bar"><span class="l">高经出题 · 实战资料包</span><span class="r">02 / 09</span></div>
+</div>
+
+<!-- 卡7 · 双行业卡 -->
+<div class="card" id="c7">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">双行业复用</span><span class="topline"></span></div>
+  <div class="h-mid">一套提示词<br><span class="cyan">两个行业同时跑</span></div>
+  <div class="cols">
+    <div class="col a">
+      <div class="ct cyan">科技 / 软件版</div>
+      <div class="cd">出题8期，从每题返修3遍磨到稳定过线，提示词的所有坑都在这条线上踩过</div>
+    </div>
+    <div class="col b">
+      <div class="ct org">金融版</div>
+      <div class="cd">零基础接触这套提示词，换行业字段直接上手——一次通过率比我还高</div>
+    </div>
+  </div>
+  <div class="swap">⇄ 换行业字段，即复用</div>
+  <div class="sub" style="margin-top:44px;">两个方向、两个账号并行出题：国庆双号一次交卷16题，这就是「家庭作战单元」的结构。</div>
+  <div class="quote">差的从来不是天赋，是每一轮返修意见都回灌进了提示词。</div>
+  <div class="bar"><span class="l">高经出题 · 实战资料包</span><span class="r">07 / 09</span></div>
+</div>
+
+<!-- 卡8 · 购买须知 -->
+<div class="card" id="c8">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">购买须知</span><span class="topline"></span></div>
+  <div class="h-mid">拍之前，<br>先看<span class="org">这三条</span></div>
+  <div class="warnlist">
+    <div class="warn"><span class="ic">📦</span><div><div class="w1">虚拟商品，发货后不退</div><div class="w2">云盘链接 + 目录说明发货，想清楚再拍，介意勿拍</div></div></div>
+    <div class="warn"><span class="ic">🔄</span><div><div class="w1">持续更新，不是死文件</div><div class="w2">凭订单进更新群，提示词后续迭代免费更新，平台规则变动同步解读</div></div></div>
+    <div class="warn"><span class="ic">🚫</span><div><div class="w1">劝退区（重要）</div><div class="w2">没行业纵深（金融/法律/医疗/软件等）· 想躺赚的 · 不配强模型当陪练的 —— 这三类请绕行，买了也过不了线</div></div></div>
+  </div>
+  <div class="quote">宁可少卖一单，也不想售后吵到天亮。<br>合适的，是手里有行业经验、被难度分卡住的人。</div>
+  <div class="bar"><span class="l">高经出题 · 实战资料包</span><span class="r">08 / 09</span></div>
+</div>
+
+<!-- 卡9 · 服务流程 -->
+<div class="card" id="c9">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="top"><span class="dot"></span><span class="tag">服务流程</span><span class="topline"></span></div>
+  <div class="h-mid">从拍下到上手<br><span class="cyan">只要四步</span></div>
+  <div class="steps">
+    <div class="step"><div class="rail"><div class="pn">1</div><div class="ln"></div></div><div class="bd"><div class="s1">拍下即发货</div><div class="s2">平台发货通道交付：云盘链接 + 文件目录说明</div></div></div>
+    <div class="step"><div class="rail"><div class="pn">2</div><div class="ln"></div></div><div class="bd"><div class="s1">按使用顺序开跑</div><div class="s2">先读《通用规则》10分钟 → 替换行业字段 → 跑第一题</div></div></div>
+    <div class="step"><div class="rail"><div class="pn">3</div><div class="ln"></div></div><div class="bd"><div class="s1">卡住就问</div><div class="s2">对照《返修思路》自查，随时私信我，出题的事你把关</div></div></div>
+    <div class="step"><div class="rail"><div class="pn">4</div></div><div class="bd"><div class="s1">进更新群</div><div class="s2">凭订单记录入群，后续期数规则变动免费解读</div></div></div>
+  </div>
+  <div class="quote">行业判断和最终把关是你，<br>流水线的活，交给提示词。</div>
+  <div class="bar"><span class="l">高经出题 · 实战资料包</span><span class="r">09 / 09</span></div>
+</div>
+
+</body>
+</html>
