@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#1a1a1a; font-family:'Microsoft YaHei','PingFang SC',sans-serif; display:flex; flex-direction:column; align-items:center; padding:40px 0; }
+  .card { width:1242px; height:1242px; position:relative; overflow:hidden;
+          background:linear-gradient(168deg,#081527 0%,#0E2A4E 52%,#0A1C36 100%);
+          color:#fff; padding:88px 84px 110px; display:flex; flex-direction:column; }
+  .glow1 { position:absolute; width:520px; height:520px; border-radius:50%; top:-180px; right:-140px;
+           background:radial-gradient(circle,rgba(53,224,192,0.16) 0%,transparent 70%); }
+  .glow2 { position:absolute; width:560px; height:560px; border-radius:50%; bottom:-220px; left:-180px;
+           background:radial-gradient(circle,rgba(255,107,107,0.10) 0%,transparent 70%); }
+  .top { display:flex; align-items:center; gap:18px; margin-bottom:52px; }
+  .dot { width:14px; height:14px; border-radius:50%; background:#FF6B6B; box-shadow:0 0 18px #FF6B6B; }
+  .tag { font-size:32px; letter-spacing:8px; color:#FF6B6B; font-weight:700; }
+  .topline { flex:1; height:2px; background:linear-gradient(to right,rgba(255,107,107,0.5),transparent); }
+  .h-big { font-size:100px; font-weight:900; line-height:1.28; letter-spacing:2px; }
+  .cyan { color:#35E0C0; } .red { color:#FF6B6B; }
+  .stats { display:flex; gap:24px; margin-top:60px; }
+  .stat { flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(53,224,192,0.35); border-radius:22px; padding:36px 18px; text-align:center; }
+  .stat .n { font-size:50px; font-weight:900; color:#35E0C0; }
+  .stat .n.hot { color:#FF6B6B; }
+  .stat .t { font-size:26px; color:rgba(255,255,255,0.8); margin-top:12px; font-weight:600; line-height:1.4; }
+  .quote { margin-top:auto; border-left:6px solid #FF6B6B; padding:8px 0 8px 26px; font-size:32px; color:rgba(255,255,255,0.85); line-height:1.7; }
+</style>
+</head>
+<body>
+  <div class="card" id="n2">
+    <div class="glow1"></div><div class="glow2"></div>
+    <div class="top"><span class="dot"></span><span class="tag">平台通知 · 高经出题</span><span class="topline"></span></div>
+    <div class="h-big">9期<span class="cyan">11.16截止</span><br>10期<span class="red">时间待定</span></div>
+    <div class="stats">
+      <div class="stat"><div class="n">11.16</div><div class="t">截止收题<br>23:59:59</div></div>
+      <div class="stat"><div class="n">四期</div><div class="t">结算确认表<br>明天开始发</div></div>
+      <div class="stat"><div class="n hot">6期返修</div><div class="t">下周开跑<br>7期紧随其后</div></div>
+    </div>
+    <div class="quote">「九期 11.16 23:59:59 截止收题，十期开始时间待定。早一点填表，避免最后一小时集中提交。」——平台群通知<br><br>管线没有停：四期在结算、六期在排队、五期返修单独安排。</div>
+  </div>
+</body>
+</html>
