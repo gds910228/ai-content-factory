@@ -7,12 +7,13 @@
   "enableAutoTitleGeneration": true,
   "titleGenerationLocale": "",
   "titleGenerationModel": "",
+  "showTabTitlesByDefault": true,
+  "chatFontScale": 100,
   "excludedTags": [],
   "mediaFolder": "",
   "systemPrompt": "",
   "sharedEnvironmentVariables": "",
   "envSnippets": [],
-  "customContextLimits": {},
   "keyboardNavigation": {
     "scrollUpKey": "w",
     "scrollDownKey": "s",
@@ -33,7 +34,7 @@
       "modelEnvironmentType": "model",
       "titleModelEnvironmentType": "",
       "environmentVariables": "ANTHROPIC_API_KEY=c2ad8d02439a4e458bd8c288bdbc8097.UbaNhPMvFlo5gneM\nANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic\nANTHROPIC_MODEL=glm-5.3",
-      "environmentHash": "runtime-input:v1:13fe5506be088a899d9fe0e778371f4efb7af92254c2a17eca03928b11657c9d",
+      "environmentHash": "runtime-input:v1:aba4f296eb642fd4e75cf5c63dafc564acddc7b6aca8158449167bddffcc9697",
       "outputStyle": null,
       "promptSuggestions": false,
       "discoveredOutputStyles": [
@@ -46,7 +47,6 @@
       "visibleModels": [
         "opus"
       ],
-      "sessionEnvironmentHash": "runtime-input:v1:302098e7842ce8722a85e2c0112f79f957d649ef1d4ad4406f7698ed53db7944",
       "selectedModels": [
         {
           "value": "opus",
@@ -89,7 +89,7 @@
       "cliPath": "",
       "cliPathsByHost": {},
       "enabled": false,
-      "environmentHash": "",
+      "environmentHash": "runtime-input:v1:65be9fd755fceb24e0d4a97b388b455fc79245d593888ed6c3a02adef11d106a",
       "environmentVariables": "OPENCODE_ENABLE_EXA=1",
       "modelAliases": {},
       "preferredThinkingByModel": {},
@@ -109,14 +109,12 @@
       "environmentVariables": "",
       "modelAliases": {},
       "preferredThinkingByModel": {},
-      "sessionEnvironmentHash": "",
       "visibleModels": [],
       "selectedModels": []
     },
     "grok": {
       "installationMethodsByHost": {},
       "wslDistroOverridesByHost": {},
-      "sessionEnvironmentHash": "",
       "cliPath": "",
       "cliPathsByHost": {},
       "enabled": false,
@@ -150,7 +148,6 @@
       "environmentVariables": "",
       "modelAliases": {},
       "preferredReasoningByModel": {},
-      "sessionStoreHash": "",
       "visibleModels": [],
       "selectedModelsByHost": {}
     }
@@ -165,11 +162,10 @@
   "savedProviderEffort": {},
   "savedProviderServiceTier": {},
   "savedProviderPermissionMode": {
-    "claude": "yolo"
+    "claude": "yolo",
+    "opencode": "normal"
   },
-  "pendingProviderSessionInvalidations": {},
   "enableAutoScroll": true,
-  "showMessageTimestamps": false,
   "deferMathRenderingDuringStreaming": true,
   "pluginRenderedFenceLanguages": [],
   "expandFileEditsByDefault": false,
