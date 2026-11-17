@@ -1,0 +1,38 @@
+{
+  "tasks": [
+    {
+      "id": "illustration-01",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\出题过硬被字节拉进新项目试标-20261117\\05-发布包\\imgs\\prompts\\01-infographic-workspace-kit.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\出题过硬被字节拉进新项目试标-20261117\\05-发布包\\imgs\\01-infographic-workspace-kit.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-02",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\出题过硬被字节拉进新项目试标-20261117\\05-发布包\\imgs\\prompts\\02-infographic-causal-chain.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\出题过硬被字节拉进新项目试标-20261117\\05-发布包\\imgs\\02-infographic-causal-chain.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    },
+    {
+      "id": "illustration-03",
+      "promptFiles": [
+        "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\出题过硬被字节拉进新项目试标-20261117\\05-发布包\\imgs\\prompts\\03-infographic-asset-two-ways.md"
+      ],
+      "image": "D:\\Program Files\\Obsidian\\repository\\ArcherArticle\\02-稿件库\\01-创作中稿件\\出题过硬被字节拉进新项目试标-20261117\\05-发布包\\imgs\\03-infographic-asset-two-ways.png",
+      "provider": "modelscope",
+      "ar": "16:9",
+      "quality": "2k",
+      "model": "Tongyi-MAI/Z-Image-Turbo"
+    }
+  ],
+  "jobs": 4
+}
